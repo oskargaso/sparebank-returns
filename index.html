@@ -19,9 +19,15 @@
       background: #1e3a5f;
       color: white;
       padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
     }
-    header h1 { font-size: 1.35rem; font-weight: 600; }
-    header .sub {
+    header .logo-mark {
+      flex-shrink: 0;
+    }
+    header .header-text h1 { font-size: 1.35rem; font-weight: 600; }
+    header .header-text .sub {
       font-size: 0.82rem;
       color: #94a3b8;
       margin-top: 3px;
@@ -148,8 +154,21 @@
 <body>
 
 <header>
-  <h1>Sparebank 1 SMN <span style="color:#7aa8d0;font-weight:400">(MING.OL)</span></h1>
-  <div class="sub">Total Return &mdash; All dividends reinvested at closing price &nbsp;|&nbsp; <span id="last-updated">Loading&hellip;</span></div>
+  <div class="logo-mark">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 44" width="88" height="44" aria-label="SpareBank 1 SMN logo" role="img">
+      <!-- Red brand mark -->
+      <rect x="0" y="0" width="44" height="44" rx="5" fill="#E31E26"/>
+      <text x="22" y="33" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="white" text-anchor="middle">1</text>
+      <!-- SpareBank text -->
+      <text x="52" y="18" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="white" letter-spacing="0.3">SpareBank</text>
+      <!-- SMN text -->
+      <text x="52" y="34" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="white" letter-spacing="0.5">SMN</text>
+    </svg>
+  </div>
+  <div class="header-text">
+    <h1>Sparebank 1 SMN <span style="color:#7aa8d0;font-weight:400">(MING.OL)</span></h1>
+    <div class="sub">Total Return &mdash; All dividends reinvested at closing price &nbsp;|&nbsp; <span id="last-updated">Loading&hellip;</span></div>
+  </div>
 </header>
 
 <div class="container">
