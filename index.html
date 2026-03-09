@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sparebank 1 SMN – Total Return</title>
+  <title>Norwegian Sparebank Stocks – Total Return</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -15,51 +15,145 @@
       min-height: 100vh;
     }
 
+    /* ── Header ─────────────────────────────────────────────────── */
     header {
       background: #1e3a5f;
       color: white;
-      padding: 18px 24px;
+      padding: 14px 22px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    header h1 { font-size: 1.35rem; font-weight: 600; }
+    header h1 { font-size: 1.2rem; font-weight: 600; }
     header .sub {
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       color: #94a3b8;
-      margin-top: 3px;
+      margin-top: 2px;
+    }
+
+    /* ── Mobile tab bar (hidden on desktop) ─────────────────────── */
+    #tab-bar {
+      display: none;
+      overflow-x: auto;
+      white-space: nowrap;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
+      padding: 0 6px;
+      -webkit-overflow-scrolling: touch;
+    }
+    #tab-bar::-webkit-scrollbar { height: 3px; }
+    #tab-bar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+    .tab-item {
+      display: inline-block;
+      padding: 10px 12px;
+      font-size: 0.78rem;
+      color: #64748b;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all 0.1s;
+    }
+    .tab-item:hover { color: #1e293b; }
+    .tab-item.active {
+      color: #2563eb;
+      border-bottom-color: #2563eb;
+      font-weight: 600;
+    }
+
+    /* ── App layout ──────────────────────────────────────────────── */
+    .app-layout {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────────── */
+    #sidebar {
+      width: 210px;
+      flex-shrink: 0;
+      background: #fff;
+      border-right: 1px solid #e2e8f0;
+      padding: 10px 0;
+      position: sticky;
+      top: 54px;               /* below header */
+      height: calc(100vh - 54px);
+      overflow-y: auto;
+    }
+    #sidebar::-webkit-scrollbar { width: 4px; }
+    #sidebar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 2px; }
+
+    .sidebar-label {
+      padding: 8px 16px 4px;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #94a3b8;
+    }
+
+    .sidebar-item {
+      display: block;
+      padding: 9px 16px;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+      transition: all 0.1s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .sidebar-item:hover { background: #f8fafc; }
+    .sidebar-item.active {
+      border-left-color: #2563eb;
+      background: #eff6ff;
+    }
+    .sidebar-name {
+      font-size: 0.82rem;
+      color: #1e293b;
+      font-weight: 500;
+    }
+    .sidebar-item.active .sidebar-name { color: #2563eb; }
+    .sidebar-ticker {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      margin-top: 1px;
+    }
+
+    /* ── Main content ────────────────────────────────────────────── */
+    .main-content {
+      flex: 1;
+      min-width: 0;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 20px 16px;
+      padding: 18px 16px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
     }
 
+    /* ── Cards ───────────────────────────────────────────────────── */
     .card {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-      padding: 18px 22px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+      padding: 16px 20px;
     }
 
-    /* Controls */
+    /* ── Controls ────────────────────────────────────────────────── */
     .controls {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
     .range-buttons { display: flex; gap: 4px; }
     .range-btn {
-      padding: 6px 14px;
+      padding: 5px 12px;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
       background: white;
       cursor: pointer;
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: #64748b;
-      transition: all 0.12s;
+      transition: all 0.1s;
     }
     .range-btn:hover { border-color: #2563eb; color: #2563eb; }
     .range-btn.active { background: #2563eb; border-color: #2563eb; color: white; }
@@ -67,254 +161,395 @@
     .date-inputs {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
       margin-left: auto;
       flex-wrap: wrap;
     }
-    .date-inputs label { font-size: 0.8rem; color: #64748b; }
+    .date-inputs label { font-size: 0.78rem; color: #64748b; }
     .date-inputs input[type="date"] {
-      padding: 5px 8px;
+      padding: 4px 7px;
       border: 1px solid #e2e8f0;
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: #1e293b;
       background: white;
     }
 
-    /* Chart */
-    .chart-area { position: relative; height: 420px; }
+    /* ── Chart ───────────────────────────────────────────────────── */
+    .chart-area { position: relative; height: 400px; }
 
-    /* Legend */
     .legend {
       display: flex;
-      gap: 20px;
+      gap: 18px;
       flex-wrap: wrap;
-      margin-top: 14px;
+      margin-top: 12px;
     }
     .legend-item {
       display: flex;
       align-items: center;
-      gap: 7px;
-      font-size: 0.8rem;
+      gap: 6px;
+      font-size: 0.78rem;
       color: #475569;
     }
 
-    /* Stats */
+    /* ── Stats ───────────────────────────────────────────────────── */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 10px;
     }
     .stat {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-      padding: 16px 20px;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+      padding: 14px 18px;
     }
     .stat-label {
-      font-size: 0.73rem;
+      font-size: 0.7rem;
       color: #94a3b8;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
     .stat-value {
-      font-size: 1.55rem;
+      font-size: 1.45rem;
       font-weight: 700;
       line-height: 1;
     }
     .stat-value.pos { color: #16a34a; }
     .stat-value.neg { color: #dc2626; }
-    .stat-sub { font-size: 0.73rem; color: #94a3b8; margin-top: 4px; }
+    .stat-sub { font-size: 0.7rem; color: #94a3b8; margin-top: 3px; }
 
-    .note {
-      font-size: 0.73rem;
+    .note { font-size: 0.7rem; color: #94a3b8; margin-top: 10px; }
+
+    /* ── States ──────────────────────────────────────────────────── */
+    #loading {
+      text-align: center;
+      padding: 80px 0;
       color: #94a3b8;
-      margin-top: 12px;
+      font-size: 0.88rem;
     }
-
-    #loading { text-align: center; padding: 80px 0; color: #94a3b8; font-size: 0.9rem; }
     #error-msg {
       display: none;
       text-align: center;
       padding: 80px 0;
       color: #dc2626;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     #chart-container { display: none; }
     #stats-container { display: none; }
+
+    /* ── Mobile ──────────────────────────────────────────────────── */
+    @media (max-width: 680px) {
+      #sidebar      { display: none; }
+      #tab-bar      { display: block; }
+      .app-layout   { display: block; }
+      .chart-area   { height: 300px; }
+      .date-inputs  { display: none; }  /* hide on small screens */
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Sparebank 1 SMN <span style="color:#7aa8d0;font-weight:400">(MING.OL)</span></h1>
-  <div class="sub">Total Return &mdash; All dividends reinvested at closing price &nbsp;|&nbsp; <span id="last-updated">Loading&hellip;</span></div>
+  <h1 id="header-name">Norwegian Sparebank Stocks</h1>
+  <div class="sub">Total Return &mdash; All dividends reinvested &nbsp;|&nbsp; <span id="last-updated">Loading&hellip;</span></div>
 </header>
 
-<div class="container">
+<!-- Mobile: horizontal scrollable tab bar -->
+<nav id="tab-bar"></nav>
 
-  <!-- Controls -->
-  <div class="card">
-    <div class="controls">
-      <div class="range-buttons">
-        <button class="range-btn" data-range="1">1Y</button>
-        <button class="range-btn" data-range="3">3Y</button>
-        <button class="range-btn" data-range="5">5Y</button>
-        <button class="range-btn" data-range="10">10Y</button>
-        <button class="range-btn active" data-range="max">Max</button>
-      </div>
-      <div class="date-inputs">
-        <label>From</label>
-        <input type="date" id="date-from" />
-        <label>To</label>
-        <input type="date" id="date-to" />
-      </div>
-    </div>
-  </div>
+<div class="app-layout">
 
-  <!-- Chart -->
-  <div class="card">
-    <div id="loading">Loading chart data&hellip;</div>
-    <div id="error-msg">Could not load data. Make sure <code>data/data.json</code> exists (run the GitHub Actions workflow first).</div>
-    <div id="chart-container">
-      <div class="chart-area">
-        <canvas id="chart"></canvas>
-      </div>
-      <div class="legend">
-        <div class="legend-item">
-          <svg width="26" height="12"><line x1="0" y1="6" x2="26" y2="6" stroke="#2563eb" stroke-width="2.5"/></svg>
-          Total Return (dividends reinvested)
-        </div>
-        <div class="legend-item">
-          <svg width="26" height="12"><line x1="0" y1="6" x2="26" y2="6" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/></svg>
-          Price Return only
+  <!-- Desktop: left sidebar -->
+  <aside id="sidebar">
+    <div class="sidebar-label">Sparebanker</div>
+    <div id="sidebar-list"></div>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Controls -->
+      <div class="card">
+        <div class="controls">
+          <div class="range-buttons">
+            <button class="range-btn" data-range="1">1Y</button>
+            <button class="range-btn" data-range="3">3Y</button>
+            <button class="range-btn" data-range="5">5Y</button>
+            <button class="range-btn" data-range="10">10Y</button>
+            <button class="range-btn active" data-range="max">Max</button>
+          </div>
+          <div class="date-inputs">
+            <label>From</label>
+            <input type="date" id="date-from" />
+            <label>To</label>
+            <input type="date" id="date-to" />
+          </div>
         </div>
       </div>
-      <div class="note">
-        Data: Yahoo Finance &nbsp;&bull;&nbsp; Dividends reinvested at closing price on ex-dividend date &nbsp;&bull;&nbsp; Chart indexed to 100 at selected start date
+
+      <!-- Chart -->
+      <div class="card">
+        <div id="loading">Loading&hellip;</div>
+        <div id="error-msg"></div>
+        <div id="chart-container">
+          <div class="chart-area">
+            <canvas id="chart"></canvas>
+          </div>
+          <div class="legend">
+            <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#2563eb" stroke-width="2.5"/></svg>
+              Total Return (dividends reinvested)
+            </div>
+            <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/></svg>
+              Price Return only
+            </div>
+          </div>
+          <div class="note">
+            Data: Yahoo Finance &nbsp;&bull;&nbsp; Dividends reinvested at closing price on ex-dividend date &nbsp;&bull;&nbsp; Indexed to 100 at selected start date
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Stats -->
-  <div class="stats-grid" id="stats-container">
-    <div class="stat">
-      <div class="stat-label">Total Return</div>
-      <div class="stat-value" id="s-total">–</div>
-      <div class="stat-sub">with dividends reinvested</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Price Return</div>
-      <div class="stat-value" id="s-price">–</div>
-      <div class="stat-sub">capital gain only</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Dividend Contribution</div>
-      <div class="stat-value" id="s-divs">–</div>
-      <div class="stat-sub">extra return from dividends</div>
-    </div>
-    <div class="stat">
-      <div class="stat-label">Annualized Return</div>
-      <div class="stat-value" id="s-cagr">–</div>
-      <div class="stat-sub">per year (total return, CAGR)</div>
-    </div>
-  </div>
+      <!-- Stats -->
+      <div class="stats-grid" id="stats-container">
+        <div class="stat">
+          <div class="stat-label">Total Return</div>
+          <div class="stat-value" id="s-total">–</div>
+          <div class="stat-sub">with dividends reinvested</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Price Return</div>
+          <div class="stat-value" id="s-price">–</div>
+          <div class="stat-sub">capital gain only</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Dividend Contribution</div>
+          <div class="stat-value" id="s-divs">–</div>
+          <div class="stat-sub">extra return from dividends</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Annualized Return</div>
+          <div class="stat-value" id="s-cagr">–</div>
+          <div class="stat-sub">per year (total return, CAGR)</div>
+        </div>
+      </div>
 
-</div>
+    </div>
+  </main>
+
+</div><!-- .app-layout -->
 
 <script>
-let allRecords = [];
-let chart = null;
-let activeRange = 'max';
+// ── State ─────────────────────────────────────────────────────────────────────
+const state = {
+  stocks:        [],      // [{ticker, name}] from stocks.json
+  currentTicker: null,
+  activeRange:   'max',
+  allRecords:    [],      // records for the current stock
+  chart:         null,    // Chart.js instance (reused across stock switches)
+};
+const dataCache = new Map(); // ticker → parsed JSON response
 
-// ── Data loading ──────────────────────────────────────────────────────────────
 
-async function loadData() {
+// ── Boot ──────────────────────────────────────────────────────────────────────
+async function initApp() {
   try {
-    const resp = await fetch('data/data.json');
+    const resp = await fetch('data/stocks.json');
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const json = await resp.json();
-
-    document.getElementById('last-updated').textContent = 'Updated ' + json.last_updated;
-    allRecords = json.records;
-
-    const firstDate = allRecords[0].date;
-    const lastDate  = allRecords[allRecords.length - 1].date;
-
-    const fromEl = document.getElementById('date-from');
-    const toEl   = document.getElementById('date-to');
-    fromEl.min = firstDate; fromEl.max = lastDate;
-    toEl.min   = firstDate; toEl.max   = lastDate;
-    toEl.value = lastDate;
-
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('chart-container').style.display = 'block';
-    document.getElementById('stats-container').style.display = 'grid';
-
-    applyRange('max');
-
+    state.stocks = await resp.json();
   } catch (e) {
-    console.error(e);
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('error-msg').style.display = 'block';
+    showError('Could not load stock index (data/stocks.json). Run the GitHub Actions workflow first.');
+    return;
   }
+
+  if (state.stocks.length === 0) {
+    showError('No stocks found in data/stocks.json.');
+    return;
+  }
+
+  buildNav();
+
+  const initialTicker = getTickerFromHash() || state.stocks[0].ticker;
+  await selectStock(initialTicker);
 }
 
-// ── Date helpers ──────────────────────────────────────────────────────────────
+window.addEventListener('hashchange', () => {
+  const ticker = getTickerFromHash();
+  if (ticker && ticker !== state.currentTicker) selectStock(ticker);
+});
 
+
+// ── Navigation ────────────────────────────────────────────────────────────────
+function buildNav() {
+  const sidebarList = document.getElementById('sidebar-list');
+  const tabBar      = document.getElementById('tab-bar');
+
+  state.stocks.forEach(({ ticker, name }) => {
+    // Sidebar item
+    const a = document.createElement('a');
+    a.href = '#' + ticker;
+    a.className = 'sidebar-item';
+    a.dataset.ticker = ticker;
+    a.innerHTML = `<div class="sidebar-name">${name}</div><div class="sidebar-ticker">${ticker}</div>`;
+    a.addEventListener('click', e => { e.preventDefault(); selectStock(ticker); });
+    sidebarList.appendChild(a);
+
+    // Mobile tab item
+    const tab = document.createElement('span');
+    tab.className = 'tab-item';
+    tab.dataset.ticker = ticker;
+    // Shorten label for mobile
+    tab.textContent = name
+      .replace('Sparebank 1 ', 'SPB1 ')
+      .replace('Sparebanken ', 'SPB ');
+    tab.addEventListener('click', () => selectStock(ticker));
+    tabBar.appendChild(tab);
+  });
+}
+
+function setActiveNav(ticker) {
+  document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.ticker === ticker);
+  });
+  // Scroll active tab into view on mobile
+  const activeTab = document.querySelector(`.tab-item[data-ticker="${ticker}"]`);
+  activeTab?.scrollIntoView({ behavior: 'smooth', inline: 'nearest', block: 'nearest' });
+}
+
+function getTickerFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (!hash) return null;
+  return state.stocks.find(s => s.ticker === hash)?.ticker ?? null;
+}
+
+
+// ── Stock selection ───────────────────────────────────────────────────────────
+async function selectStock(ticker) {
+  if (ticker === state.currentTicker) return;
+
+  showLoading();
+
+  let stockData = dataCache.get(ticker);
+  if (!stockData) {
+    try {
+      const resp = await fetch(`data/${ticker}.json`);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      stockData = await resp.json();
+      dataCache.set(ticker, stockData);
+    } catch (e) {
+      showError(`Could not load data for ${ticker}.`);
+      return;
+    }
+  }
+
+  state.currentTicker = ticker;
+  state.allRecords    = stockData.records;
+  state.activeRange   = 'max';
+
+  // URL hash (bookmarkable, no page reload)
+  history.replaceState(null, '', '#' + ticker);
+
+  // Update header
+  const stock = state.stocks.find(s => s.ticker === ticker);
+  document.getElementById('header-name').innerHTML =
+    `${stock.name} <span style="color:#7aa8d0;font-weight:400">(${ticker})</span>`;
+  document.getElementById('last-updated').textContent =
+    'Updated ' + stockData.last_updated;
+
+  // Update nav
+  setActiveNav(ticker);
+
+  // Reset date pickers
+  const firstDate = state.allRecords[0].date;
+  const lastDate  = state.allRecords[state.allRecords.length - 1].date;
+  const fromEl = document.getElementById('date-from');
+  const toEl   = document.getElementById('date-to');
+  fromEl.min = firstDate; fromEl.max = lastDate;
+  toEl.min   = firstDate; toEl.max   = lastDate;
+  toEl.value = lastDate;
+
+  // Reset range buttons to Max
+  document.querySelectorAll('.range-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.range === 'max'));
+
+  showContent();
+  applyRange('max');
+}
+
+
+// ── Visibility helpers ────────────────────────────────────────────────────────
+function showLoading() {
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('error-msg').style.display = 'none';
+  document.getElementById('chart-container').style.display = 'none';
+  document.getElementById('stats-container').style.display = 'none';
+}
+function showContent() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('error-msg').style.display = 'none';
+  document.getElementById('chart-container').style.display = 'block';
+  document.getElementById('stats-container').style.display = 'grid';
+}
+function showError(msg) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('error-msg').style.display = 'block';
+  document.getElementById('error-msg').textContent = msg;
+}
+
+
+// ── Date helpers ──────────────────────────────────────────────────────────────
 function startDateForRange(years) {
-  if (years === 'max') return allRecords[0].date;
-  const last = new Date(allRecords[allRecords.length - 1].date);
+  if (years === 'max') return state.allRecords[0].date;
+  const last = new Date(state.allRecords[state.allRecords.length - 1].date);
   last.setFullYear(last.getFullYear() - years);
   return last.toISOString().slice(0, 10);
 }
 
 function filterAndNormalize(startDate, endDate) {
-  const slice = allRecords.filter(r => r.date >= startDate && r.date <= endDate);
+  const slice = state.allRecords.filter(r => r.date >= startDate && r.date <= endDate);
   if (slice.length < 2) return [];
-
   const initTri   = slice[0].tri;
   const initClose = slice[0].close;
-
   return slice.map(r => ({
     date:        r.date,
     totalReturn: r.tri / initTri * 100,
     priceReturn: r.close / initClose * 100,
-    div:         r.div,
   }));
 }
 
-// ── Chart rendering ───────────────────────────────────────────────────────────
 
+// ── Chart rendering ───────────────────────────────────────────────────────────
 function xTickCallback(labels) {
-  const days = (new Date(labels[labels.length-1]) - new Date(labels[0])) / 86400000;
+  const days = (new Date(labels[labels.length - 1]) - new Date(labels[0])) / 86400000;
   return function(val) {
     const label = labels[val] || '';
-    if (days > 365 * 3) return label.slice(0, 4);        // YYYY
-    if (days > 90)      return label.slice(0, 7);        // YYYY-MM
-    return label.slice(5);                               // MM-DD
+    if (days > 365 * 3) return label.slice(0, 4);   // YYYY
+    if (days > 90)      return label.slice(0, 7);   // YYYY-MM
+    return label.slice(5);                           // MM-DD
   };
 }
 
 function renderChart(data) {
-  const labels     = data.map(d => d.date);
-  const triValues  = data.map(d => d.totalReturn);
-  const priceValues= data.map(d => d.priceReturn);
+  const labels      = data.map(d => d.date);
+  const triValues   = data.map(d => d.totalReturn);
+  const priceValues = data.map(d => d.priceReturn);
+  const tickCb      = xTickCallback(labels);
 
-  const tickCb = xTickCallback(labels);
-
-  if (chart) {
-    chart.data.labels           = labels;
-    chart.data.datasets[0].data = triValues;
-    chart.data.datasets[1].data = priceValues;
-    chart.options.scales.x.ticks.callback = tickCb;
-    chart.update('none');
+  if (state.chart) {
+    state.chart.data.labels           = labels;
+    state.chart.data.datasets[0].data = triValues;
+    state.chart.data.datasets[1].data = priceValues;
+    state.chart.options.scales.x.ticks.callback = tickCb;
+    state.chart.update('none');
     return;
   }
 
   const ctx = document.getElementById('chart').getContext('2d');
-  chart = new Chart(ctx, {
+  state.chart = new Chart(ctx, {
     type: 'line',
     data: {
       labels,
@@ -384,8 +619,8 @@ function renderChart(data) {
   });
 }
 
-// ── Stats update ──────────────────────────────────────────────────────────────
 
+// ── Stats ─────────────────────────────────────────────────────────────────────
 function setStat(id, pct, suffix = '') {
   const el = document.getElementById(id);
   el.className = 'stat-value ' + (pct >= 0 ? 'pos' : 'neg');
@@ -395,32 +630,33 @@ function setStat(id, pct, suffix = '') {
 function updateStats(data) {
   const first = data[0];
   const last  = data[data.length - 1];
-
   const totalPct = last.totalReturn - 100;
   const pricePct = last.priceReturn - 100;
   const divPct   = totalPct - pricePct;
-
-  const days  = (new Date(last.date) - new Date(first.date)) / 86400000;
-  const years = days / 365.25;
-  const cagr  = years > 0.01 ? (Math.pow(last.totalReturn / 100, 1 / years) - 1) * 100 : 0;
-
+  const days     = (new Date(last.date) - new Date(first.date)) / 86400000;
+  const years    = days / 365.25;
+  const cagr     = years > 0.01 ? (Math.pow(last.totalReturn / 100, 1 / years) - 1) * 100 : 0;
   setStat('s-total', totalPct);
   setStat('s-price', pricePct);
   setStat('s-divs',  divPct);
   setStat('s-cagr',  cagr, '/yr');
 }
 
-// ── Main update flow ──────────────────────────────────────────────────────────
 
+// ── Range / date controls ─────────────────────────────────────────────────────
 function applyRange(range) {
   const toEl   = document.getElementById('date-to');
   const fromEl = document.getElementById('date-from');
-  const lastDate = allRecords[allRecords.length - 1].date;
+  const lastDate = state.allRecords[state.allRecords.length - 1].date;
+  const endDate  = toEl.value || lastDate;
 
-  const endDate   = toEl.value || lastDate;
-  const startDate = range === 'custom' ? (fromEl.value || allRecords[0].date) : startDateForRange(range);
-
-  if (range !== 'custom') fromEl.value = startDate;
+  let startDate;
+  if (range === 'custom') {
+    startDate = fromEl.value || state.allRecords[0].date;
+  } else {
+    startDate = startDateForRange(range);
+    fromEl.value = startDate;
+  }
 
   const data = filterAndNormalize(startDate, endDate);
   if (data.length < 2) return;
@@ -429,29 +665,28 @@ function applyRange(range) {
   updateStats(data);
 }
 
-// ── Event listeners ───────────────────────────────────────────────────────────
-
 document.querySelectorAll('.range-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    activeRange = btn.dataset.range === 'max' ? 'max' : parseInt(btn.dataset.range);
-    applyRange(activeRange);
+    state.activeRange = btn.dataset.range === 'max' ? 'max' : parseInt(btn.dataset.range);
+    applyRange(state.activeRange);
   });
 });
 
 document.getElementById('date-from').addEventListener('change', () => {
   document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
-  activeRange = 'custom';
+  state.activeRange = 'custom';
   applyRange('custom');
 });
 
 document.getElementById('date-to').addEventListener('change', () => {
-  applyRange(activeRange);
+  applyRange(state.activeRange);
 });
 
-// ── Boot ──────────────────────────────────────────────────────────────────────
-loadData();
+
+// ── Start ─────────────────────────────────────────────────────────────────────
+initApp();
 </script>
 
 </body>
