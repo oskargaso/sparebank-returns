@@ -197,6 +197,54 @@
     /* ── Chart ───────────────────────────────────────────────────── */
     .chart-area { position: relative; height: 400px; }
 
+    /* ── Stock logo overlay ──────────────────────────────────────── */
+    #logo-wrap {
+      position: absolute;
+      top: 10px;
+      left: 58px;     /* clear the Chart.js y-axis label area */
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(4px);
+      border-radius: 8px;
+      padding: 5px 10px 5px 6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.09);
+      pointer-events: none;  /* don't intercept chart hover */
+    }
+    #logo-img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
+      border-radius: 4px;
+      display: none;
+    }
+    #logo-badge {
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.3px;
+      flex-shrink: 0;
+    }
+    #logo-name {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1e293b;
+      white-space: nowrap;
+    }
+    #logo-ticker {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      margin-left: 2px;
+    }
+
     .legend {
       display: flex;
       gap: 18px;
@@ -319,6 +367,11 @@
         <div id="chart-container">
           <div class="chart-area">
             <canvas id="chart"></canvas>
+            <div id="logo-wrap">
+              <img id="logo-img" src="" alt="" />
+              <div id="logo-badge"></div>
+              <span><span id="logo-name"></span> <span id="logo-ticker"></span></span>
+            </div>
           </div>
           <div class="legend">
             <div class="legend-item">
@@ -366,6 +419,141 @@
 </div><!-- .app-layout -->
 
 <script>
+// ── Logo domain mapping (Clearbit logo API) ───────────────────────────────────
+const LOGO_DOMAINS = {
+  "EQNR.OL":  "equinor.com",
+  "DNB.OL":   "dnb.no",
+  "KOG.OL":   "kongsberg.com",
+  "TEL.OL":   "telenor.com",
+  "AKRBP.OL": "akerbp.com",
+  "NHY.OL":   "hydro.com",
+  "GJF.OL":   "gjensidige.no",
+  "YAR.OL":   "yara.com",
+  "ORK.OL":   "orkla.com",
+  "MOWI.OL":  "mowi.com",
+  "AKER.OL":  "akerasa.com",
+  "SUBC.OL":  "subsea7.com",
+  "FRO.OL":   "frontline.bm",
+  "SALM.OL":  "salmar.no",
+  "STB.OL":   "storebrand.no",
+  "WAWI.OL":  "walleniuswilhelmsen.com",
+  "PROT.OL":  "protectorforsikring.no",
+  "HAFNI.OL": "hafniabm.com",
+  "AUTO.OL":  "autostoretech.com",
+  "SBNOR.OL": "sparebanken.no",
+  "TOM.OL":   "tomra.com",
+  "DOFG.OL":  "dofasa.com",
+  "MING.OL":  "smn.no",
+  "LSG.OL":   "leroy.no",
+  "SPOL.OL":  "sb1ostlandet.no",
+  "NOD.OL":   "nordicsemi.com",
+  "BWLPG.OL": "bwlpg.com",
+  "BAKKA.OL": "bakkafrost.com",
+  "VEI.OL":   "veidekke.no",
+  "TIETO.OL": "tietoevry.com",
+  "TGS.OL":   "tgs.com",
+  "CADLR.OL": "cadeler.com",
+  "ENTRA.OL": "entra.no",
+  "AKSO.OL":  "akersolutions.com",
+  "AFG.OL":   "afgruppen.no",
+  "SNI.OL":   "stolt-nielsen.com",
+  "SCATC.OL": "scatec.com",
+  "OET.OL":   "okeanisecotankers.com",
+  "ELK.OL":   "elkem.com",
+  "BRG.OL":   "borregaard.com",
+  "BORR.OL":  "borrdrilling.com",
+  "NONG.OL":  "snn.no",
+  "ATEA.OL":  "atea.no",
+  "NAS.OL":   "norwegian.com",
+  "DNO.OL":   "dno.no",
+  "EPR.OL":   "europris.no",
+  "BNOR.OL":  "bluenord.com",
+  "ELO.OL":   "elopak.com",
+  "BONHR.OL": "bonheur.no",
+  "MPCC.OL":  "mpccontainerships.com",
+  "AKBM.OL":  "akerbiomarineas.com",
+  "BWO.OL":   "bwoffshore.com",
+  "AFK.OL":   "arendalsfossekompani.no",
+  "SATS.OL":  "sats.com",
+  "GSF.OL":   "griegseafood.com",
+  "ODF.OL":   "odfjell.com",
+  "RING.OL":  "sb1ring-had.no",
+  "LINK.OL":  "linkmobility.com",
+  "PEXIP.OL": "pexip.com",
+  "PARB.OL":  "paretobank.no",
+  "MORG.OL":  "sparebankenmore.no",
+  "BOUV.OL":  "bouvet.no",
+  "KID.OL":   "kid.no",
+  "MULTI.OL": "multiconsult.no",
+  "ABG.OL":   "abgsc.com",
+  "CLOUD.OL": "cloudberryenergy.com",
+  "MEDI.OL":  "medistim.com",
+  "NEL.OL":   "nelhydrogen.com",
+  "ELMRA.OL": "elmeragroup.com",
+  "AKVA.OL":  "akvagroup.com",
+  "ZAP.OL":   "zaptec.com",
+  "NSKOG.OL": "norske-skog.com",
+  "APR.OL":   "appear.com",
+  "ARCH.OL":  "archerwell.com",
+  "PHO.OL":   "photocure.com",
+  "INSTA.OL": "instabank.no",
+  "SPOG.OL":  "spob.no",
+  "ZAL.OL":   "zalaris.com",
+  "NKR.OL":   "nekkar.com",
+  "NRC.OL":   "nrcgroup.com",
+  "PRS.OL":   "prosafe.com",
+  "AZT.OL":   "arcticzymes.com",
+  "NORSE.OL": "norwegianair.com",
+  "VISTN.OL": "vistinpharma.com",
+  "IDEX.OL":  "idexbiometrics.com",
+  "RECSI.OL": "recsilicon.com",
+  "HPUR.OL":  "hexagonpurus.com",
+  "STRO.OL":  "strongpoint.com",
+  "EMGS.OL":  "emgs.com",
+  "HYPRO.OL": "hydrogenpro.com",
+  "PCIB.OL":  "pcibiotech.no",
+};
+
+// Derive a consistent color from ticker string
+function tickerColor(ticker) {
+  const palette = ['#2563eb','#7c3aed','#059669','#b45309','#0891b2','#be185d','#4f46e5','#0f766e'];
+  let h = 0;
+  for (const c of ticker) h = (h * 31 + c.charCodeAt(0)) & 0x7fffffff;
+  return palette[h % palette.length];
+}
+
+function updateLogo(ticker, name) {
+  const imgEl    = document.getElementById('logo-img');
+  const badgeEl  = document.getElementById('logo-badge');
+  const nameEl   = document.getElementById('logo-name');
+  const tickerEl = document.getElementById('logo-ticker');
+
+  // Short display name (strip common suffixes for brevity)
+  const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
+  nameEl.textContent  = shortName;
+  tickerEl.textContent = ticker.replace('.OL', '');
+
+  const domain = LOGO_DOMAINS[ticker];
+  if (domain) {
+    imgEl.style.display  = 'block';
+    badgeEl.style.display = 'none';
+    imgEl.src = `https://logo.clearbit.com/${domain}`;
+    imgEl.onerror = () => showBadge(ticker, badgeEl, imgEl);
+  } else {
+    showBadge(ticker, badgeEl, imgEl);
+  }
+}
+
+function showBadge(ticker, badgeEl, imgEl) {
+  imgEl.style.display   = 'none';
+  badgeEl.style.display = 'flex';
+  badgeEl.style.background = tickerColor(ticker);
+  // Use first 1-3 letters of the ticker (without .OL)
+  const abbr = ticker.replace('.OL', '').slice(0, 3);
+  badgeEl.textContent = abbr;
+}
+
+
 // ── State ─────────────────────────────────────────────────────────────────────
 const state = {
   stocks:        [],      // [{ticker, name}] from stocks.json
@@ -475,8 +663,9 @@ async function selectStock(ticker) {
   // URL hash (bookmarkable, no page reload)
   history.replaceState(null, '', '#' + ticker);
 
-  // Update header
+  // Update logo overlay
   const stock = state.stocks.find(s => s.ticker === ticker);
+  updateLogo(ticker, stock.name);
   document.getElementById('header-name').innerHTML =
     `${stock.name} <span style="color:#7aa8d0;font-weight:400">(${ticker})</span>`;
   document.getElementById('last-updated').textContent =
