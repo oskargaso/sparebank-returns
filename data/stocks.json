@@ -1,1014 +1,1014 @@
 [
   {
     "ticker":"EQNR.OL",
-    "name":null
+    "name":"Equinor"
   },
   {
     "ticker":"DNB.OL",
-    "name":null
+    "name":"DNB Bank"
   },
   {
     "ticker":"KOG.OL",
-    "name":null
+    "name":"Kongsberg Gruppen"
   },
   {
     "ticker":"TEL.OL",
-    "name":null
+    "name":"Telenor"
   },
   {
     "ticker":"AKRBP.OL",
-    "name":null
+    "name":"Aker BP"
   },
   {
     "ticker":"NHY.OL",
-    "name":null
+    "name":"Norsk Hydro"
   },
   {
     "ticker":"GJF.OL",
-    "name":null
+    "name":"Gjensidige Forsikring"
   },
   {
     "ticker":"YAR.OL",
-    "name":null
+    "name":"Yara International"
   },
   {
     "ticker":"ORK.OL",
-    "name":null
+    "name":"Orkla"
   },
   {
     "ticker":"MOWI.OL",
-    "name":null
+    "name":"Mowi"
   },
   {
     "ticker":"AKER.OL",
-    "name":null
+    "name":"Aker"
   },
   {
     "ticker":"SUBC.OL",
-    "name":null
+    "name":"Subsea 7"
   },
   {
     "ticker":"FRO.OL",
-    "name":null
+    "name":"Frontline"
   },
   {
     "ticker":"SALM.OL",
-    "name":null
+    "name":"SalMar"
   },
   {
     "ticker":"STB.OL",
-    "name":null
+    "name":"Storebrand"
   },
   {
     "ticker":"VEND.OL",
-    "name":null
+    "name":"Vend Marketplaces"
   },
   {
     "ticker":"WAWI.OL",
-    "name":null
+    "name":"Wallenius Wilhelmsen"
   },
   {
     "ticker":"PROT.OL",
-    "name":null
+    "name":"Protector Forsikring"
   },
   {
     "ticker":"CMBTO.OL",
-    "name":null
+    "name":"CMB.TECH"
   },
   {
     "ticker":"HAFNI.OL",
-    "name":null
+    "name":"Hafnia"
   },
   {
     "ticker":"AUTO.OL",
-    "name":null
+    "name":"AutoStore Holdings"
   },
   {
     "ticker":"SBNOR.OL",
-    "name":null
+    "name":"Sparebanken Norge"
   },
   {
     "ticker":"TOM.OL",
-    "name":null
+    "name":"Tomra Systems"
   },
   {
     "ticker":"DOFG.OL",
-    "name":null
+    "name":"DOF Group"
   },
   {
     "ticker":"MING.OL",
-    "name":null
+    "name":"Sparebank 1 SMN"
   },
   {
     "ticker":"LSG.OL",
-    "name":null
+    "name":"Ler\u00f8y Seafood Group"
   },
   {
     "ticker":"SPOL.OL",
-    "name":null
+    "name":"Sparebank 1 \u00d8stlandet"
   },
   {
     "ticker":"NOD.OL",
-    "name":null
+    "name":"Nordic Semiconductor"
   },
   {
     "ticker":"BWLPG.OL",
-    "name":null
+    "name":"BW LPG"
   },
   {
     "ticker":"BAKKA.OL",
-    "name":null
+    "name":"Bakkafrost"
   },
   {
     "ticker":"VEI.OL",
-    "name":null
+    "name":"Veidekke"
   },
   {
     "ticker":"TIETO.OL",
-    "name":null
+    "name":"Tietoevry"
   },
   {
     "ticker":"TGS.OL",
-    "name":null
+    "name":"TGS"
   },
   {
     "ticker":"KIT.OL",
-    "name":null
+    "name":"Kitron"
   },
   {
     "ticker":"AUSS.OL",
-    "name":null
+    "name":"Austevoll Seafood"
   },
   {
     "ticker":"CADLR.OL",
-    "name":null
+    "name":"Cadeler"
   },
   {
     "ticker":"ENTRA.OL",
-    "name":null
+    "name":"Entra"
   },
   {
     "ticker":"AKSO.OL",
-    "name":null
+    "name":"Aker Solutions"
   },
   {
     "ticker":"AFG.OL",
-    "name":null
+    "name":"AF Gruppen"
   },
   {
     "ticker":"SNI.OL",
-    "name":null
+    "name":"Stolt-Nielsen"
   },
   {
     "ticker":"SWON.OL",
-    "name":null
+    "name":"SoftwareOne Holding"
   },
   {
     "ticker":"SCATC.OL",
-    "name":null
+    "name":"Scatec"
   },
   {
     "ticker":"OET.OL",
-    "name":null
+    "name":"Okeanis Eco Tankers"
   },
   {
     "ticker":"ELK.OL",
-    "name":null
+    "name":"Elkem"
   },
   {
     "ticker":"BRG.OL",
-    "name":null
+    "name":"Borregaard"
   },
   {
     "ticker":"BORR.OL",
-    "name":null
+    "name":"Borr Drilling"
   },
   {
     "ticker":"NONG.OL",
-    "name":null
+    "name":"Sparebank 1 Nord-Norge"
   },
   {
     "ticker":"ATEA.OL",
-    "name":null
+    "name":"Atea"
   },
   {
     "ticker":"NAS.OL",
-    "name":null
+    "name":"Norwegian Air Shuttle"
   },
   {
     "ticker":"DNO.OL",
-    "name":null
+    "name":"DNO"
   },
   {
     "ticker":"EPR.OL",
-    "name":null
+    "name":"Europris"
   },
   {
     "ticker":"BNOR.OL",
-    "name":null
+    "name":"Bluenord"
   },
   {
     "ticker":"ELO.OL",
-    "name":null
+    "name":"Elopak"
   },
   {
     "ticker":"NORCO.OL",
-    "name":null
+    "name":"Norconsult"
   },
   {
     "ticker":"SOMA.OL",
-    "name":null
+    "name":"Solstad Maritime"
   },
   {
     "ticker":"COSH.OL",
-    "name":null
+    "name":"Constellation Oil Services"
   },
   {
     "ticker":"BONHR.OL",
-    "name":null
+    "name":"Bonheur"
   },
   {
     "ticker":"MPCC.OL",
-    "name":null
+    "name":"MPC Container Ships"
   },
   {
     "ticker":"AKBM.OL",
-    "name":null
+    "name":"Aker BioMarine"
   },
   {
     "ticker":"BWO.OL",
-    "name":null
+    "name":"BW Offshore"
   },
   {
     "ticker":"B2I.OL",
-    "name":null
+    "name":"B2 Impact"
   },
   {
     "ticker":"AFK.OL",
-    "name":null
+    "name":"Arendals Fossekompani"
   },
   {
     "ticker":"SATS.OL",
-    "name":null
+    "name":"SATS"
   },
   {
     "ticker":"GSF.OL",
-    "name":null
+    "name":"Grieg Seafood"
   },
   {
     "ticker":"ODF.OL",
-    "name":null
+    "name":"Odfjell Ser. A"
   },
   {
     "ticker":"PLSV.OL",
-    "name":null
+    "name":"Paratus Energy Services"
   },
   {
     "ticker":"RING.OL",
-    "name":null
+    "name":"Sparebank 1 Ringerike Hadeland"
   },
   {
     "ticker":"SNTIA.OL",
-    "name":null
+    "name":"Sentia"
   },
   {
     "ticker":"LINK.OL",
-    "name":null
+    "name":"Link Mobility Group"
   },
   {
     "ticker":"PEXIP.OL",
-    "name":null
+    "name":"Pexip Holding"
   },
   {
     "ticker":"PARB.OL",
-    "name":null
+    "name":"Pareto Bank"
   },
   {
     "ticker":"WWIB.OL",
-    "name":null
+    "name":"Wilh. Wilhelmsen Holding B"
   },
   {
     "ticker":"HSHP.OL",
-    "name":null
+    "name":"Himalaya Shipping"
   },
   {
     "ticker":"MORG.OL",
-    "name":null
+    "name":"Sparebanken M\u00f8re"
   },
   {
     "ticker":"SOAG.OL",
-    "name":null
+    "name":"Sparebank 1 \u00d8stfold Akershus"
   },
   {
     "ticker":"KCC.OL",
-    "name":null
+    "name":"Klaveness Combination Carriers"
   },
   {
     "ticker":"BOUV.OL",
-    "name":null
+    "name":"Bouvet"
   },
   {
     "ticker":"KID.OL",
-    "name":null
+    "name":"Kid"
   },
   {
     "ticker":"SOFF.OL",
-    "name":null
+    "name":"Solstad Offshore"
   },
   {
     "ticker":"HELG.OL",
-    "name":null
+    "name":"Sparebank 1 Helgeland"
   },
   {
     "ticker":"MULTI.OL",
-    "name":null
+    "name":"Multiconsult"
   },
   {
     "ticker":"SEA1.OL",
-    "name":null
+    "name":"Sea1 Offshore"
   },
   {
     "ticker":"ABG.OL",
-    "name":null
+    "name":"ABG Sundal Collier"
   },
   {
     "ticker":"CLOUD.OL",
-    "name":null
+    "name":"Cloudberry Clean Energy"
   },
   {
     "ticker":"AKAST.OL",
-    "name":null
+    "name":"Akastor"
   },
   {
     "ticker":"MEDI.OL",
-    "name":null
+    "name":"Medistim"
   },
   {
     "ticker":"NEL.OL",
-    "name":null
+    "name":"NEL"
   },
   {
     "ticker":"ROGS.OL",
-    "name":null
+    "name":"Rogaland Sparebank"
   },
   {
     "ticker":"ELMRA.OL",
-    "name":null
+    "name":"Elmera Group"
   },
   {
     "ticker":"BEWI.OL",
-    "name":null
+    "name":"Bewi"
   },
   {
     "ticker":"AKVA.OL",
-    "name":null
+    "name":"Akva Group"
   },
   {
     "ticker":"NAPA.OL",
-    "name":null
+    "name":"Napatech"
   },
   {
     "ticker":"SMOP.OL",
-    "name":null
+    "name":"Smartoptics Group"
   },
   {
     "ticker":"ENVIP.OL",
-    "name":null
+    "name":"Envipco Holding"
   },
   {
     "ticker":"PEN.OL",
-    "name":null
+    "name":"Panoro Energy"
   },
   {
     "ticker":"2020.OL",
-    "name":null
+    "name":"2020 Bulkers"
   },
   {
     "ticker":"ANDF.OL",
-    "name":null
+    "name":"Andfjord Salmon"
   },
   {
     "ticker":"POL.OL",
-    "name":null
+    "name":"Polaris Media"
   },
   {
     "ticker":"MORLD.OL",
-    "name":null
+    "name":"Moreld"
   },
   {
     "ticker":"CAMBI.OL",
-    "name":null
+    "name":"Cambi"
   },
   {
     "ticker":"SMCRT.OL",
-    "name":null
+    "name":"SmartCraft"
   },
   {
     "ticker":"RANA.OL",
-    "name":null
+    "name":"Rana Gruber"
   },
   {
     "ticker":"MAS.OL",
-    "name":null
+    "name":"M\u00e5s\u00f8val"
   },
   {
     "ticker":"OTL.OL",
-    "name":null
+    "name":"Odfjell Technology"
   },
   {
     "ticker":"NOL.OL",
-    "name":null
+    "name":"Northern Ocean"
   },
   {
     "ticker":"ZAP.OL",
-    "name":null
+    "name":"Zaptec"
   },
   {
     "ticker":"NSKOG.OL",
-    "name":null
+    "name":"Norske Skog"
   },
   {
     "ticker":"VDI.OL",
-    "name":null
+    "name":"Vantage Drilling International"
   },
   {
     "ticker":"APR.OL",
-    "name":null
+    "name":"Appear"
   },
   {
     "ticker":"VTURA.OL",
-    "name":null
+    "name":"Ventura Offshore"
   },
   {
     "ticker":"ARCH.OL",
-    "name":null
+    "name":"Archer"
   },
   {
     "ticker":"XPLRA.OL",
-    "name":null
+    "name":"Xplora Technologies"
   },
   {
     "ticker":"IWS.OL",
-    "name":null
+    "name":"Integrated Wind Solutions"
   },
   {
     "ticker":"DELIA.OL",
-    "name":null
+    "name":"Delia Group"
   },
   {
     "ticker":"ODFB.OL",
-    "name":null
+    "name":"Odfjell Ser. B"
   },
   {
     "ticker":"REACH.OL",
-    "name":null
+    "name":"Reach Subsea"
   },
   {
     "ticker":"SKUE.OL",
-    "name":null
+    "name":"Skue Sparebank"
   },
   {
     "ticker":"SALME.OL",
-    "name":null
+    "name":"Salmon Evolution"
   },
   {
     "ticker":"DVD.OL",
-    "name":null
+    "name":"Deep Value Driller"
   },
   {
     "ticker":"PHO.OL",
-    "name":null
+    "name":"Photocure"
   },
   {
     "ticker":"KOMPL.OL",
-    "name":null
+    "name":"Komplett"
   },
   {
     "ticker":"KOA.OL",
-    "name":null
+    "name":"Kongsberg Automotive"
   },
   {
     "ticker":"INSTA.OL",
-    "name":null
+    "name":"Instabank"
   },
   {
     "ticker":"NORAM.OL",
-    "name":null
+    "name":"Noram Drilling"
   },
   {
     "ticker":"JAREN.OL",
-    "name":null
+    "name":"J\u00e6ren Sparebank"
   },
   {
     "ticker":"SPOG.OL",
-    "name":null
+    "name":"Sparebanken \u00d8st"
   },
   {
     "ticker":"SNOR.OL",
-    "name":null
+    "name":"Sparebank 1 Nordm\u00f8re"
   },
   {
     "ticker":"AGLX.OL",
-    "name":null
+    "name":"Agilyx"
   },
   {
     "ticker":"GIGA.OL",
-    "name":null
+    "name":"Gigante Salmon"
   },
   {
     "ticker":"ZAL.OL",
-    "name":null
+    "name":"Zalaris"
   },
   {
     "ticker":"NOAP.OL",
-    "name":null
+    "name":"Nordic Aqua Partners"
   },
   {
     "ticker":"TRMED.OL",
-    "name":null
+    "name":"Thor Medical"
   },
   {
     "ticker":"PNOR.OL",
-    "name":null
+    "name":"Petronor E&P"
   },
   {
     "ticker":"NKR.OL",
-    "name":null
+    "name":"Nekkar"
   },
   {
     "ticker":"NRC.OL",
-    "name":null
+    "name":"NRC Group"
   },
   {
     "ticker":"NOM.OL",
-    "name":null
+    "name":"Nordic Mining"
   },
   {
     "ticker":"MGN.OL",
-    "name":null
+    "name":"Magnora"
   },
   {
     "ticker":"NORDH.OL",
-    "name":null
+    "name":"Nordhealth"
   },
   {
     "ticker":"AURG.OL",
-    "name":null
+    "name":"Aurskog Sparebank"
   },
   {
     "ticker":"NOHAL.OL",
-    "name":null
+    "name":"Nordic Halibut"
   },
   {
     "ticker":"AFISH.OL",
-    "name":null
+    "name":"Arctic Fish Holding"
   },
   {
     "ticker":"BMA.OL",
-    "name":null
+    "name":"Byggma"
   },
   {
     "ticker":"LUMI.OL",
-    "name":null
+    "name":"Lumi Gruppen"
   },
   {
     "ticker":"PRS.OL",
-    "name":null
+    "name":"Prosafe"
   },
   {
     "ticker":"AZT.OL",
-    "name":null
+    "name":"ArcticZymes Technologies"
   },
   {
     "ticker":"GYL.OL",
-    "name":null
+    "name":"Gyldendal"
   },
   {
     "ticker":"EIOF.OL",
-    "name":null
+    "name":"Eidesvik Offshore"
   },
   {
     "ticker":"NYKD.OL",
-    "name":null
+    "name":"Nykode Therapeutics"
   },
   {
     "ticker":"SDSD.OL",
-    "name":null
+    "name":"S.D. Standard ETC"
   },
   {
     "ticker":"NORSE.OL",
-    "name":null
+    "name":"Norse Atlantic"
   },
   {
     "ticker":"DFENS.OL",
-    "name":null
+    "name":"Fjord Defence Group"
   },
   {
     "ticker":"VISTN.OL",
-    "name":null
+    "name":"Vistin Pharma"
   },
   {
     "ticker":"VVL.OL",
-    "name":null
+    "name":"Voss Veksel- og Landmandsbank"
   },
   {
     "ticker":"HKY.OL",
-    "name":null
+    "name":"Havila Kystruten"
   },
   {
     "ticker":"NTI.OL",
-    "name":null
+    "name":"Norsk Titanium"
   },
   {
     "ticker":"SAGA.OL",
-    "name":null
+    "name":"Saga Pure"
   },
   {
     "ticker":"OMDA.OL",
-    "name":null
+    "name":"OMDA"
   },
   {
     "ticker":"LYTIX.OL",
-    "name":null
+    "name":"Lytix Biopharma"
   },
   {
     "ticker":"ELIMP.OL",
-    "name":null
+    "name":"Elektroimport\u00f8ren"
   },
   {
     "ticker":"BIEN.OL",
-    "name":null
+    "name":"Bien Sparebank"
   },
   {
     "ticker":"VOW.OL",
-    "name":null
+    "name":"VOW"
   },
   {
     "ticker":"KLDVK.OL",
-    "name":null
+    "name":"Kaldvik"
   },
   {
     "ticker":"GRONG.OL",
-    "name":null
+    "name":"Grong Sparebank"
   },
   {
     "ticker":"CRNA.OL",
-    "name":null
+    "name":"Circio Holding"
   },
   {
     "ticker":"STECH.OL",
-    "name":null
+    "name":"Soiltech"
   },
   {
     "ticker":"SCANA.OL",
-    "name":null
+    "name":"Scana"
   },
   {
     "ticker":"WEST.OL",
-    "name":null
+    "name":"Western Bulk Chartering"
   },
   {
     "ticker":"OTOVO.OL",
-    "name":null
+    "name":"Otovo"
   },
   {
     "ticker":"IDEX.OL",
-    "name":null
+    "name":"IDEX Biometrics"
   },
   {
     "ticker":"NCOD.OL",
-    "name":null
+    "name":"Norcod"
   },
   {
     "ticker":"ENSU.OL",
-    "name":null
+    "name":"Ensurge Micropower"
   },
   {
     "ticker":"HUNT.OL",
-    "name":null
+    "name":"Hunter Group"
   },
   {
     "ticker":"SB68.OL",
-    "name":null
+    "name":"Sparebank 68 Grader Nord"
   },
   {
     "ticker":"TINDE.OL",
-    "name":null
+    "name":"Tinde Sparebank"
   },
   {
     "ticker":"HDLY.OL",
-    "name":null
+    "name":"Huddly"
   },
   {
     "ticker":"JIN.OL",
-    "name":null
+    "name":"Jinhui Shipping and Transport"
   },
   {
     "ticker":"GENT.OL",
-    "name":null
+    "name":"Gentian Diagnostics"
   },
   {
     "ticker":"ITERA.OL",
-    "name":null
+    "name":"Itera"
   },
   {
     "ticker":"GEOS.OL",
-    "name":null
+    "name":"Golden Energy Offshore"
   },
   {
     "ticker":"MELG.OL",
-    "name":null
+    "name":"Melhus Sparebank"
   },
   {
     "ticker":"TRSB.OL",
-    "name":null
+    "name":"Tr\u00f8ndelag Sparebank"
   },
   {
     "ticker":"HBC.OL",
-    "name":null
+    "name":"Hofseth BioCare"
   },
   {
     "ticker":"WSTEP.OL",
-    "name":null
+    "name":"Webstep"
   },
   {
     "ticker":"AKOBO.OL",
-    "name":null
+    "name":"Akobo Minerals"
   },
   {
     "ticker":"STST.OL",
-    "name":null
+    "name":"Stainless Tankers"
   },
   {
     "ticker":"NAVA.OL",
-    "name":null
+    "name":"Navamedic"
   },
   {
     "ticker":"HPUR.OL",
-    "name":null
+    "name":"Hexagon Purus"
   },
   {
     "ticker":"CYVIZ.OL",
-    "name":null
+    "name":"Cyviz"
   },
   {
     "ticker":"STRO.OL",
-    "name":null
+    "name":"Strongpoint"
   },
   {
     "ticker":"ALNG.OL",
-    "name":null
+    "name":"Awilco LNG"
   },
   {
     "ticker":"PPG.OL",
-    "name":null
+    "name":"Pioneer Property Group"
   },
   {
     "ticker":"ZLNA.OL",
-    "name":null
+    "name":"Zelluna"
   },
   {
     "ticker":"KING.OL",
-    "name":null
+    "name":"The Kingfish Company"
   },
   {
     "ticker":"BALT.OL",
-    "name":null
+    "name":"Baltic Sea Properties"
   },
   {
     "ticker":"ZENA.OL",
-    "name":null
+    "name":"Zenith Energy"
   },
   {
     "ticker":"ROMER.OL",
-    "name":null
+    "name":"Romerike Sparebank"
   },
   {
     "ticker":"CAPSL.OL",
-    "name":null
+    "name":"Capsol Technologies"
   },
   {
     "ticker":"NTG.OL",
-    "name":null
+    "name":"Nordic Technology Group"
   },
   {
     "ticker":"TECH.OL",
-    "name":null
+    "name":"Techstep"
   },
   {
     "ticker":"LOKO.OL",
-    "name":null
+    "name":"Lokotech Group"
   },
   {
     "ticker":"GOD.OL",
-    "name":null
+    "name":"Goodtech"
   },
   {
     "ticker":"ELABS.OL",
-    "name":null
+    "name":"Elliptic Laboratories"
   },
   {
     "ticker":"PROXI.OL",
-    "name":null
+    "name":"Proximar Seafood"
   },
   {
     "ticker":"PSE.OL",
-    "name":null
+    "name":"Petrolia"
   },
   {
     "ticker":"NORTH.OL",
-    "name":null
+    "name":"North Energy"
   },
   {
     "ticker":"MPCES.OL",
-    "name":null
+    "name":"MPC Energy Solutions"
   },
   {
     "ticker":"HAVI.OL",
-    "name":null
+    "name":"Havila Shipping"
   },
   {
     "ticker":"PRYME.OL",
-    "name":null
+    "name":"Pryme"
   },
   {
     "ticker":"EQVA.OL",
-    "name":null
+    "name":"Eqva"
   },
   {
     "ticker":"HERMA.OL",
-    "name":null
+    "name":"Hermana Holding"
   },
   {
     "ticker":"AASB.OL",
-    "name":null
+    "name":"Aasen Sparebank"
   },
   {
     "ticker":"CONTX.OL",
-    "name":null
+    "name":"Contextvision"
   },
   {
     "ticker":"CAVEN.OL",
-    "name":null
+    "name":"Cavendish Hydrogen"
   },
   {
     "ticker":"MVE.OL",
-    "name":null
+    "name":"Matvareexpressen"
   },
   {
     "ticker":"OCEAN.OL",
-    "name":null
+    "name":"Ocean Geoloop"
   },
   {
     "ticker":"MVW.OL",
-    "name":null
+    "name":"M Vest Water"
   },
   {
     "ticker":"ONCIN.OL",
-    "name":null
+    "name":"Oncoinvent"
   },
   {
     "ticker":"FFSB.OL",
-    "name":null
+    "name":"Flekkefjord Sparebank"
   },
   {
     "ticker":"ASA.OL",
-    "name":null
+    "name":"Atlantic Sapphire"
   },
   {
     "ticker":"ADS.OL",
-    "name":null
+    "name":"ADS Maritime Holding"
   },
   {
     "ticker":"HUDL.OL",
-    "name":null
+    "name":"Huddlestock Fintech"
   },
   {
     "ticker":"RECSI.OL",
-    "name":null
+    "name":"REC Silicon"
   },
   {
     "ticker":"HYPRO.OL",
-    "name":null
+    "name":"HydrogenPro"
   },
   {
     "ticker":"BCS.OL",
-    "name":null
+    "name":"Bergen Carbon Solutions"
   },
   {
     "ticker":"NISB.OL",
-    "name":null
+    "name":"Nidaros Sparebank"
   },
   {
     "ticker":"OBSRV.OL",
-    "name":null
+    "name":"Observe Medical"
   },
   {
     "ticker":"NEXT.OL",
-    "name":null
+    "name":"Next Biometrics Group"
   },
   {
     "ticker":"NBX.OL",
-    "name":null
+    "name":"Norwegian Block Exchange"
   },
   {
     "ticker":"HSPG.OL",
-    "name":null
+    "name":"H\u00f8land og Setskog Sparebank"
   },
   {
     "ticker":"ABS.OL",
-    "name":null
+    "name":"Arctic Bioscience"
   },
   {
     "ticker":"IOX.OL",
-    "name":null
+    "name":"Interoil Exploration"
   },
   {
     "ticker":"EMGS.OL",
-    "name":null
+    "name":"Electromagnetic Geoservices"
   },
   {
     "ticker":"ABTEC.OL",
-    "name":null
+    "name":"Aqua Bio Technology"
   },
   {
     "ticker":"AKH.OL",
-    "name":null
+    "name":"Aker Horizons"
   },
   {
     "ticker":"EAM.OL",
-    "name":null
+    "name":"EAM Solar"
   },
   {
     "ticker":"KMCP.OL",
-    "name":null
+    "name":"KMC Properties"
   },
   {
     "ticker":"PCIB.OL",
-    "name":null
+    "name":"PCI Biotech Holding"
   },
   {
     "ticker":"PYRUM.OL",
-    "name":null
+    "name":"Pyrum Innovations"
   },
   {
     "ticker":"REFL.OL",
-    "name":null
+    "name":"Refuels"
   },
   {
     "ticker":"SOFTX.OL",
-    "name":null
+    "name":"Softox Solutions"
   },
   {
     "ticker":"ROM.OL",
-    "name":null
+    "name":"Romreal"
   },
   {
     "ticker":"RIVER.OL",
-    "name":null
+    "name":"River Tech"
   },
   {
     "ticker":"NOSN.OL",
-    "name":null
+    "name":"NOS Nova"
   },
   {
     "ticker":"GEM.OL",
-    "name":null
+    "name":"Green Minerals"
   },
   {
     "ticker":"BSP.OL",
-    "name":null
+    "name":"Black Sea Property"
   },
   {
     "ticker":"HYN.OL",
-    "name":null
+    "name":"Hynion"
   },
   {
     "ticker":"INIFY.OL",
-    "name":null
+    "name":"Inify Laboratories"
   },
   {
     "ticker":"NOFIN.OL",
-    "name":null
+    "name":"Nordic Financials"
   },
   {
     "ticker":"ACED.OL",
-    "name":null
+    "name":"ACE Digital"
   },
   {
     "ticker":"EXTX.OL",
-    "name":null
+    "name":"Exact Therapeutics"
   },
   {
     "ticker":"AIX.OL",
-    "name":null
+    "name":"Ayfie International"
   },
   {
     "ticker":"INDCT.OL",
-    "name":null
+    "name":"Induct"
   },
   {
     "ticker":"BARRA.OL",
-    "name":null
+    "name":"Barramundi Group"
   }
 ]
