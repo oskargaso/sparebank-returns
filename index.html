@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Norwegian Sparebank Stocks – Total Return</title>
+  <title>Oslo Børs – Total Return</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -80,6 +80,25 @@
     #sidebar::-webkit-scrollbar { width: 4px; }
     #sidebar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 2px; }
 
+    /* ── Sidebar search ──────────────────────────────────────────── */
+    .sidebar-search-wrap {
+      padding: 10px 10px 6px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    #sidebar-search {
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      color: #1e293b;
+      background: #f8fafc;
+      outline: none;
+    }
+    #sidebar-search:focus {
+      border-color: #93c5fd;
+      background: white;
+    }
     .sidebar-label {
       padding: 8px 16px 4px;
       font-size: 0.68rem;
@@ -252,7 +271,7 @@
 <body>
 
 <header>
-  <h1 id="header-name">Norwegian Sparebank Stocks</h1>
+  <h1 id="header-name">Oslo Børs</h1>
   <div class="sub">Total Return &mdash; All dividends reinvested &nbsp;|&nbsp; <span id="last-updated">Loading&hellip;</span></div>
 </header>
 
@@ -263,7 +282,10 @@
 
   <!-- Desktop: left sidebar -->
   <aside id="sidebar">
-    <div class="sidebar-label">Sparebanker</div>
+    <div class="sidebar-search-wrap">
+      <input type="search" id="sidebar-search" placeholder="Search stocks…" autocomplete="off" />
+    </div>
+    <div class="sidebar-label">Oslo Børs</div>
     <div id="sidebar-list"></div>
   </aside>
 
@@ -682,6 +704,17 @@ document.getElementById('date-from').addEventListener('change', () => {
 
 document.getElementById('date-to').addEventListener('change', () => {
   applyRange(state.activeRange);
+});
+
+
+// ── Sidebar search ────────────────────────────────────────────────────────────
+document.getElementById('sidebar-search').addEventListener('input', function () {
+  const q = this.value.toLowerCase();
+  document.querySelectorAll('.sidebar-item').forEach(el => {
+    const match = el.dataset.ticker.toLowerCase().includes(q) ||
+                  el.querySelector('.sidebar-name').textContent.toLowerCase().includes(q);
+    el.style.display = match ? 'block' : 'none';
+  });
 });
 
 
