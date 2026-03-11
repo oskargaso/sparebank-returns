@@ -640,6 +640,10 @@
               <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,4"/></svg>
               Price Return only
             </div>
+            <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="rgba(22,163,74,0.55)" stroke-width="1.5" stroke-dasharray="3,4"/></svg>
+              Ex-dividend date
+            </div>
           </div>
           <div class="note">
             Data: Yahoo Finance &nbsp;&bull;&nbsp; Dividends reinvested at closing price on ex-dividend date &nbsp;&bull;&nbsp; Indexed to 100 at selected start date
@@ -840,6 +844,32 @@ function showBadge(ticker, badgeEl, imgEl) {
   const abbr = ticker.replace('.OL', '').slice(0, 3);
   badgeEl.textContent = abbr;
 }
+
+
+// ── Dividend marker plugin ────────────────────────────────────────────────────
+// Stores the current filtered chart data so the plugin and tooltip can read it.
+let _chartData = [];
+
+Chart.register({
+  id: 'divMarkers',
+  afterDraw(chart) {
+    const { ctx, chartArea, scales } = chart;
+    ctx.save();
+    ctx.strokeStyle = 'rgba(22, 163, 74, 0.28)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([3, 4]);
+    _chartData.forEach((d, i) => {
+      if (!d.div) return;
+      const x = scales.x.getPixelForValue(i);
+      if (x < chartArea.left || x > chartArea.right) return;
+      ctx.beginPath();
+      ctx.moveTo(x, chartArea.top);
+      ctx.lineTo(x, chartArea.bottom);
+      ctx.stroke();
+    });
+    ctx.restore();
+  },
+});
 
 
 // ── State ─────────────────────────────────────────────────────────────────────
@@ -1090,7 +1120,7 @@ function buildRecoveryOverview() {
   rgrid.innerHTML = '';
 
   const top10 = state.stocks
-    .filter(s => s.avg_recovery_days != null && s.avg_recovery_days > 0)
+    .filter(s => s.avg_recovery_days != null && s.avg_recovery_days > 0 && s.div_frequency !== 'irregular')
     .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
     .slice(0, 10);
 
@@ -1188,6 +1218,7 @@ function filterAndNormalize(startDate, endDate) {
     date:        r.date,
     totalReturn: r.tri / initTri * 100,
     priceReturn: r.close / initClose * 100,
+    div:         r.div || 0,
   }));
 }
 
@@ -1204,6 +1235,7 @@ function xTickCallback(labels) {
 }
 
 function renderChart(data) {
+  _chartData = data;  // update for divMarkers plugin and tooltip
   const labels      = data.map(d => d.date);
   const triValues   = data.map(d => d.totalReturn);
   const priceValues = data.map(d => d.priceReturn);
@@ -1258,6 +1290,10 @@ function renderChart(data) {
               const pct  = ctx.raw - 100;
               const sign = pct >= 0 ? '+' : '';
               return `${ctx.dataset.label}: ${sign}${pct.toFixed(1)}%`;
+            },
+            afterBody: items => {
+              const d = _chartData[items[0]?.dataIndex];
+              return d?.div > 0 ? [`Ex-dividend: ${d.div.toFixed(4)} NOK`] : [];
             },
           },
         },

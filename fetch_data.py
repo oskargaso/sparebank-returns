@@ -339,7 +339,7 @@ def process_ticker(ticker, name):
     """Fetch and process a single ticker. Returns output dict or None on failure."""
     try:
         t = yf.Ticker(ticker)
-        history = t.history(start=START_DATE, auto_adjust=False)
+        history = t.history(period="max", auto_adjust=False)
     except Exception as e:
         print(f"  ERROR fetching {ticker}: {e}")
         return None
