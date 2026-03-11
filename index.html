@@ -711,6 +711,10 @@
               Price Return only
             </div>
             <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="2,3"/></svg>
+              Share Price (NOK) →
+            </div>
+            <div class="legend-item">
               <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="rgba(22,163,74,0.55)" stroke-width="1.5" stroke-dasharray="3,4"/></svg>
               Ex-dividend date
             </div>
@@ -1438,6 +1442,7 @@ function filterAndNormalize(startDate, endDate) {
     date:        r.date,
     totalReturn: r.tri / initTri * 100,
     priceReturn: r.close / initClose * 100,
+    close:       r.close,
     div:         r.div || 0,
   }));
 }
@@ -1456,10 +1461,11 @@ function xTickCallback(labels) {
 
 function renderChart(data) {
   _chartData = data;  // update for divMarkers plugin and tooltip
-  const labels      = data.map(d => d.date);
-  const triValues   = data.map(d => d.totalReturn);
-  const priceValues = data.map(d => d.priceReturn);
-  const tickCb      = xTickCallback(labels);
+  const labels       = data.map(d => d.date);
+  const triValues    = data.map(d => d.totalReturn);
+  const priceValues  = data.map(d => d.priceReturn);
+  const closeValues  = data.map(d => d.close);
+  const tickCb       = xTickCallback(labels);
 
   // Enable recovery lines only for ≤ 5Y view
   const spanDays = labels.length > 1
@@ -1471,6 +1477,7 @@ function renderChart(data) {
     state.chart.data.labels           = labels;
     state.chart.data.datasets[0].data = triValues;
     state.chart.data.datasets[1].data = priceValues;
+    state.chart.data.datasets[2].data = closeValues;
     state.chart.options.scales.x.ticks.callback = tickCb;
     state.chart.update('none');
     return;
@@ -1485,6 +1492,7 @@ function renderChart(data) {
         {
           label: 'Total Return (DRIP)',
           data: triValues,
+          yAxisID: 'y',
           borderColor: '#2563eb',
           backgroundColor: 'rgba(37,99,235,0.06)',
           fill: true,
@@ -1495,10 +1503,22 @@ function renderChart(data) {
         {
           label: 'Price Return',
           data: priceValues,
+          yAxisID: 'y',
           borderColor: '#94a3b8',
           backgroundColor: 'transparent',
           borderWidth: 1.5,
           borderDash: [5, 4],
+          pointRadius: 0,
+          tension: 0,
+        },
+        {
+          label: 'Share Price',
+          data: closeValues,
+          yAxisID: 'y2',
+          borderColor: '#f59e0b',
+          backgroundColor: 'transparent',
+          borderWidth: 1.5,
+          borderDash: [2, 3],
           pointRadius: 0,
           tension: 0,
         },
@@ -1513,6 +1533,9 @@ function renderChart(data) {
         tooltip: {
           callbacks: {
             label: ctx => {
+              if (ctx.datasetIndex === 2) {
+                return `Share Price: ${ctx.raw.toFixed(2)} NOK`;
+              }
               const pct  = ctx.raw - 100;
               const sign = pct >= 0 ? '+' : '';
               return `${ctx.dataset.label}: ${sign}${pct.toFixed(1)}%`;
@@ -1536,6 +1559,7 @@ function renderChart(data) {
           grid: { display: false },
         },
         y: {
+          position: 'left',
           ticks: {
             color: '#94a3b8',
             font: { size: 11 },
@@ -1545,6 +1569,15 @@ function renderChart(data) {
             },
           },
           grid: { color: '#f1f5f9' },
+        },
+        y2: {
+          position: 'right',
+          grid: { display: false },
+          ticks: {
+            color: '#f59e0b',
+            font: { size: 11 },
+            callback: val => val >= 1000 ? (val / 1000).toFixed(1) + 'k' : val.toFixed(0),
+          },
         },
       },
     },
