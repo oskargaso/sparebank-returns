@@ -923,6 +923,19 @@ function tickerColor(ticker) {
   return palette[h % palette.length];
 }
 
+// Build logo img HTML with Clearbit → Google favicon → badge cascade
+function makeLogoHtml(domain, ticker, extraClass = '') {
+  const color = tickerColor(ticker);
+  const abbr  = ticker.replace('.OL', '').slice(0, 3);
+  const cls   = extraClass ? ` class="${extraClass}"` : '';
+  if (!domain) return `<div class="card-badge" style="background:${color}">${abbr}</div>`;
+  const fallback = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+  return `<img${cls} src="https://logo.clearbit.com/${domain}" ` +
+    `onerror="if(this.dataset.tried){this.style.display='none';this.nextElementSibling.style.display='flex';}else{this.dataset.tried=1;this.src='${fallback}';}" ` +
+    `alt="" />` +
+    `<div class="card-badge" style="background:${color};display:none">${abbr}</div>`;
+}
+
 function updateLogo(ticker, name, website) {
   const imgEl    = document.getElementById('logo-img');
   const badgeEl  = document.getElementById('logo-badge');
@@ -937,8 +950,13 @@ function updateLogo(ticker, name, website) {
   if (domain) {
     imgEl.style.display   = 'block';
     badgeEl.style.display = 'none';
+    const fallback = `https://www.google.com/s2/favicons?domain=${domain}&sz=128`;
+    imgEl.removeAttribute('data-tried');
     imgEl.src = `https://logo.clearbit.com/${domain}`;
-    imgEl.onerror = () => showBadge(ticker, badgeEl, imgEl);
+    imgEl.onerror = () => {
+      if (imgEl.dataset.tried) { showBadge(ticker, badgeEl, imgEl); }
+      else { imgEl.dataset.tried = '1'; imgEl.src = fallback; }
+    };
   } else {
     showBadge(ticker, badgeEl, imgEl);
   }
@@ -948,7 +966,6 @@ function showBadge(ticker, badgeEl, imgEl) {
   imgEl.style.display   = 'none';
   badgeEl.style.display = 'flex';
   badgeEl.style.background = tickerColor(ticker);
-  // Use first 1-3 letters of the ticker (without .OL)
   const abbr = ticker.replace('.OL', '').slice(0, 3);
   badgeEl.textContent = abbr;
 }
@@ -1242,12 +1259,8 @@ function buildOverview() {
     card.className = 'stock-card';
 
     // Logo / badge
-    const domain = LOGO_DOMAINS[ticker] || domainFromUrl(website);
-    const color  = tickerColor(ticker);
-    const abbr   = ticker.replace('.OL', '').slice(0, 3);
-    const logoHtml = domain
-      ? `<img class="card-img" src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
-      : `<div class="card-badge" style="background:${color}">${abbr}</div>`;
+    const domain   = LOGO_DOMAINS[ticker] || domainFromUrl(website);
+    const logoHtml = makeLogoHtml(domain, ticker, 'card-img');
 
     const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
 
@@ -1296,12 +1309,8 @@ function buildRecoveryOverview() {
     const row = document.createElement('div');
     row.className = 'recovery-row';
 
-    const domain = LOGO_DOMAINS[ticker] || domainFromUrl(website);
-    const color  = tickerColor(ticker);
-    const abbr   = ticker.replace('.OL', '').slice(0, 3);
-    const logoHtml = domain
-      ? `<img src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
-      : `<div class="card-badge" style="background:${color}">${abbr}</div>`;
+    const domain   = LOGO_DOMAINS[ticker] || domainFromUrl(website);
+    const logoHtml = makeLogoHtml(domain, ticker);
 
     const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
     const freqMap = { quarterly: 'kvartalsvis', 'semi-annual': 'halvårlig', annual: 'årlig', irregular: 'uregelmessig' };
