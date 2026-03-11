@@ -24,7 +24,8 @@
       top: 0;
       z-index: 100;
     }
-    header h1 { font-size: 1.2rem; font-weight: 600; }
+    header h1 { font-size: 1.2rem; font-weight: 600; cursor: pointer; display: inline; }
+    header h1:hover { opacity: 0.85; }
     header .sub {
       font-size: 0.78rem;
       color: #94a3b8;
@@ -121,12 +122,31 @@
       border-left-color: #2563eb;
       background: #eff6ff;
     }
+    .sidebar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 4px;
+    }
     .sidebar-name {
       font-size: 0.82rem;
       color: #1e293b;
       font-weight: 500;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .sidebar-item.active .sidebar-name { color: #2563eb; }
+    .sidebar-return {
+      font-size: 0.72rem;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .sidebar-return.pos { color: #16a34a; }
+    .sidebar-return.neg { color: #dc2626; }
     .sidebar-ticker {
       font-size: 0.7rem;
       color: #94a3b8;
@@ -192,6 +212,108 @@
       font-size: 0.78rem;
       color: #1e293b;
       background: white;
+    }
+
+    /* ── Overview landing page ───────────────────────────────────── */
+    #overview-container { display: none; }
+    .overview-intro {
+      margin-bottom: 16px;
+    }
+    .overview-intro h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 4px;
+    }
+    .overview-intro p {
+      font-size: 0.82rem;
+      color: #64748b;
+    }
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 12px;
+    }
+    .stock-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
+      padding: 16px;
+      cursor: pointer;
+      transition: box-shadow 0.15s, transform 0.12s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .stock-card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.11);
+      transform: translateY(-2px);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .card-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      letter-spacing: -0.3px;
+    }
+    .card-img {
+      width: 34px;
+      height: 34px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+    .card-title .card-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.2;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .card-title .card-ticker {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      margin-top: 1px;
+    }
+    .card-metrics {
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .card-metric-label {
+      font-size: 0.62rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 2px;
+    }
+    .card-metric-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .card-metric-value.pos { color: #16a34a; }
+    .card-metric-value.neg { color: #dc2626; }
+    .card-metric-sub {
+      font-size: 0.62rem;
+      color: #94a3b8;
+      margin-top: 1px;
     }
 
     /* ── Chart ───────────────────────────────────────────────────── */
@@ -341,10 +463,20 @@
   <main class="main-content">
     <div class="container">
 
+      <!-- Overview landing page -->
+      <div id="overview-container">
+        <div class="overview-intro">
+          <h2>Oslo Børs &mdash; Største selskaper</h2>
+          <p>5-års totalavkastning (DRIP). Klikk for å se full graf.</p>
+        </div>
+        <div id="overview-grid" class="overview-grid"></div>
+      </div>
+
       <!-- Controls -->
-      <div class="card">
+      <div id="controls-card" class="card">
         <div class="controls">
           <div class="range-buttons">
+            <button class="range-btn" data-range="ytd">YTD</button>
             <button class="range-btn" data-range="1">1Y</button>
             <button class="range-btn" data-range="3">3Y</button>
             <button class="range-btn" data-range="5">5Y</button>
@@ -361,7 +493,7 @@
       </div>
 
       <!-- Chart -->
-      <div class="card">
+      <div id="chart-card" class="card">
         <div id="loading">Loading&hellip;</div>
         <div id="error-msg"></div>
         <div id="chart-container">
@@ -582,14 +714,24 @@ async function initApp() {
   }
 
   buildNav();
+  buildOverview();
 
-  const initialTicker = getTickerFromHash() || state.stocks[0].ticker;
-  await selectStock(initialTicker);
+  const initialTicker = getTickerFromHash();
+  if (initialTicker) {
+    await selectStock(initialTicker);
+  } else {
+    showOverview();
+  }
 }
 
 window.addEventListener('hashchange', () => {
   const ticker = getTickerFromHash();
   if (ticker && ticker !== state.currentTicker) selectStock(ticker);
+  else if (!ticker) showOverview();
+});
+
+document.getElementById('header-name').addEventListener('click', () => {
+  if (state.stocks.length > 0) showOverview();
 });
 
 
@@ -598,13 +740,16 @@ function buildNav() {
   const sidebarList = document.getElementById('sidebar-list');
   const tabBar      = document.getElementById('tab-bar');
 
-  state.stocks.forEach(({ ticker, name }) => {
+  state.stocks.forEach(({ ticker, name, return_1y }) => {
     // Sidebar item
     const a = document.createElement('a');
     a.href = '#' + ticker;
     a.className = 'sidebar-item';
     a.dataset.ticker = ticker;
-    a.innerHTML = `<div class="sidebar-name">${name}</div><div class="sidebar-ticker">${ticker}</div>`;
+    const retHtml = typeof return_1y === 'number'
+      ? `<span class="sidebar-return ${return_1y >= 0 ? 'pos' : 'neg'}">${return_1y >= 0 ? '+' : ''}${return_1y.toFixed(1)}%</span>`
+      : '';
+    a.innerHTML = `<div class="sidebar-row"><div class="sidebar-name">${name}</div>${retHtml}</div><div class="sidebar-ticker">${ticker}</div>`;
     a.addEventListener('click', e => { e.preventDefault(); selectStock(ticker); });
     sidebarList.appendChild(a);
 
@@ -692,8 +837,73 @@ async function selectStock(ticker) {
 }
 
 
+// ── Overview ──────────────────────────────────────────────────────────────────
+function buildOverview() {
+  const top10 = state.stocks.slice(0, 10);
+  const grid  = document.getElementById('overview-grid');
+  grid.innerHTML = '';
+
+  top10.forEach(({ ticker, name, cagr_5y, return_1y }) => {
+    const card = document.createElement('div');
+    card.className = 'stock-card';
+
+    // Logo / badge
+    const domain = LOGO_DOMAINS[ticker];
+    const color  = tickerColor(ticker);
+    const abbr   = ticker.replace('.OL', '').slice(0, 3);
+    const logoHtml = domain
+      ? `<img class="card-img" src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
+      : `<div class="card-badge" style="background:${color}">${abbr}</div>`;
+
+    const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
+
+    const fmtVal = (v) => v == null ? '–' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+    const cls    = (v) => v == null ? '' : v >= 0 ? 'pos' : 'neg';
+
+    card.innerHTML = `
+      <div class="card-header">
+        <div style="display:flex;align-items:center">${logoHtml}</div>
+        <div class="card-title">
+          <div class="card-name">${shortName}</div>
+          <div class="card-ticker">${ticker.replace('.OL','')}</div>
+        </div>
+      </div>
+      <div class="card-metrics">
+        <div>
+          <div class="card-metric-label">5Y CAGR</div>
+          <div class="card-metric-value ${cls(cagr_5y)}">${fmtVal(cagr_5y)}</div>
+          <div class="card-metric-sub">per år</div>
+        </div>
+        <div>
+          <div class="card-metric-label">1Y</div>
+          <div class="card-metric-value ${cls(return_1y)}">${fmtVal(return_1y)}</div>
+          <div class="card-metric-sub">totalavk.</div>
+        </div>
+      </div>`;
+
+    card.addEventListener('click', () => selectStock(ticker));
+    grid.appendChild(card);
+  });
+}
+
+function showOverview() {
+  state.currentTicker = null;
+  history.replaceState(null, '', window.location.pathname);
+  document.getElementById('overview-container').style.display = 'block';
+  document.getElementById('controls-card').style.display    = 'none';
+  document.getElementById('chart-card').style.display       = 'none';
+  document.getElementById('stats-container').style.display  = 'none';
+  document.getElementById('header-name').innerHTML = 'Oslo Børs';
+  document.getElementById('last-updated').textContent = '';
+  document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
+}
+
+
 // ── Visibility helpers ────────────────────────────────────────────────────────
 function showLoading() {
+  document.getElementById('overview-container').style.display = 'none';
+  document.getElementById('controls-card').style.display    = 'block';
+  document.getElementById('chart-card').style.display       = 'block';
   document.getElementById('loading').style.display = 'block';
   document.getElementById('error-msg').style.display = 'none';
   document.getElementById('chart-container').style.display = 'none';
@@ -715,6 +925,7 @@ function showError(msg) {
 // ── Date helpers ──────────────────────────────────────────────────────────────
 function startDateForRange(years) {
   if (years === 'max') return state.allRecords[0].date;
+  if (years === 'ytd') return new Date().getFullYear() + '-01-01';
   const last = new Date(state.allRecords[state.allRecords.length - 1].date);
   last.setFullYear(last.getFullYear() - years);
   return last.toISOString().slice(0, 10);
@@ -880,7 +1091,8 @@ document.querySelectorAll('.range-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.range-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    state.activeRange = btn.dataset.range === 'max' ? 'max' : parseInt(btn.dataset.range);
+    const r = btn.dataset.range;
+    state.activeRange = (r === 'max' || r === 'ytd') ? r : parseInt(r);
     applyRange(state.activeRange);
   });
 });

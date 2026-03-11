@@ -1,1014 +1,1520 @@
 [
   {
     "ticker":"EQNR.OL",
-    "name":"Equinor"
+    "name":"Equinor",
+    "return_1y":26.3,
+    "cagr_5y":21.6
   },
   {
     "ticker":"DNB.OL",
-    "name":"DNB Bank"
+    "name":"DNB Bank",
+    "return_1y":17.5,
+    "cagr_5y":16.8
   },
   {
     "ticker":"KOG.OL",
-    "name":"Kongsberg Gruppen"
+    "name":"Kongsberg Gruppen",
+    "return_1y":35.1,
+    "cagr_5y":66.9
   },
   {
     "ticker":"TEL.OL",
-    "name":"Telenor"
+    "name":"Telenor",
+    "return_1y":22.7,
+    "cagr_5y":9.5
   },
   {
     "ticker":"AKRBP.OL",
-    "name":"Aker BP"
+    "name":"Aker BP",
+    "return_1y":45.1,
+    "cagr_5y":12.2
   },
   {
     "ticker":"NHY.OL",
-    "name":"Norsk Hydro"
+    "name":"Norsk Hydro",
+    "return_1y":38.1,
+    "cagr_5y":18.4
   },
   {
     "ticker":"GJF.OL",
-    "name":"Gjensidige Forsikring"
+    "name":"Gjensidige Forsikring",
+    "return_1y":19.9,
+    "cagr_5y":10.5
   },
   {
     "ticker":"YAR.OL",
-    "name":"Yara International"
+    "name":"Yara International",
+    "return_1y":49.2,
+    "cagr_5y":10.0
   },
   {
     "ticker":"ORK.OL",
-    "name":"Orkla"
+    "name":"Orkla",
+    "return_1y":19.3,
+    "cagr_5y":13.6
   },
   {
     "ticker":"MOWI.OL",
-    "name":"Mowi"
+    "name":"Mowi",
+    "return_1y":11.7,
+    "cagr_5y":3.8
   },
   {
     "ticker":"AKER.OL",
-    "name":"Aker"
+    "name":"Aker",
+    "return_1y":97.1,
+    "cagr_5y":12.7
   },
   {
     "ticker":"SUBC.OL",
-    "name":"Subsea 7"
+    "name":"Subsea 7",
+    "return_1y":83.5,
+    "cagr_5y":27.0
   },
   {
     "ticker":"FRO.OL",
-    "name":"Frontline"
+    "name":"Frontline",
+    "return_1y":117.5,
+    "cagr_5y":50.3
   },
   {
     "ticker":"SALM.OL",
-    "name":"SalMar"
+    "name":"SalMar",
+    "return_1y":8.3,
+    "cagr_5y":3.1
   },
   {
     "ticker":"STB.OL",
-    "name":"Storebrand"
+    "name":"Storebrand",
+    "return_1y":45.0,
+    "cagr_5y":21.5
   },
   {
     "ticker":"VEND.OL",
-    "name":"Vend Marketplaces"
+    "name":"Vend Marketplaces",
+    "return_1y":-5.8,
+    "cagr_5y":0.6
   },
   {
     "ticker":"WAWI.OL",
-    "name":"Wallenius Wilhelmsen"
+    "name":"Wallenius Wilhelmsen",
+    "return_1y":92.8,
+    "cagr_5y":54.8
   },
   {
     "ticker":"PROT.OL",
-    "name":"Protector Forsikring"
+    "name":"Protector Forsikring",
+    "return_1y":70.7,
+    "cagr_5y":55.4
   },
   {
     "ticker":"CMBTO.OL",
-    "name":"CMB.TECH"
+    "name":"CMB.TECH",
+    "return_1y":47.1,
+    "cagr_5y":null
   },
   {
     "ticker":"HAFNI.OL",
-    "name":"Hafnia"
+    "name":"Hafnia",
+    "return_1y":73.8,
+    "cagr_5y":48.2
   },
   {
     "ticker":"AUTO.OL",
-    "name":"AutoStore Holdings"
+    "name":"AutoStore Holdings",
+    "return_1y":3.4,
+    "cagr_5y":-24.0
   },
   {
     "ticker":"SBNOR.OL",
-    "name":"Sparebanken Norge"
+    "name":"Sparebanken Norge",
+    "return_1y":47.7,
+    "cagr_5y":null
   },
   {
     "ticker":"TOM.OL",
-    "name":"Tomra Systems"
+    "name":"Tomra Systems",
+    "return_1y":-31.0,
+    "cagr_5y":-8.2
   },
   {
     "ticker":"DOFG.OL",
-    "name":"DOF Group"
+    "name":"DOF Group",
+    "return_1y":76.2,
+    "cagr_5y":66.0
   },
   {
     "ticker":"MING.OL",
-    "name":"Sparebank 1 SMN"
+    "name":"Sparebank 1 SMN",
+    "return_1y":22.9,
+    "cagr_5y":21.1
   },
   {
     "ticker":"LSG.OL",
-    "name":"Ler\u00f8y Seafood Group"
+    "name":"Ler\u00f8y Seafood Group",
+    "return_1y":5.6,
+    "cagr_5y":-3.1
   },
   {
     "ticker":"SPOL.OL",
-    "name":"Sparebank 1 \u00d8stlandet"
+    "name":"Sparebank 1 \u00d8stlandet",
+    "return_1y":40.6,
+    "cagr_5y":20.4
   },
   {
     "ticker":"NOD.OL",
-    "name":"Nordic Semiconductor"
+    "name":"Nordic Semiconductor",
+    "return_1y":15.3,
+    "cagr_5y":-0.1
   },
   {
     "ticker":"BWLPG.OL",
-    "name":"BW LPG"
+    "name":"BW LPG",
+    "return_1y":62.0,
+    "cagr_5y":48.4
   },
   {
     "ticker":"BAKKA.OL",
-    "name":"Bakkafrost"
+    "name":"Bakkafrost",
+    "return_1y":-16.9,
+    "cagr_5y":-7.0
   },
   {
     "ticker":"VEI.OL",
-    "name":"Veidekke"
+    "name":"Veidekke",
+    "return_1y":41.8,
+    "cagr_5y":16.7
   },
   {
     "ticker":"TIETO.OL",
-    "name":"Tietoevry"
+    "name":"Tietoevry",
+    "return_1y":0.3,
+    "cagr_5y":2.0
   },
   {
     "ticker":"TGS.OL",
-    "name":"TGS"
+    "name":"TGS",
+    "return_1y":23.0,
+    "cagr_5y":-0.7
   },
   {
     "ticker":"KIT.OL",
-    "name":"Kitron"
+    "name":"Kitron",
+    "return_1y":122.1,
+    "cagr_5y":44.5
   },
   {
     "ticker":"AUSS.OL",
-    "name":"Austevoll Seafood"
+    "name":"Austevoll Seafood",
+    "return_1y":9.2,
+    "cagr_5y":4.3
   },
   {
     "ticker":"CADLR.OL",
-    "name":"Cadeler"
+    "name":"Cadeler",
+    "return_1y":19.2,
+    "cagr_5y":11.4
   },
   {
     "ticker":"ENTRA.OL",
-    "name":"Entra"
+    "name":"Entra",
+    "return_1y":1.9,
+    "cagr_5y":-7.4
   },
   {
     "ticker":"AKSO.OL",
-    "name":"Aker Solutions"
+    "name":"Aker Solutions",
+    "return_1y":50.5,
+    "cagr_5y":27.5
   },
   {
     "ticker":"AFG.OL",
-    "name":"AF Gruppen"
+    "name":"AF Gruppen",
+    "return_1y":33.2,
+    "cagr_5y":5.0
   },
   {
     "ticker":"SNI.OL",
-    "name":"Stolt-Nielsen"
+    "name":"Stolt-Nielsen",
+    "return_1y":51.6,
+    "cagr_5y":32.0
   },
   {
     "ticker":"SWON.OL",
-    "name":"SoftwareOne Holding"
+    "name":"SoftwareOne Holding",
+    "return_1y":-7.4,
+    "cagr_5y":null
   },
   {
     "ticker":"SCATC.OL",
-    "name":"Scatec"
+    "name":"Scatec",
+    "return_1y":57.8,
+    "cagr_5y":-13.8
   },
   {
     "ticker":"OET.OL",
-    "name":"Okeanis Eco Tankers"
+    "name":"Okeanis Eco Tankers",
+    "return_1y":135.0,
+    "cagr_5y":65.0
   },
   {
     "ticker":"ELK.OL",
-    "name":"Elkem"
+    "name":"Elkem",
+    "return_1y":29.3,
+    "cagr_5y":2.8
   },
   {
     "ticker":"BRG.OL",
-    "name":"Borregaard"
+    "name":"Borregaard",
+    "return_1y":-0.6,
+    "cagr_5y":1.9
   },
   {
     "ticker":"BORR.OL",
-    "name":"Borr Drilling"
+    "name":"Borr Drilling",
+    "return_1y":36.1,
+    "cagr_5y":null
   },
   {
     "ticker":"NONG.OL",
-    "name":"Sparebank 1 Nord-Norge"
+    "name":"Sparebank 1 Nord-Norge",
+    "return_1y":29.7,
+    "cagr_5y":22.8
   },
   {
     "ticker":"ATEA.OL",
-    "name":"Atea"
+    "name":"Atea",
+    "return_1y":11.1,
+    "cagr_5y":3.8
   },
   {
     "ticker":"NAS.OL",
-    "name":"Norwegian Air Shuttle"
+    "name":"Norwegian Air Shuttle",
+    "return_1y":39.1,
+    "cagr_5y":-9.2
   },
   {
     "ticker":"DNO.OL",
-    "name":"DNO"
+    "name":"DNO",
+    "return_1y":41.6,
+    "cagr_5y":19.0
   },
   {
     "ticker":"EPR.OL",
-    "name":"Europris"
+    "name":"Europris",
+    "return_1y":17.8,
+    "cagr_5y":18.2
   },
   {
     "ticker":"BNOR.OL",
-    "name":"Bluenord"
+    "name":"Bluenord",
+    "return_1y":-1.8,
+    "cagr_5y":33.1
   },
   {
     "ticker":"ELO.OL",
-    "name":"Elopak"
+    "name":"Elopak",
+    "return_1y":44.5,
+    "cagr_5y":17.8
   },
   {
     "ticker":"NORCO.OL",
-    "name":"Norconsult"
+    "name":"Norconsult",
+    "return_1y":-2.4,
+    "cagr_5y":41.5
   },
   {
     "ticker":"SOMA.OL",
-    "name":"Solstad Maritime"
+    "name":"Solstad Maritime",
+    "return_1y":11.6,
+    "cagr_5y":null
   },
   {
     "ticker":"COSH.OL",
-    "name":"Constellation Oil Services"
+    "name":"Constellation Oil Services",
+    "return_1y":33.6,
+    "cagr_5y":37.9
   },
   {
     "ticker":"BONHR.OL",
-    "name":"Bonheur"
+    "name":"Bonheur",
+    "return_1y":8.9,
+    "cagr_5y":1.8
   },
   {
     "ticker":"MPCC.OL",
-    "name":"MPC Container Ships"
+    "name":"MPC Container Ships",
+    "return_1y":58.6,
+    "cagr_5y":60.3
   },
   {
     "ticker":"AKBM.OL",
-    "name":"Aker BioMarine"
+    "name":"Aker BioMarine",
+    "return_1y":78.6,
+    "cagr_5y":12.7
   },
   {
     "ticker":"BWO.OL",
-    "name":"BW Offshore"
+    "name":"BW Offshore",
+    "return_1y":100.2,
+    "cagr_5y":18.1
   },
   {
     "ticker":"B2I.OL",
-    "name":"B2 Impact"
+    "name":"B2 Impact",
+    "return_1y":188.1,
+    "cagr_5y":36.0
   },
   {
     "ticker":"AFK.OL",
-    "name":"Arendals Fossekompani"
+    "name":"Arendals Fossekompani",
+    "return_1y":34.7,
+    "cagr_5y":-1.8
   },
   {
     "ticker":"SATS.OL",
-    "name":"SATS"
+    "name":"SATS",
+    "return_1y":50.3,
+    "cagr_5y":14.5
   },
   {
     "ticker":"GSF.OL",
-    "name":"Grieg Seafood"
+    "name":"Grieg Seafood",
+    "return_1y":42.3,
+    "cagr_5y":-2.1
   },
   {
     "ticker":"ODF.OL",
-    "name":"Odfjell Ser. A"
+    "name":"Odfjell Ser. A",
+    "return_1y":52.5,
+    "cagr_5y":48.5
   },
   {
     "ticker":"PLSV.OL",
-    "name":"Paratus Energy Services"
+    "name":"Paratus Energy Services",
+    "return_1y":44.5,
+    "cagr_5y":5.1
   },
   {
     "ticker":"RING.OL",
-    "name":"Sparebank 1 Ringerike Hadeland"
+    "name":"Sparebank 1 Ringerike Hadeland",
+    "return_1y":31.0,
+    "cagr_5y":19.3
   },
   {
     "ticker":"SNTIA.OL",
-    "name":"Sentia"
+    "name":"Sentia",
+    "return_1y":21.8,
+    "cagr_5y":null
   },
   {
     "ticker":"LINK.OL",
-    "name":"Link Mobility Group"
+    "name":"Link Mobility Group",
+    "return_1y":6.7,
+    "cagr_5y":-13.6
   },
   {
     "ticker":"PEXIP.OL",
-    "name":"Pexip Holding"
+    "name":"Pexip Holding",
+    "return_1y":67.2,
+    "cagr_5y":-7.1
   },
   {
     "ticker":"PARB.OL",
-    "name":"Pareto Bank"
+    "name":"Pareto Bank",
+    "return_1y":23.2,
+    "cagr_5y":20.4
   },
   {
     "ticker":"WWIB.OL",
-    "name":"Wilh. Wilhelmsen Holding B"
+    "name":"Wilh. Wilhelmsen Holding B",
+    "return_1y":86.0,
+    "cagr_5y":35.0
   },
   {
     "ticker":"HSHP.OL",
-    "name":"Himalaya Shipping"
+    "name":"Himalaya Shipping",
+    "return_1y":148.0,
+    "cagr_5y":33.2
   },
   {
     "ticker":"MORG.OL",
-    "name":"Sparebanken M\u00f8re"
+    "name":"Sparebanken M\u00f8re",
+    "return_1y":24.0,
+    "cagr_5y":18.1
   },
   {
     "ticker":"SOAG.OL",
-    "name":"Sparebank 1 \u00d8stfold Akershus"
+    "name":"Sparebank 1 \u00d8stfold Akershus",
+    "return_1y":10.7,
+    "cagr_5y":15.1
   },
   {
     "ticker":"KCC.OL",
-    "name":"Klaveness Combination Carriers"
+    "name":"Klaveness Combination Carriers",
+    "return_1y":68.4,
+    "cagr_5y":32.3
   },
   {
     "ticker":"BOUV.OL",
-    "name":"Bouvet"
+    "name":"Bouvet",
+    "return_1y":-26.5,
+    "cagr_5y":-1.4
   },
   {
     "ticker":"KID.OL",
-    "name":"Kid"
+    "name":"Kid",
+    "return_1y":-12.0,
+    "cagr_5y":10.8
   },
   {
     "ticker":"SOFF.OL",
-    "name":"Solstad Offshore"
+    "name":"Solstad Offshore",
+    "return_1y":74.1,
+    "cagr_5y":48.5
   },
   {
     "ticker":"HELG.OL",
-    "name":"Sparebank 1 Helgeland"
+    "name":"Sparebank 1 Helgeland",
+    "return_1y":15.5,
+    "cagr_5y":15.6
   },
   {
     "ticker":"MULTI.OL",
-    "name":"Multiconsult"
+    "name":"Multiconsult",
+    "return_1y":-7.1,
+    "cagr_5y":4.8
   },
   {
     "ticker":"SEA1.OL",
-    "name":"Sea1 Offshore"
+    "name":"Sea1 Offshore",
+    "return_1y":58.5,
+    "cagr_5y":11.9
   },
   {
     "ticker":"ABG.OL",
-    "name":"ABG Sundal Collier"
+    "name":"ABG Sundal Collier",
+    "return_1y":21.4,
+    "cagr_5y":8.2
   },
   {
     "ticker":"CLOUD.OL",
-    "name":"Cloudberry Clean Energy"
+    "name":"Cloudberry Clean Energy",
+    "return_1y":21.7,
+    "cagr_5y":-2.6
   },
   {
     "ticker":"AKAST.OL",
-    "name":"Akastor"
+    "name":"Akastor",
+    "return_1y":38.8,
+    "cagr_5y":18.5
   },
   {
     "ticker":"MEDI.OL",
-    "name":"Medistim"
+    "name":"Medistim",
+    "return_1y":20.0,
+    "cagr_5y":-3.1
   },
   {
     "ticker":"NEL.OL",
-    "name":"NEL"
+    "name":"NEL",
+    "return_1y":3.6,
+    "cagr_5y":-38.3
   },
   {
     "ticker":"ROGS.OL",
-    "name":"Rogaland Sparebank"
+    "name":"Rogaland Sparebank",
+    "return_1y":29.9,
+    "cagr_5y":37.5
   },
   {
     "ticker":"ELMRA.OL",
-    "name":"Elmera Group"
+    "name":"Elmera Group",
+    "return_1y":10.7,
+    "cagr_5y":-5.5
   },
   {
     "ticker":"BEWI.OL",
-    "name":"Bewi"
+    "name":"Bewi",
+    "return_1y":-38.4,
+    "cagr_5y":-9.3
   },
   {
     "ticker":"AKVA.OL",
-    "name":"Akva Group"
+    "name":"Akva Group",
+    "return_1y":67.4,
+    "cagr_5y":4.1
   },
   {
     "ticker":"NAPA.OL",
-    "name":"Napatech"
+    "name":"Napatech",
+    "return_1y":82.1,
+    "cagr_5y":14.3
   },
   {
     "ticker":"SMOP.OL",
-    "name":"Smartoptics Group"
+    "name":"Smartoptics Group",
+    "return_1y":91.2,
+    "cagr_5y":32.5
   },
   {
     "ticker":"ENVIP.OL",
-    "name":"Envipco Holding"
+    "name":"Envipco Holding",
+    "return_1y":-16.1,
+    "cagr_5y":20.9
   },
   {
     "ticker":"PEN.OL",
-    "name":"Panoro Energy"
+    "name":"Panoro Energy",
+    "return_1y":19.2,
+    "cagr_5y":10.6
   },
   {
     "ticker":"2020.OL",
-    "name":"2020 Bulkers"
+    "name":"2020 Bulkers",
+    "return_1y":27.4,
+    "cagr_5y":32.0
   },
   {
     "ticker":"ANDF.OL",
-    "name":"Andfjord Salmon"
+    "name":"Andfjord Salmon",
+    "return_1y":-17.7,
+    "cagr_5y":-10.4
   },
   {
     "ticker":"POL.OL",
-    "name":"Polaris Media"
+    "name":"Polaris Media",
+    "return_1y":-8.8,
+    "cagr_5y":7.4
   },
   {
     "ticker":"MORLD.OL",
-    "name":"Moreld"
+    "name":"Moreld",
+    "return_1y":28.0,
+    "cagr_5y":31.3
   },
   {
     "ticker":"CAMBI.OL",
-    "name":"Cambi"
+    "name":"Cambi",
+    "return_1y":7.6,
+    "cagr_5y":1.7
   },
   {
     "ticker":"SMCRT.OL",
-    "name":"SmartCraft"
+    "name":"SmartCraft",
+    "return_1y":-35.6,
+    "cagr_5y":-5.4
   },
   {
     "ticker":"RANA.OL",
-    "name":"Rana Gruber"
+    "name":"Rana Gruber",
+    "return_1y":14.7,
+    "cagr_5y":19.0
   },
   {
     "ticker":"MAS.OL",
-    "name":"M\u00e5s\u00f8val"
+    "name":"M\u00e5s\u00f8val",
+    "return_1y":-1.7,
+    "cagr_5y":-8.9
   },
   {
     "ticker":"OTL.OL",
-    "name":"Odfjell Technology"
+    "name":"Odfjell Technology",
+    "return_1y":90.8,
+    "cagr_5y":42.1
   },
   {
     "ticker":"NOL.OL",
-    "name":"Northern Ocean"
+    "name":"Northern Ocean",
+    "return_1y":38.2,
+    "cagr_5y":-6.0
   },
   {
     "ticker":"ZAP.OL",
-    "name":"Zaptec"
+    "name":"Zaptec",
+    "return_1y":106.0,
+    "cagr_5y":-8.0
   },
   {
     "ticker":"NSKOG.OL",
-    "name":"Norske Skog"
+    "name":"Norske Skog",
+    "return_1y":28.7,
+    "cagr_5y":-0.3
   },
   {
     "ticker":"VDI.OL",
-    "name":"Vantage Drilling International"
+    "name":"Vantage Drilling International",
+    "return_1y":-11.6,
+    "cagr_5y":-8.9
   },
   {
     "ticker":"APR.OL",
-    "name":"Appear"
+    "name":"Appear",
+    "return_1y":-9.3,
+    "cagr_5y":null
   },
   {
     "ticker":"VTURA.OL",
-    "name":"Ventura Offshore"
+    "name":"Ventura Offshore",
+    "return_1y":27.6,
+    "cagr_5y":-5.3
   },
   {
     "ticker":"ARCH.OL",
-    "name":"Archer"
+    "name":"Archer",
+    "return_1y":29.1,
+    "cagr_5y":-5.7
   },
   {
     "ticker":"XPLRA.OL",
-    "name":"Xplora Technologies"
+    "name":"Xplora Technologies",
+    "return_1y":92.0,
+    "cagr_5y":1.8
   },
   {
     "ticker":"IWS.OL",
-    "name":"Integrated Wind Solutions"
+    "name":"Integrated Wind Solutions",
+    "return_1y":55.1,
+    "cagr_5y":10.8
   },
   {
     "ticker":"DELIA.OL",
-    "name":"Delia Group"
+    "name":"Delia Group",
+    "return_1y":143.8,
+    "cagr_5y":null
   },
   {
     "ticker":"ODFB.OL",
-    "name":"Odfjell Ser. B"
+    "name":"Odfjell Ser. B",
+    "return_1y":49.3,
+    "cagr_5y":47.6
   },
   {
     "ticker":"REACH.OL",
-    "name":"Reach Subsea"
+    "name":"Reach Subsea",
+    "return_1y":4.5,
+    "cagr_5y":21.7
   },
   {
     "ticker":"SKUE.OL",
-    "name":"Skue Sparebank"
+    "name":"Skue Sparebank",
+    "return_1y":13.0,
+    "cagr_5y":20.3
   },
   {
     "ticker":"SALME.OL",
-    "name":"Salmon Evolution"
+    "name":"Salmon Evolution",
+    "return_1y":-27.3,
+    "cagr_5y":-8.6
   },
   {
     "ticker":"DVD.OL",
-    "name":"Deep Value Driller"
+    "name":"Deep Value Driller",
+    "return_1y":68.5,
+    "cagr_5y":34.7
   },
   {
     "ticker":"PHO.OL",
-    "name":"Photocure"
+    "name":"Photocure",
+    "return_1y":35.1,
+    "cagr_5y":-10.3
   },
   {
     "ticker":"KOMPL.OL",
-    "name":"Komplett"
+    "name":"Komplett",
+    "return_1y":4.8,
+    "cagr_5y":-28.1
   },
   {
     "ticker":"KOA.OL",
-    "name":"Kongsberg Automotive"
+    "name":"Kongsberg Automotive",
+    "return_1y":33.0,
+    "cagr_5y":-7.9
   },
   {
     "ticker":"INSTA.OL",
-    "name":"Instabank"
+    "name":"Instabank",
+    "return_1y":97.4,
+    "cagr_5y":19.6
   },
   {
     "ticker":"NORAM.OL",
-    "name":"Noram Drilling"
+    "name":"Noram Drilling",
+    "return_1y":49.5,
+    "cagr_5y":14.5
   },
   {
     "ticker":"JAREN.OL",
-    "name":"J\u00e6ren Sparebank"
+    "name":"J\u00e6ren Sparebank",
+    "return_1y":3.5,
+    "cagr_5y":21.3
   },
   {
     "ticker":"SPOG.OL",
-    "name":"Sparebanken \u00d8st"
+    "name":"Sparebanken \u00d8st",
+    "return_1y":17.3,
+    "cagr_5y":16.3
   },
   {
     "ticker":"SNOR.OL",
-    "name":"Sparebank 1 Nordm\u00f8re"
+    "name":"Sparebank 1 Nordm\u00f8re",
+    "return_1y":20.1,
+    "cagr_5y":12.0
   },
   {
     "ticker":"AGLX.OL",
-    "name":"Agilyx"
+    "name":"Agilyx",
+    "return_1y":-50.8,
+    "cagr_5y":-16.5
   },
   {
     "ticker":"GIGA.OL",
-    "name":"Gigante Salmon"
+    "name":"Gigante Salmon",
+    "return_1y":-4.2,
+    "cagr_5y":7.0
   },
   {
     "ticker":"ZAL.OL",
-    "name":"Zalaris"
+    "name":"Zalaris",
+    "return_1y":-10.0,
+    "cagr_5y":5.2
   },
   {
     "ticker":"NOAP.OL",
-    "name":"Nordic Aqua Partners"
+    "name":"Nordic Aqua Partners",
+    "return_1y":-9.9,
+    "cagr_5y":-0.5
   },
   {
     "ticker":"TRMED.OL",
-    "name":"Thor Medical"
+    "name":"Thor Medical",
+    "return_1y":126.1,
+    "cagr_5y":-28.4
   },
   {
     "ticker":"PNOR.OL",
-    "name":"Petronor E&P"
+    "name":"Petronor E&P",
+    "return_1y":37.4,
+    "cagr_5y":8.3
   },
   {
     "ticker":"NKR.OL",
-    "name":"Nekkar"
+    "name":"Nekkar",
+    "return_1y":27.7,
+    "cagr_5y":10.1
   },
   {
     "ticker":"NRC.OL",
-    "name":"NRC Group"
+    "name":"NRC Group",
+    "return_1y":66.3,
+    "cagr_5y":-14.6
   },
   {
     "ticker":"NOM.OL",
-    "name":"Nordic Mining"
+    "name":"Nordic Mining",
+    "return_1y":-48.1,
+    "cagr_5y":-18.3
   },
   {
     "ticker":"MGN.OL",
-    "name":"Magnora"
+    "name":"Magnora",
+    "return_1y":-4.5,
+    "cagr_5y":-2.9
   },
   {
     "ticker":"NORDH.OL",
-    "name":"Nordhealth"
+    "name":"Nordhealth",
+    "return_1y":-27.1,
+    "cagr_5y":-6.0
   },
   {
     "ticker":"AURG.OL",
-    "name":"Aurskog Sparebank"
+    "name":"Aurskog Sparebank",
+    "return_1y":15.0,
+    "cagr_5y":16.4
   },
   {
     "ticker":"NOHAL.OL",
-    "name":"Nordic Halibut"
+    "name":"Nordic Halibut",
+    "return_1y":14.9,
+    "cagr_5y":-5.2
   },
   {
     "ticker":"AFISH.OL",
-    "name":"Arctic Fish Holding"
+    "name":"Arctic Fish Holding",
+    "return_1y":-57.3,
+    "cagr_5y":-15.6
   },
   {
     "ticker":"BMA.OL",
-    "name":"Byggma"
+    "name":"Byggma",
+    "return_1y":-1.8,
+    "cagr_5y":-5.2
   },
   {
     "ticker":"LUMI.OL",
-    "name":"Lumi Gruppen"
+    "name":"Lumi Gruppen",
+    "return_1y":40.0,
+    "cagr_5y":-17.9
   },
   {
     "ticker":"PRS.OL",
-    "name":"Prosafe"
+    "name":"Prosafe",
+    "return_1y":-60.0,
+    "cagr_5y":-71.4
   },
   {
     "ticker":"AZT.OL",
-    "name":"ArcticZymes Technologies"
+    "name":"ArcticZymes Technologies",
+    "return_1y":16.9,
+    "cagr_5y":-21.3
   },
   {
     "ticker":"GYL.OL",
-    "name":"Gyldendal"
+    "name":"Gyldendal",
+    "return_1y":20.5,
+    "cagr_5y":-3.0
   },
   {
     "ticker":"EIOF.OL",
-    "name":"Eidesvik Offshore"
+    "name":"Eidesvik Offshore",
+    "return_1y":28.3,
+    "cagr_5y":32.0
   },
   {
     "ticker":"NYKD.OL",
-    "name":"Nykode Therapeutics"
+    "name":"Nykode Therapeutics",
+    "return_1y":139.4,
+    "cagr_5y":-43.5
   },
   {
     "ticker":"SDSD.OL",
-    "name":"S.D. Standard ETC"
+    "name":"S.D. Standard ETC",
+    "return_1y":1.4,
+    "cagr_5y":12.4
   },
   {
     "ticker":"NORSE.OL",
-    "name":"Norse Atlantic"
+    "name":"Norse Atlantic",
+    "return_1y":35.7,
+    "cagr_5y":-37.4
   },
   {
     "ticker":"DFENS.OL",
-    "name":"Fjord Defence Group"
+    "name":"Fjord Defence Group",
+    "return_1y":152.5,
+    "cagr_5y":-21.9
   },
   {
     "ticker":"VISTN.OL",
-    "name":"Vistin Pharma"
+    "name":"Vistin Pharma",
+    "return_1y":-10.2,
+    "cagr_5y":0.7
   },
   {
     "ticker":"VVL.OL",
-    "name":"Voss Veksel- og Landmandsbank"
+    "name":"Voss Veksel- og Landmandsbank",
+    "return_1y":30.3,
+    "cagr_5y":23.7
   },
   {
     "ticker":"HKY.OL",
-    "name":"Havila Kystruten"
+    "name":"Havila Kystruten",
+    "return_1y":20.9,
+    "cagr_5y":-45.7
   },
   {
     "ticker":"NTI.OL",
-    "name":"Norsk Titanium"
+    "name":"Norsk Titanium",
+    "return_1y":-57.9,
+    "cagr_5y":-37.3
   },
   {
     "ticker":"SAGA.OL",
-    "name":"Saga Pure"
+    "name":"Saga Pure",
+    "return_1y":13.9,
+    "cagr_5y":-9.7
   },
   {
     "ticker":"OMDA.OL",
-    "name":"OMDA"
+    "name":"OMDA",
+    "return_1y":5.6,
+    "cagr_5y":6.7
   },
   {
     "ticker":"LYTIX.OL",
-    "name":"Lytix Biopharma"
+    "name":"Lytix Biopharma",
+    "return_1y":105.9,
+    "cagr_5y":-11.4
   },
   {
     "ticker":"ELIMP.OL",
-    "name":"Elektroimport\u00f8ren"
+    "name":"Elektroimport\u00f8ren",
+    "return_1y":36.1,
+    "cagr_5y":-24.8
   },
   {
     "ticker":"BIEN.OL",
-    "name":"Bien Sparebank"
+    "name":"Bien Sparebank",
+    "return_1y":11.1,
+    "cagr_5y":16.7
   },
   {
     "ticker":"VOW.OL",
-    "name":"VOW"
+    "name":"VOW",
+    "return_1y":96.7,
+    "cagr_5y":-44.1
   },
   {
     "ticker":"KLDVK.OL",
-    "name":"Kaldvik"
+    "name":"Kaldvik",
+    "return_1y":-81.5,
+    "cagr_5y":-66.4
   },
   {
     "ticker":"GRONG.OL",
-    "name":"Grong Sparebank"
+    "name":"Grong Sparebank",
+    "return_1y":30.7,
+    "cagr_5y":16.9
   },
   {
     "ticker":"CRNA.OL",
-    "name":"Circio Holding"
+    "name":"Circio Holding",
+    "return_1y":450.0,
+    "cagr_5y":-56.6
   },
   {
     "ticker":"STECH.OL",
-    "name":"Soiltech"
+    "name":"Soiltech",
+    "return_1y":55.5,
+    "cagr_5y":22.3
   },
   {
     "ticker":"SCANA.OL",
-    "name":"Scana"
+    "name":"Scana",
+    "return_1y":-36.9,
+    "cagr_5y":-7.3
   },
   {
     "ticker":"WEST.OL",
-    "name":"Western Bulk Chartering"
+    "name":"Western Bulk Chartering",
+    "return_1y":70.3,
+    "cagr_5y":4.3
   },
   {
     "ticker":"OTOVO.OL",
-    "name":"Otovo"
+    "name":"Otovo",
+    "return_1y":-9.9,
+    "cagr_5y":-42.1
   },
   {
     "ticker":"IDEX.OL",
-    "name":"IDEX Biometrics"
+    "name":"IDEX Biometrics",
+    "return_1y":93.9,
+    "cagr_5y":-56.7
   },
   {
     "ticker":"NCOD.OL",
-    "name":"Norcod"
+    "name":"Norcod",
+    "return_1y":-14.2,
+    "cagr_5y":-37.9
   },
   {
     "ticker":"ENSU.OL",
-    "name":"Ensurge Micropower"
+    "name":"Ensurge Micropower",
+    "return_1y":-40.2,
+    "cagr_5y":-54.9
   },
   {
     "ticker":"HUNT.OL",
-    "name":"Hunter Group"
+    "name":"Hunter Group",
+    "return_1y":622.6,
+    "cagr_5y":36.8
   },
   {
     "ticker":"SB68.OL",
-    "name":"Sparebank 68 Grader Nord"
+    "name":"Sparebank 68 Grader Nord",
+    "return_1y":32.6,
+    "cagr_5y":12.1
   },
   {
     "ticker":"TINDE.OL",
-    "name":"Tinde Sparebank"
+    "name":"Tinde Sparebank",
+    "return_1y":-5.9,
+    "cagr_5y":null
   },
   {
     "ticker":"HDLY.OL",
-    "name":"Huddly"
+    "name":"Huddly",
+    "return_1y":30.7,
+    "cagr_5y":-55.0
   },
   {
     "ticker":"JIN.OL",
-    "name":"Jinhui Shipping and Transport"
+    "name":"Jinhui Shipping and Transport",
+    "return_1y":5.2,
+    "cagr_5y":0.9
   },
   {
     "ticker":"GENT.OL",
-    "name":"Gentian Diagnostics"
+    "name":"Gentian Diagnostics",
+    "return_1y":-18.5,
+    "cagr_5y":-9.2
   },
   {
     "ticker":"ITERA.OL",
-    "name":"Itera"
+    "name":"Itera",
+    "return_1y":-17.1,
+    "cagr_5y":-8.5
   },
   {
     "ticker":"GEOS.OL",
-    "name":"Golden Energy Offshore"
+    "name":"Golden Energy Offshore",
+    "return_1y":-51.2,
+    "cagr_5y":-18.4
   },
   {
     "ticker":"MELG.OL",
-    "name":"Melhus Sparebank"
+    "name":"Melhus Sparebank",
+    "return_1y":21.1,
+    "cagr_5y":11.7
   },
   {
     "ticker":"TRSB.OL",
-    "name":"Tr\u00f8ndelag Sparebank"
+    "name":"Tr\u00f8ndelag Sparebank",
+    "return_1y":6.2,
+    "cagr_5y":5.0
   },
   {
     "ticker":"HBC.OL",
-    "name":"Hofseth BioCare"
+    "name":"Hofseth BioCare",
+    "return_1y":-38.9,
+    "cagr_5y":-30.1
   },
   {
     "ticker":"WSTEP.OL",
-    "name":"Webstep"
+    "name":"Webstep",
+    "return_1y":-16.7,
+    "cagr_5y":-3.5
   },
   {
     "ticker":"AKOBO.OL",
-    "name":"Akobo Minerals"
+    "name":"Akobo Minerals",
+    "return_1y":19.6,
+    "cagr_5y":-27.1
   },
   {
     "ticker":"STST.OL",
-    "name":"Stainless Tankers"
+    "name":"Stainless Tankers",
+    "return_1y":-16.0,
+    "cagr_5y":6.8
   },
   {
     "ticker":"NAVA.OL",
-    "name":"Navamedic"
+    "name":"Navamedic",
+    "return_1y":1.8,
+    "cagr_5y":-6.5
   },
   {
     "ticker":"HPUR.OL",
-    "name":"Hexagon Purus"
+    "name":"Hexagon Purus",
+    "return_1y":-37.0,
+    "cagr_5y":-53.6
   },
   {
     "ticker":"CYVIZ.OL",
-    "name":"Cyviz"
+    "name":"Cyviz",
+    "return_1y":23.1,
+    "cagr_5y":-5.2
   },
   {
     "ticker":"STRO.OL",
-    "name":"Strongpoint"
+    "name":"Strongpoint",
+    "return_1y":2.4,
+    "cagr_5y":-18.5
   },
   {
     "ticker":"ALNG.OL",
-    "name":"Awilco LNG"
+    "name":"Awilco LNG",
+    "return_1y":23.9,
+    "cagr_5y":28.0
   },
   {
     "ticker":"PPG.OL",
-    "name":"Pioneer Property Group"
+    "name":"Pioneer Property Group",
+    "return_1y":17.2,
+    "cagr_5y":10.7
   },
   {
     "ticker":"ZLNA.OL",
-    "name":"Zelluna"
+    "name":"Zelluna",
+    "return_1y":-23.0,
+    "cagr_5y":-52.2
   },
   {
     "ticker":"KING.OL",
-    "name":"The Kingfish Company"
+    "name":"The Kingfish Company",
+    "return_1y":-39.8,
+    "cagr_5y":-32.1
   },
   {
     "ticker":"BALT.OL",
-    "name":"Baltic Sea Properties"
+    "name":"Baltic Sea Properties",
+    "return_1y":-8.7,
+    "cagr_5y":-2.3
   },
   {
     "ticker":"ZENA.OL",
-    "name":"Zenith Energy"
+    "name":"Zenith Energy",
+    "return_1y":-37.8,
+    "cagr_5y":-13.4
   },
   {
     "ticker":"ROMER.OL",
-    "name":"Romerike Sparebank"
+    "name":"Romerike Sparebank",
+    "return_1y":13.9,
+    "cagr_5y":7.6
   },
   {
     "ticker":"CAPSL.OL",
-    "name":"Capsol Technologies"
+    "name":"Capsol Technologies",
+    "return_1y":-44.2,
+    "cagr_5y":-32.0
   },
   {
     "ticker":"NTG.OL",
-    "name":"Nordic Technology Group"
+    "name":"Nordic Technology Group",
+    "return_1y":17.6,
+    "cagr_5y":-38.2
   },
   {
     "ticker":"TECH.OL",
-    "name":"Techstep"
+    "name":"Techstep",
+    "return_1y":-11.7,
+    "cagr_5y":-25.3
   },
   {
     "ticker":"LOKO.OL",
-    "name":"Lokotech Group"
+    "name":"Lokotech Group",
+    "return_1y":-68.5,
+    "cagr_5y":-25.4
   },
   {
     "ticker":"GOD.OL",
-    "name":"Goodtech"
+    "name":"Goodtech",
+    "return_1y":20.2,
+    "cagr_5y":-2.2
   },
   {
     "ticker":"ELABS.OL",
-    "name":"Elliptic Laboratories"
+    "name":"Elliptic Laboratories",
+    "return_1y":-69.8,
+    "cagr_5y":-23.8
   },
   {
     "ticker":"PROXI.OL",
-    "name":"Proximar Seafood"
+    "name":"Proximar Seafood",
+    "return_1y":-79.4,
+    "cagr_5y":-45.9
   },
   {
     "ticker":"PSE.OL",
-    "name":"Petrolia"
+    "name":"Petrolia",
+    "return_1y":26.2,
+    "cagr_5y":-14.3
   },
   {
     "ticker":"NORTH.OL",
-    "name":"North Energy"
+    "name":"North Energy",
+    "return_1y":6.7,
+    "cagr_5y":-2.0
   },
   {
     "ticker":"MPCES.OL",
-    "name":"MPC Energy Solutions"
+    "name":"MPC Energy Solutions",
+    "return_1y":43.9,
+    "cagr_5y":-20.6
   },
   {
     "ticker":"HAVI.OL",
-    "name":"Havila Shipping"
+    "name":"Havila Shipping",
+    "return_1y":-21.8,
+    "cagr_5y":-17.9
   },
   {
     "ticker":"PRYME.OL",
-    "name":"Pryme"
+    "name":"Pryme",
+    "return_1y":-4.0,
+    "cagr_5y":-55.7
   },
   {
     "ticker":"EQVA.OL",
-    "name":"Eqva"
+    "name":"Eqva",
+    "return_1y":-40.4,
+    "cagr_5y":1.8
   },
   {
     "ticker":"HERMA.OL",
-    "name":"Hermana Holding"
+    "name":"Hermana Holding",
+    "return_1y":75.4,
+    "cagr_5y":-6.4
   },
   {
     "ticker":"AASB.OL",
-    "name":"Aasen Sparebank"
+    "name":"Aasen Sparebank",
+    "return_1y":16.9,
+    "cagr_5y":5.1
   },
   {
     "ticker":"CONTX.OL",
-    "name":"Contextvision"
+    "name":"Contextvision",
+    "return_1y":-50.3,
+    "cagr_5y":-31.2
   },
   {
     "ticker":"CAVEN.OL",
-    "name":"Cavendish Hydrogen"
+    "name":"Cavendish Hydrogen",
+    "return_1y":50.0,
+    "cagr_5y":-51.7
   },
   {
     "ticker":"MVE.OL",
-    "name":"Matvareexpressen"
+    "name":"Matvareexpressen",
+    "return_1y":160.4,
+    "cagr_5y":44.7
   },
   {
     "ticker":"OCEAN.OL",
-    "name":"Ocean Geoloop"
+    "name":"Ocean Geoloop",
+    "return_1y":-10.3,
+    "cagr_5y":-40.4
   },
   {
     "ticker":"MVW.OL",
-    "name":"M Vest Water"
+    "name":"M Vest Water",
+    "return_1y":-38.6,
+    "cagr_5y":-24.6
   },
   {
     "ticker":"ONCIN.OL",
-    "name":"Oncoinvent"
+    "name":"Oncoinvent",
+    "return_1y":-53.1,
+    "cagr_5y":-80.8
   },
   {
     "ticker":"FFSB.OL",
-    "name":"Flekkefjord Sparebank"
+    "name":"Flekkefjord Sparebank",
+    "return_1y":8.4,
+    "cagr_5y":7.1
   },
   {
     "ticker":"ASA.OL",
-    "name":"Atlantic Sapphire"
+    "name":"Atlantic Sapphire",
+    "return_1y":4.7,
+    "cagr_5y":-82.8
   },
   {
     "ticker":"ADS.OL",
-    "name":"ADS Maritime Holding"
+    "name":"ADS Maritime Holding",
+    "return_1y":22.8,
+    "cagr_5y":9.7
   },
   {
     "ticker":"HUDL.OL",
-    "name":"Huddlestock Fintech"
+    "name":"Huddlestock Fintech",
+    "return_1y":-18.9,
+    "cagr_5y":-38.6
   },
   {
     "ticker":"RECSI.OL",
-    "name":"REC Silicon"
+    "name":"REC Silicon",
+    "return_1y":-65.5,
+    "cagr_5y":-52.8
   },
   {
     "ticker":"HYPRO.OL",
-    "name":"HydrogenPro"
+    "name":"HydrogenPro",
+    "return_1y":-67.9,
+    "cagr_5y":-49.3
   },
   {
     "ticker":"BCS.OL",
-    "name":"Bergen Carbon Solutions"
+    "name":"Bergen Carbon Solutions",
+    "return_1y":15.2,
+    "cagr_5y":-27.8
   },
   {
     "ticker":"NISB.OL",
-    "name":"Nidaros Sparebank"
+    "name":"Nidaros Sparebank",
+    "return_1y":0.1,
+    "cagr_5y":7.2
   },
   {
     "ticker":"OBSRV.OL",
-    "name":"Observe Medical"
+    "name":"Observe Medical",
+    "return_1y":-77.0,
+    "cagr_5y":-69.4
   },
   {
     "ticker":"NEXT.OL",
-    "name":"Next Biometrics Group"
+    "name":"Next Biometrics Group",
+    "return_1y":-84.8,
+    "cagr_5y":-37.4
   },
   {
     "ticker":"NBX.OL",
-    "name":"Norwegian Block Exchange"
+    "name":"Norwegian Block Exchange",
+    "return_1y":61.4,
+    "cagr_5y":-52.1
   },
   {
     "ticker":"HSPG.OL",
-    "name":"H\u00f8land og Setskog Sparebank"
+    "name":"H\u00f8land og Setskog Sparebank",
+    "return_1y":-6.4,
+    "cagr_5y":6.4
   },
   {
     "ticker":"ABS.OL",
-    "name":"Arctic Bioscience"
+    "name":"Arctic Bioscience",
+    "return_1y":-10.5,
+    "cagr_5y":-34.2
   },
   {
     "ticker":"IOX.OL",
-    "name":"Interoil Exploration"
+    "name":"Interoil Exploration",
+    "return_1y":128.1,
+    "cagr_5y":-23.9
   },
   {
     "ticker":"EMGS.OL",
-    "name":"Electromagnetic Geoservices"
+    "name":"Electromagnetic Geoservices",
+    "return_1y":-85.0,
+    "cagr_5y":-30.5
   },
   {
     "ticker":"ABTEC.OL",
-    "name":"Aqua Bio Technology"
+    "name":"Aqua Bio Technology",
+    "return_1y":-79.2,
+    "cagr_5y":-55.0
   },
   {
     "ticker":"AKH.OL",
-    "name":"Aker Horizons"
+    "name":"Aker Horizons",
+    "return_1y":-97.6,
+    "cagr_5y":-74.8
   },
   {
     "ticker":"EAM.OL",
-    "name":"EAM Solar"
+    "name":"EAM Solar",
+    "return_1y":-96.0,
+    "cagr_5y":-43.4
   },
   {
     "ticker":"KMCP.OL",
-    "name":"KMC Properties"
+    "name":"KMC Properties",
+    "return_1y":-47.4,
+    "cagr_5y":14.0
   },
   {
     "ticker":"PCIB.OL",
-    "name":"PCI Biotech Holding"
+    "name":"PCI Biotech Holding",
+    "return_1y":-79.8,
+    "cagr_5y":-60.2
   },
   {
     "ticker":"PYRUM.OL",
-    "name":"Pyrum Innovations"
+    "name":"Pyrum Innovations",
+    "return_1y":-23.5,
+    "cagr_5y":-14.9
   },
   {
     "ticker":"REFL.OL",
-    "name":"Refuels"
+    "name":"Refuels",
+    "return_1y":3.4,
+    "cagr_5y":-17.3
   },
   {
     "ticker":"SOFTX.OL",
-    "name":"Softox Solutions"
+    "name":"Softox Solutions",
+    "return_1y":112.1,
+    "cagr_5y":-74.0
   },
   {
     "ticker":"ROM.OL",
-    "name":"Romreal"
+    "name":"Romreal",
+    "return_1y":7.7,
+    "cagr_5y":4.5
   },
   {
     "ticker":"RIVER.OL",
-    "name":"River Tech"
+    "name":"River Tech",
+    "return_1y":-76.3,
+    "cagr_5y":-32.6
   },
   {
     "ticker":"NOSN.OL",
-    "name":"NOS Nova"
+    "name":"NOS Nova",
+    "return_1y":-3.8,
+    "cagr_5y":null
   },
   {
     "ticker":"GEM.OL",
-    "name":"Green Minerals"
+    "name":"Green Minerals",
+    "return_1y":-36.5,
+    "cagr_5y":-44.0
   },
   {
     "ticker":"BSP.OL",
-    "name":"Black Sea Property"
+    "name":"Black Sea Property",
+    "return_1y":-72.7,
+    "cagr_5y":19.5
   },
   {
     "ticker":"HYN.OL",
-    "name":"Hynion"
+    "name":"Hynion",
+    "return_1y":-83.2,
+    "cagr_5y":-65.5
   },
   {
     "ticker":"INIFY.OL",
-    "name":"Inify Laboratories"
+    "name":"Inify Laboratories",
+    "return_1y":-43.9,
+    "cagr_5y":-22.4
   },
   {
     "ticker":"NOFIN.OL",
-    "name":"Nordic Financials"
+    "name":"Nordic Financials",
+    "return_1y":-96.1,
+    "cagr_5y":-22.4
   },
   {
     "ticker":"ACED.OL",
-    "name":"ACE Digital"
+    "name":"ACE Digital",
+    "return_1y":-50.5,
+    "cagr_5y":null
   },
   {
     "ticker":"EXTX.OL",
-    "name":"Exact Therapeutics"
+    "name":"Exact Therapeutics",
+    "return_1y":-45.0,
+    "cagr_5y":-42.1
   },
   {
     "ticker":"AIX.OL",
-    "name":"Ayfie International"
+    "name":"Ayfie International",
+    "return_1y":19.3,
+    "cagr_5y":-19.9
   },
   {
     "ticker":"INDCT.OL",
-    "name":"Induct"
+    "name":"Induct",
+    "return_1y":-2.2,
+    "cagr_5y":-16.6
   },
   {
     "ticker":"BARRA.OL",
-    "name":"Barramundi Group"
+    "name":"Barramundi Group",
+    "return_1y":12.5,
+    "cagr_5y":-45.8
   }
 ]

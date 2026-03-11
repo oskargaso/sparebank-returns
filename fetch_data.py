@@ -340,6 +340,27 @@ def process_ticker(ticker, name):
     initial_price = records[0]["close"]
     final_price = records[-1]["close"]
     price_pct = (final_price / initial_price - 1) * 100
+
+    last_dt = datetime.strptime(records[-1]["date"], "%Y-%m-%d")
+
+    # 1Y return
+    one_year_ago = last_dt.replace(year=last_dt.year - 1).strftime("%Y-%m-%d")
+    base = next((r for r in records if r["date"] >= one_year_ago), None)
+    return_1y = None
+    if base and base["date"] != records[-1]["date"]:
+        return_1y = round((records[-1]["tri"] / base["tri"] - 1) * 100, 1)
+    output["return_1y"] = return_1y
+
+    # 5Y CAGR
+    five_years_ago = last_dt.replace(year=last_dt.year - 5).strftime("%Y-%m-%d")
+    base_5y = next((r for r in records if r["date"] >= five_years_ago), None)
+    cagr_5y = None
+    if base_5y and base_5y["date"] != records[-1]["date"]:
+        yrs = (last_dt - datetime.strptime(base_5y["date"], "%Y-%m-%d")).days / 365.25
+        if yrs >= 1:
+            cagr_5y = round((pow(records[-1]["tri"] / base_5y["tri"], 1 / yrs) - 1) * 100, 1)
+    output["cagr_5y"] = cagr_5y
+
     print(f"  {records[0]['date']} → {records[-1]['date']}  "
           f"DRIP: {final_tri - 100:.1f}%  Price: {price_pct:.1f}%  ({len(records)} days)")
 
@@ -349,13 +370,12 @@ def process_ticker(ticker, name):
 def main():
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    # Deduplicate (dict preserves insertion order, but we may have accidental dupes above)
-    unique_tickers = dict.fromkeys(TICKERS)
+    # Python dict already deduplicates keys (last definition wins for any dupes)
     stock_index = []
     skipped = []
 
-    total = len(unique_tickers)
-    for i, (ticker, name) in enumerate(unique_tickers.items(), 1):
+    total = len(TICKERS)
+    for i, (ticker, name) in enumerate(TICKERS.items(), 1):
         print(f"[{i}/{total}] {ticker} — {name}")
         result = process_ticker(ticker, name)
 
@@ -365,7 +385,7 @@ def main():
             out_path = os.path.join(DATA_DIR, f"{ticker}.json")
             with open(out_path, "w") as f:
                 json.dump(result, f, separators=(",", ":"))
-            stock_index.append({"ticker": ticker, "name": name})
+            stock_index.append({"ticker": ticker, "name": name, "return_1y": result.get("return_1y"), "cagr_5y": result.get("cagr_5y")})
 
         # Small delay to avoid Yahoo Finance rate limits
         time.sleep(0.4)
