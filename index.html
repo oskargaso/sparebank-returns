@@ -411,6 +411,55 @@
 
     .note { font-size: 0.7rem; color: #94a3b8; margin-top: 10px; }
 
+    /* ── Company info card ───────────────────────────────────────── */
+    #company-info { display: none; }
+    .company-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+    .company-meta-label {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+    .company-meta-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .industry-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1px solid #bfdbfe;
+    }
+    .company-summary {
+      font-size: 0.8rem;
+      color: #475569;
+      line-height: 1.6;
+      max-height: 4.8em;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.2s ease;
+    }
+    .company-summary.expanded { max-height: none; }
+    .summary-toggle {
+      font-size: 0.75rem;
+      color: #2563eb;
+      cursor: pointer;
+      margin-top: 4px;
+      display: none;
+    }
+    .summary-toggle:hover { text-decoration: underline; }
+
     /* ── States ──────────────────────────────────────────────────── */
     #loading {
       text-align: center;
@@ -547,6 +596,22 @@
         </div>
       </div>
 
+      <!-- Company info -->
+      <div id="company-info" class="card">
+        <div class="company-meta">
+          <div class="company-meta-item">
+            <div class="company-meta-label">Market Cap</div>
+            <div class="company-meta-value" id="ci-marketcap">–</div>
+          </div>
+          <div class="company-meta-item">
+            <div class="company-meta-label">Industry</div>
+            <div class="company-meta-value" id="ci-industry">–</div>
+          </div>
+        </div>
+        <div class="company-summary" id="ci-summary"></div>
+        <span class="summary-toggle" id="ci-toggle">Show more</span>
+      </div>
+
     </div>
   </main>
 
@@ -647,6 +712,15 @@ const LOGO_DOMAINS = {
   "HYPRO.OL": "hydrogenpro.com",
   "PCIB.OL":  "pcibiotech.no",
 };
+
+// ── Market cap formatter ──────────────────────────────────────────────────────
+function fmtMarketCap(v) {
+  if (v == null) return '–';
+  if (v >= 1e12) return (v / 1e12).toFixed(1) + 'T NOK';
+  if (v >= 1e9)  return (v / 1e9).toFixed(1) + 'B NOK';
+  if (v >= 1e6)  return (v / 1e6).toFixed(0) + 'M NOK';
+  return v.toLocaleString() + ' NOK';
+}
 
 // Derive a consistent color from ticker string
 function tickerColor(ticker) {
@@ -835,6 +909,32 @@ async function selectStock(ticker) {
     b.classList.toggle('active', b.dataset.range === 'max'));
 
   showContent();
+
+  // Populate company info card
+  document.getElementById('ci-marketcap').textContent = fmtMarketCap(stockData.marketCap);
+  const industryEl = document.getElementById('ci-industry');
+  if (stockData.industry) {
+    industryEl.innerHTML = `<span class="industry-tag">${stockData.industry}</span>`;
+  } else {
+    industryEl.textContent = '–';
+  }
+  const summaryEl = document.getElementById('ci-summary');
+  const toggleEl  = document.getElementById('ci-toggle');
+  if (stockData.longBusinessSummary) {
+    summaryEl.textContent = stockData.longBusinessSummary;
+    summaryEl.classList.remove('expanded');
+    // Only show toggle if text is long enough to be clamped
+    toggleEl.style.display = 'block';
+    toggleEl.textContent = 'Show more';
+    toggleEl.onclick = () => {
+      const expanded = summaryEl.classList.toggle('expanded');
+      toggleEl.textContent = expanded ? 'Show less' : 'Show more';
+    };
+  } else {
+    summaryEl.textContent = '';
+    toggleEl.style.display = 'none';
+  }
+
   applyRange('max');
 }
 
@@ -845,7 +945,7 @@ function buildOverview() {
   const grid  = document.getElementById('overview-grid');
   grid.innerHTML = '';
 
-  top10.forEach(({ ticker, name, cagr_5y, return_1y }) => {
+  top10.forEach(({ ticker, name, cagr_5y, return_1y, marketCap, industry }) => {
     const card = document.createElement('div');
     card.className = 'stock-card';
 
@@ -867,7 +967,7 @@ function buildOverview() {
         <div style="display:flex;align-items:center">${logoHtml}</div>
         <div class="card-title">
           <div class="card-name">${shortName}</div>
-          <div class="card-ticker">${ticker.replace('.OL','')}</div>
+          <div class="card-ticker">${ticker.replace('.OL','')}${industry ? ` &nbsp;·&nbsp; ${industry}` : ''}</div>
         </div>
       </div>
       <div class="card-metrics">
@@ -881,7 +981,8 @@ function buildOverview() {
           <div class="card-metric-value ${cls(return_1y)}">${fmtVal(return_1y)}</div>
           <div class="card-metric-sub">totalavk.</div>
         </div>
-      </div>`;
+      </div>
+      ${marketCap ? `<div style="font-size:0.68rem;color:#94a3b8;margin-top:4px">Mkt cap: ${fmtMarketCap(marketCap)}</div>` : ''}`;
 
     card.addEventListener('click', () => selectStock(ticker));
     grid.appendChild(card);
@@ -897,6 +998,7 @@ function showOverview() {
   document.getElementById('stats-container').style.display  = 'none';
   document.getElementById('header-name').innerHTML = 'Oslo Børs';
   document.getElementById('last-updated').textContent = '';
+  document.getElementById('company-info').style.display = 'none';
   document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
 }
 
@@ -910,12 +1012,14 @@ function showLoading() {
   document.getElementById('error-msg').style.display = 'none';
   document.getElementById('chart-container').style.display = 'none';
   document.getElementById('stats-container').style.display = 'none';
+  document.getElementById('company-info').style.display    = 'none';
 }
 function showContent() {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('error-msg').style.display = 'none';
   document.getElementById('chart-container').style.display = 'block';
   document.getElementById('stats-container').style.display = 'grid';
+  document.getElementById('company-info').style.display    = 'block';
 }
 function showError(msg) {
   document.getElementById('loading').style.display = 'none';

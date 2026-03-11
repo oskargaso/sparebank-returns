@@ -326,6 +326,13 @@ def process_ticker(ticker, name):
     for r in records:
         r["tri"] = round(r["tri"] / initial_tri * 100, 4)
 
+    # Fetch company metadata from yfinance .info
+    info = {}
+    try:
+        info = t.info or {}
+    except Exception:
+        pass
+
     output = {
         "ticker": ticker,
         "name": name,
@@ -333,6 +340,9 @@ def process_ticker(ticker, name):
         "last_updated": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         "start_date": records[0]["date"],
         "end_date": records[-1]["date"],
+        "marketCap": info.get("marketCap"),
+        "industry": info.get("industry"),
+        "longBusinessSummary": info.get("longBusinessSummary"),
         "records": records,
     }
 
@@ -361,7 +371,7 @@ def process_ticker(ticker, name):
             cagr_5y = round((pow(records[-1]["tri"] / base_5y["tri"], 1 / yrs) - 1) * 100, 1)
     output["cagr_5y"] = cagr_5y
 
-    print(f"  {records[0]['date']} → {records[-1]['date']}  "
+    print(f"  {records[0]['date']} -> {records[-1]['date']}  "
           f"DRIP: {final_tri - 100:.1f}%  Price: {price_pct:.1f}%  ({len(records)} days)")
 
     return output
@@ -385,7 +395,14 @@ def main():
             out_path = os.path.join(DATA_DIR, f"{ticker}.json")
             with open(out_path, "w") as f:
                 json.dump(result, f, separators=(",", ":"))
-            stock_index.append({"ticker": ticker, "name": name, "return_1y": result.get("return_1y"), "cagr_5y": result.get("cagr_5y")})
+            stock_index.append({
+                "ticker": ticker,
+                "name": name,
+                "return_1y": result.get("return_1y"),
+                "cagr_5y": result.get("cagr_5y"),
+                "marketCap": result.get("marketCap"),
+                "industry": result.get("industry"),
+            })
 
         # Small delay to avoid Yahoo Finance rate limits
         time.sleep(0.4)
