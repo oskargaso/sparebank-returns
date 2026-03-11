@@ -315,6 +315,20 @@ def calc_dividend_recovery(records, years=5):
             continue  # no previous price reference
 
         pre_ex_price = records[i - 1]["close"]
+        div_amount   = r["div"]
+
+        # Data-quality filter: skip events where no meaningful price drop is
+        # observable within 3 trading days of the ex-date.  This removes
+        # artefacts from (a) illiquid stocks whose price is forward-filled by
+        # Yahoo Finance and (b) ex-dates where the stock happened to rise.
+        # Threshold: the minimum close in the window must be at least 20% of
+        # the dividend below the pre-ex close.
+        min_close_window = min(
+            records[k]["close"]
+            for k in range(i, min(i + 4, len(records)))
+        )
+        if min_close_window > pre_ex_price - div_amount * 0.2:
+            continue  # no real drop observed — skip this event
 
         # Find first day AFTER ex-date when price recovers to pre-ex level.
         # We start from i+1: the ex-date itself is where the drop occurs,

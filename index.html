@@ -1024,6 +1024,13 @@ Chart.register({
           const div      = _chartData[i].div;
           const floor    = preClose - div;  // theoretical post-ex price
 
+          // Skip if no meaningful drop observed (same filter as Python)
+          let minClose3d = _chartData[i].close;
+          for (let k = i + 1; k < Math.min(i + 4, _chartData.length); k++) {
+            minClose3d = Math.min(minClose3d, _chartData[k].close);
+          }
+          if (minClose3d > preClose - div * 0.2) return;
+
           let recovIdx = null;
           for (let j = i + 1; j < _chartData.length; j++) {
             if (_chartData[j].close >= preClose) { recovIdx = j; break; }
@@ -1066,6 +1073,14 @@ Chart.register({
 
         } else {
           // Return chart: draw lines in normalised priceReturn space
+          const preClose2 = _chartData[i - 1].close;
+          const div2      = _chartData[i].div;
+          let minClose3d2 = _chartData[i].close;
+          for (let k = i + 1; k < Math.min(i + 4, _chartData.length); k++) {
+            minClose3d2 = Math.min(minClose3d2, _chartData[k].close);
+          }
+          if (minClose3d2 > preClose2 - div2 * 0.2) return;
+
           const preExVal = _chartData[i - 1].priceReturn;
           let recovIdx = null;
           for (let j = i + 1; j < _chartData.length; j++) {
@@ -1450,19 +1465,33 @@ function buildDivHistoryTable(stockData) {
     const div       = records[i].div;
     const expectedDropPct = -(div / preClose) * 100;
     const actualDropPct   = ((exClose - preClose) / preClose) * 100;
-    let recoveredIn = null;
-    for (let j = i + 1; j < Math.min(i + 253, records.length); j++) {
-      if (records[j].close >= preClose) { recoveredIn = j - i; break; }
+
+    // Data-quality filter: require observable drop ≥ 20% of dividend within
+    // 3 days. Filters out illiquid stocks with forward-filled prices and
+    // days where the stock rose despite the ex-date (no meaningful recovery
+    // to measure).
+    let minClose3d = exClose;
+    for (let k = i + 1; k < Math.min(i + 4, records.length); k++) {
+      minClose3d = Math.min(minClose3d, records[k].close);
     }
-    events.push({ date: records[i].date, div, recoveredIn, expectedDropPct, actualDropPct });
+    const meaningfulDrop = minClose3d <= preClose - div * 0.2;
+
+    let recoveredIn = null;
+    if (meaningfulDrop) {
+      for (let j = i + 1; j < Math.min(i + 253, records.length); j++) {
+        if (records[j].close >= preClose) { recoveredIn = j - i; break; }
+      }
+    }
+    events.push({ date: records[i].date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop });
   }
 
   if (!events.length && !nextEx) { card.style.display = 'none'; return; }
   card.style.display = 'block';
 
-  events.reverse().forEach(({ date, div, recoveredIn, expectedDropPct, actualDropPct }) => {
+  events.reverse().forEach(({ date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop }) => {
     let badgeCls, badgeTxt;
-    if (recoveredIn == null)      { badgeCls = 'none'; badgeTxt = '>1 år'; }
+    if (!meaningfulDrop)          { badgeCls = 'none'; badgeTxt = '–'; }
+    else if (recoveredIn == null) { badgeCls = 'none'; badgeTxt = '>1 år'; }
     else if (recoveredIn <= 10)   { badgeCls = 'fast'; badgeTxt = recoveredIn + 'd'; }
     else if (recoveredIn <= 40)   { badgeCls = 'mid';  badgeTxt = recoveredIn + 'd'; }
     else                          { badgeCls = 'slow'; badgeTxt = recoveredIn + 'd'; }
