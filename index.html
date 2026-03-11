@@ -407,7 +407,20 @@
     }
     .stat-value.pos { color: #16a34a; }
     .stat-value.neg { color: #dc2626; }
+    .stat-value.neutral { color: #2563eb; }
     .stat-sub { font-size: 0.7rem; color: #94a3b8; margin-top: 3px; }
+    .freq-tag {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 0.65rem;
+      font-weight: 500;
+      padding: 1px 6px;
+      border-radius: 8px;
+      border: 1px solid #bfdbfe;
+      margin-right: 3px;
+      vertical-align: middle;
+    }
 
     .note { font-size: 0.7rem; color: #94a3b8; margin-top: 10px; }
 
@@ -521,6 +534,12 @@
           <p>5-års totalavkastning (DRIP). Klikk for å se full graf.</p>
         </div>
         <div id="overview-grid" class="overview-grid"></div>
+
+        <div class="overview-intro" style="margin-top:28px">
+          <h2>Raskest etter ex-dag &mdash; Top 10</h2>
+          <p>Gjennomsnittlig handelsdager til kursutvinning etter ex-utbytte (siste 5 år). Klikk for å se full graf.</p>
+        </div>
+        <div id="recovery-grid" class="overview-grid"></div>
       </div>
 
       <!-- Controls -->
@@ -593,6 +612,11 @@
           <div class="stat-label">Annualized Return</div>
           <div class="stat-value" id="s-cagr">–</div>
           <div class="stat-sub">per year (total return, CAGR)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Dividend Recovery</div>
+          <div class="stat-value" id="s-recovery">–</div>
+          <div class="stat-sub" id="s-recovery-sub">avg days after ex-date</div>
         </div>
       </div>
 
@@ -935,6 +959,20 @@ async function selectStock(ticker) {
     toggleEl.style.display = 'none';
   }
 
+  // Populate dividend recovery stat
+  const recoveryEl    = document.getElementById('s-recovery');
+  const recoverySubEl = document.getElementById('s-recovery-sub');
+  if (stockData.avg_recovery_days != null) {
+    recoveryEl.textContent = Math.round(stockData.avg_recovery_days) + 'd';
+    recoveryEl.className = 'stat-value neutral';
+    const freqLabel = stockData.div_frequency ? stockData.div_frequency + ' · ' : '';
+    recoverySubEl.textContent = freqLabel + 'avg days after ex-date';
+  } else {
+    recoveryEl.textContent = '–';
+    recoveryEl.className = 'stat-value';
+    recoverySubEl.textContent = 'no dividend data';
+  }
+
   applyRange('max');
 }
 
@@ -986,6 +1024,60 @@ function buildOverview() {
 
     card.addEventListener('click', () => selectStock(ticker));
     grid.appendChild(card);
+  });
+
+  buildRecoveryOverview();
+}
+
+function buildRecoveryOverview() {
+  const rgrid = document.getElementById('recovery-grid');
+  rgrid.innerHTML = '';
+
+  const top10 = state.stocks
+    .filter(s => s.avg_recovery_days != null)
+    .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
+    .slice(0, 10);
+
+  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y }) => {
+    const card = document.createElement('div');
+    card.className = 'stock-card';
+
+    const domain = LOGO_DOMAINS[ticker];
+    const color  = tickerColor(ticker);
+    const abbr   = ticker.replace('.OL', '').slice(0, 3);
+    const logoHtml = domain
+      ? `<img class="card-img" src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
+      : `<div class="card-badge" style="background:${color}">${abbr}</div>`;
+
+    const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
+    const freqHtml  = div_frequency ? `<span class="freq-tag">${div_frequency}</span>` : '';
+
+    const fmtCagr = (v) => v == null ? '–' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+    const cagrCls = (v) => v == null ? '' : v >= 0 ? 'pos' : 'neg';
+
+    card.innerHTML = `
+      <div class="card-header">
+        <div style="display:flex;align-items:center">${logoHtml}</div>
+        <div class="card-title">
+          <div class="card-name">${shortName}</div>
+          <div class="card-ticker">${ticker.replace('.OL', '')}</div>
+        </div>
+      </div>
+      <div class="card-metrics">
+        <div>
+          <div class="card-metric-label">Gj.sn. dager</div>
+          <div class="card-metric-value" style="color:#2563eb">${avg_recovery_days.toFixed(0)}</div>
+          <div class="card-metric-sub">til utvinning</div>
+        </div>
+        <div>
+          <div class="card-metric-label">5Y CAGR</div>
+          <div class="card-metric-value ${cagrCls(cagr_5y)}">${fmtCagr(cagr_5y)}</div>
+          <div class="card-metric-sub">${freqHtml}per år</div>
+        </div>
+      </div>`;
+
+    card.addEventListener('click', () => selectStock(ticker));
+    rgrid.appendChild(card);
   });
 }
 

@@ -274,6 +274,65 @@ START_DATE = "2010-01-01"
 DATA_DIR = "data"
 
 
+def calc_dividend_recovery(records, years=5):
+    """
+    For each dividend ex-date in the last `years` years, calculate how many
+    trading days it takes for the stock price to recover to the pre-ex-dividend
+    closing price. Returns (avg_recovery_days, freq_label, divs_per_year).
+    """
+    if not records:
+        return None, None, None
+
+    last_date = datetime.strptime(records[-1]["date"], "%Y-%m-%d")
+    try:
+        cutoff = last_date.replace(year=last_date.year - years).strftime("%Y-%m-%d")
+    except ValueError:
+        cutoff = last_date.strftime("%Y-%m-%d")
+
+    MAX_RECOVERY = 252  # ~1 trading year cap
+
+    recovery_days_list = []
+    div_count = 0
+
+    for i, r in enumerate(records):
+        if r["date"] < cutoff:
+            continue
+        if r.get("div", 0) <= 0:
+            continue
+
+        div_count += 1
+        if i == 0:
+            continue  # no previous price reference
+
+        pre_ex_price = records[i - 1]["close"]
+
+        # Find first day (at or after ex-date) when price recovers to pre-ex level
+        recovered_in = MAX_RECOVERY
+        for j in range(i, min(i + MAX_RECOVERY + 1, len(records))):
+            if records[j]["close"] >= pre_ex_price:
+                recovered_in = j - i
+                break
+
+        recovery_days_list.append(recovered_in)
+
+    if not recovery_days_list:
+        return None, None, None
+
+    avg_days = round(sum(recovery_days_list) / len(recovery_days_list), 1)
+    divs_per_year = div_count / years
+
+    if divs_per_year >= 3.5:
+        freq_label = "quarterly"
+    elif divs_per_year >= 1.5:
+        freq_label = "semi-annual"
+    elif divs_per_year >= 0.5:
+        freq_label = "annual"
+    else:
+        freq_label = "irregular"
+
+    return avg_days, freq_label, round(divs_per_year, 1)
+
+
 def process_ticker(ticker, name):
     """Fetch and process a single ticker. Returns output dict or None on failure."""
     try:
@@ -371,6 +430,12 @@ def process_ticker(ticker, name):
             cagr_5y = round((pow(records[-1]["tri"] / base_5y["tri"], 1 / yrs) - 1) * 100, 1)
     output["cagr_5y"] = cagr_5y
 
+    # Dividend recovery analysis (last 5 years)
+    avg_recovery_days, div_frequency, divs_per_year = calc_dividend_recovery(records)
+    output["avg_recovery_days"] = avg_recovery_days
+    output["div_frequency"] = div_frequency
+    output["divs_per_year"] = divs_per_year
+
     print(f"  {records[0]['date']} -> {records[-1]['date']}  "
           f"DRIP: {final_tri - 100:.1f}%  Price: {price_pct:.1f}%  ({len(records)} days)")
 
@@ -402,6 +467,8 @@ def main():
                 "cagr_5y": result.get("cagr_5y"),
                 "marketCap": result.get("marketCap"),
                 "industry": result.get("industry"),
+                "avg_recovery_days": result.get("avg_recovery_days"),
+                "div_frequency": result.get("div_frequency"),
             })
 
         # Small delay to avoid Yahoo Finance rate limits

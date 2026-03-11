@@ -2,858 +2,1072 @@
   {
     "ticker":"EQNR.OL",
     "name":"Equinor",
-    "return_1y":26.3,
-    "cagr_5y":21.6,
-    "marketCap":781141999616,
-    "industry":"Oil & Gas Integrated"
+    "return_1y":32.1,
+    "cagr_5y":22.0,
+    "marketCap":802098839552,
+    "industry":"Oil & Gas Integrated",
+    "avg_recovery_days":21.6,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"DNB.OL",
     "name":"DNB Bank",
-    "return_1y":17.5,
+    "return_1y":18.0,
     "cagr_5y":16.8,
-    "marketCap":425464233984,
-    "industry":"Banks - Regional"
+    "marketCap":424154234880,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":5.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"KOG.OL",
     "name":"Kongsberg Gruppen",
-    "return_1y":35.1,
-    "cagr_5y":66.9,
-    "marketCap":354024357888,
-    "industry":"Aerospace & Defense"
+    "return_1y":28.4,
+    "cagr_5y":65.9,
+    "marketCap":344393121792,
+    "industry":"Aerospace & Defense",
+    "avg_recovery_days":9.9,
+    "div_frequency":"annual"
   },
   {
     "ticker":"TEL.OL",
     "name":"Telenor",
-    "return_1y":22.7,
-    "cagr_5y":9.5,
-    "marketCap":232676147200,
-    "industry":"Telecom Services"
+    "return_1y":23.0,
+    "cagr_5y":9.9,
+    "marketCap":232949710848,
+    "industry":"Telecom Services",
+    "avg_recovery_days":39.5,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"AKRBP.OL",
     "name":"Aker BP",
-    "return_1y":45.1,
-    "cagr_5y":12.2,
-    "marketCap":192301121536,
-    "industry":"Oil & Gas E&P"
+    "return_1y":49.7,
+    "cagr_5y":12.1,
+    "marketCap":195459809280,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":27.8,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"NHY.OL",
     "name":"Norsk Hydro",
-    "return_1y":38.1,
+    "return_1y":41.5,
     "cagr_5y":18.4,
-    "marketCap":176088940544,
-    "industry":"Aluminum"
+    "marketCap":181631025152,
+    "industry":"Aluminum",
+    "avg_recovery_days":1.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"GJF.OL",
     "name":"Gjensidige Forsikring",
-    "return_1y":19.9,
-    "cagr_5y":10.5,
-    "marketCap":131790544896,
-    "industry":"Insurance - Property & Casualty"
+    "return_1y":20.0,
+    "cagr_5y":10.6,
+    "marketCap":132690477056,
+    "industry":"Insurance - Property & Casualty",
+    "avg_recovery_days":6.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"YAR.OL",
     "name":"Yara International",
-    "return_1y":49.2,
-    "cagr_5y":10.0,
-    "marketCap":125630685184,
-    "industry":"Agricultural Inputs"
+    "return_1y":55.7,
+    "cagr_5y":10.5,
+    "marketCap":130521423872,
+    "industry":"Agricultural Inputs",
+    "avg_recovery_days":18.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ORK.OL",
     "name":"Orkla",
-    "return_1y":19.3,
-    "cagr_5y":13.6,
-    "marketCap":116214636544,
-    "industry":"Packaged Foods"
+    "return_1y":19.5,
+    "cagr_5y":13.5,
+    "marketCap":115429400576,
+    "industry":"Packaged Foods",
+    "avg_recovery_days":40.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MOWI.OL",
     "name":"Mowi",
-    "return_1y":11.7,
-    "cagr_5y":3.8,
-    "marketCap":114949349376,
-    "industry":"Farm Products"
+    "return_1y":13.1,
+    "cagr_5y":4.4,
+    "marketCap":115898474496,
+    "industry":"Farm Products",
+    "avg_recovery_days":21.9,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"AKER.OL",
     "name":"Aker",
-    "return_1y":97.1,
-    "cagr_5y":12.7,
-    "marketCap":79489531904,
-    "industry":"Conglomerates"
+    "return_1y":99.0,
+    "cagr_5y":12.8,
+    "marketCap":79192375296,
+    "industry":"Conglomerates",
+    "avg_recovery_days":14.3,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SUBC.OL",
     "name":"Subsea 7",
-    "return_1y":83.5,
-    "cagr_5y":27.0,
-    "marketCap":77469229056,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":79.8,
+    "cagr_5y":26.8,
+    "marketCap":76403138560,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":4.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"FRO.OL",
     "name":"Frontline",
-    "return_1y":117.5,
-    "cagr_5y":50.3,
-    "marketCap":77361455104,
-    "industry":"Oil & Gas Midstream"
+    "return_1y":109.4,
+    "cagr_5y":46.9,
+    "marketCap":71239327744,
+    "industry":"Oil & Gas Midstream",
+    "avg_recovery_days":20.1,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SALM.OL",
     "name":"SalMar",
-    "return_1y":8.3,
-    "cagr_5y":3.1,
-    "marketCap":75494752256,
-    "industry":"Farm Products"
+    "return_1y":12.1,
+    "cagr_5y":3.5,
+    "marketCap":76646825984,
+    "industry":"Farm Products",
+    "avg_recovery_days":26.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"STB.OL",
     "name":"Storebrand",
-    "return_1y":45.0,
-    "cagr_5y":21.5,
-    "marketCap":73674547200,
-    "industry":"Financial Conglomerates"
+    "return_1y":46.0,
+    "cagr_5y":21.8,
+    "marketCap":73886261248,
+    "industry":"Financial Conglomerates",
+    "avg_recovery_days":1.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"VEND.OL",
     "name":"Vend Marketplaces",
-    "return_1y":-5.8,
-    "cagr_5y":0.6,
-    "marketCap":54728626176,
-    "industry":"Internet Content & Information"
+    "return_1y":-3.2,
+    "cagr_5y":1.2,
+    "marketCap":55069880320,
+    "industry":"Internet Content & Information",
+    "avg_recovery_days":4.9,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"WAWI.OL",
     "name":"Wallenius Wilhelmsen",
-    "return_1y":92.8,
-    "cagr_5y":54.8,
-    "marketCap":52426526720,
-    "industry":"Marine Shipping"
+    "return_1y":92.4,
+    "cagr_5y":54.6,
+    "marketCap":52088287232,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":77.1,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"PROT.OL",
     "name":"Protector Forsikring",
-    "return_1y":70.7,
-    "cagr_5y":55.4,
-    "marketCap":41794457600,
-    "industry":"Insurance - Specialty"
+    "return_1y":72.2,
+    "cagr_5y":54.8,
+    "marketCap":41959325696,
+    "industry":"Insurance - Specialty",
+    "avg_recovery_days":21.6,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"CMBTO.OL",
     "name":"CMB.TECH",
-    "return_1y":47.1,
+    "return_1y":41.2,
     "cagr_5y":null,
-    "marketCap":37431898112,
-    "industry":"Oil & Gas Midstream"
+    "marketCap":35923017728,
+    "industry":"Oil & Gas Midstream",
+    "avg_recovery_days":3.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"HAFNI.OL",
     "name":"Hafnia",
-    "return_1y":73.8,
-    "cagr_5y":48.2,
-    "marketCap":35670036480,
-    "industry":"Marine Shipping"
+    "return_1y":72.1,
+    "cagr_5y":46.0,
+    "marketCap":35020402688,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":35.0,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"AUTO.OL",
     "name":"AutoStore Holdings",
-    "return_1y":3.4,
-    "cagr_5y":-24.0,
-    "marketCap":35043323904,
-    "industry":"Computer Hardware"
+    "return_1y":1.4,
+    "cagr_5y":-24.5,
+    "marketCap":34034397184,
+    "industry":"Computer Hardware",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SBNOR.OL",
     "name":"Sparebanken Norge",
-    "return_1y":47.7,
+    "return_1y":47.3,
     "cagr_5y":null,
-    "marketCap":34939674624,
-    "industry":"Banks - Regional"
+    "marketCap":34835738624,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"TOM.OL",
     "name":"Tomra Systems",
-    "return_1y":-31.0,
+    "return_1y":-28.9,
     "cagr_5y":-8.2,
-    "marketCap":33556967424,
-    "industry":"Waste Management"
+    "marketCap":33379729408,
+    "industry":"Waste Management",
+    "avg_recovery_days":27.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"DOFG.OL",
     "name":"DOF Group",
-    "return_1y":76.2,
-    "cagr_5y":66.0,
-    "marketCap":31055738880,
-    "industry":"Engineering & Construction"
+    "return_1y":79.6,
+    "cagr_5y":66.7,
+    "marketCap":31449784320,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":42.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MING.OL",
     "name":"Sparebank 1 SMN",
-    "return_1y":22.9,
-    "cagr_5y":21.1,
-    "marketCap":30235082752,
-    "industry":"Banks - Regional"
+    "return_1y":25.6,
+    "cagr_5y":21.2,
+    "marketCap":30314307584,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":4.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"LSG.OL",
     "name":"Ler\u00f8y Seafood Group",
-    "return_1y":5.6,
-    "cagr_5y":-3.1,
-    "marketCap":29833340928,
-    "industry":"Packaged Foods"
+    "return_1y":8.0,
+    "cagr_5y":-2.6,
+    "marketCap":30101307392,
+    "industry":"Packaged Foods",
+    "avg_recovery_days":13.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SPOL.OL",
     "name":"Sparebank 1 \u00d8stlandet",
     "return_1y":40.6,
     "cagr_5y":20.4,
-    "marketCap":28921282560,
-    "industry":"Banks - Regional"
+    "marketCap":28873758720,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":4.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NOD.OL",
     "name":"Nordic Semiconductor",
-    "return_1y":15.3,
-    "cagr_5y":-0.1,
-    "marketCap":29101826048,
-    "industry":"Semiconductors"
+    "return_1y":18.6,
+    "cagr_5y":-0.2,
+    "marketCap":29537064960,
+    "industry":"Semiconductors",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BWLPG.OL",
     "name":"BW LPG",
-    "return_1y":62.0,
-    "cagr_5y":48.4,
-    "marketCap":25277132800,
-    "industry":"Marine Shipping"
+    "return_1y":48.2,
+    "cagr_5y":43.3,
+    "marketCap":22498924544,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":15.7,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"BAKKA.OL",
     "name":"Bakkafrost",
-    "return_1y":-16.9,
-    "cagr_5y":-7.0,
-    "marketCap":25824313344,
-    "industry":"Farm Products"
+    "return_1y":-14.7,
+    "cagr_5y":-6.2,
+    "marketCap":26346014720,
+    "industry":"Farm Products",
+    "avg_recovery_days":143.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"VEI.OL",
     "name":"Veidekke",
-    "return_1y":41.8,
+    "return_1y":42.0,
     "cagr_5y":16.7,
     "marketCap":25965586432,
-    "industry":"Engineering & Construction"
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":51.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"TIETO.OL",
     "name":"Tietoevry",
-    "return_1y":0.3,
-    "cagr_5y":2.0,
-    "marketCap":25169790976,
-    "industry":"Information Technology Services"
+    "return_1y":0.9,
+    "cagr_5y":0.8,
+    "marketCap":24886982656,
+    "industry":"Information Technology Services",
+    "avg_recovery_days":59.5,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"TGS.OL",
     "name":"TGS",
-    "return_1y":23.0,
-    "cagr_5y":-0.7,
-    "marketCap":22239115264,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":26.7,
+    "cagr_5y":-0.8,
+    "marketCap":22199824384,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":26.9,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"KIT.OL",
     "name":"Kitron",
-    "return_1y":122.1,
-    "cagr_5y":44.5,
-    "marketCap":21826506752,
-    "industry":"Electronic Components"
+    "return_1y":118.6,
+    "cagr_5y":42.8,
+    "marketCap":21170399232,
+    "industry":"Electronic Components",
+    "avg_recovery_days":7.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AUSS.OL",
     "name":"Austevoll Seafood",
-    "return_1y":9.2,
-    "cagr_5y":4.3,
-    "marketCap":20545691648,
-    "industry":"Farm Products"
+    "return_1y":10.5,
+    "cagr_5y":4.8,
+    "marketCap":20626419712,
+    "industry":"Farm Products",
+    "avg_recovery_days":103.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CADLR.OL",
     "name":"Cadeler",
-    "return_1y":19.2,
-    "cagr_5y":11.4,
-    "marketCap":21063800832,
-    "industry":"Engineering & Construction"
+    "return_1y":21.1,
+    "cagr_5y":10.6,
+    "marketCap":21081325568,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ENTRA.OL",
     "name":"Entra",
-    "return_1y":1.9,
-    "cagr_5y":-7.4,
-    "marketCap":20272852992,
-    "industry":"Real Estate Services"
+    "return_1y":1.7,
+    "cagr_5y":-7.5,
+    "marketCap":20236521472,
+    "industry":"Real Estate Services",
+    "avg_recovery_days":44.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AKSO.OL",
     "name":"Aker Solutions",
-    "return_1y":50.5,
-    "cagr_5y":27.5,
-    "marketCap":20002097152,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":53.2,
+    "cagr_5y":28.0,
+    "marketCap":20244723712,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":1.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AFG.OL",
     "name":"AF Gruppen",
-    "return_1y":33.2,
-    "cagr_5y":5.0,
+    "return_1y":35.7,
+    "cagr_5y":4.8,
     "marketCap":19971756032,
-    "industry":"Engineering & Construction"
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":78.6,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SNI.OL",
     "name":"Stolt-Nielsen",
-    "return_1y":51.6,
-    "cagr_5y":32.0,
-    "marketCap":22709141504,
-    "industry":"Marine Shipping"
+    "return_1y":49.1,
+    "cagr_5y":31.3,
+    "marketCap":22144733184,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":14.8,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SWON.OL",
     "name":"SoftwareOne Holding",
-    "return_1y":-7.4,
+    "return_1y":-5.3,
     "cagr_5y":null,
-    "marketCap":18397566976,
-    "industry":"Software - Application"
+    "marketCap":18822621184,
+    "industry":"Software - Application",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SCATC.OL",
     "name":"Scatec",
-    "return_1y":57.8,
-    "cagr_5y":-13.8,
-    "marketCap":18926090240,
-    "industry":"Utilities - Renewable"
+    "return_1y":57.6,
+    "cagr_5y":-14.2,
+    "marketCap":19181848576,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":88.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"OET.OL",
     "name":"Okeanis Eco Tankers",
-    "return_1y":135.0,
-    "cagr_5y":65.0,
-    "marketCap":18721912832,
-    "industry":"Marine Shipping"
+    "return_1y":126.6,
+    "cagr_5y":61.9,
+    "marketCap":17921497088,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":13.5,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"ELK.OL",
     "name":"Elkem",
-    "return_1y":29.3,
-    "cagr_5y":2.8,
-    "marketCap":18506524672,
-    "industry":"Specialty Chemicals"
+    "return_1y":30.5,
+    "cagr_5y":3.0,
+    "marketCap":18417733632,
+    "industry":"Specialty Chemicals",
+    "avg_recovery_days":76.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"BRG.OL",
     "name":"Borregaard",
-    "return_1y":-0.6,
-    "cagr_5y":1.9,
+    "return_1y":2.1,
+    "cagr_5y":1.8,
     "marketCap":16914468864,
-    "industry":"Specialty Chemicals"
+    "industry":"Specialty Chemicals",
+    "avg_recovery_days":1.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"BORR.OL",
     "name":"Borr Drilling",
-    "return_1y":36.1,
+    "return_1y":36.8,
     "cagr_5y":null,
-    "marketCap":16491344896,
-    "industry":"Oil & Gas Drilling"
+    "marketCap":16583406592,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NONG.OL",
     "name":"Sparebank 1 Nord-Norge",
-    "return_1y":29.7,
-    "cagr_5y":22.8,
-    "marketCap":15903045632,
-    "industry":"Banks - Regional"
+    "return_1y":30.5,
+    "cagr_5y":22.9,
+    "marketCap":15929149440,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":2.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ATEA.OL",
     "name":"Atea",
-    "return_1y":11.1,
-    "cagr_5y":3.8,
-    "marketCap":15711365120,
-    "industry":"Information Technology Services"
+    "return_1y":12.4,
+    "cagr_5y":4.2,
+    "marketCap":15755935744,
+    "industry":"Information Technology Services",
+    "avg_recovery_days":6.4,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"NAS.OL",
     "name":"Norwegian Air Shuttle",
-    "return_1y":39.1,
-    "cagr_5y":-9.2,
-    "marketCap":15693627392,
-    "industry":"Airlines"
+    "return_1y":43.9,
+    "cagr_5y":-8.6,
+    "marketCap":15667305472,
+    "industry":"Airlines",
+    "avg_recovery_days":9.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"DNO.OL",
     "name":"DNO",
-    "return_1y":41.6,
-    "cagr_5y":19.0,
-    "marketCap":15609750528,
-    "industry":"Oil & Gas E&P"
+    "return_1y":44.8,
+    "cagr_5y":18.4,
+    "marketCap":15980249088,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":32.6,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"EPR.OL",
     "name":"Europris",
-    "return_1y":17.8,
-    "cagr_5y":18.2,
-    "marketCap":14433863680,
-    "industry":"Discount Stores"
+    "return_1y":19.6,
+    "cagr_5y":18.4,
+    "marketCap":14548418560,
+    "industry":"Discount Stores",
+    "avg_recovery_days":1.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"BNOR.OL",
     "name":"Bluenord",
-    "return_1y":-1.8,
-    "cagr_5y":33.1,
-    "marketCap":14189797376,
-    "industry":"Oil & Gas E&P"
+    "return_1y":3.2,
+    "cagr_5y":33.2,
+    "marketCap":14292066304,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":72.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ELO.OL",
     "name":"Elopak",
-    "return_1y":44.5,
+    "return_1y":41.8,
     "cagr_5y":17.8,
     "marketCap":13878411264,
-    "industry":"Packaging & Containers"
+    "industry":"Packaging & Containers",
+    "avg_recovery_days":10.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NORCO.OL",
     "name":"Norconsult",
-    "return_1y":-2.4,
-    "cagr_5y":41.5,
-    "marketCap":12225836032,
-    "industry":"Engineering & Construction"
+    "return_1y":-1.2,
+    "cagr_5y":41.8,
+    "marketCap":12287894528,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":1.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"SOMA.OL",
     "name":"Solstad Maritime",
-    "return_1y":11.6,
+    "return_1y":12.0,
     "cagr_5y":null,
-    "marketCap":12029518848,
-    "industry":"Marine Shipping"
+    "marketCap":12076054528,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":3.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"COSH.OL",
     "name":"Constellation Oil Services",
-    "return_1y":33.6,
-    "cagr_5y":37.9,
-    "marketCap":200629223424,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":42.1,
+    "cagr_5y":38.8,
+    "marketCap":202149134336,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BONHR.OL",
     "name":"Bonheur",
-    "return_1y":8.9,
-    "cagr_5y":1.8,
-    "marketCap":10016260096,
-    "industry":"Conglomerates"
+    "return_1y":9.6,
+    "cagr_5y":2.1,
+    "marketCap":10122590208,
+    "industry":"Conglomerates",
+    "avg_recovery_days":8.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MPCC.OL",
     "name":"MPC Container Ships",
-    "return_1y":58.6,
-    "cagr_5y":60.3,
-    "marketCap":10267224064,
-    "industry":"Marine Shipping"
+    "return_1y":59.1,
+    "cagr_5y":59.2,
+    "marketCap":10125240320,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":12.9,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"AKBM.OL",
     "name":"Aker BioMarine",
-    "return_1y":78.6,
-    "cagr_5y":12.7,
-    "marketCap":9507048448,
-    "industry":"Packaged Foods"
+    "return_1y":90.3,
+    "cagr_5y":13.4,
+    "marketCap":9682455552,
+    "industry":"Packaged Foods",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"BWO.OL",
     "name":"BW Offshore",
-    "return_1y":100.2,
-    "cagr_5y":18.1,
-    "marketCap":9278245888,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":106.3,
+    "cagr_5y":18.2,
+    "marketCap":9368853504,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":5.7,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"B2I.OL",
     "name":"B2 Impact",
-    "return_1y":188.1,
-    "cagr_5y":36.0,
-    "marketCap":9494285312,
-    "industry":"Credit Services"
+    "return_1y":190.3,
+    "cagr_5y":35.6,
+    "marketCap":9401567232,
+    "industry":"Credit Services",
+    "avg_recovery_days":7.3,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AFK.OL",
     "name":"Arendals Fossekompani",
-    "return_1y":34.7,
-    "cagr_5y":-1.8,
+    "return_1y":36.0,
+    "cagr_5y":-1.9,
     "marketCap":9123476480,
-    "industry":"Conglomerates"
+    "industry":"Conglomerates",
+    "avg_recovery_days":1.6,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SATS.OL",
     "name":"SATS",
-    "return_1y":50.3,
-    "cagr_5y":14.5,
-    "marketCap":8630753280,
-    "industry":"Leisure"
+    "return_1y":48.3,
+    "cagr_5y":14.6,
+    "marketCap":8571435008,
+    "industry":"Leisure",
+    "avg_recovery_days":2.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"GSF.OL",
     "name":"Grieg Seafood",
-    "return_1y":42.3,
-    "cagr_5y":-2.1,
-    "marketCap":7991661568,
-    "industry":"Farm Products"
+    "return_1y":43.5,
+    "cagr_5y":-1.5,
+    "marketCap":8059007488,
+    "industry":"Farm Products",
+    "avg_recovery_days":53.3,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ODF.OL",
     "name":"Odfjell Ser. A",
-    "return_1y":52.5,
-    "cagr_5y":48.5,
-    "marketCap":9909511168,
-    "industry":"Marine Shipping"
+    "return_1y":53.5,
+    "cagr_5y":48.2,
+    "marketCap":9830362112,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":43.7,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"PLSV.OL",
     "name":"Paratus Energy Services",
-    "return_1y":44.5,
-    "cagr_5y":5.1,
-    "marketCap":7173361664,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":55.9,
+    "cagr_5y":5.5,
+    "marketCap":7215672320,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":87.7,
+    "div_frequency":"annual"
   },
   {
     "ticker":"RING.OL",
     "name":"Sparebank 1 Ringerike Hadeland",
-    "return_1y":31.0,
-    "cagr_5y":19.3,
-    "marketCap":7353463808,
-    "industry":"Banks - Regional"
+    "return_1y":33.4,
+    "cagr_5y":19.6,
+    "marketCap":7446555648,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":79.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SNTIA.OL",
     "name":"Sentia",
     "return_1y":21.8,
     "cagr_5y":null,
-    "marketCap":6974678528,
-    "industry":"Engineering & Construction"
+    "marketCap":6969657856,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"LINK.OL",
     "name":"Link Mobility Group",
-    "return_1y":6.7,
-    "cagr_5y":-13.6,
-    "marketCap":6393918464,
-    "industry":"Telecom Services"
+    "return_1y":5.9,
+    "cagr_5y":-13.4,
+    "marketCap":6630183424,
+    "industry":"Telecom Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PEXIP.OL",
     "name":"Pexip Holding",
-    "return_1y":67.2,
-    "cagr_5y":-7.1,
-    "marketCap":6476551680,
-    "industry":"Software - Application"
+    "return_1y":68.9,
+    "cagr_5y":-6.8,
+    "marketCap":6599524352,
+    "industry":"Software - Application",
+    "avg_recovery_days":16.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"PARB.OL",
     "name":"Pareto Bank",
-    "return_1y":23.2,
-    "cagr_5y":20.4,
-    "marketCap":6623044096,
-    "industry":"Banks - Regional"
+    "return_1y":24.7,
+    "cagr_5y":20.6,
+    "marketCap":6676764672,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":67.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"WWIB.OL",
     "name":"Wilh. Wilhelmsen Holding B",
-    "return_1y":86.0,
-    "cagr_5y":35.0,
-    "marketCap":27732815872,
-    "industry":"Marine Shipping"
+    "return_1y":88.5,
+    "cagr_5y":35.1,
+    "marketCap":27648903168,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":6.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"HSHP.OL",
     "name":"Himalaya Shipping",
-    "return_1y":148.0,
-    "cagr_5y":33.2,
-    "marketCap":6255150080,
-    "industry":"Marine Shipping"
+    "return_1y":145.5,
+    "cagr_5y":32.3,
+    "marketCap":6096199680,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":5.8,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"MORG.OL",
     "name":"Sparebanken M\u00f8re",
-    "return_1y":24.0,
-    "cagr_5y":18.1,
-    "marketCap":5650339328,
-    "industry":"Banks - Regional"
+    "return_1y":25.1,
+    "cagr_5y":19.1,
+    "marketCap":5767311360,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":1.7,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SOAG.OL",
     "name":"Sparebank 1 \u00d8stfold Akershus",
-    "return_1y":10.7,
-    "cagr_5y":15.1,
-    "marketCap":5562213376,
-    "industry":"Banks - Regional"
+    "return_1y":11.9,
+    "cagr_5y":14.4,
+    "marketCap":5630347264,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":54.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"KCC.OL",
     "name":"Klaveness Combination Carriers",
-    "return_1y":68.4,
-    "cagr_5y":32.3,
-    "marketCap":5436907008,
-    "industry":"Marine Shipping"
+    "return_1y":65.4,
+    "cagr_5y":32.7,
+    "marketCap":5330184704,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":15.0,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"BOUV.OL",
     "name":"Bouvet",
-    "return_1y":-26.5,
+    "return_1y":-25.7,
     "cagr_5y":-1.4,
-    "marketCap":5178488832,
-    "industry":"Information Technology Services"
+    "marketCap":5168152576,
+    "industry":"Information Technology Services",
+    "avg_recovery_days":26.0,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"KID.OL",
     "name":"Kid",
-    "return_1y":-12.0,
-    "cagr_5y":10.8,
-    "marketCap":4991225856,
-    "industry":"Specialty Retail"
+    "return_1y":-12.2,
+    "cagr_5y":10.7,
+    "marketCap":5048128512,
+    "industry":"Specialty Retail",
+    "avg_recovery_days":52.0,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"SOFF.OL",
     "name":"Solstad Offshore",
-    "return_1y":74.1,
-    "cagr_5y":48.5,
-    "marketCap":6309950464,
-    "industry":"Marine Shipping"
+    "return_1y":76.2,
+    "cagr_5y":47.6,
+    "marketCap":6320811008,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":127.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"HELG.OL",
     "name":"Sparebank 1 Helgeland",
-    "return_1y":15.5,
-    "cagr_5y":15.6,
-    "marketCap":4556866560,
-    "industry":"Banks - Regional"
+    "return_1y":11.3,
+    "cagr_5y":15.7,
+    "marketCap":4583830528,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":6.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MULTI.OL",
     "name":"Multiconsult",
-    "return_1y":-7.1,
-    "cagr_5y":4.8,
-    "marketCap":4312480256,
-    "industry":"Engineering & Construction"
+    "return_1y":-5.2,
+    "cagr_5y":5.2,
+    "marketCap":4367591936,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":2.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SEA1.OL",
     "name":"Sea1 Offshore",
-    "return_1y":58.5,
-    "cagr_5y":11.9,
-    "marketCap":4364596224,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":61.5,
+    "cagr_5y":11.5,
+    "marketCap":4333967360,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ABG.OL",
     "name":"ABG Sundal Collier",
-    "return_1y":21.4,
-    "cagr_5y":8.2,
-    "marketCap":4010243072,
-    "industry":"Capital Markets"
+    "return_1y":23.4,
+    "cagr_5y":7.9,
+    "marketCap":4035883776,
+    "industry":"Capital Markets",
+    "avg_recovery_days":67.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CLOUD.OL",
     "name":"Cloudberry Clean Energy",
-    "return_1y":21.7,
+    "return_1y":25.2,
     "cagr_5y":-2.6,
-    "marketCap":4173532928,
-    "industry":"Utilities - Renewable"
+    "marketCap":4167170816,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AKAST.OL",
     "name":"Akastor",
-    "return_1y":38.8,
-    "cagr_5y":18.5,
-    "marketCap":4137432832,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":40.6,
+    "cagr_5y":18.9,
+    "marketCap":4121079040,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":62.3,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MEDI.OL",
     "name":"Medistim",
-    "return_1y":20.0,
-    "cagr_5y":-3.1,
-    "marketCap":3892168704,
-    "industry":"Medical Devices"
+    "return_1y":14.9,
+    "cagr_5y":-2.9,
+    "marketCap":3910441728,
+    "industry":"Medical Devices",
+    "avg_recovery_days":8.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NEL.OL",
     "name":"NEL",
-    "return_1y":3.6,
-    "cagr_5y":-38.3,
-    "marketCap":3896644096,
-    "industry":"Specialty Industrial Machinery"
+    "return_1y":8.3,
+    "cagr_5y":-38.4,
+    "marketCap":3903996672,
+    "industry":"Specialty Industrial Machinery",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ROGS.OL",
     "name":"Rogaland Sparebank",
-    "return_1y":29.9,
-    "cagr_5y":37.5,
-    "marketCap":3517097984,
-    "industry":"Banks - Regional"
+    "return_1y":26.6,
+    "cagr_5y":38.5,
+    "marketCap":3563254272,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":35.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ELMRA.OL",
     "name":"Elmera Group",
-    "return_1y":10.7,
-    "cagr_5y":-5.5,
-    "marketCap":3603151360,
-    "industry":"Utilities - Regulated Electric"
+    "return_1y":10.9,
+    "cagr_5y":-4.9,
+    "marketCap":3652359936,
+    "industry":"Utilities - Regulated Electric",
+    "avg_recovery_days":32.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"BEWI.OL",
     "name":"Bewi",
-    "return_1y":-38.4,
-    "cagr_5y":-9.3,
-    "marketCap":3713399808,
-    "industry":"Packaging & Containers"
+    "return_1y":-37.1,
+    "cagr_5y":-8.8,
+    "marketCap":3732321536,
+    "industry":"Packaging & Containers",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"AKVA.OL",
     "name":"Akva Group",
-    "return_1y":67.4,
-    "cagr_5y":4.1,
-    "marketCap":3675966208,
-    "industry":"Farm & Heavy Construction Machinery"
+    "return_1y":78.4,
+    "cagr_5y":4.7,
+    "marketCap":3803351040,
+    "industry":"Farm & Heavy Construction Machinery",
+    "avg_recovery_days":19.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NAPA.OL",
     "name":"Napatech",
-    "return_1y":82.1,
-    "cagr_5y":14.3,
-    "marketCap":3651797760,
-    "industry":"Communication Equipment"
+    "return_1y":83.6,
+    "cagr_5y":14.5,
+    "marketCap":3690353664,
+    "industry":"Communication Equipment",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SMOP.OL",
     "name":"Smartoptics Group",
-    "return_1y":91.2,
-    "cagr_5y":32.5,
-    "marketCap":3617879808,
-    "industry":"Communication Equipment"
+    "return_1y":94.5,
+    "cagr_5y":33.6,
+    "marketCap":3764948224,
+    "industry":"Communication Equipment",
+    "avg_recovery_days":2.7,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ENVIP.OL",
     "name":"Envipco Holding",
-    "return_1y":-16.1,
-    "cagr_5y":20.9,
-    "marketCap":3410263296,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":-17.6,
+    "cagr_5y":20.2,
+    "marketCap":3238428416,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PEN.OL",
     "name":"Panoro Energy",
-    "return_1y":19.2,
-    "cagr_5y":10.6,
-    "marketCap":3355767808,
-    "industry":"Oil & Gas E&P"
+    "return_1y":21.2,
+    "cagr_5y":10.3,
+    "marketCap":3399108096,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":37.4,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"2020.OL",
     "name":"2020 Bulkers",
-    "return_1y":27.4,
-    "cagr_5y":32.0,
-    "marketCap":3102551552,
-    "industry":"Marine Shipping"
+    "return_1y":25.6,
+    "cagr_5y":30.7,
+    "marketCap":3033758976,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":19.1,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"ANDF.OL",
     "name":"Andfjord Salmon",
-    "return_1y":-17.7,
-    "cagr_5y":-10.4,
-    "marketCap":3097679872,
-    "industry":"Farm Products"
+    "return_1y":-17.8,
+    "cagr_5y":-9.6,
+    "marketCap":3119117056,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"POL.OL",
     "name":"Polaris Media",
-    "return_1y":-8.8,
-    "cagr_5y":7.4,
-    "marketCap":2932499968,
-    "industry":"Publishing"
+    "return_1y":-9.1,
+    "cagr_5y":7.2,
+    "marketCap":2908062464,
+    "industry":"Publishing",
+    "avg_recovery_days":63.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MORLD.OL",
     "name":"Moreld",
-    "return_1y":28.0,
-    "cagr_5y":31.3,
-    "marketCap":2890449408,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":35.3,
+    "cagr_5y":32.8,
+    "marketCap":2932748544,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":3.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CAMBI.OL",
     "name":"Cambi",
-    "return_1y":7.6,
-    "cagr_5y":1.7,
-    "marketCap":3000481792,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":7.4,
+    "cagr_5y":1.9,
+    "marketCap":2960475392,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":4.4,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SMCRT.OL",
     "name":"SmartCraft",
-    "return_1y":-35.6,
-    "cagr_5y":-5.4,
-    "marketCap":2835823616,
-    "industry":"Software - Application"
+    "return_1y":-34.7,
+    "cagr_5y":-5.6,
+    "marketCap":2802944256,
+    "industry":"Software - Application",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"RANA.OL",
     "name":"Rana Gruber",
-    "return_1y":14.7,
-    "cagr_5y":19.0,
-    "marketCap":2866677760,
-    "industry":"Steel"
+    "return_1y":17.8,
+    "cagr_5y":18.6,
+    "marketCap":2911179776,
+    "industry":"Steel",
+    "avg_recovery_days":70.5,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"MAS.OL",
     "name":"M\u00e5s\u00f8val",
-    "return_1y":-1.7,
+    "return_1y":-7.6,
     "cagr_5y":-8.9,
     "marketCap":2829945344,
-    "industry":"Farm Products"
+    "industry":"Farm Products",
+    "avg_recovery_days":0.7,
+    "div_frequency":"annual"
   },
   {
     "ticker":"OTL.OL",
     "name":"Odfjell Technology",
-    "return_1y":90.8,
-    "cagr_5y":42.1,
-    "marketCap":2825612800,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":97.1,
+    "cagr_5y":42.2,
+    "marketCap":2837452288,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":11.7,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"NOL.OL",
     "name":"Northern Ocean",
-    "return_1y":38.2,
-    "cagr_5y":-6.0,
-    "marketCap":2698616832,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":39.1,
+    "cagr_5y":-5.9,
+    "marketCap":2716809984,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ZAP.OL",
     "name":"Zaptec",
-    "return_1y":106.0,
-    "cagr_5y":-8.0,
-    "marketCap":2688942336,
-    "industry":"Auto Parts"
+    "return_1y":101.0,
+    "cagr_5y":-9.3,
+    "marketCap":2715048704,
+    "industry":"Auto Parts",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NSKOG.OL",
     "name":"Norske Skog",
-    "return_1y":28.7,
-    "cagr_5y":-0.3,
-    "marketCap":2608775680,
-    "industry":"Paper & Paper Products"
+    "return_1y":41.8,
+    "cagr_5y":1.3,
+    "marketCap":2774210304,
+    "industry":"Paper & Paper Products",
+    "avg_recovery_days":20.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"VDI.OL",
@@ -861,135 +1075,169 @@
     "return_1y":-11.6,
     "cagr_5y":-8.9,
     "marketCap":2711814144,
-    "industry":"Oil & Gas Drilling"
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"APR.OL",
     "name":"Appear",
-    "return_1y":-9.3,
+    "return_1y":-8.9,
     "cagr_5y":null,
-    "marketCap":2590340352,
-    "industry":"Computer Hardware"
+    "marketCap":2601354240,
+    "industry":"Computer Hardware",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"VTURA.OL",
     "name":"Ventura Offshore",
-    "return_1y":27.6,
-    "cagr_5y":-5.3,
-    "marketCap":2737950208,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":26.5,
+    "cagr_5y":-6.5,
+    "marketCap":2674522624,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ARCH.OL",
     "name":"Archer",
-    "return_1y":29.1,
-    "cagr_5y":-5.7,
-    "marketCap":2557006080,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":29.6,
+    "cagr_5y":-5.5,
+    "marketCap":2576904960,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":8.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"XPLRA.OL",
     "name":"Xplora Technologies",
-    "return_1y":92.0,
-    "cagr_5y":1.8,
-    "marketCap":2371876864,
-    "industry":"Internet Retail"
+    "return_1y":104.5,
+    "cagr_5y":2.0,
+    "marketCap":2416629504,
+    "industry":"Internet Retail",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"IWS.OL",
     "name":"Integrated Wind Solutions",
-    "return_1y":55.1,
-    "cagr_5y":10.8,
-    "marketCap":2337370880,
-    "industry":"Specialty Industrial Machinery"
+    "return_1y":63.8,
+    "cagr_5y":11.9,
+    "marketCap":2456836352,
+    "industry":"Specialty Industrial Machinery",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"DELIA.OL",
     "name":"Delia Group",
-    "return_1y":143.8,
+    "return_1y":141.8,
     "cagr_5y":null,
-    "marketCap":1961872384,
-    "industry":"Packaged Foods"
+    "marketCap":1945306624,
+    "industry":"Packaged Foods",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ODFB.OL",
     "name":"Odfjell Ser. B",
-    "return_1y":49.3,
-    "cagr_5y":47.6,
-    "marketCap":9761496064,
-    "industry":"Marine Shipping"
+    "return_1y":44.9,
+    "cagr_5y":46.4,
+    "marketCap":9581031424,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":43.0,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"REACH.OL",
     "name":"Reach Subsea",
-    "return_1y":4.5,
-    "cagr_5y":21.7,
-    "marketCap":2190158848,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":3.5,
+    "cagr_5y":21.6,
+    "marketCap":2177063680,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":24.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SKUE.OL",
     "name":"Skue Sparebank",
-    "return_1y":13.0,
-    "cagr_5y":20.3,
-    "marketCap":2010994176,
-    "industry":"Banks - Regional"
+    "return_1y":14.4,
+    "cagr_5y":20.6,
+    "marketCap":2025729920,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":13.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SALME.OL",
     "name":"Salmon Evolution",
-    "return_1y":-27.3,
-    "cagr_5y":-8.6,
-    "marketCap":2035454592,
-    "industry":"Farm Products"
+    "return_1y":-26.5,
+    "cagr_5y":-6.8,
+    "marketCap":2051645568,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"DVD.OL",
     "name":"Deep Value Driller",
-    "return_1y":68.5,
-    "cagr_5y":34.7,
-    "marketCap":1963675008,
-    "industry":"Oil & Gas Drilling"
+    "return_1y":64.8,
+    "cagr_5y":34.6,
+    "marketCap":1958999680,
+    "industry":"Oil & Gas Drilling",
+    "avg_recovery_days":43.0,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"PHO.OL",
     "name":"Photocure",
-    "return_1y":35.1,
-    "cagr_5y":-10.3,
-    "marketCap":1873109760,
-    "industry":"Drug Manufacturers - Specialty & Generic"
+    "return_1y":34.0,
+    "cagr_5y":-10.6,
+    "marketCap":1835860352,
+    "industry":"Drug Manufacturers - Specialty & Generic",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"KOMPL.OL",
     "name":"Komplett",
-    "return_1y":4.8,
-    "cagr_5y":-28.1,
-    "marketCap":1902451712,
-    "industry":"Internet Retail"
+    "return_1y":3.9,
+    "cagr_5y":-28.2,
+    "marketCap":1884917504,
+    "industry":"Internet Retail",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"KOA.OL",
     "name":"Kongsberg Automotive",
-    "return_1y":33.0,
-    "cagr_5y":-7.9,
-    "marketCap":1858857344,
-    "industry":"Auto Parts"
+    "return_1y":35.1,
+    "cagr_5y":-7.4,
+    "marketCap":1851421952,
+    "industry":"Auto Parts",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"INSTA.OL",
     "name":"Instabank",
-    "return_1y":97.4,
-    "cagr_5y":19.6,
-    "marketCap":1837581696,
-    "industry":"Banks - Regional"
+    "return_1y":96.5,
+    "cagr_5y":19.0,
+    "marketCap":1846633856,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":12.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"NORAM.OL",
     "name":"Noram Drilling",
-    "return_1y":49.5,
-    "cagr_5y":14.5,
-    "marketCap":1784699776,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":58.4,
+    "cagr_5y":16.1,
+    "marketCap":1873501568,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":37.9,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"JAREN.OL",
@@ -997,127 +1245,159 @@
     "return_1y":3.5,
     "cagr_5y":21.3,
     "marketCap":1741061888,
-    "industry":"Banks - Regional"
+    "industry":"Banks - Regional",
+    "avg_recovery_days":54.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SPOG.OL",
     "name":"Sparebanken \u00d8st",
-    "return_1y":17.3,
-    "cagr_5y":16.3,
-    "marketCap":1735200000,
-    "industry":"Banks - Regional"
+    "return_1y":15.5,
+    "cagr_5y":16.6,
+    "marketCap":1741419520,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":44.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SNOR.OL",
     "name":"Sparebank 1 Nordm\u00f8re",
-    "return_1y":20.1,
-    "cagr_5y":12.0,
-    "marketCap":1670855808,
-    "industry":"Banks - Regional"
+    "return_1y":17.4,
+    "cagr_5y":11.2,
+    "marketCap":1636878464,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":4.3,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AGLX.OL",
     "name":"Agilyx",
-    "return_1y":-50.8,
-    "cagr_5y":-16.5,
-    "marketCap":1699022976,
-    "industry":"Waste Management"
+    "return_1y":-52.2,
+    "cagr_5y":-17.2,
+    "marketCap":1648681600,
+    "industry":"Waste Management",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"GIGA.OL",
     "name":"Gigante Salmon",
-    "return_1y":-4.2,
-    "cagr_5y":7.0,
-    "marketCap":1641259136,
-    "industry":"Farm Products"
+    "return_1y":-5.8,
+    "cagr_5y":6.6,
+    "marketCap":1611262208,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ZAL.OL",
     "name":"Zalaris",
-    "return_1y":-10.0,
-    "cagr_5y":5.2,
-    "marketCap":1586520960,
-    "industry":"Staffing & Employment Services"
+    "return_1y":-11.2,
+    "cagr_5y":3.0,
+    "marketCap":1573481088,
+    "industry":"Staffing & Employment Services",
+    "avg_recovery_days":0.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NOAP.OL",
     "name":"Nordic Aqua Partners",
-    "return_1y":-9.9,
-    "cagr_5y":-0.5,
-    "marketCap":1624959232,
-    "industry":"Farm Products"
+    "return_1y":-10.7,
+    "cagr_5y":0.0,
+    "marketCap":1591017600,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"TRMED.OL",
     "name":"Thor Medical",
-    "return_1y":126.1,
-    "cagr_5y":-28.4,
-    "marketCap":1544053248,
-    "industry":"Biotechnology"
+    "return_1y":121.8,
+    "cagr_5y":-28.7,
+    "marketCap":1531658240,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PNOR.OL",
     "name":"Petronor E&P",
-    "return_1y":37.4,
-    "cagr_5y":8.3,
-    "marketCap":1543148288,
-    "industry":"Oil & Gas E&P"
+    "return_1y":41.4,
+    "cagr_5y":8.7,
+    "marketCap":1565925376,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"NKR.OL",
     "name":"Nekkar",
-    "return_1y":27.7,
-    "cagr_5y":10.1,
+    "return_1y":30.1,
+    "cagr_5y":10.4,
     "marketCap":1328756608,
-    "industry":"Specialty Industrial Machinery"
+    "industry":"Specialty Industrial Machinery",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NRC.OL",
     "name":"NRC Group",
-    "return_1y":66.3,
-    "cagr_5y":-14.6,
-    "marketCap":1444638976,
-    "industry":"Railroads"
+    "return_1y":63.9,
+    "cagr_5y":-14.8,
+    "marketCap":1422201344,
+    "industry":"Railroads",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NOM.OL",
     "name":"Nordic Mining",
-    "return_1y":-48.1,
-    "cagr_5y":-18.3,
-    "marketCap":1181685760,
-    "industry":"Other Industrial Metals & Mining"
+    "return_1y":-46.8,
+    "cagr_5y":-18.5,
+    "marketCap":1196863360,
+    "industry":"Other Industrial Metals & Mining",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"MGN.OL",
     "name":"Magnora",
-    "return_1y":-4.5,
-    "cagr_5y":-2.9,
-    "marketCap":1332614016,
-    "industry":"Utilities - Renewable"
+    "return_1y":-2.1,
+    "cagr_5y":-2.7,
+    "marketCap":1348592640,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":33.5,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"NORDH.OL",
     "name":"Nordhealth",
-    "return_1y":-27.1,
-    "cagr_5y":-6.0,
-    "marketCap":2285604608,
-    "industry":"Health Information Services"
+    "return_1y":-26.5,
+    "cagr_5y":-6.3,
+    "marketCap":2254078976,
+    "industry":"Health Information Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AURG.OL",
     "name":"Aurskog Sparebank",
-    "return_1y":15.0,
-    "cagr_5y":16.4,
-    "marketCap":1215744000,
-    "industry":"Banks - Regional"
+    "return_1y":15.3,
+    "cagr_5y":16.9,
+    "marketCap":1243479680,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":71.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NOHAL.OL",
     "name":"Nordic Halibut",
-    "return_1y":14.9,
-    "cagr_5y":-5.2,
-    "marketCap":1197053440,
-    "industry":"Farm Products"
+    "return_1y":11.8,
+    "cagr_5y":-5.7,
+    "marketCap":1164989440,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AFISH.OL",
@@ -1125,143 +1405,179 @@
     "return_1y":-57.3,
     "cagr_5y":-15.6,
     "marketCap":1134124800,
-    "industry":"Farm Products"
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BMA.OL",
     "name":"Byggma",
-    "return_1y":-1.8,
-    "cagr_5y":-5.2,
-    "marketCap":1165982208,
-    "industry":"Building Products & Equipment"
+    "return_1y":0.3,
+    "cagr_5y":-6.0,
+    "marketCap":1186927872,
+    "industry":"Building Products & Equipment",
+    "avg_recovery_days":0.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"LUMI.OL",
     "name":"Lumi Gruppen",
-    "return_1y":40.0,
-    "cagr_5y":-17.9,
-    "marketCap":1133680896,
-    "industry":"Education & Training Services"
+    "return_1y":42.9,
+    "cagr_5y":-17.7,
+    "marketCap":1156817280,
+    "industry":"Education & Training Services",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"PRS.OL",
     "name":"Prosafe",
     "return_1y":-60.0,
     "cagr_5y":-71.4,
-    "marketCap":1115782656,
-    "industry":"Oil & Gas Equipment & Services"
+    "marketCap":1117545344,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AZT.OL",
     "name":"ArcticZymes Technologies",
-    "return_1y":16.9,
-    "cagr_5y":-21.3,
-    "marketCap":1108249216,
-    "industry":"Biotechnology"
+    "return_1y":20.1,
+    "cagr_5y":-21.8,
+    "marketCap":1103142144,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"GYL.OL",
     "name":"Gyldendal",
-    "return_1y":20.5,
-    "cagr_5y":-3.0,
-    "marketCap":1047437504,
-    "industry":"Publishing"
+    "return_1y":16.1,
+    "cagr_5y":-3.4,
+    "marketCap":1015137664,
+    "industry":"Publishing",
+    "avg_recovery_days":0.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"EIOF.OL",
     "name":"Eidesvik Offshore",
-    "return_1y":28.3,
-    "cagr_5y":32.0,
-    "marketCap":1069205824,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":31.0,
+    "cagr_5y":30.8,
+    "marketCap":1065556736,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":8.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"NYKD.OL",
     "name":"Nykode Therapeutics",
-    "return_1y":139.4,
-    "cagr_5y":-43.5,
-    "marketCap":1038417664,
-    "industry":"Biotechnology"
+    "return_1y":145.8,
+    "cagr_5y":-43.6,
+    "marketCap":1029927488,
+    "industry":"Biotechnology",
+    "avg_recovery_days":167.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"SDSD.OL",
     "name":"S.D. Standard ETC",
-    "return_1y":1.4,
-    "cagr_5y":12.4,
-    "marketCap":993895104,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":-0.3,
+    "cagr_5y":12.2,
+    "marketCap":978160640,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":252.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"NORSE.OL",
     "name":"Norse Atlantic",
-    "return_1y":35.7,
-    "cagr_5y":-37.4,
-    "marketCap":970618432,
-    "industry":"Airlines"
+    "return_1y":30.3,
+    "cagr_5y":-37.5,
+    "marketCap":962489344,
+    "industry":"Airlines",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"DFENS.OL",
     "name":"Fjord Defence Group",
-    "return_1y":152.5,
+    "return_1y":150.1,
     "cagr_5y":-21.9,
-    "marketCap":964337664,
-    "industry":"Aerospace & Defense"
+    "marketCap":947795456,
+    "industry":"Aerospace & Defense",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"VISTN.OL",
     "name":"Vistin Pharma",
-    "return_1y":-10.2,
-    "cagr_5y":0.7,
-    "marketCap":935670912,
-    "industry":"Drug Manufacturers - Specialty & Generic"
+    "return_1y":-5.9,
+    "cagr_5y":0.4,
+    "marketCap":944539776,
+    "industry":"Drug Manufacturers - Specialty & Generic",
+    "avg_recovery_days":101.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"VVL.OL",
     "name":"Voss Veksel- og Landmandsbank",
-    "return_1y":30.3,
-    "cagr_5y":23.7,
-    "marketCap":916745856,
-    "industry":"Banks - Regional"
+    "return_1y":29.7,
+    "cagr_5y":23.8,
+    "marketCap":912338432,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":0.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"HKY.OL",
     "name":"Havila Kystruten",
-    "return_1y":20.9,
+    "return_1y":25.0,
     "cagr_5y":-45.7,
     "marketCap":921040576,
-    "industry":"Travel Services"
+    "industry":"Travel Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NTI.OL",
     "name":"Norsk Titanium",
-    "return_1y":-57.9,
-    "cagr_5y":-37.3,
-    "marketCap":901816128,
-    "industry":"Aerospace & Defense"
+    "return_1y":-58.2,
+    "cagr_5y":-37.6,
+    "marketCap":881226752,
+    "industry":"Aerospace & Defense",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SAGA.OL",
     "name":"Saga Pure",
-    "return_1y":13.9,
-    "cagr_5y":-9.7,
-    "marketCap":1022440768,
-    "industry":"Asset Management"
+    "return_1y":13.5,
+    "cagr_5y":-9.0,
+    "marketCap":1019066368,
+    "industry":"Asset Management",
+    "avg_recovery_days":1.3,
+    "div_frequency":"annual"
   },
   {
     "ticker":"OMDA.OL",
     "name":"OMDA",
-    "return_1y":5.6,
-    "cagr_5y":6.7,
-    "marketCap":779291264,
-    "industry":"Health Information Services"
+    "return_1y":6.0,
+    "cagr_5y":7.9,
+    "marketCap":799798912,
+    "industry":"Health Information Services",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"LYTIX.OL",
     "name":"Lytix Biopharma",
-    "return_1y":105.9,
-    "cagr_5y":-11.4,
-    "marketCap":807450112,
-    "industry":"Biotechnology"
+    "return_1y":110.7,
+    "cagr_5y":-10.5,
+    "marketCap":845900096,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ELIMP.OL",
@@ -1269,111 +1585,139 @@
     "return_1y":36.1,
     "cagr_5y":-24.8,
     "marketCap":832828032,
-    "industry":"Specialty Retail"
+    "industry":"Specialty Retail",
+    "avg_recovery_days":168.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"BIEN.OL",
     "name":"Bien Sparebank",
-    "return_1y":11.1,
-    "cagr_5y":16.7,
-    "marketCap":800907904,
-    "industry":"Banks - Regional"
+    "return_1y":10.9,
+    "cagr_5y":17.4,
+    "marketCap":817948544,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"VOW.OL",
     "name":"VOW",
-    "return_1y":96.7,
-    "cagr_5y":-44.1,
-    "marketCap":772496448,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":96.0,
+    "cagr_5y":-44.3,
+    "marketCap":759427904,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"KLDVK.OL",
     "name":"Kaldvik",
-    "return_1y":-81.5,
-    "cagr_5y":-66.4,
-    "marketCap":747111424,
-    "industry":"Farm Products"
+    "return_1y":-83.6,
+    "cagr_5y":-66.8,
+    "marketCap":730284608,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"GRONG.OL",
     "name":"Grong Sparebank",
-    "return_1y":30.7,
-    "cagr_5y":16.9,
-    "marketCap":748732096,
-    "industry":"Banks - Regional"
+    "return_1y":31.7,
+    "cagr_5y":16.7,
+    "marketCap":754372992,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":29.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CRNA.OL",
     "name":"Circio Holding",
-    "return_1y":450.0,
-    "cagr_5y":-56.6,
-    "marketCap":708574272,
-    "industry":"Biotechnology"
+    "return_1y":555.5,
+    "cagr_5y":-55.4,
+    "marketCap":841700416,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"STECH.OL",
     "name":"Soiltech",
-    "return_1y":55.5,
-    "cagr_5y":22.3,
-    "marketCap":719299840,
-    "industry":"Waste Management"
+    "return_1y":53.2,
+    "cagr_5y":21.1,
+    "marketCap":708824576,
+    "industry":"Waste Management",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SCANA.OL",
     "name":"Scana",
-    "return_1y":-36.9,
-    "cagr_5y":-7.3,
-    "marketCap":684515712,
-    "industry":"Specialty Industrial Machinery"
+    "return_1y":-35.5,
+    "cagr_5y":-7.7,
+    "marketCap":670659136,
+    "industry":"Specialty Industrial Machinery",
+    "avg_recovery_days":6.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"WEST.OL",
     "name":"Western Bulk Chartering",
-    "return_1y":70.3,
-    "cagr_5y":4.3,
-    "marketCap":692566144,
-    "industry":"Marine Shipping"
+    "return_1y":76.2,
+    "cagr_5y":4.1,
+    "marketCap":685842176,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":96.7,
+    "div_frequency":"annual"
   },
   {
     "ticker":"OTOVO.OL",
     "name":"Otovo",
-    "return_1y":-9.9,
-    "cagr_5y":-42.1,
-    "marketCap":674613248,
-    "industry":"Solar"
+    "return_1y":-7.5,
+    "cagr_5y":-42.0,
+    "marketCap":683218560,
+    "industry":"Solar",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"IDEX.OL",
     "name":"IDEX Biometrics",
-    "return_1y":93.9,
-    "cagr_5y":-56.7,
-    "marketCap":692377408,
-    "industry":"Software - Application"
+    "return_1y":155.6,
+    "cagr_5y":-56.9,
+    "marketCap":663122048,
+    "industry":"Software - Application",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NCOD.OL",
     "name":"Norcod",
-    "return_1y":-14.2,
-    "cagr_5y":-37.9,
-    "marketCap":724380736,
-    "industry":"Farm Products"
+    "return_1y":-18.8,
+    "cagr_5y":-39.1,
+    "marketCap":670931264,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ENSU.OL",
     "name":"Ensurge Micropower",
-    "return_1y":-40.2,
-    "cagr_5y":-54.9,
-    "marketCap":668883520,
-    "industry":"Electronic Components"
+    "return_1y":-41.4,
+    "cagr_5y":-54.7,
+    "marketCap":664036544,
+    "industry":"Electronic Components",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HUNT.OL",
     "name":"Hunter Group",
-    "return_1y":622.6,
-    "cagr_5y":36.8,
+    "return_1y":655.9,
+    "cagr_5y":36.5,
     "marketCap":687509632,
-    "industry":"Oil & Gas Midstream"
+    "industry":"Oil & Gas Midstream",
+    "avg_recovery_days":101.5,
+    "div_frequency":"annual"
   },
   {
     "ticker":"SB68.OL",
@@ -1381,39 +1725,49 @@
     "return_1y":32.6,
     "cagr_5y":12.1,
     "marketCap":655618688,
-    "industry":"Banks - Regional"
+    "industry":"Banks - Regional",
+    "avg_recovery_days":61.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"TINDE.OL",
     "name":"Tinde Sparebank",
-    "return_1y":-5.9,
+    "return_1y":-5.6,
     "cagr_5y":null,
-    "marketCap":646372480,
-    "industry":"Financial Conglomerates"
+    "marketCap":648443520,
+    "industry":"Financial Conglomerates",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HDLY.OL",
     "name":"Huddly",
-    "return_1y":30.7,
-    "cagr_5y":-55.0,
-    "marketCap":575216576,
-    "industry":"Communication Equipment"
+    "return_1y":42.0,
+    "cagr_5y":-55.6,
+    "marketCap":561585856,
+    "industry":"Communication Equipment",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"JIN.OL",
     "name":"Jinhui Shipping and Transport",
-    "return_1y":5.2,
-    "cagr_5y":0.9,
-    "marketCap":605294528,
-    "industry":"Marine Shipping"
+    "return_1y":3.3,
+    "cagr_5y":0.5,
+    "marketCap":609664896,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":52.2,
+    "div_frequency":"annual"
   },
   {
     "ticker":"GENT.OL",
     "name":"Gentian Diagnostics",
     "return_1y":-18.5,
-    "cagr_5y":-9.2,
+    "cagr_5y":-9.0,
     "marketCap":586049280,
-    "industry":"Medical Devices"
+    "industry":"Medical Devices",
+    "avg_recovery_days":0.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ITERA.OL",
@@ -1421,23 +1775,29 @@
     "return_1y":-17.1,
     "cagr_5y":-8.5,
     "marketCap":589975296,
-    "industry":"Information Technology Services"
+    "industry":"Information Technology Services",
+    "avg_recovery_days":1.4,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"GEOS.OL",
     "name":"Golden Energy Offshore",
     "return_1y":-51.2,
-    "cagr_5y":-18.4,
-    "marketCap":556075712,
-    "industry":"Marine Shipping"
+    "cagr_5y":-17.6,
+    "marketCap":545681728,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"MELG.OL",
     "name":"Melhus Sparebank",
-    "return_1y":21.1,
-    "cagr_5y":11.7,
-    "marketCap":552963520,
-    "industry":"Banks - Regional"
+    "return_1y":21.4,
+    "cagr_5y":13.0,
+    "marketCap":551577664,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":12.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"TRSB.OL",
@@ -1445,239 +1805,299 @@
     "return_1y":6.2,
     "cagr_5y":5.0,
     "marketCap":545114368,
-    "industry":"Banks - Regional"
+    "industry":"Banks - Regional",
+    "avg_recovery_days":19.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"HBC.OL",
     "name":"Hofseth BioCare",
-    "return_1y":-38.9,
-    "cagr_5y":-30.1,
-    "marketCap":560308736,
-    "industry":"Packaged Foods"
+    "return_1y":-36.7,
+    "cagr_5y":-30.8,
+    "marketCap":532293312,
+    "industry":"Packaged Foods",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"WSTEP.OL",
     "name":"Webstep",
-    "return_1y":-16.7,
-    "cagr_5y":-3.5,
-    "marketCap":494580096,
-    "industry":"Information Technology Services"
+    "return_1y":-16.4,
+    "cagr_5y":-3.1,
+    "marketCap":500015008,
+    "industry":"Information Technology Services",
+    "avg_recovery_days":51.6,
+    "div_frequency":"annual"
   },
   {
     "ticker":"AKOBO.OL",
     "name":"Akobo Minerals",
-    "return_1y":19.6,
-    "cagr_5y":-27.1,
-    "marketCap":447560096,
-    "industry":"Gold"
+    "return_1y":7.7,
+    "cagr_5y":-27.6,
+    "marketCap":433789024,
+    "industry":"Gold",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"STST.OL",
     "name":"Stainless Tankers",
-    "return_1y":-16.0,
-    "cagr_5y":6.8,
-    "marketCap":496800000,
-    "industry":"Marine Shipping"
+    "return_1y":-13.3,
+    "cagr_5y":7.0,
+    "marketCap":499500000,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":125.3,
+    "div_frequency":"semi-annual"
   },
   {
     "ticker":"NAVA.OL",
     "name":"Navamedic",
-    "return_1y":1.8,
-    "cagr_5y":-6.5,
-    "marketCap":486821952,
-    "industry":"Medical Distribution"
+    "return_1y":0.0,
+    "cagr_5y":-6.4,
+    "marketCap":476030368,
+    "industry":"Medical Distribution",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HPUR.OL",
     "name":"Hexagon Purus",
-    "return_1y":-37.0,
+    "return_1y":-37.9,
     "cagr_5y":-53.6,
-    "marketCap":464478944,
-    "industry":"Industrial Distribution"
+    "marketCap":455052256,
+    "industry":"Industrial Distribution",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"CYVIZ.OL",
     "name":"Cyviz",
-    "return_1y":23.1,
-    "cagr_5y":-5.2,
-    "marketCap":472265248,
-    "industry":"Computer Hardware"
+    "return_1y":24.0,
+    "cagr_5y":-5.4,
+    "marketCap":470964256,
+    "industry":"Computer Hardware",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"STRO.OL",
     "name":"Strongpoint",
-    "return_1y":2.4,
-    "cagr_5y":-18.5,
-    "marketCap":456581856,
-    "industry":"Business Equipment & Supplies"
+    "return_1y":4.9,
+    "cagr_5y":-17.9,
+    "marketCap":467772576,
+    "industry":"Business Equipment & Supplies",
+    "avg_recovery_days":2.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ALNG.OL",
     "name":"Awilco LNG",
-    "return_1y":23.9,
-    "cagr_5y":28.0,
-    "marketCap":487116128,
-    "industry":"Oil & Gas Midstream"
+    "return_1y":18.5,
+    "cagr_5y":26.4,
+    "marketCap":463257376,
+    "industry":"Oil & Gas Midstream",
+    "avg_recovery_days":59.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"PPG.OL",
     "name":"Pioneer Property Group",
-    "return_1y":17.2,
-    "cagr_5y":10.7,
+    "return_1y":18.0,
+    "cagr_5y":10.8,
     "marketCap":null,
-    "industry":"Real Estate Services"
+    "industry":"Real Estate Services",
+    "avg_recovery_days":8.9,
+    "div_frequency":"quarterly"
   },
   {
     "ticker":"ZLNA.OL",
     "name":"Zelluna",
-    "return_1y":-23.0,
-    "cagr_5y":-52.2,
-    "marketCap":425728352,
-    "industry":"Biotechnology"
+    "return_1y":-15.7,
+    "cagr_5y":-52.3,
+    "marketCap":434134688,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"KING.OL",
     "name":"The Kingfish Company",
-    "return_1y":-39.8,
-    "cagr_5y":-32.1,
-    "marketCap":468036480,
-    "industry":"Farm Products"
+    "return_1y":-44.6,
+    "cagr_5y":-34.0,
+    "marketCap":410958880,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BALT.OL",
     "name":"Baltic Sea Properties",
-    "return_1y":-8.7,
-    "cagr_5y":-2.3,
-    "marketCap":404968512,
-    "industry":"Real Estate Services"
+    "return_1y":-9.9,
+    "cagr_5y":-2.5,
+    "marketCap":399754368,
+    "industry":"Real Estate Services",
+    "avg_recovery_days":0.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ZENA.OL",
     "name":"Zenith Energy",
-    "return_1y":-37.8,
-    "cagr_5y":-13.4,
-    "marketCap":421968512,
-    "industry":"Oil & Gas E&P"
+    "return_1y":-36.1,
+    "cagr_5y":-11.3,
+    "marketCap":468709664,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ROMER.OL",
     "name":"Romerike Sparebank",
-    "return_1y":13.9,
-    "cagr_5y":7.6,
-    "marketCap":414095424,
-    "industry":"Banks - Regional"
+    "return_1y":17.8,
+    "cagr_5y":8.4,
+    "marketCap":429694912,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":9.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CAPSL.OL",
     "name":"Capsol Technologies",
-    "return_1y":-44.2,
-    "cagr_5y":-32.0,
-    "marketCap":395719936,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":-38.7,
+    "cagr_5y":-30.8,
+    "marketCap":425585568,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NTG.OL",
     "name":"Nordic Technology Group",
-    "return_1y":17.6,
-    "cagr_5y":-38.2,
-    "marketCap":383561344,
-    "industry":"Scientific & Technical Instruments"
+    "return_1y":-21.0,
+    "cagr_5y":-42.0,
+    "marketCap":303013472,
+    "industry":"Scientific & Technical Instruments",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"TECH.OL",
     "name":"Techstep",
-    "return_1y":-11.7,
-    "cagr_5y":-25.3,
-    "marketCap":376756288,
-    "industry":"Communication Equipment"
+    "return_1y":-9.2,
+    "cagr_5y":-25.5,
+    "marketCap":375035936,
+    "industry":"Communication Equipment",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"LOKO.OL",
     "name":"Lokotech Group",
-    "return_1y":-68.5,
-    "cagr_5y":-25.4,
-    "marketCap":370457984,
-    "industry":"Software - Infrastructure"
+    "return_1y":-67.3,
+    "cagr_5y":-25.1,
+    "marketCap":372978112,
+    "industry":"Software - Infrastructure",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"GOD.OL",
     "name":"Goodtech",
-    "return_1y":20.2,
-    "cagr_5y":-2.2,
-    "marketCap":314676032,
-    "industry":"Engineering & Construction"
+    "return_1y":15.2,
+    "cagr_5y":-2.8,
+    "marketCap":307219264,
+    "industry":"Engineering & Construction",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ELABS.OL",
     "name":"Elliptic Laboratories",
-    "return_1y":-69.8,
-    "cagr_5y":-23.8,
-    "marketCap":314807424,
-    "industry":"Software - Infrastructure"
+    "return_1y":-70.1,
+    "cagr_5y":-24.4,
+    "marketCap":316913184,
+    "industry":"Software - Infrastructure",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PROXI.OL",
     "name":"Proximar Seafood",
-    "return_1y":-79.4,
-    "cagr_5y":-45.9,
-    "marketCap":311929888,
-    "industry":"Farm Products"
+    "return_1y":-79.6,
+    "cagr_5y":-46.3,
+    "marketCap":299368960,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PSE.OL",
     "name":"Petrolia",
-    "return_1y":26.2,
-    "cagr_5y":-14.3,
-    "marketCap":301072320,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":24.3,
+    "cagr_5y":-14.4,
+    "marketCap":296349600,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NORTH.OL",
     "name":"North Energy",
-    "return_1y":6.7,
-    "cagr_5y":-2.0,
-    "marketCap":294301504,
-    "industry":"Asset Management"
+    "return_1y":2.6,
+    "cagr_5y":-2.1,
+    "marketCap":293128992,
+    "industry":"Asset Management",
+    "avg_recovery_days":8.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"MPCES.OL",
     "name":"MPC Energy Solutions",
-    "return_1y":43.9,
-    "cagr_5y":-20.6,
-    "marketCap":288137504,
-    "industry":"Utilities - Renewable"
+    "return_1y":42.9,
+    "cagr_5y":-20.2,
+    "marketCap":289249984,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HAVI.OL",
     "name":"Havila Shipping",
-    "return_1y":-21.8,
-    "cagr_5y":-17.9,
-    "marketCap":286175616,
-    "industry":"Marine Shipping"
+    "return_1y":-21.3,
+    "cagr_5y":-18.2,
+    "marketCap":275168864,
+    "industry":"Marine Shipping",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PRYME.OL",
     "name":"Pryme",
-    "return_1y":-4.0,
-    "cagr_5y":-55.7,
-    "marketCap":301655680,
-    "industry":"Waste Management"
+    "return_1y":-2.3,
+    "cagr_5y":-55.0,
+    "marketCap":324979584,
+    "industry":"Waste Management",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"EQVA.OL",
     "name":"Eqva",
-    "return_1y":-40.4,
-    "cagr_5y":1.8,
-    "marketCap":262243104,
-    "industry":"Utilities - Renewable"
+    "return_1y":-41.1,
+    "cagr_5y":0.7,
+    "marketCap":258093664,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":4.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"HERMA.OL",
     "name":"Hermana Holding",
-    "return_1y":75.4,
-    "cagr_5y":-6.4,
-    "marketCap":240505728,
-    "industry":"Asset Management"
+    "return_1y":71.4,
+    "cagr_5y":-7.8,
+    "marketCap":234321280,
+    "industry":"Asset Management",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AASB.OL",
@@ -1685,31 +2105,39 @@
     "return_1y":16.9,
     "cagr_5y":5.1,
     "marketCap":242132496,
-    "industry":"Banks - Regional"
+    "industry":"Banks - Regional",
+    "avg_recovery_days":60.8,
+    "div_frequency":"annual"
   },
   {
     "ticker":"CONTX.OL",
     "name":"Contextvision",
-    "return_1y":-50.3,
-    "cagr_5y":-31.2,
-    "marketCap":225617728,
-    "industry":"Health Information Services"
+    "return_1y":-47.4,
+    "cagr_5y":-31.0,
+    "marketCap":228625968,
+    "industry":"Health Information Services",
+    "avg_recovery_days":93.5,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"CAVEN.OL",
     "name":"Cavendish Hydrogen",
-    "return_1y":50.0,
-    "cagr_5y":-51.7,
-    "marketCap":225571264,
-    "industry":"Utilities - Regulated Gas"
+    "return_1y":60.0,
+    "cagr_5y":-51.1,
+    "marketCap":230583952,
+    "industry":"Utilities - Regulated Gas",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"MVE.OL",
     "name":"Matvareexpressen",
-    "return_1y":160.4,
-    "cagr_5y":44.7,
+    "return_1y":127.7,
+    "cagr_5y":44.6,
     "marketCap":219725488,
-    "industry":"Internet Retail"
+    "industry":"Internet Retail",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"OCEAN.OL",
@@ -1717,39 +2145,49 @@
     "return_1y":-10.3,
     "cagr_5y":-40.4,
     "marketCap":210861904,
-    "industry":"Pollution & Treatment Controls"
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"MVW.OL",
     "name":"M Vest Water",
-    "return_1y":-38.6,
-    "cagr_5y":-24.6,
-    "marketCap":206832592,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":-38.8,
+    "cagr_5y":-24.7,
+    "marketCap":206126688,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ONCIN.OL",
     "name":"Oncoinvent",
-    "return_1y":-53.1,
+    "return_1y":-52.2,
     "cagr_5y":-80.8,
-    "marketCap":204484288,
-    "industry":"Biotechnology"
+    "marketCap":201528544,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"FFSB.OL",
     "name":"Flekkefjord Sparebank",
-    "return_1y":8.4,
-    "cagr_5y":7.1,
-    "marketCap":181698304,
-    "industry":"Banks - Regional"
+    "return_1y":6.6,
+    "cagr_5y":6.1,
+    "marketCap":178773408,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":1.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ASA.OL",
     "name":"Atlantic Sapphire",
-    "return_1y":4.7,
+    "return_1y":0.0,
     "cagr_5y":-82.8,
-    "marketCap":181062928,
-    "industry":"Farm Products"
+    "marketCap":179270224,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ADS.OL",
@@ -1757,103 +2195,129 @@
     "return_1y":22.8,
     "cagr_5y":9.7,
     "marketCap":171842624,
-    "industry":"Marine Shipping"
+    "industry":"Marine Shipping",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HUDL.OL",
     "name":"Huddlestock Fintech",
-    "return_1y":-18.9,
-    "cagr_5y":-38.6,
-    "marketCap":161558384,
-    "industry":"Software - Application"
+    "return_1y":-16.5,
+    "cagr_5y":-38.2,
+    "marketCap":164402720,
+    "industry":"Software - Application",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"RECSI.OL",
     "name":"REC Silicon",
-    "return_1y":-65.5,
-    "cagr_5y":-52.8,
-    "marketCap":159837600,
-    "industry":"Semiconductor Equipment & Materials"
+    "return_1y":-66.6,
+    "cagr_5y":-53.4,
+    "marketCap":151929840,
+    "industry":"Semiconductor Equipment & Materials",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HYPRO.OL",
     "name":"HydrogenPro",
-    "return_1y":-67.9,
-    "cagr_5y":-49.3,
-    "marketCap":144242576,
-    "industry":"Specialty Industrial Machinery"
+    "return_1y":-68.2,
+    "cagr_5y":-48.6,
+    "marketCap":146153072,
+    "industry":"Specialty Industrial Machinery",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BCS.OL",
     "name":"Bergen Carbon Solutions",
-    "return_1y":15.2,
-    "cagr_5y":-27.8,
-    "marketCap":147734896,
-    "industry":"Specialty Chemicals"
+    "return_1y":16.0,
+    "cagr_5y":-28.0,
+    "marketCap":146056096,
+    "industry":"Specialty Chemicals",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NISB.OL",
     "name":"Nidaros Sparebank",
     "return_1y":0.1,
-    "cagr_5y":7.2,
-    "marketCap":124097776,
-    "industry":"Banks - Regional"
+    "cagr_5y":6.2,
+    "marketCap":124075208,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":5.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"OBSRV.OL",
     "name":"Observe Medical",
-    "return_1y":-77.0,
-    "cagr_5y":-69.4,
-    "marketCap":123895064,
-    "industry":"Medical Devices"
+    "return_1y":-75.7,
+    "cagr_5y":-69.3,
+    "marketCap":127298768,
+    "industry":"Medical Devices",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NEXT.OL",
     "name":"Next Biometrics Group",
-    "return_1y":-84.8,
-    "cagr_5y":-37.4,
-    "marketCap":106436048,
-    "industry":"Scientific & Technical Instruments"
+    "return_1y":-94.8,
+    "cagr_5y":-49.2,
+    "marketCap":36317708,
+    "industry":"Scientific & Technical Instruments",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NBX.OL",
     "name":"Norwegian Block Exchange",
-    "return_1y":61.4,
-    "cagr_5y":-52.1,
-    "marketCap":107677384,
-    "industry":"Capital Markets"
+    "return_1y":72.1,
+    "cagr_5y":-52.6,
+    "marketCap":103608960,
+    "industry":"Capital Markets",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HSPG.OL",
     "name":"H\u00f8land og Setskog Sparebank",
-    "return_1y":-6.4,
-    "cagr_5y":6.4,
-    "marketCap":97984480,
-    "industry":"Banks - Regional"
+    "return_1y":1.9,
+    "cagr_5y":8.3,
+    "marketCap":106624496,
+    "industry":"Banks - Regional",
+    "avg_recovery_days":0.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"ABS.OL",
     "name":"Arctic Bioscience",
-    "return_1y":-10.5,
-    "cagr_5y":-34.2,
+    "return_1y":-1.2,
+    "cagr_5y":-35.3,
     "marketCap":91651272,
-    "industry":"Biotechnology"
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"IOX.OL",
     "name":"Interoil Exploration",
-    "return_1y":128.1,
-    "cagr_5y":-23.9,
-    "marketCap":82651824,
-    "industry":"Oil & Gas E&P"
+    "return_1y":129.8,
+    "cagr_5y":-24.8,
+    "marketCap":76812840,
+    "industry":"Oil & Gas E&P",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"EMGS.OL",
     "name":"Electromagnetic Geoservices",
-    "return_1y":-85.0,
-    "cagr_5y":-30.5,
-    "marketCap":40600604,
-    "industry":"Oil & Gas Equipment & Services"
+    "return_1y":-84.9,
+    "cagr_5y":-32.7,
+    "marketCap":41386424,
+    "industry":"Oil & Gas Equipment & Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ABTEC.OL",
@@ -1861,47 +2325,59 @@
     "return_1y":-79.2,
     "cagr_5y":-55.0,
     "marketCap":23762772,
-    "industry":"Biotechnology"
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AKH.OL",
     "name":"Aker Horizons",
     "return_1y":-97.6,
-    "cagr_5y":-74.8,
-    "marketCap":24507380,
-    "industry":"Utilities - Renewable"
+    "cagr_5y":-75.0,
+    "marketCap":23471858,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"EAM.OL",
     "name":"EAM Solar",
-    "return_1y":-96.0,
-    "cagr_5y":-43.4,
-    "marketCap":22962708,
-    "industry":"Utilities - Renewable"
+    "return_1y":-96.2,
+    "cagr_5y":-44.2,
+    "marketCap":21337028,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"KMCP.OL",
     "name":"KMC Properties",
-    "return_1y":-47.4,
-    "cagr_5y":14.0,
-    "marketCap":22021048,
-    "industry":"Real Estate Services"
+    "return_1y":-50.8,
+    "cagr_5y":16.6,
+    "marketCap":24431290,
+    "industry":"Real Estate Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PCIB.OL",
     "name":"PCI Biotech Holding",
-    "return_1y":-79.8,
-    "cagr_5y":-60.2,
-    "marketCap":9891493,
-    "industry":"Biotechnology"
+    "return_1y":-81.2,
+    "cagr_5y":-61.2,
+    "marketCap":8809029,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"PYRUM.OL",
     "name":"Pyrum Innovations",
-    "return_1y":-23.5,
-    "cagr_5y":-14.9,
-    "marketCap":1214823936,
-    "industry":"Pollution & Treatment Controls"
+    "return_1y":-21.4,
+    "cagr_5y":-14.6,
+    "marketCap":1231994624,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"REFL.OL",
@@ -1909,47 +2385,59 @@
     "return_1y":3.4,
     "cagr_5y":-17.3,
     "marketCap":931247872,
-    "industry":"Specialty Retail"
+    "industry":"Specialty Retail",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"SOFTX.OL",
     "name":"Softox Solutions",
-    "return_1y":112.1,
-    "cagr_5y":-74.0,
-    "marketCap":170479200,
-    "industry":"Biotechnology"
+    "return_1y":110.7,
+    "cagr_5y":-74.4,
+    "marketCap":161224624,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"ROM.OL",
     "name":"Romreal",
-    "return_1y":7.7,
-    "cagr_5y":4.5,
-    "marketCap":101645016,
-    "industry":"Real Estate Services"
+    "return_1y":13.7,
+    "cagr_5y":5.7,
+    "marketCap":107291968,
+    "industry":"Real Estate Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"RIVER.OL",
     "name":"River Tech",
     "return_1y":-76.3,
-    "cagr_5y":-32.6,
-    "marketCap":67822512,
-    "industry":"Information Technology Services"
+    "cagr_5y":-31.2,
+    "marketCap":69055648,
+    "industry":"Information Technology Services",
+    "avg_recovery_days":168.0,
+    "div_frequency":"annual"
   },
   {
     "ticker":"NOSN.OL",
     "name":"NOS Nova",
-    "return_1y":-3.8,
+    "return_1y":-6.0,
     "cagr_5y":null,
-    "marketCap":53720108,
-    "industry":"Pollution & Treatment Controls"
+    "marketCap":52461044,
+    "industry":"Pollution & Treatment Controls",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"GEM.OL",
     "name":"Green Minerals",
-    "return_1y":-36.5,
-    "cagr_5y":-44.0,
-    "marketCap":28079946,
-    "industry":"Other Industrial Metals & Mining"
+    "return_1y":-50.0,
+    "cagr_5y":-44.3,
+    "marketCap":27271890,
+    "industry":"Other Industrial Metals & Mining",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BSP.OL",
@@ -1957,7 +2445,9 @@
     "return_1y":-72.7,
     "cagr_5y":19.5,
     "marketCap":15979581,
-    "industry":"Lodging"
+    "industry":"Lodging",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"HYN.OL",
@@ -1965,39 +2455,49 @@
     "return_1y":-83.2,
     "cagr_5y":-65.5,
     "marketCap":14711433,
-    "industry":"Specialty Retail"
+    "industry":"Specialty Retail",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"INIFY.OL",
     "name":"Inify Laboratories",
-    "return_1y":-43.9,
-    "cagr_5y":-22.4,
-    "marketCap":312638624,
-    "industry":"Diagnostics & Research"
+    "return_1y":-31.1,
+    "cagr_5y":-21.3,
+    "marketCap":328671328,
+    "industry":"Diagnostics & Research",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"NOFIN.OL",
     "name":"Nordic Financials",
-    "return_1y":-96.1,
-    "cagr_5y":-22.4,
-    "marketCap":36237056,
-    "industry":"Utilities - Renewable"
+    "return_1y":-97.1,
+    "cagr_5y":-20.6,
+    "marketCap":36630936,
+    "industry":"Utilities - Renewable",
+    "avg_recovery_days":73.0,
+    "div_frequency":"irregular"
   },
   {
     "ticker":"ACED.OL",
     "name":"ACE Digital",
-    "return_1y":-50.5,
+    "return_1y":-51.5,
     "cagr_5y":null,
-    "marketCap":69214752,
-    "industry":""
+    "marketCap":67704608,
+    "industry":"",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"EXTX.OL",
     "name":"Exact Therapeutics",
-    "return_1y":-45.0,
-    "cagr_5y":-42.1,
-    "marketCap":111343488,
-    "industry":"Biotechnology"
+    "return_1y":-40.4,
+    "cagr_5y":-40.7,
+    "marketCap":125261432,
+    "industry":"Biotechnology",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"AIX.OL",
@@ -2005,22 +2505,28 @@
     "return_1y":19.3,
     "cagr_5y":-19.9,
     "marketCap":106800800,
-    "industry":"Software - Application"
+    "industry":"Software - Application",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"INDCT.OL",
     "name":"Induct",
-    "return_1y":-2.2,
-    "cagr_5y":-16.6,
-    "marketCap":113964936,
-    "industry":"Health Information Services"
+    "return_1y":5.7,
+    "cagr_5y":-16.3,
+    "marketCap":115843480,
+    "industry":"Health Information Services",
+    "avg_recovery_days":null,
+    "div_frequency":null
   },
   {
     "ticker":"BARRA.OL",
     "name":"Barramundi Group",
-    "return_1y":12.5,
-    "cagr_5y":-45.8,
-    "marketCap":157862480,
-    "industry":"Farm Products"
+    "return_1y":6.9,
+    "cagr_5y":-46.4,
+    "marketCap":149092336,
+    "industry":"Farm Products",
+    "avg_recovery_days":null,
+    "div_frequency":null
   }
 ]
