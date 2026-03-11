@@ -306,11 +306,13 @@ def calc_dividend_recovery(records, years=5):
 
         pre_ex_price = records[i - 1]["close"]
 
-        # Find first day (at or after ex-date) when price recovers to pre-ex level
+        # Find first day AFTER ex-date when price recovers to pre-ex level.
+        # We start from i+1: the ex-date itself is where the drop occurs,
+        # so recovery is measured from the next trading day onwards.
         recovered_in = MAX_RECOVERY
-        for j in range(i, min(i + MAX_RECOVERY + 1, len(records))):
+        for j in range(i + 1, min(i + MAX_RECOVERY + 1, len(records))):
             if records[j]["close"] >= pre_ex_price:
-                recovered_in = j - i
+                recovered_in = j - i  # minimum 1
                 break
 
         recovery_days_list.append(recovered_in)

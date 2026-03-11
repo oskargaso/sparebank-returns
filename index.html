@@ -422,6 +422,62 @@
       vertical-align: middle;
     }
 
+    /* ── Recovery ranked list ────────────────────────────────────── */
+    .recovery-list { display: flex; flex-direction: column; gap: 5px; }
+    .recovery-row {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: box-shadow 0.12s, transform 0.1s;
+    }
+    .recovery-row:hover { box-shadow: 0 3px 10px rgba(0,0,0,0.1); transform: translateX(2px); }
+    .recovery-rank {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #94a3b8;
+      width: 18px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .recovery-logo { flex-shrink: 0; }
+    .recovery-logo img { width: 28px; height: 28px; object-fit: contain; border-radius: 5px; display: block; }
+    .recovery-logo .card-badge { width: 28px; height: 28px; font-size: 0.6rem; }
+    .recovery-company { flex: 1; min-width: 0; }
+    .recovery-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #1e293b;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .recovery-ticker { font-size: 0.68rem; color: #94a3b8; margin-top: 1px; }
+    .recovery-days {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #2563eb;
+      white-space: nowrap;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    .recovery-days-sub { font-size: 0.62rem; color: #94a3b8; }
+    .recovery-meta {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      flex-shrink: 0;
+      min-width: 72px;
+    }
+    .recovery-cagr { font-size: 0.78rem; font-weight: 600; white-space: nowrap; }
+    .recovery-cagr.pos { color: #16a34a; }
+    .recovery-cagr.neg { color: #dc2626; }
+
     .note { font-size: 0.7rem; color: #94a3b8; margin-top: 10px; }
 
     /* ── Company info card ───────────────────────────────────────── */
@@ -539,7 +595,7 @@
           <h2>Raskest etter ex-dag &mdash; Top 10</h2>
           <p>Gjennomsnittlig handelsdager til kursutvinning etter ex-utbytte (siste 5 år). Klikk for å se full graf.</p>
         </div>
-        <div id="recovery-grid" class="overview-grid"></div>
+        <div id="recovery-grid" class="recovery-list"></div>
       </div>
 
       <!-- Controls -->
@@ -1034,50 +1090,44 @@ function buildRecoveryOverview() {
   rgrid.innerHTML = '';
 
   const top10 = state.stocks
-    .filter(s => s.avg_recovery_days != null)
+    .filter(s => s.avg_recovery_days != null && s.avg_recovery_days > 0)
     .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
     .slice(0, 10);
 
-  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y }) => {
-    const card = document.createElement('div');
-    card.className = 'stock-card';
+  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y }, idx) => {
+    const row = document.createElement('div');
+    row.className = 'recovery-row';
 
     const domain = LOGO_DOMAINS[ticker];
     const color  = tickerColor(ticker);
     const abbr   = ticker.replace('.OL', '').slice(0, 3);
     const logoHtml = domain
-      ? `<img class="card-img" src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
+      ? `<img src="https://logo.clearbit.com/${domain}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" alt="" /><div class="card-badge" style="background:${color};display:none">${abbr}</div>`
       : `<div class="card-badge" style="background:${color}">${abbr}</div>`;
 
     const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
     const freqHtml  = div_frequency ? `<span class="freq-tag">${div_frequency}</span>` : '';
+    const fmtCagr   = (v) => v == null ? '–' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
+    const cagrCls   = (v) => v == null ? '' : v >= 0 ? 'pos' : 'neg';
 
-    const fmtCagr = (v) => v == null ? '–' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
-    const cagrCls = (v) => v == null ? '' : v >= 0 ? 'pos' : 'neg';
-
-    card.innerHTML = `
-      <div class="card-header">
-        <div style="display:flex;align-items:center">${logoHtml}</div>
-        <div class="card-title">
-          <div class="card-name">${shortName}</div>
-          <div class="card-ticker">${ticker.replace('.OL', '')}</div>
-        </div>
+    row.innerHTML = `
+      <div class="recovery-rank">${idx + 1}</div>
+      <div class="recovery-logo">${logoHtml}</div>
+      <div class="recovery-company">
+        <div class="recovery-name">${shortName}</div>
+        <div class="recovery-ticker">${ticker.replace('.OL', '')} &nbsp;${freqHtml}</div>
       </div>
-      <div class="card-metrics">
-        <div>
-          <div class="card-metric-label">Gj.sn. dager</div>
-          <div class="card-metric-value" style="color:#2563eb">${avg_recovery_days.toFixed(0)}</div>
-          <div class="card-metric-sub">til utvinning</div>
-        </div>
-        <div>
-          <div class="card-metric-label">5Y CAGR</div>
-          <div class="card-metric-value ${cagrCls(cagr_5y)}">${fmtCagr(cagr_5y)}</div>
-          <div class="card-metric-sub">${freqHtml}per år</div>
-        </div>
+      <div>
+        <div class="recovery-days">${Math.round(avg_recovery_days)}d</div>
+        <div class="recovery-days-sub">avg dager</div>
+      </div>
+      <div class="recovery-meta">
+        <div class="recovery-cagr ${cagrCls(cagr_5y)}">${fmtCagr(cagr_5y)}</div>
+        <div style="font-size:0.62rem;color:#94a3b8">5Y CAGR</div>
       </div>`;
 
-    card.addEventListener('click', () => selectStock(ticker));
-    rgrid.appendChild(card);
+    row.addEventListener('click', () => selectStock(ticker));
+    rgrid.appendChild(row);
   });
 }
 
