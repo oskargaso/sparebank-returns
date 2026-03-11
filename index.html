@@ -611,6 +611,7 @@
     .div-recovery-badge.mid  { background: #fef9c3; color: #a16207; }
     .div-recovery-badge.slow { background: #fee2e2; color: #b91c1c; }
     .div-recovery-badge.none { background: #f1f5f9; color: #94a3b8; }
+    .div-recovery-badge.rose { background: #e0f2fe; color: #0369a1; }
     .div-table-wrap {
       max-height: 320px;
       overflow-y: auto;
@@ -1482,19 +1483,26 @@ function buildDivHistoryTable(stockData) {
         if (records[j].close >= preClose) { recoveredIn = j - i; break; }
       }
     }
-    events.push({ date: records[i].date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop });
+    // Classify why no drop: stock rose vs flat/data artifact
+    const noDropReason = !meaningfulDrop
+      ? (actualDropPct > 0 ? 'rose' : 'flat')
+      : null;
+    events.push({ date: records[i].date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop, noDropReason });
   }
 
   if (!events.length && !nextEx) { card.style.display = 'none'; return; }
   card.style.display = 'block';
 
-  events.reverse().forEach(({ date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop }) => {
-    let badgeCls, badgeTxt;
-    if (!meaningfulDrop)          { badgeCls = 'none'; badgeTxt = '–'; }
-    else if (recoveredIn == null) { badgeCls = 'none'; badgeTxt = '>1 år'; }
-    else if (recoveredIn <= 10)   { badgeCls = 'fast'; badgeTxt = recoveredIn + 'd'; }
-    else if (recoveredIn <= 40)   { badgeCls = 'mid';  badgeTxt = recoveredIn + 'd'; }
-    else                          { badgeCls = 'slow'; badgeTxt = recoveredIn + 'd'; }
+  events.reverse().forEach(({ date, div, recoveredIn, expectedDropPct, actualDropPct, meaningfulDrop, noDropReason }) => {
+    let badgeCls, badgeTxt, badgeTitle;
+    if (!meaningfulDrop && noDropReason === 'rose') {
+      badgeCls = 'rose'; badgeTxt = '↑ steg'; badgeTitle = 'Kursen steg på ex-datoen — ingen gjenoppretting nødvendig';
+    } else if (!meaningfulDrop) {
+      badgeCls = 'none'; badgeTxt = '–'; badgeTitle = 'Ingen observerbart kursfall på ex-datoen';
+    } else if (recoveredIn == null) { badgeCls = 'none'; badgeTxt = '>1 år'; badgeTitle = 'Ikke gjenopprettet innen 1 år';
+    } else if (recoveredIn <= 10)   { badgeCls = 'fast'; badgeTxt = recoveredIn + 'd'; badgeTitle = recoveredIn + ' handelsdager';
+    } else if (recoveredIn <= 40)   { badgeCls = 'mid';  badgeTxt = recoveredIn + 'd'; badgeTitle = recoveredIn + ' handelsdager';
+    } else                          { badgeCls = 'slow'; badgeTxt = recoveredIn + 'd'; badgeTitle = recoveredIn + ' handelsdager'; }
 
     const actCls  = actualDropPct <= 0 ? 'neg' : 'pos';
     const actSign = actualDropPct >= 0 ? '+' : '';
@@ -1508,7 +1516,7 @@ function buildDivHistoryTable(stockData) {
         <div class="div-drop-actual ${actCls}">${actSign}${actualDropPct.toFixed(1)}%</div>
         <div class="div-drop-expected">forv. ${expSign}${expectedDropPct.toFixed(1)}%</div>
       </td>
-      <td><span class="div-recovery-badge ${badgeCls}">${badgeTxt}</span></td>`;
+      <td><span class="div-recovery-badge ${badgeCls}" title="${badgeTitle}">${badgeTxt}</span></td>`;
     tbody.appendChild(tr);
   });
 }
