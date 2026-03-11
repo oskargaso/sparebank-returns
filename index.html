@@ -546,6 +546,56 @@
     #chart-container { display: none; }
     #stats-container { display: none; }
 
+    /* ── Dividend history card ───────────────────────────────────── */
+    #div-history-card { display: none; }
+    .div-history-header {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 10px;
+    }
+    .div-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+    .div-table th {
+      text-align: left;
+      color: #94a3b8;
+      font-weight: 500;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0 8px 6px 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .div-table td {
+      padding: 5px 8px 5px 0;
+      border-bottom: 1px solid #f8fafc;
+      color: #475569;
+      vertical-align: middle;
+    }
+    .div-table tr:last-child td { border-bottom: none; }
+    .div-table td:first-child { color: #64748b; font-variant-numeric: tabular-nums; }
+    .div-table td.div-amount { font-weight: 600; color: #1e293b; }
+    .div-recovery-badge {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 1px 6px;
+      border-radius: 8px;
+    }
+    .div-recovery-badge.fast { background: #dcfce7; color: #15803d; }
+    .div-recovery-badge.mid  { background: #fef9c3; color: #a16207; }
+    .div-recovery-badge.slow { background: #fee2e2; color: #b91c1c; }
+    .div-recovery-badge.none { background: #f1f5f9; color: #94a3b8; }
+    .div-table-wrap {
+      max-height: 320px;
+      overflow-y: auto;
+    }
+    .div-table-wrap::-webkit-scrollbar { width: 4px; }
+    .div-table-wrap::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 2px; }
+
     /* ── Mobile ──────────────────────────────────────────────────── */
     @media (max-width: 680px) {
       #sidebar      { display: none; }
@@ -644,6 +694,10 @@
               <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="rgba(22,163,74,0.55)" stroke-width="1.5" stroke-dasharray="3,4"/></svg>
               Ex-dividend date
             </div>
+            <div class="legend-item" id="recovery-legend" style="display:none">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="rgba(234,88,12,0.7)" stroke-width="1.5" stroke-dasharray="5,3"/></svg>
+              Price recovery level
+            </div>
           </div>
           <div class="note">
             Data: Yahoo Finance &nbsp;&bull;&nbsp; Dividends reinvested at closing price on ex-dividend date &nbsp;&bull;&nbsp; Indexed to 100 at selected start date
@@ -694,6 +748,23 @@
         </div>
         <div class="company-summary" id="ci-summary"></div>
         <span class="summary-toggle" id="ci-toggle">Show more</span>
+      </div>
+
+      <!-- Dividend history -->
+      <div id="div-history-card" class="card">
+        <div class="div-history-header">Dividend History</div>
+        <div class="div-table-wrap">
+          <table class="div-table">
+            <thead>
+              <tr>
+                <th>Ex-Date</th>
+                <th>Dividend (NOK)</th>
+                <th>Recovery</th>
+              </tr>
+            </thead>
+            <tbody id="div-history-body"></tbody>
+          </table>
+        </div>
       </div>
 
     </div>
@@ -806,6 +877,12 @@ function fmtMarketCap(v) {
   return v.toLocaleString() + ' NOK';
 }
 
+// Extract hostname from a URL string (for Clearbit logo fallback)
+function domainFromUrl(url) {
+  if (!url) return null;
+  try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return null; }
+}
+
 // Derive a consistent color from ticker string
 function tickerColor(ticker) {
   const palette = ['#2563eb','#7c3aed','#059669','#b45309','#0891b2','#be185d','#4f46e5','#0f766e'];
@@ -814,20 +891,19 @@ function tickerColor(ticker) {
   return palette[h % palette.length];
 }
 
-function updateLogo(ticker, name) {
+function updateLogo(ticker, name, website) {
   const imgEl    = document.getElementById('logo-img');
   const badgeEl  = document.getElementById('logo-badge');
   const nameEl   = document.getElementById('logo-name');
   const tickerEl = document.getElementById('logo-ticker');
 
-  // Short display name (strip common suffixes for brevity)
   const shortName = name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
-  nameEl.textContent  = shortName;
+  nameEl.textContent   = shortName;
   tickerEl.textContent = ticker.replace('.OL', '');
 
-  const domain = LOGO_DOMAINS[ticker];
+  const domain = LOGO_DOMAINS[ticker] || domainFromUrl(website);
   if (domain) {
-    imgEl.style.display  = 'block';
+    imgEl.style.display   = 'block';
     badgeEl.style.display = 'none';
     imgEl.src = `https://logo.clearbit.com/${domain}`;
     imgEl.onerror = () => showBadge(ticker, badgeEl, imgEl);
@@ -846,27 +922,83 @@ function showBadge(ticker, badgeEl, imgEl) {
 }
 
 
-// ── Dividend marker plugin ────────────────────────────────────────────────────
-// Stores the current filtered chart data so the plugin and tooltip can read it.
-let _chartData = [];
+// ── Dividend marker + recovery plugin ────────────────────────────────────────
+let _chartData   = [];   // filtered chart records (with div field)
+let _showRecovery = false; // true when view spans ≤ 5 years
 
 Chart.register({
   id: 'divMarkers',
   afterDraw(chart) {
     const { ctx, chartArea, scales } = chart;
+
+    // Collect dividend indices
+    const divIdxs = [];
+    _chartData.forEach((d, i) => { if (d.div > 0) divIdxs.push(i); });
+    if (!divIdxs.length) return;
+
     ctx.save();
-    ctx.strokeStyle = 'rgba(22, 163, 74, 0.28)';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([3, 4]);
-    _chartData.forEach((d, i) => {
-      if (!d.div) return;
+
+    // ── Recovery horizontal lines (only when ≤ 5Y view) ──────────────────────
+    if (_showRecovery) {
+      divIdxs.forEach(i => {
+        if (i === 0) return;
+        const preExVal = _chartData[i - 1].priceReturn;
+        // Find first day after ex-date where price returns to pre-ex level
+        let recovIdx = null;
+        for (let j = i + 1; j < _chartData.length; j++) {
+          if (_chartData[j].priceReturn >= preExVal) { recovIdx = j; break; }
+        }
+        const x1 = scales.x.getPixelForValue(i);
+        const x2 = recovIdx != null ? scales.x.getPixelForValue(recovIdx) : chartArea.right;
+        const y  = scales.y.getPixelForValue(preExVal);
+
+        if (x1 > chartArea.right || y < chartArea.top || y > chartArea.bottom) return;
+
+        // Dashed horizontal recovery target line (orange)
+        ctx.strokeStyle = 'rgba(234, 88, 12, 0.55)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([5, 3]);
+        ctx.beginPath();
+        ctx.moveTo(Math.max(x1, chartArea.left), y);
+        ctx.lineTo(Math.min(x2, chartArea.right), y);
+        ctx.stroke();
+
+        // Dot at recovery point
+        if (recovIdx != null && x2 <= chartArea.right) {
+          ctx.fillStyle = 'rgba(234, 88, 12, 0.75)';
+          ctx.setLineDash([]);
+          ctx.beginPath();
+          ctx.arc(x2, y, 3, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+    }
+
+    // ── Vertical ex-dividend lines with triangle markers ─────────────────────
+    divIdxs.forEach(i => {
       const x = scales.x.getPixelForValue(i);
       if (x < chartArea.left || x > chartArea.right) return;
+
+      // Vertical dashed green line
+      ctx.strokeStyle = 'rgba(22, 163, 74, 0.42)';
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 4]);
       ctx.beginPath();
       ctx.moveTo(x, chartArea.top);
       ctx.lineTo(x, chartArea.bottom);
       ctx.stroke();
+
+      // Small upward triangle at bottom of chart
+      ctx.fillStyle = 'rgba(22, 163, 74, 0.65)';
+      ctx.setLineDash([]);
+      ctx.beginPath();
+      ctx.moveTo(x,     chartArea.bottom + 1);
+      ctx.lineTo(x - 4, chartArea.bottom + 8);
+      ctx.lineTo(x + 4, chartArea.bottom + 8);
+      ctx.closePath();
+      ctx.fill();
     });
+
     ctx.restore();
   },
 });
@@ -996,7 +1128,7 @@ async function selectStock(ticker) {
 
   // Update logo overlay
   const stock = state.stocks.find(s => s.ticker === ticker);
-  updateLogo(ticker, stock.name);
+  updateLogo(ticker, stock.name, stockData.website);
   document.getElementById('header-name').innerHTML =
     `${stock.name} <span style="color:#7aa8d0;font-weight:400">(${ticker})</span>`;
   document.getElementById('last-updated').textContent =
@@ -1059,6 +1191,9 @@ async function selectStock(ticker) {
     recoverySubEl.textContent = 'no dividend data';
   }
 
+  // Populate dividend history table
+  buildDivHistoryTable(stockData.records);
+
   applyRange('max');
 }
 
@@ -1069,12 +1204,12 @@ function buildOverview() {
   const grid  = document.getElementById('overview-grid');
   grid.innerHTML = '';
 
-  top10.forEach(({ ticker, name, cagr_5y, return_1y, marketCap, industry }) => {
+  top10.forEach(({ ticker, name, cagr_5y, return_1y, marketCap, industry, website }) => {
     const card = document.createElement('div');
     card.className = 'stock-card';
 
     // Logo / badge
-    const domain = LOGO_DOMAINS[ticker];
+    const domain = LOGO_DOMAINS[ticker] || domainFromUrl(website);
     const color  = tickerColor(ticker);
     const abbr   = ticker.replace('.OL', '').slice(0, 3);
     const logoHtml = domain
@@ -1124,11 +1259,11 @@ function buildRecoveryOverview() {
     .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
     .slice(0, 10);
 
-  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y }, idx) => {
+  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y, website }, idx) => {
     const row = document.createElement('div');
     row.className = 'recovery-row';
 
-    const domain = LOGO_DOMAINS[ticker];
+    const domain = LOGO_DOMAINS[ticker] || domainFromUrl(website);
     const color  = tickerColor(ticker);
     const abbr   = ticker.replace('.OL', '').slice(0, 3);
     const logoHtml = domain
@@ -1161,6 +1296,42 @@ function buildRecoveryOverview() {
   });
 }
 
+function buildDivHistoryTable(records) {
+  const tbody = document.getElementById('div-history-body');
+  tbody.innerHTML = '';
+  const card = document.getElementById('div-history-card');
+
+  const events = [];
+  for (let i = 1; i < records.length; i++) {
+    if (!records[i].div || records[i].div <= 0) continue;
+    const preEx = records[i - 1].close;
+    let recoveredIn = null;
+    for (let j = i + 1; j < Math.min(i + 253, records.length); j++) {
+      if (records[j].close >= preEx) { recoveredIn = j - i; break; }
+    }
+    events.push({ date: records[i].date, div: records[i].div, recoveredIn });
+  }
+
+  if (!events.length) { card.style.display = 'none'; return; }
+  card.style.display = 'block';
+
+  events.reverse().forEach(({ date, div, recoveredIn }) => {
+    let badgeCls, badgeTxt;
+    if (recoveredIn == null)      { badgeCls = 'none'; badgeTxt = '>1 yr'; }
+    else if (recoveredIn <= 10)   { badgeCls = 'fast'; badgeTxt = recoveredIn + 'd'; }
+    else if (recoveredIn <= 40)   { badgeCls = 'mid';  badgeTxt = recoveredIn + 'd'; }
+    else                          { badgeCls = 'slow'; badgeTxt = recoveredIn + 'd'; }
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${date}</td>
+      <td class="div-amount">${div.toFixed(4)}</td>
+      <td><span class="div-recovery-badge ${badgeCls}">${badgeTxt}</span></td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+
 function showOverview() {
   state.currentTicker = null;
   history.replaceState(null, '', window.location.pathname);
@@ -1170,7 +1341,8 @@ function showOverview() {
   document.getElementById('stats-container').style.display  = 'none';
   document.getElementById('header-name').innerHTML = 'Oslo Børs';
   document.getElementById('last-updated').textContent = '';
-  document.getElementById('company-info').style.display = 'none';
+  document.getElementById('company-info').style.display    = 'none';
+  document.getElementById('div-history-card').style.display = 'none';
   document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
 }
 
@@ -1185,6 +1357,7 @@ function showLoading() {
   document.getElementById('chart-container').style.display = 'none';
   document.getElementById('stats-container').style.display = 'none';
   document.getElementById('company-info').style.display    = 'none';
+  document.getElementById('div-history-card').style.display = 'none';
 }
 function showContent() {
   document.getElementById('loading').style.display = 'none';
@@ -1240,6 +1413,12 @@ function renderChart(data) {
   const triValues   = data.map(d => d.totalReturn);
   const priceValues = data.map(d => d.priceReturn);
   const tickCb      = xTickCallback(labels);
+
+  // Enable recovery lines only for ≤ 5Y view
+  const spanDays = labels.length > 1
+    ? (new Date(labels[labels.length - 1]) - new Date(labels[0])) / 86400000 : 0;
+  _showRecovery = spanDays > 0 && spanDays <= 365 * 5 + 30;
+  document.getElementById('recovery-legend').style.display = _showRecovery ? 'flex' : 'none';
 
   if (state.chart) {
     state.chart.data.labels           = labels;

@@ -403,6 +403,7 @@ def process_ticker(ticker, name):
         "end_date": records[-1]["date"],
         "marketCap": info.get("marketCap"),
         "industry": info.get("industry"),
+        "website": info.get("website"),
         "longBusinessSummary": info.get("longBusinessSummary"),
         "records": records,
     }
@@ -471,6 +472,7 @@ def main():
                 "industry": result.get("industry"),
                 "avg_recovery_days": result.get("avg_recovery_days"),
                 "div_frequency": result.get("div_frequency"),
+                "website": result.get("website"),
             })
 
         # Small delay to avoid Yahoo Finance rate limits
