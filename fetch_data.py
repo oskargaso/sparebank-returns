@@ -3,7 +3,7 @@ import pandas as pd
 import json
 import os
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 
 # All stocks listed on Oslo Børs (source: DN Investor, 2026-03-10)
 # Sorted roughly by market cap descending. Tickers use .OL suffix for Yahoo Finance.
@@ -274,6 +274,16 @@ START_DATE = "2010-01-01"
 DATA_DIR = "data"
 
 
+def _ts_to_date(ts):
+    """Convert a Unix timestamp (int or None) to a YYYY-MM-DD string, or None."""
+    if not ts:
+        return None
+    try:
+        return datetime.fromtimestamp(int(ts), tz=timezone.utc).strftime("%Y-%m-%d")
+    except (OSError, OverflowError, ValueError):
+        return None
+
+
 def calc_dividend_recovery(records, years=5):
     """
     For each dividend ex-date in the last `years` years, calculate how many
@@ -405,6 +415,8 @@ def process_ticker(ticker, name):
         "industry": info.get("industry"),
         "website": info.get("website"),
         "longBusinessSummary": info.get("longBusinessSummary"),
+        "next_ex_date": _ts_to_date(info.get("exDividendDate")),
+        "forward_annual_dividend": info.get("dividendRate"),
         "records": records,
     }
 
@@ -473,6 +485,8 @@ def main():
                 "avg_recovery_days": result.get("avg_recovery_days"),
                 "div_frequency": result.get("div_frequency"),
                 "website": result.get("website"),
+                "next_ex_date": result.get("next_ex_date"),
+                "forward_annual_dividend": result.get("forward_annual_dividend"),
             })
 
         # Small delay to avoid Yahoo Finance rate limits

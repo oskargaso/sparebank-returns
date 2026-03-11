@@ -8,7 +8,9 @@
     "industry":"Oil & Gas Integrated",
     "avg_recovery_days":22.0,
     "div_frequency":"quarterly",
-    "website":"https://www.equinor.com"
+    "website":"https://www.equinor.com",
+    "next_ex_date":"2026-05-13",
+    "forward_annual_dividend":14.81
   },
   {
     "ticker":"DNB.OL",
@@ -19,7 +21,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":5.6,
     "div_frequency":"annual",
-    "website":"https://www.dnb.no"
+    "website":"https://www.dnb.no",
+    "next_ex_date":"2026-04-22",
+    "forward_annual_dividend":18.0
   },
   {
     "ticker":"KOG.OL",
@@ -30,7 +34,9 @@
     "industry":"Aerospace & Defense",
     "avg_recovery_days":11.4,
     "div_frequency":"annual",
-    "website":"https://www.kongsberg.com"
+    "website":"https://www.kongsberg.com",
+    "next_ex_date":"2026-04-14",
+    "forward_annual_dividend":2.2
   },
   {
     "ticker":"TEL.OL",
@@ -41,7 +47,9 @@
     "industry":"Telecom Services",
     "avg_recovery_days":40.9,
     "div_frequency":"semi-annual",
-    "website":"https://www.telenor.com"
+    "website":"https://www.telenor.com",
+    "next_ex_date":"2026-05-20",
+    "forward_annual_dividend":9.7
   },
   {
     "ticker":"AKRBP.OL",
@@ -52,7 +60,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":28.1,
     "div_frequency":"quarterly",
-    "website":"https://akerbp.com"
+    "website":"https://akerbp.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":25.18
   },
   {
     "ticker":"NHY.OL",
@@ -63,7 +73,9 @@
     "industry":"Aluminum",
     "avg_recovery_days":3.2,
     "div_frequency":"annual",
-    "website":"https://www.hydro.com"
+    "website":"https://www.hydro.com",
+    "next_ex_date":"2026-05-08",
+    "forward_annual_dividend":3.0
   },
   {
     "ticker":"GJF.OL",
@@ -74,7 +86,9 @@
     "industry":"Insurance - Property & Casualty",
     "avg_recovery_days":6.5,
     "div_frequency":"annual",
-    "website":"https://www.gjensidige.com"
+    "website":"https://www.gjensidige.com",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":10.0
   },
   {
     "ticker":"YAR.OL",
@@ -85,7 +99,9 @@
     "industry":"Agricultural Inputs",
     "avg_recovery_days":20.7,
     "div_frequency":"annual",
-    "website":"https://www.yara.com"
+    "website":"https://www.yara.com",
+    "next_ex_date":"2026-05-13",
+    "forward_annual_dividend":22.0
   },
   {
     "ticker":"ORK.OL",
@@ -96,7 +112,9 @@
     "industry":"Packaged Foods",
     "avg_recovery_days":40.8,
     "div_frequency":"annual",
-    "website":"https://www.orkla.com"
+    "website":"https://www.orkla.com",
+    "next_ex_date":"2025-04-25",
+    "forward_annual_dividend":4.0
   },
   {
     "ticker":"MOWI.OL",
@@ -107,7 +125,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":30.8,
     "div_frequency":"quarterly",
-    "website":"https://www.mowi.com"
+    "website":"https://www.mowi.com",
+    "next_ex_date":"2026-02-20",
+    "forward_annual_dividend":6.15
   },
   {
     "ticker":"AKER.OL",
@@ -118,7 +138,9 @@
     "industry":"Conglomerates",
     "avg_recovery_days":15.3,
     "div_frequency":"semi-annual",
-    "website":"https://www.akerasa.com"
+    "website":"https://www.akerasa.com",
+    "next_ex_date":"2025-11-06",
+    "forward_annual_dividend":53.0
   },
   {
     "ticker":"SUBC.OL",
@@ -129,7 +151,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":4.4,
     "div_frequency":"annual",
-    "website":"https://www.subsea7.com"
+    "website":"https://www.subsea7.com",
+    "next_ex_date":"2026-05-20",
+    "forward_annual_dividend":19.5
   },
   {
     "ticker":"FRO.OL",
@@ -140,7 +164,9 @@
     "industry":"Oil & Gas Midstream",
     "avg_recovery_days":20.6,
     "div_frequency":"semi-annual",
-    "website":"https://www.frontlineplc.cy"
+    "website":"https://www.frontlineplc.cy",
+    "next_ex_date":"2026-03-11",
+    "forward_annual_dividend":17.14
   },
   {
     "ticker":"SALM.OL",
@@ -151,7 +177,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":26.6,
     "div_frequency":"annual",
-    "website":"https://www.salmar.no"
+    "website":"https://www.salmar.no",
+    "next_ex_date":"2025-06-19",
+    "forward_annual_dividend":22.0
   },
   {
     "ticker":"STB.OL",
@@ -162,7 +190,9 @@
     "industry":"Financial Conglomerates",
     "avg_recovery_days":2.0,
     "div_frequency":"annual",
-    "website":"https://www.storebrand.no"
+    "website":"https://www.storebrand.no",
+    "next_ex_date":"2026-04-10",
+    "forward_annual_dividend":5.4
   },
   {
     "ticker":"VEND.OL",
@@ -173,18 +203,22 @@
     "industry":"Internet Content & Information",
     "avg_recovery_days":8.1,
     "div_frequency":"semi-annual",
-    "website":"https://vend.com"
+    "website":"https://vend.com",
+    "next_ex_date":"2026-05-04",
+    "forward_annual_dividend":2.5
   },
   {
     "ticker":"WAWI.OL",
     "name":"Wallenius Wilhelmsen",
-    "return_1y":92.8,
+    "return_1y":92.9,
     "cagr_5y":54.7,
     "marketCap":52215128064,
     "industry":"Marine Shipping",
     "avg_recovery_days":78.0,
     "div_frequency":"semi-annual",
-    "website":"https://www.walleniuswilhelmsen.com"
+    "website":"https://www.walleniuswilhelmsen.com",
+    "next_ex_date":"2026-03-10",
+    "forward_annual_dividend":13.02
   },
   {
     "ticker":"PROT.OL",
@@ -195,7 +229,9 @@
     "industry":"Insurance - Specialty",
     "avg_recovery_days":23.6,
     "div_frequency":"quarterly",
-    "website":"https://www.protectorforsikring.no"
+    "website":"https://www.protectorforsikring.no",
+    "next_ex_date":"2026-02-03",
+    "forward_annual_dividend":18.0
   },
   {
     "ticker":"CMBTO.OL",
@@ -206,7 +242,9 @@
     "industry":"Oil & Gas Midstream",
     "avg_recovery_days":4.0,
     "div_frequency":"irregular",
-    "website":"https://www.cmb.tech"
+    "website":"https://www.cmb.tech",
+    "next_ex_date":"2026-04-14",
+    "forward_annual_dividend":2.03
   },
   {
     "ticker":"HAFNI.OL",
@@ -217,7 +255,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":35.8,
     "div_frequency":"semi-annual",
-    "website":"https://hafnia.com"
+    "website":"https://hafnia.com",
+    "next_ex_date":"2026-03-05",
+    "forward_annual_dividend":6.76
   },
   {
     "ticker":"AUTO.OL",
@@ -228,7 +268,9 @@
     "industry":"Computer Hardware",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.autostoresystem.com"
+    "website":"https://www.autostoresystem.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SBNOR.OL",
@@ -239,7 +281,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.sbnorge.no"
+    "website":"https://www.sbnorge.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":12.0
   },
   {
     "ticker":"TOM.OL",
@@ -250,7 +294,9 @@
     "industry":"Waste Management",
     "avg_recovery_days":27.8,
     "div_frequency":"annual",
-    "website":"https://www.tomra.com"
+    "website":"https://www.tomra.com",
+    "next_ex_date":"2026-04-24",
+    "forward_annual_dividend":2.15
   },
   {
     "ticker":"DOFG.OL",
@@ -261,7 +307,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":42.8,
     "div_frequency":"annual",
-    "website":"https://www.dof.com"
+    "website":"https://www.dof.com",
+    "next_ex_date":"2026-02-25",
+    "forward_annual_dividend":13.02
   },
   {
     "ticker":"MING.OL",
@@ -272,7 +320,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":5.2,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no"
+    "website":"https://www.sparebank1.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":13.5
   },
   {
     "ticker":"LSG.OL",
@@ -283,7 +333,9 @@
     "industry":"Packaged Foods",
     "avg_recovery_days":13.8,
     "div_frequency":"annual",
-    "website":"https://www.leroyseafood.com"
+    "website":"https://www.leroyseafood.com",
+    "next_ex_date":"2025-05-28",
+    "forward_annual_dividend":2.5
   },
   {
     "ticker":"SPOL.OL",
@@ -294,7 +346,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":4.7,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no/en/ostlandet/personal.html"
+    "website":"https://www.sparebank1.no/en/ostlandet/personal.html",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":12.7
   },
   {
     "ticker":"NOD.OL",
@@ -305,18 +359,22 @@
     "industry":"Semiconductors",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nordicsemi.com"
+    "website":"https://www.nordicsemi.com",
+    "next_ex_date":"2011-06-17",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BWLPG.OL",
     "name":"BW LPG",
-    "return_1y":48.1,
+    "return_1y":48.2,
     "cagr_5y":43.3,
     "marketCap":22483744768,
     "industry":"Marine Shipping",
     "avg_recovery_days":16.2,
     "div_frequency":"quarterly",
-    "website":"https://www.bwlpg.com"
+    "website":"https://www.bwlpg.com",
+    "next_ex_date":"2026-03-12",
+    "forward_annual_dividend":14.46
   },
   {
     "ticker":"BAKKA.OL",
@@ -327,7 +385,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":143.0,
     "div_frequency":"annual",
-    "website":"https://www.bakkafrost.com"
+    "website":"https://www.bakkafrost.com",
+    "next_ex_date":"2026-05-04",
+    "forward_annual_dividend":5.27
   },
   {
     "ticker":"VEI.OL",
@@ -338,7 +398,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":51.4,
     "div_frequency":"annual",
-    "website":"https://www.veidekke.com"
+    "website":"https://www.veidekke.com",
+    "next_ex_date":"2026-05-07",
+    "forward_annual_dividend":11.25
   },
   {
     "ticker":"TIETO.OL",
@@ -349,7 +411,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":84.8,
     "div_frequency":"semi-annual",
-    "website":"https://www.tietoevry.com"
+    "website":"https://www.tietoevry.com",
+    "next_ex_date":"2026-03-25",
+    "forward_annual_dividend":9.97
   },
   {
     "ticker":"TGS.OL",
@@ -360,7 +424,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":40.5,
     "div_frequency":"quarterly",
-    "website":"https://www.tgs.com"
+    "website":"https://www.tgs.com",
+    "next_ex_date":"2026-02-19",
+    "forward_annual_dividend":6.2
   },
   {
     "ticker":"KIT.OL",
@@ -371,7 +437,9 @@
     "industry":"Electronic Components",
     "avg_recovery_days":7.3,
     "div_frequency":"annual",
-    "website":"https://kitron.com"
+    "website":"https://kitron.com",
+    "next_ex_date":"2026-04-27",
+    "forward_annual_dividend":0.7
   },
   {
     "ticker":"AUSS.OL",
@@ -382,7 +450,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":105.8,
     "div_frequency":"annual",
-    "website":"https://www.auss.no"
+    "website":"https://www.auss.no",
+    "next_ex_date":"2025-05-30",
+    "forward_annual_dividend":6.5
   },
   {
     "ticker":"CADLR.OL",
@@ -393,7 +463,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.cadeler.com"
+    "website":"https://www.cadeler.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ENTRA.OL",
@@ -404,7 +476,9 @@
     "industry":"Real Estate Services",
     "avg_recovery_days":44.5,
     "div_frequency":"annual",
-    "website":"https://www.entra.no"
+    "website":"https://www.entra.no",
+    "next_ex_date":"2026-04-22",
+    "forward_annual_dividend":2.2
   },
   {
     "ticker":"AKSO.OL",
@@ -415,7 +489,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":11.0,
     "div_frequency":"annual",
-    "website":"https://akersolutions.com"
+    "website":"https://akersolutions.com",
+    "next_ex_date":"2025-04-29",
+    "forward_annual_dividend":3.3
   },
   {
     "ticker":"AFG.OL",
@@ -426,7 +502,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":79.6,
     "div_frequency":"semi-annual",
-    "website":"https://afgruppen.com"
+    "website":"https://afgruppen.com",
+    "next_ex_date":"2026-05-15",
+    "forward_annual_dividend":6.5
   },
   {
     "ticker":"SNI.OL",
@@ -437,7 +515,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":15.7,
     "div_frequency":"semi-annual",
-    "website":"https://www.stolt-nielsen.com"
+    "website":"https://www.stolt-nielsen.com",
+    "next_ex_date":"2026-04-21",
+    "forward_annual_dividend":19.11
   },
   {
     "ticker":"SWON.OL",
@@ -448,7 +528,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.softwareone.com"
+    "website":"https://www.softwareone.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SCATC.OL",
@@ -459,7 +541,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":88.0,
     "div_frequency":"annual",
-    "website":"https://scatec.com"
+    "website":"https://scatec.com",
+    "next_ex_date":"2023-04-19",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"OET.OL",
@@ -470,7 +554,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":30.6,
     "div_frequency":"semi-annual",
-    "website":"https://www.okeanisecotankers.com"
+    "website":"https://www.okeanisecotankers.com",
+    "next_ex_date":"2026-03-02",
+    "forward_annual_dividend":59.92
   },
   {
     "ticker":"ELK.OL",
@@ -481,7 +567,9 @@
     "industry":"Specialty Chemicals",
     "avg_recovery_days":76.5,
     "div_frequency":"annual",
-    "website":"https://www.elkem.com"
+    "website":"https://www.elkem.com",
+    "next_ex_date":"2025-05-02",
+    "forward_annual_dividend":0.3
   },
   {
     "ticker":"BRG.OL",
@@ -492,7 +580,9 @@
     "industry":"Specialty Chemicals",
     "avg_recovery_days":4.4,
     "div_frequency":"annual",
-    "website":"https://www.borregaard.com"
+    "website":"https://www.borregaard.com",
+    "next_ex_date":"2026-04-17",
+    "forward_annual_dividend":4.75
   },
   {
     "ticker":"BORR.OL",
@@ -503,7 +593,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://borrdrilling.com"
+    "website":"https://borrdrilling.com",
+    "next_ex_date":"2024-11-28",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NONG.OL",
@@ -514,7 +606,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":4.3,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no"
+    "website":"https://www.sparebank1.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":8.5
   },
   {
     "ticker":"ATEA.OL",
@@ -525,7 +619,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":7.0,
     "div_frequency":"semi-annual",
-    "website":"https://www.atea.com"
+    "website":"https://www.atea.com",
+    "next_ex_date":"2025-11-19",
+    "forward_annual_dividend":7.0
   },
   {
     "ticker":"NAS.OL",
@@ -536,7 +632,9 @@
     "industry":"Airlines",
     "avg_recovery_days":9.0,
     "div_frequency":"irregular",
-    "website":"https://www.norwegian.com"
+    "website":"https://www.norwegian.com",
+    "next_ex_date":"2026-05-07",
+    "forward_annual_dividend":1.7
   },
   {
     "ticker":"DNO.OL",
@@ -547,7 +645,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":33.1,
     "div_frequency":"semi-annual",
-    "website":"https://www.dno.no"
+    "website":"https://www.dno.no",
+    "next_ex_date":"2026-02-13",
+    "forward_annual_dividend":1.5
   },
   {
     "ticker":"EPR.OL",
@@ -558,7 +658,9 @@
     "industry":"Discount Stores",
     "avg_recovery_days":2.4,
     "div_frequency":"annual",
-    "website":"https://www.europris.no"
+    "website":"https://www.europris.no",
+    "next_ex_date":"2026-04-30",
+    "forward_annual_dividend":3.75
   },
   {
     "ticker":"BNOR.OL",
@@ -569,7 +671,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":72.0,
     "div_frequency":"irregular",
-    "website":"https://www.bluenord.com"
+    "website":"https://www.bluenord.com",
+    "next_ex_date":"2026-03-24",
+    "forward_annual_dividend":19.49
   },
   {
     "ticker":"ELO.OL",
@@ -580,7 +684,9 @@
     "industry":"Packaging & Containers",
     "avg_recovery_days":12.6,
     "div_frequency":"annual",
-    "website":"https://www.elopak.com"
+    "website":"https://www.elopak.com",
+    "next_ex_date":"2026-05-15",
+    "forward_annual_dividend":2.11
   },
   {
     "ticker":"NORCO.OL",
@@ -591,7 +697,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":2.0,
     "div_frequency":"irregular",
-    "website":"https://norconsult.com"
+    "website":"https://norconsult.com",
+    "next_ex_date":"2025-05-06",
+    "forward_annual_dividend":3.4
   },
   {
     "ticker":"SOMA.OL",
@@ -602,7 +710,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":3.0,
     "div_frequency":"irregular",
-    "website":"https://www.solstad.com"
+    "website":"https://www.solstad.com",
+    "next_ex_date":"2026-02-23",
+    "forward_annual_dividend":1.23
   },
   {
     "ticker":"COSH.OL",
@@ -613,7 +723,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.theconstellation.com"
+    "website":"https://www.theconstellation.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BONHR.OL",
@@ -624,7 +736,9 @@
     "industry":"Conglomerates",
     "avg_recovery_days":8.6,
     "div_frequency":"annual",
-    "website":"https://www.bonheur.no"
+    "website":"https://www.bonheur.no",
+    "next_ex_date":"2026-05-28",
+    "forward_annual_dividend":7.3
   },
   {
     "ticker":"MPCC.OL",
@@ -635,7 +749,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":13.8,
     "div_frequency":"quarterly",
-    "website":"https://www.mpc-container.com"
+    "website":"https://www.mpc-container.com",
+    "next_ex_date":"2026-03-20",
+    "forward_annual_dividend":2.28
   },
   {
     "ticker":"AKBM.OL",
@@ -646,7 +762,9 @@
     "industry":"Packaged Foods",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://www.akerbiomarine.com"
+    "website":"https://www.akerbiomarine.com",
+    "next_ex_date":"2024-09-09",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BWO.OL",
@@ -657,7 +775,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":19.6,
     "div_frequency":"quarterly",
-    "website":"https://www.bwoffshore.com"
+    "website":"https://www.bwoffshore.com",
+    "next_ex_date":"2026-03-04",
+    "forward_annual_dividend":7.09
   },
   {
     "ticker":"B2I.OL",
@@ -668,7 +788,9 @@
     "industry":"Credit Services",
     "avg_recovery_days":7.7,
     "div_frequency":"annual",
-    "website":"https://www.b2-impact.com"
+    "website":"https://www.b2-impact.com",
+    "next_ex_date":"2026-05-26",
+    "forward_annual_dividend":1.9
   },
   {
     "ticker":"AFK.OL",
@@ -679,7 +801,9 @@
     "industry":"Conglomerates",
     "avg_recovery_days":10.3,
     "div_frequency":"semi-annual",
-    "website":"https://arendalsfossekompani.no"
+    "website":"https://arendalsfossekompani.no",
+    "next_ex_date":"2025-05-20",
+    "forward_annual_dividend":4.0
   },
   {
     "ticker":"SATS.OL",
@@ -690,7 +814,9 @@
     "industry":"Leisure",
     "avg_recovery_days":3.0,
     "div_frequency":"irregular",
-    "website":"https://satsgroup.com"
+    "website":"https://satsgroup.com",
+    "next_ex_date":"2026-03-04",
+    "forward_annual_dividend":1.3
   },
   {
     "ticker":"GSF.OL",
@@ -701,7 +827,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":53.3,
     "div_frequency":"annual",
-    "website":"https://griegseafood.com"
+    "website":"https://griegseafood.com",
+    "next_ex_date":"2024-06-20",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ODF.OL",
@@ -712,7 +840,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":44.1,
     "div_frequency":"semi-annual",
-    "website":"https://www.odfjell.com"
+    "website":"https://www.odfjell.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":9.48
   },
   {
     "ticker":"PLSV.OL",
@@ -723,7 +853,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":87.7,
     "div_frequency":"annual",
-    "website":"https://www.paratus-energy.com"
+    "website":"https://www.paratus-energy.com",
+    "next_ex_date":"2026-03-05",
+    "forward_annual_dividend":8.73
   },
   {
     "ticker":"RING.OL",
@@ -734,7 +866,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":79.8,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no/ringerike-hadeland"
+    "website":"https://www.sparebank1.no/ringerike-hadeland",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":26.35
   },
   {
     "ticker":"SNTIA.OL",
@@ -745,7 +879,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.sentiagruppen.com"
+    "website":"https://www.sentiagruppen.com",
+    "next_ex_date":"2026-05-13",
+    "forward_annual_dividend":11.0
   },
   {
     "ticker":"LINK.OL",
@@ -756,7 +892,9 @@
     "industry":"Telecom Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.linkmobility.com"
+    "website":"https://www.linkmobility.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PEXIP.OL",
@@ -767,7 +905,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":16.5,
     "div_frequency":"irregular",
-    "website":"https://www.pexip.com"
+    "website":"https://www.pexip.com",
+    "next_ex_date":"2026-04-20",
+    "forward_annual_dividend":4.0
   },
   {
     "ticker":"PARB.OL",
@@ -778,7 +918,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":68.0,
     "div_frequency":"annual",
-    "website":"https://www.paretobank.no"
+    "website":"https://www.paretobank.no",
+    "next_ex_date":"2026-04-10",
+    "forward_annual_dividend":8.0
   },
   {
     "ticker":"WWIB.OL",
@@ -789,18 +931,22 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":7.3,
     "div_frequency":"annual",
-    "website":"https://www.wilhelmsen.com"
+    "website":"https://www.wilhelmsen.com",
+    "next_ex_date":"2026-05-04",
+    "forward_annual_dividend":20.0
   },
   {
     "ticker":"HSHP.OL",
     "name":"Himalaya Shipping",
-    "return_1y":144.3,
+    "return_1y":144.4,
     "cagr_5y":32.2,
     "marketCap":6068150272,
     "industry":"Marine Shipping",
     "avg_recovery_days":14.1,
     "div_frequency":"quarterly",
-    "website":"https://himalaya-shipping.com"
+    "website":"https://himalaya-shipping.com",
+    "next_ex_date":"2026-03-16",
+    "forward_annual_dividend":6.9
   },
   {
     "ticker":"MORG.OL",
@@ -811,7 +957,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":4.3,
     "div_frequency":"annual",
-    "website":"https://www.sbm.no"
+    "website":"https://www.sbm.no",
+    "next_ex_date":"2025-04-10",
+    "forward_annual_dividend":6.25
   },
   {
     "ticker":"SOAG.OL",
@@ -822,7 +970,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":54.7,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no/nb/ostfold-akershus/privat.html"
+    "website":"https://www.sparebank1.no/nb/ostfold-akershus/privat.html",
+    "next_ex_date":"2026-03-26",
+    "forward_annual_dividend":24.5
   },
   {
     "ticker":"KCC.OL",
@@ -833,7 +983,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":15.5,
     "div_frequency":"quarterly",
-    "website":"https://www.combinationcarriers.com"
+    "website":"https://www.combinationcarriers.com",
+    "next_ex_date":"2026-02-18",
+    "forward_annual_dividend":3.58
   },
   {
     "ticker":"BOUV.OL",
@@ -844,7 +996,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":26.8,
     "div_frequency":"semi-annual",
-    "website":"https://www.bouvet.no"
+    "website":"https://www.bouvet.no",
+    "next_ex_date":"2026-05-15",
+    "forward_annual_dividend":3.0
   },
   {
     "ticker":"KID.OL",
@@ -855,7 +1009,9 @@
     "industry":"Specialty Retail",
     "avg_recovery_days":65.6,
     "div_frequency":"semi-annual",
-    "website":"https://www.kid.no"
+    "website":"https://www.kid.no",
+    "next_ex_date":"2026-05-12",
+    "forward_annual_dividend":10.0
   },
   {
     "ticker":"SOFF.OL",
@@ -866,7 +1022,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":1.5,
     "div_frequency":"irregular",
-    "website":"https://www.solstad.com"
+    "website":"https://www.solstad.com",
+    "next_ex_date":"2026-03-10",
+    "forward_annual_dividend":0.51
   },
   {
     "ticker":"HELG.OL",
@@ -877,7 +1035,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":34.2,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no/nb/helgeland/privat.html"
+    "website":"https://www.sparebank1.no/nb/helgeland/privat.html",
+    "next_ex_date":"2026-03-25",
+    "forward_annual_dividend":7.67
   },
   {
     "ticker":"MULTI.OL",
@@ -888,7 +1048,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":3.6,
     "div_frequency":"annual",
-    "website":"https://www.multiconsultgroup.com"
+    "website":"https://www.multiconsultgroup.com",
+    "next_ex_date":"2026-04-17",
+    "forward_annual_dividend":5.0
   },
   {
     "ticker":"SEA1.OL",
@@ -899,7 +1061,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://www.sea1offshore.com"
+    "website":"https://www.sea1offshore.com",
+    "next_ex_date":"2025-01-14",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ABG.OL",
@@ -910,7 +1074,9 @@
     "industry":"Capital Markets",
     "avg_recovery_days":69.4,
     "div_frequency":"annual",
-    "website":"https://www.abgsc.com"
+    "website":"https://www.abgsc.com",
+    "next_ex_date":"2026-04-17",
+    "forward_annual_dividend":0.55
   },
   {
     "ticker":"CLOUD.OL",
@@ -921,7 +1087,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.cloudberry.no"
+    "website":"https://www.cloudberry.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AKAST.OL",
@@ -932,7 +1100,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":62.3,
     "div_frequency":"annual",
-    "website":"https://akastor.com"
+    "website":"https://akastor.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"MEDI.OL",
@@ -943,7 +1113,9 @@
     "industry":"Medical Devices",
     "avg_recovery_days":8.8,
     "div_frequency":"annual",
-    "website":"https://www.medistim.com"
+    "website":"https://www.medistim.com",
+    "next_ex_date":"2025-05-09",
+    "forward_annual_dividend":6.0
   },
   {
     "ticker":"NEL.OL",
@@ -954,7 +1126,9 @@
     "industry":"Specialty Industrial Machinery",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://nelhydrogen.com"
+    "website":"https://nelhydrogen.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ROGS.OL",
@@ -965,7 +1139,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":35.0,
     "div_frequency":"irregular",
-    "website":"https://www.rogalandsparebank.no"
+    "website":"https://www.rogalandsparebank.no",
+    "next_ex_date":"2026-03-26",
+    "forward_annual_dividend":11.7
   },
   {
     "ticker":"ELMRA.OL",
@@ -976,7 +1152,9 @@
     "industry":"Utilities - Regulated Electric",
     "avg_recovery_days":33.0,
     "div_frequency":"annual",
-    "website":"https://elmeragroup.no"
+    "website":"https://elmeragroup.no",
+    "next_ex_date":"2025-05-02",
+    "forward_annual_dividend":3.0
   },
   {
     "ticker":"BEWI.OL",
@@ -987,7 +1165,9 @@
     "industry":"Packaging & Containers",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://bewi.com"
+    "website":"https://bewi.com",
+    "next_ex_date":"2022-11-10",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AKVA.OL",
@@ -998,7 +1178,9 @@
     "industry":"Farm & Heavy Construction Machinery",
     "avg_recovery_days":20.0,
     "div_frequency":"annual",
-    "website":"https://www.akvagroup.com"
+    "website":"https://www.akvagroup.com",
+    "next_ex_date":"2025-10-28",
+    "forward_annual_dividend":2.0
   },
   {
     "ticker":"NAPA.OL",
@@ -1009,7 +1191,9 @@
     "industry":"Communication Equipment",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.napatech.com"
+    "website":"https://www.napatech.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SMOP.OL",
@@ -1020,7 +1204,9 @@
     "industry":"Communication Equipment",
     "avg_recovery_days":3.0,
     "div_frequency":"annual",
-    "website":"https://smartoptics.com"
+    "website":"https://smartoptics.com",
+    "next_ex_date":"2025-05-09",
+    "forward_annual_dividend":0.6
   },
   {
     "ticker":"ENVIP.OL",
@@ -1031,7 +1217,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.envipco.com"
+    "website":"https://www.envipco.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PEN.OL",
@@ -1042,7 +1230,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":38.3,
     "div_frequency":"semi-annual",
-    "website":"https://www.panoroenergy.com"
+    "website":"https://www.panoroenergy.com",
+    "next_ex_date":"2026-02-27",
+    "forward_annual_dividend":2.53
   },
   {
     "ticker":"2020.OL",
@@ -1053,7 +1243,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":31.5,
     "div_frequency":"quarterly",
-    "website":"https://2020bulkers.com"
+    "website":"https://2020bulkers.com",
+    "next_ex_date":"2026-03-17",
+    "forward_annual_dividend":11.59
   },
   {
     "ticker":"ANDF.OL",
@@ -1064,7 +1256,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.andfjordsalmon.com"
+    "website":"https://www.andfjordsalmon.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"POL.OL",
@@ -1075,7 +1269,9 @@
     "industry":"Publishing",
     "avg_recovery_days":63.8,
     "div_frequency":"annual",
-    "website":"https://www.polarismedia.no"
+    "website":"https://www.polarismedia.no",
+    "next_ex_date":"2026-05-12",
+    "forward_annual_dividend":3.3
   },
   {
     "ticker":"MORLD.OL",
@@ -1086,7 +1282,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":27.2,
     "div_frequency":"annual",
-    "website":"https://www.moreld.com"
+    "website":"https://www.moreld.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":1.68
   },
   {
     "ticker":"CAMBI.OL",
@@ -1097,7 +1295,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":5.2,
     "div_frequency":"annual",
-    "website":"https://www.cambi.com"
+    "website":"https://www.cambi.com",
+    "next_ex_date":"2025-11-10",
+    "forward_annual_dividend":0.3
   },
   {
     "ticker":"SMCRT.OL",
@@ -1108,7 +1308,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://smartcraft.com"
+    "website":"https://smartcraft.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"RANA.OL",
@@ -1119,7 +1321,9 @@
     "industry":"Steel",
     "avg_recovery_days":70.7,
     "div_frequency":"quarterly",
-    "website":"https://ranagruber.no"
+    "website":"https://ranagruber.no",
+    "next_ex_date":"2025-11-14",
+    "forward_annual_dividend":5.33
   },
   {
     "ticker":"MAS.OL",
@@ -1130,7 +1334,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":1.3,
     "div_frequency":"annual",
-    "website":"https://www.masoval.no"
+    "website":"https://www.masoval.no",
+    "next_ex_date":"2024-06-05",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"OTL.OL",
@@ -1141,7 +1347,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":15.8,
     "div_frequency":"semi-annual",
-    "website":"https://www.odfjelltechnology.com"
+    "website":"https://www.odfjelltechnology.com",
+    "next_ex_date":"2026-03-10",
+    "forward_annual_dividend":6.08
   },
   {
     "ticker":"NOL.OL",
@@ -1152,7 +1360,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.northernocean.no"
+    "website":"https://www.northernocean.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ZAP.OL",
@@ -1163,7 +1373,9 @@
     "industry":"Auto Parts",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://zaptec.com"
+    "website":"https://zaptec.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NSKOG.OL",
@@ -1174,7 +1386,9 @@
     "industry":"Paper & Paper Products",
     "avg_recovery_days":20.0,
     "div_frequency":"irregular",
-    "website":"https://www.norskeskog.com"
+    "website":"https://www.norskeskog.com",
+    "next_ex_date":"2023-11-20",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"VDI.OL",
@@ -1185,7 +1399,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://www.vantagedrilling.com"
+    "website":"https://www.vantagedrilling.com",
+    "next_ex_date":"2025-12-19",
+    "forward_annual_dividend":50.07
   },
   {
     "ticker":"APR.OL",
@@ -1196,7 +1412,9 @@
     "industry":"Computer Hardware",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.appear.net"
+    "website":"https://www.appear.net",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"VTURA.OL",
@@ -1207,7 +1425,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://ventura-offshore.com"
+    "website":"https://ventura-offshore.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ARCH.OL",
@@ -1218,7 +1438,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":8.0,
     "div_frequency":"annual",
-    "website":"https://www.archerwell.com"
+    "website":"https://www.archerwell.com",
+    "next_ex_date":"2026-02-04",
+    "forward_annual_dividend":2.48
   },
   {
     "ticker":"XPLRA.OL",
@@ -1229,7 +1451,9 @@
     "industry":"Internet Retail",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.myxplora.com"
+    "website":"https://www.myxplora.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"IWS.OL",
@@ -1240,7 +1464,9 @@
     "industry":"Specialty Industrial Machinery",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://www.integratedwind.com"
+    "website":"https://www.integratedwind.com",
+    "next_ex_date":"2026-03-02",
+    "forward_annual_dividend":3.0
   },
   {
     "ticker":"DELIA.OL",
@@ -1251,7 +1477,9 @@
     "industry":"Packaged Foods",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.dellia.com/en"
+    "website":"https://www.dellia.com/en",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ODFB.OL",
@@ -1262,7 +1490,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":43.4,
     "div_frequency":"semi-annual",
-    "website":"https://www.odfjell.com"
+    "website":"https://www.odfjell.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":9.48
   },
   {
     "ticker":"REACH.OL",
@@ -1273,7 +1503,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":25.0,
     "div_frequency":"annual",
-    "website":"https://reachsubsea.no"
+    "website":"https://reachsubsea.no",
+    "next_ex_date":"2025-05-30",
+    "forward_annual_dividend":0.42
   },
   {
     "ticker":"SKUE.OL",
@@ -1284,7 +1516,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":13.8,
     "div_frequency":"annual",
-    "website":"https://skuesparebank.no"
+    "website":"https://skuesparebank.no",
+    "next_ex_date":"2026-03-26",
+    "forward_annual_dividend":22.27
   },
   {
     "ticker":"SALME.OL",
@@ -1295,7 +1529,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.salmonevolution.no"
+    "website":"https://www.salmonevolution.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"DVD.OL",
@@ -1306,7 +1542,9 @@
     "industry":"Oil & Gas Drilling",
     "avg_recovery_days":43.2,
     "div_frequency":"semi-annual",
-    "website":"https://www.deepvaluedriller.no"
+    "website":"https://www.deepvaluedriller.no",
+    "next_ex_date":"2026-01-07",
+    "forward_annual_dividend":3.0
   },
   {
     "ticker":"PHO.OL",
@@ -1317,7 +1555,9 @@
     "industry":"Drug Manufacturers - Specialty & Generic",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.photocure.com"
+    "website":"https://www.photocure.com",
+    "next_ex_date":"2013-05-23",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"KOMPL.OL",
@@ -1328,7 +1568,9 @@
     "industry":"Internet Retail",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://www.komplettgroup.com"
+    "website":"https://www.komplettgroup.com",
+    "next_ex_date":"2022-06-03",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"KOA.OL",
@@ -1339,7 +1581,9 @@
     "industry":"Auto Parts",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.kongsbergautomotive.com"
+    "website":"https://www.kongsbergautomotive.com",
+    "next_ex_date":"2007-06-04",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"INSTA.OL",
@@ -1350,7 +1594,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":12.0,
     "div_frequency":"irregular",
-    "website":"https://www.instabank.no"
+    "website":"https://www.instabank.no",
+    "next_ex_date":"2025-04-11",
+    "forward_annual_dividend":0.08
   },
   {
     "ticker":"NORAM.OL",
@@ -1361,7 +1607,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":40.8,
     "div_frequency":"quarterly",
-    "website":"https://www.noramdrilling.com"
+    "website":"https://www.noramdrilling.com",
+    "next_ex_date":"2026-02-17",
+    "forward_annual_dividend":4.12
   },
   {
     "ticker":"JAREN.OL",
@@ -1372,7 +1620,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":54.8,
     "div_frequency":"annual",
-    "website":"https://www.jaerensparebank.no"
+    "website":"https://www.jaerensparebank.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":20.0
   },
   {
     "ticker":"SPOG.OL",
@@ -1383,7 +1633,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":46.4,
     "div_frequency":"annual",
-    "website":"https://www.oest.no"
+    "website":"https://www.oest.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":6.9
   },
   {
     "ticker":"SNOR.OL",
@@ -1394,7 +1646,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":5.0,
     "div_frequency":"annual",
-    "website":"https://www.sparebank1.no/nb/nordmore/privat.html"
+    "website":"https://www.sparebank1.no/nb/nordmore/privat.html",
+    "next_ex_date":"2026-04-16",
+    "forward_annual_dividend":11.0
   },
   {
     "ticker":"AGLX.OL",
@@ -1405,7 +1659,9 @@
     "industry":"Waste Management",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.agilyx.com"
+    "website":"https://www.agilyx.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"GIGA.OL",
@@ -1416,7 +1672,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://gigantesalmon.no"
+    "website":"https://gigantesalmon.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ZAL.OL",
@@ -1427,7 +1685,9 @@
     "industry":"Staffing & Employment Services",
     "avg_recovery_days":3.7,
     "div_frequency":"annual",
-    "website":"https://zalaris.com"
+    "website":"https://zalaris.com",
+    "next_ex_date":"2025-05-23",
+    "forward_annual_dividend":0.9
   },
   {
     "ticker":"NOAP.OL",
@@ -1438,7 +1698,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nordicaquapartners.com"
+    "website":"https://www.nordicaquapartners.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"TRMED.OL",
@@ -1449,7 +1711,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.thormedical.no"
+    "website":"https://www.thormedical.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PNOR.OL",
@@ -1460,7 +1724,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://petronorep.com"
+    "website":"https://petronorep.com",
+    "next_ex_date":"2025-05-23",
+    "forward_annual_dividend":4.4
   },
   {
     "ticker":"NKR.OL",
@@ -1471,7 +1737,9 @@
     "industry":"Specialty Industrial Machinery",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nekkar.com"
+    "website":"https://www.nekkar.com",
+    "next_ex_date":"2019-09-20",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NRC.OL",
@@ -1482,7 +1750,9 @@
     "industry":"Railroads",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nrcgroup.com"
+    "website":"https://www.nrcgroup.com",
+    "next_ex_date":"2018-04-20",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NOM.OL",
@@ -1493,7 +1763,9 @@
     "industry":"Other Industrial Metals & Mining",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nordicmining.com"
+    "website":"https://www.nordicmining.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"MGN.OL",
@@ -1504,7 +1776,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":33.9,
     "div_frequency":"semi-annual",
-    "website":"https://www.magnoraasa.com"
+    "website":"https://www.magnoraasa.com",
+    "next_ex_date":"2025-07-22",
+    "forward_annual_dividend":0.75
   },
   {
     "ticker":"NORDH.OL",
@@ -1515,7 +1789,9 @@
     "industry":"Health Information Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://nordhealth.com"
+    "website":"https://nordhealth.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AURG.OL",
@@ -1526,7 +1802,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":71.6,
     "div_frequency":"annual",
-    "website":"https://aurskog-sparebank.no"
+    "website":"https://aurskog-sparebank.no",
+    "next_ex_date":"2026-03-26",
+    "forward_annual_dividend":17.0
   },
   {
     "ticker":"NOHAL.OL",
@@ -1537,7 +1815,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.nordichalibut.com"
+    "website":"https://www.nordichalibut.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AFISH.OL",
@@ -1548,7 +1828,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.arcticfish.is"
+    "website":"https://www.arcticfish.is",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BMA.OL",
@@ -1559,7 +1841,9 @@
     "industry":"Building Products & Equipment",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://www.byggma.no"
+    "website":"https://www.byggma.no",
+    "next_ex_date":"2022-06-01",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"LUMI.OL",
@@ -1570,7 +1854,9 @@
     "industry":"Education & Training Services",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://lumiinvestor.com"
+    "website":"https://lumiinvestor.com",
+    "next_ex_date":"2022-04-27",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PRS.OL",
@@ -1581,7 +1867,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.prosafe.com"
+    "website":"https://www.prosafe.com",
+    "next_ex_date":"2015-08-27",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AZT.OL",
@@ -1592,7 +1880,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.arcticzymes.com"
+    "website":"https://www.arcticzymes.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"GYL.OL",
@@ -1603,7 +1893,9 @@
     "industry":"Publishing",
     "avg_recovery_days":3.0,
     "div_frequency":"annual",
-    "website":"https://www.gyldendalasa.no"
+    "website":"https://www.gyldendalasa.no",
+    "next_ex_date":"2025-06-18",
+    "forward_annual_dividend":3.5
   },
   {
     "ticker":"EIOF.OL",
@@ -1614,7 +1906,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":9.0,
     "div_frequency":"irregular",
-    "website":"https://www.eidesvik.no"
+    "website":"https://www.eidesvik.no",
+    "next_ex_date":"2025-08-28",
+    "forward_annual_dividend":0.3
   },
   {
     "ticker":"NYKD.OL",
@@ -1625,7 +1919,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":167.0,
     "div_frequency":"irregular",
-    "website":"https://nykode.com"
+    "website":"https://nykode.com",
+    "next_ex_date":"2025-05-27",
+    "forward_annual_dividend":1.0
   },
   {
     "ticker":"SDSD.OL",
@@ -1636,7 +1932,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":252.0,
     "div_frequency":"irregular",
-    "website":"https://www.standard-etc.com"
+    "website":"https://www.standard-etc.com",
+    "next_ex_date":"2024-11-15",
+    "forward_annual_dividend":0.2
   },
   {
     "ticker":"NORSE.OL",
@@ -1647,7 +1945,9 @@
     "industry":"Airlines",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.flynorse.com"
+    "website":"https://www.flynorse.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"DFENS.OL",
@@ -1658,7 +1958,9 @@
     "industry":"Aerospace & Defense",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.fjorddefencegroup.no"
+    "website":"https://www.fjorddefencegroup.no",
+    "next_ex_date":"2018-12-20",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"VISTN.OL",
@@ -1669,7 +1971,9 @@
     "industry":"Drug Manufacturers - Specialty & Generic",
     "avg_recovery_days":101.8,
     "div_frequency":"annual",
-    "website":"https://www.vistin.com"
+    "website":"https://www.vistin.com",
+    "next_ex_date":"2026-05-22",
+    "forward_annual_dividend":2.25
   },
   {
     "ticker":"VVL.OL",
@@ -1680,7 +1984,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":2.2,
     "div_frequency":"annual",
-    "website":"https://vekselbanken.no"
+    "website":"https://vekselbanken.no",
+    "next_ex_date":"2026-04-30",
+    "forward_annual_dividend":18.75
   },
   {
     "ticker":"HKY.OL",
@@ -1691,7 +1997,9 @@
     "industry":"Travel Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.havilavoyages.com"
+    "website":"https://www.havilavoyages.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NTI.OL",
@@ -1702,7 +2010,9 @@
     "industry":"Aerospace & Defense",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.norsktitanium.com"
+    "website":"https://www.norsktitanium.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SAGA.OL",
@@ -1713,7 +2023,9 @@
     "industry":"Asset Management",
     "avg_recovery_days":1.7,
     "div_frequency":"annual",
-    "website":"https://www.sagapure.com"
+    "website":"https://www.sagapure.com",
+    "next_ex_date":"2022-09-06",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"OMDA.OL",
@@ -1724,7 +2036,9 @@
     "industry":"Health Information Services",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://omda.com"
+    "website":"https://omda.com",
+    "next_ex_date":"2024-04-29",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"LYTIX.OL",
@@ -1735,7 +2049,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.lytixbiopharma.com"
+    "website":"https://www.lytixbiopharma.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ELIMP.OL",
@@ -1746,7 +2062,9 @@
     "industry":"Specialty Retail",
     "avg_recovery_days":168.3,
     "div_frequency":"annual",
-    "website":"https://www.elektroimportoren.no"
+    "website":"https://www.elektroimportoren.no",
+    "next_ex_date":"2026-04-30",
+    "forward_annual_dividend":0.4
   },
   {
     "ticker":"BIEN.OL",
@@ -1757,7 +2075,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":94.5,
     "div_frequency":"irregular",
-    "website":"https://www.bien.no"
+    "website":"https://www.bien.no",
+    "next_ex_date":"2025-03-28",
+    "forward_annual_dividend":5.35
   },
   {
     "ticker":"VOW.OL",
@@ -1768,7 +2088,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.vowasa.com"
+    "website":"https://www.vowasa.com",
+    "next_ex_date":"2019-05-24",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"KLDVK.OL",
@@ -1779,7 +2101,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.kaldvik.is"
+    "website":"https://www.kaldvik.is",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"GRONG.OL",
@@ -1790,7 +2114,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":30.6,
     "div_frequency":"annual",
-    "website":"https://www.grong-sparebank.no"
+    "website":"https://www.grong-sparebank.no",
+    "next_ex_date":"2025-04-10",
+    "forward_annual_dividend":10.5
   },
   {
     "ticker":"CRNA.OL",
@@ -1801,7 +2127,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.circio.com"
+    "website":"https://www.circio.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"STECH.OL",
@@ -1812,7 +2140,9 @@
     "industry":"Waste Management",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://soiltech.no"
+    "website":"https://soiltech.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SCANA.OL",
@@ -1823,7 +2153,9 @@
     "industry":"Specialty Industrial Machinery",
     "avg_recovery_days":6.0,
     "div_frequency":"irregular",
-    "website":"https://scana.no"
+    "website":"https://scana.no",
+    "next_ex_date":"2024-03-21",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"WEST.OL",
@@ -1834,7 +2166,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":96.8,
     "div_frequency":"annual",
-    "website":"https://www.westernbulk.com"
+    "website":"https://www.westernbulk.com",
+    "next_ex_date":"2026-02-16",
+    "forward_annual_dividend":1.21
   },
   {
     "ticker":"OTOVO.OL",
@@ -1845,7 +2179,9 @@
     "industry":"Solar",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.otovo.com"
+    "website":"https://www.otovo.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"IDEX.OL",
@@ -1856,7 +2192,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.idexbiometrics.com"
+    "website":"https://www.idexbiometrics.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NCOD.OL",
@@ -1867,7 +2205,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.norcod.com"
+    "website":"https://www.norcod.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ENSU.OL",
@@ -1878,7 +2218,9 @@
     "industry":"Electronic Components",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.ensurge.com"
+    "website":"https://www.ensurge.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HUNT.OL",
@@ -1889,7 +2231,9 @@
     "industry":"Oil & Gas Midstream",
     "avg_recovery_days":143.7,
     "div_frequency":"annual",
-    "website":"https://huntergroup.no"
+    "website":"https://huntergroup.no",
+    "next_ex_date":"2026-03-02",
+    "forward_annual_dividend":0.7
   },
   {
     "ticker":"SB68.OL",
@@ -1900,7 +2244,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":61.6,
     "div_frequency":"annual",
-    "website":"https://68nord.no"
+    "website":"https://68nord.no",
+    "next_ex_date":"2025-10-21",
+    "forward_annual_dividend":12.0
   },
   {
     "ticker":"TINDE.OL",
@@ -1911,7 +2257,9 @@
     "industry":"Financial Conglomerates",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.tinde.no"
+    "website":"https://www.tinde.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":4.9
   },
   {
     "ticker":"HDLY.OL",
@@ -1922,7 +2270,9 @@
     "industry":"Communication Equipment",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.huddly.com"
+    "website":"https://www.huddly.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"JIN.OL",
@@ -1933,7 +2283,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":52.8,
     "div_frequency":"annual",
-    "website":"https://www.jinhuiship.com/jst"
+    "website":"https://www.jinhuiship.com/jst",
+    "next_ex_date":"2026-05-28",
+    "forward_annual_dividend":0.17
   },
   {
     "ticker":"GENT.OL",
@@ -1944,7 +2296,9 @@
     "industry":"Medical Devices",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://www.gentian.com"
+    "website":"https://www.gentian.com",
+    "next_ex_date":"2026-05-06",
+    "forward_annual_dividend":0.6
   },
   {
     "ticker":"ITERA.OL",
@@ -1955,7 +2309,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":2.2,
     "div_frequency":"semi-annual",
-    "website":"https://www.itera.com"
+    "website":"https://www.itera.com",
+    "next_ex_date":"2025-10-28",
+    "forward_annual_dividend":0.3
   },
   {
     "ticker":"GEOS.OL",
@@ -1966,7 +2322,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.geoff.no"
+    "website":"https://www.geoff.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"MELG.OL",
@@ -1977,7 +2335,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":13.2,
     "div_frequency":"annual",
-    "website":"https://www.melhusbanken.no"
+    "website":"https://www.melhusbanken.no",
+    "next_ex_date":"2026-03-20",
+    "forward_annual_dividend":13.5
   },
   {
     "ticker":"TRSB.OL",
@@ -1988,7 +2348,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":19.0,
     "div_frequency":"irregular",
-    "website":"https://www.trondelagsparebank.no"
+    "website":"https://www.trondelagsparebank.no",
+    "next_ex_date":"2025-03-28",
+    "forward_annual_dividend":4.8
   },
   {
     "ticker":"HBC.OL",
@@ -1999,7 +2361,9 @@
     "industry":"Packaged Foods",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.hofsethbiocare.com"
+    "website":"https://www.hofsethbiocare.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"WSTEP.OL",
@@ -2010,7 +2374,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":52.2,
     "div_frequency":"annual",
-    "website":"https://webstep.no"
+    "website":"https://webstep.no",
+    "next_ex_date":"2025-05-19",
+    "forward_annual_dividend":2.3
   },
   {
     "ticker":"AKOBO.OL",
@@ -2021,7 +2387,9 @@
     "industry":"Gold",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://akobominerals.com"
+    "website":"https://akobominerals.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"STST.OL",
@@ -2032,7 +2400,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":125.3,
     "div_frequency":"semi-annual",
-    "website":"https://stainlesstankers.com"
+    "website":"https://stainlesstankers.com",
+    "next_ex_date":"2026-02-06",
+    "forward_annual_dividend":8.83
   },
   {
     "ticker":"NAVA.OL",
@@ -2043,7 +2413,9 @@
     "industry":"Medical Distribution",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://navamedic.com"
+    "website":"https://navamedic.com",
+    "next_ex_date":"2010-04-13",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HPUR.OL",
@@ -2054,7 +2426,9 @@
     "industry":"Industrial Distribution",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://hexagonpurus.com"
+    "website":"https://hexagonpurus.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"CYVIZ.OL",
@@ -2065,7 +2439,9 @@
     "industry":"Computer Hardware",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.cyviz.com"
+    "website":"https://www.cyviz.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"STRO.OL",
@@ -2076,7 +2452,9 @@
     "industry":"Business Equipment & Supplies",
     "avg_recovery_days":86.7,
     "div_frequency":"annual",
-    "website":"https://www.strongpoint.com"
+    "website":"https://www.strongpoint.com",
+    "next_ex_date":"2023-04-28",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ALNG.OL",
@@ -2087,7 +2465,9 @@
     "industry":"Oil & Gas Midstream",
     "avg_recovery_days":60.0,
     "div_frequency":"annual",
-    "website":"https://www.awilcolng.no"
+    "website":"https://www.awilcolng.no",
+    "next_ex_date":"2024-09-02",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PPG.OL",
@@ -2098,7 +2478,9 @@
     "industry":"Real Estate Services",
     "avg_recovery_days":9.6,
     "div_frequency":"quarterly",
-    "website":"https://www.pioneerproperty.no"
+    "website":"https://www.pioneerproperty.no",
+    "next_ex_date":"2026-03-31",
+    "forward_annual_dividend":10.0
   },
   {
     "ticker":"ZLNA.OL",
@@ -2109,7 +2491,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.zelluna.com"
+    "website":"https://www.zelluna.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"KING.OL",
@@ -2120,7 +2504,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.thekingfishcompany.com"
+    "website":"https://www.thekingfishcompany.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BALT.OL",
@@ -2131,7 +2517,9 @@
     "industry":"Real Estate Services",
     "avg_recovery_days":9.6,
     "div_frequency":"annual",
-    "website":"https://www.balticsea.no"
+    "website":"https://www.balticsea.no",
+    "next_ex_date":"2025-05-23",
+    "forward_annual_dividend":2.0
   },
   {
     "ticker":"ZENA.OL",
@@ -2142,7 +2530,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.zenithenergy.ca"
+    "website":"https://www.zenithenergy.ca",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ROMER.OL",
@@ -2153,7 +2543,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":10.4,
     "div_frequency":"annual",
-    "website":"https://www.rsbank.no"
+    "website":"https://www.rsbank.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":10.5
   },
   {
     "ticker":"CAPSL.OL",
@@ -2164,7 +2556,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.capsoltechnologies.com"
+    "website":"https://www.capsoltechnologies.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NTG.OL",
@@ -2175,7 +2569,9 @@
     "industry":"Scientific & Technical Instruments",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.ntechgroup.no"
+    "website":"https://www.ntechgroup.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"TECH.OL",
@@ -2186,7 +2582,9 @@
     "industry":"Communication Equipment",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.techstep.io"
+    "website":"https://www.techstep.io",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"LOKO.OL",
@@ -2197,7 +2595,9 @@
     "industry":"Software - Infrastructure",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.lokotechgroup.com"
+    "website":"https://www.lokotechgroup.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"GOD.OL",
@@ -2208,7 +2608,9 @@
     "industry":"Engineering & Construction",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://goodtech.no"
+    "website":"https://goodtech.no",
+    "next_ex_date":"2014-04-28",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ELABS.OL",
@@ -2219,7 +2621,9 @@
     "industry":"Software - Infrastructure",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.ellipticlabs.com"
+    "website":"https://www.ellipticlabs.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PROXI.OL",
@@ -2230,7 +2634,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://proximarseafood.com"
+    "website":"https://proximarseafood.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PSE.OL",
@@ -2241,7 +2647,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.petrolia.eu"
+    "website":"https://www.petrolia.eu",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NORTH.OL",
@@ -2252,7 +2660,9 @@
     "industry":"Asset Management",
     "avg_recovery_days":9.5,
     "div_frequency":"annual",
-    "website":"https://www.northenergy.no"
+    "website":"https://www.northenergy.no",
+    "next_ex_date":"2025-04-11",
+    "forward_annual_dividend":0.15
   },
   {
     "ticker":"MPCES.OL",
@@ -2263,7 +2673,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.mpc-energysolutions.com"
+    "website":"https://www.mpc-energysolutions.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HAVI.OL",
@@ -2274,7 +2686,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.havilashipping.no"
+    "website":"https://www.havilashipping.no",
+    "next_ex_date":"2008-05-15",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PRYME.OL",
@@ -2285,7 +2699,9 @@
     "industry":"Waste Management",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.pryme-cleantech.com"
+    "website":"https://www.pryme-cleantech.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"EQVA.OL",
@@ -2296,7 +2712,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":4.0,
     "div_frequency":"irregular",
-    "website":"https://www.eqva.no"
+    "website":"https://www.eqva.no",
+    "next_ex_date":"2024-04-16",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HERMA.OL",
@@ -2307,7 +2725,9 @@
     "industry":"Asset Management",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://hermanaholding.com"
+    "website":"https://hermanaholding.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AASB.OL",
@@ -2318,7 +2738,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":124.0,
     "div_frequency":"annual",
-    "website":"https://aasen-sparebank.no"
+    "website":"https://aasen-sparebank.no",
+    "next_ex_date":"2025-03-21",
+    "forward_annual_dividend":9.0
   },
   {
     "ticker":"CONTX.OL",
@@ -2329,7 +2751,9 @@
     "industry":"Health Information Services",
     "avg_recovery_days":94.0,
     "div_frequency":"irregular",
-    "website":"https://www.contextvision.com"
+    "website":"https://www.contextvision.com",
+    "next_ex_date":"2023-11-02",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"CAVEN.OL",
@@ -2340,7 +2764,9 @@
     "industry":"Utilities - Regulated Gas",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://cavendishh2.com"
+    "website":"https://cavendishh2.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"MVE.OL",
@@ -2351,7 +2777,9 @@
     "industry":"Internet Retail",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://ny.mve.no"
+    "website":"https://ny.mve.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"OCEAN.OL",
@@ -2362,7 +2790,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.oceangeoloop.com"
+    "website":"https://www.oceangeoloop.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"MVW.OL",
@@ -2373,7 +2803,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://mvestwater.com"
+    "website":"https://mvestwater.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ONCIN.OL",
@@ -2384,7 +2816,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.oncoinvent.com"
+    "website":"https://www.oncoinvent.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"FFSB.OL",
@@ -2395,7 +2829,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":1.0,
     "div_frequency":"irregular",
-    "website":"https://flekkefjordsparebank.no"
+    "website":"https://flekkefjordsparebank.no",
+    "next_ex_date":"2026-03-27",
+    "forward_annual_dividend":6.4
   },
   {
     "ticker":"ASA.OL",
@@ -2406,7 +2842,9 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.atlanticsapphire.com"
+    "website":"https://www.atlanticsapphire.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ADS.OL",
@@ -2417,7 +2855,9 @@
     "industry":"Marine Shipping",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.adsmh.com"
+    "website":"https://www.adsmh.com",
+    "next_ex_date":"2021-02-22",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HUDL.OL",
@@ -2428,7 +2868,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://huddlestock.com"
+    "website":"https://huddlestock.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"RECSI.OL",
@@ -2439,7 +2881,9 @@
     "industry":"Semiconductor Equipment & Materials",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.recsilicon.com"
+    "website":"https://www.recsilicon.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HYPRO.OL",
@@ -2450,7 +2894,9 @@
     "industry":"Specialty Industrial Machinery",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://hydrogenpro.com"
+    "website":"https://hydrogenpro.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BCS.OL",
@@ -2461,7 +2907,9 @@
     "industry":"Specialty Chemicals",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://bergencarbonsolutions.com"
+    "website":"https://bergencarbonsolutions.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NISB.OL",
@@ -2472,7 +2920,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":5.7,
     "div_frequency":"annual",
-    "website":"https://nidaros-sparebank.no"
+    "website":"https://nidaros-sparebank.no",
+    "next_ex_date":"2025-03-21",
+    "forward_annual_dividend":5.87
   },
   {
     "ticker":"OBSRV.OL",
@@ -2483,7 +2933,9 @@
     "industry":"Medical Devices",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://observemedical.com"
+    "website":"https://observemedical.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NEXT.OL",
@@ -2494,7 +2946,9 @@
     "industry":"Scientific & Technical Instruments",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://nextbiometrics.com"
+    "website":"https://nextbiometrics.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NBX.OL",
@@ -2505,7 +2959,9 @@
     "industry":"Capital Markets",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://nbx.com"
+    "website":"https://nbx.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HSPG.OL",
@@ -2516,7 +2972,9 @@
     "industry":"Banks - Regional",
     "avg_recovery_days":3.0,
     "div_frequency":"annual",
-    "website":"https://www.hsbank.no"
+    "website":"https://www.hsbank.no",
+    "next_ex_date":"2026-03-20",
+    "forward_annual_dividend":5.0
   },
   {
     "ticker":"ABS.OL",
@@ -2527,7 +2985,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.arctic-bioscience.com"
+    "website":"https://www.arctic-bioscience.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"IOX.OL",
@@ -2538,7 +2998,9 @@
     "industry":"Oil & Gas E&P",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.interoil.no"
+    "website":"https://www.interoil.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"EMGS.OL",
@@ -2549,7 +3011,9 @@
     "industry":"Oil & Gas Equipment & Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.emgs.com"
+    "website":"https://www.emgs.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ABTEC.OL",
@@ -2560,7 +3024,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://aquabiotechnology.com"
+    "website":"https://aquabiotechnology.com",
+    "next_ex_date":"2017-06-08",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AKH.OL",
@@ -2571,7 +3037,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.akerhorizons.com"
+    "website":"https://www.akerhorizons.com",
+    "next_ex_date":"2025-09-05",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"EAM.OL",
@@ -2582,7 +3050,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.eamsolar.no"
+    "website":"https://www.eamsolar.no",
+    "next_ex_date":"2014-05-12",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"KMCP.OL",
@@ -2593,7 +3063,9 @@
     "industry":"Real Estate Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.kmcp.no"
+    "website":"https://www.kmcp.no",
+    "next_ex_date":"2024-07-08",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PCIB.OL",
@@ -2604,7 +3076,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.pcibiotech.com"
+    "website":"https://www.pcibiotech.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"PYRUM.OL",
@@ -2615,7 +3089,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.pyrum.net"
+    "website":"https://www.pyrum.net",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"REFL.OL",
@@ -2626,7 +3102,9 @@
     "industry":"Specialty Retail",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://refuels.com"
+    "website":"https://refuels.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"SOFTX.OL",
@@ -2637,7 +3115,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://soft-ox.com"
+    "website":"https://soft-ox.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ROM.OL",
@@ -2648,7 +3128,9 @@
     "industry":"Real Estate Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.romreal.com"
+    "website":"https://www.romreal.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"RIVER.OL",
@@ -2659,7 +3141,9 @@
     "industry":"Information Technology Services",
     "avg_recovery_days":168.7,
     "div_frequency":"annual",
-    "website":"https://www.river.tech"
+    "website":"https://www.river.tech",
+    "next_ex_date":"2025-04-28",
+    "forward_annual_dividend":5.47
   },
   {
     "ticker":"NOSN.OL",
@@ -2670,7 +3154,9 @@
     "industry":"Pollution & Treatment Controls",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://horisontenergi.no"
+    "website":"https://horisontenergi.no",
+    "next_ex_date":"2025-06-12",
+    "forward_annual_dividend":0.5
   },
   {
     "ticker":"GEM.OL",
@@ -2681,7 +3167,9 @@
     "industry":"Other Industrial Metals & Mining",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://greenminerals.no"
+    "website":"https://greenminerals.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BSP.OL",
@@ -2692,7 +3180,9 @@
     "industry":"Lodging",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.blackseaproperty.no"
+    "website":"https://www.blackseaproperty.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"HYN.OL",
@@ -2703,7 +3193,9 @@
     "industry":"Specialty Retail",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.hynion.com"
+    "website":"https://www.hynion.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"INIFY.OL",
@@ -2714,7 +3206,9 @@
     "industry":"Diagnostics & Research",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.inify.com"
+    "website":"https://www.inify.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"NOFIN.OL",
@@ -2725,7 +3219,9 @@
     "industry":"Utilities - Renewable",
     "avg_recovery_days":73.0,
     "div_frequency":"irregular",
-    "website":"https://nordicfinancials.no"
+    "website":"https://nordicfinancials.no",
+    "next_ex_date":"2024-09-12",
+    "forward_annual_dividend":null
   },
   {
     "ticker":"ACED.OL",
@@ -2736,7 +3232,9 @@
     "industry":"",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.acedigital.no"
+    "website":"https://www.acedigital.no",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"EXTX.OL",
@@ -2747,7 +3245,9 @@
     "industry":"Biotechnology",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://exact-tx.com"
+    "website":"https://exact-tx.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"AIX.OL",
@@ -2758,7 +3258,9 @@
     "industry":"Software - Application",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.ayfie.com"
+    "website":"https://www.ayfie.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"INDCT.OL",
@@ -2769,7 +3271,9 @@
     "industry":"Health Information Services",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://www.web.induct.net"
+    "website":"https://www.web.induct.net",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   },
   {
     "ticker":"BARRA.OL",
@@ -2780,6 +3284,8 @@
     "industry":"Farm Products",
     "avg_recovery_days":null,
     "div_frequency":null,
-    "website":"https://barramundi.com"
+    "website":"https://barramundi.com",
+    "next_ex_date":null,
+    "forward_annual_dividend":null
   }
 ]

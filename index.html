@@ -595,6 +595,26 @@
     }
     .div-table-wrap::-webkit-scrollbar { width: 4px; }
     .div-table-wrap::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 2px; }
+    .upcoming-div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 9px 14px;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      color: #15803d;
+    }
+    .upcoming-div-icon { font-size: 1.1rem; flex-shrink: 0; }
+    .upcoming-div strong { color: #166534; font-weight: 700; }
+    .upcoming-div.past {
+      background: #fef9c3;
+      border-color: #fde047;
+      color: #a16207;
+    }
+    .upcoming-div.past strong { color: #854d0e; }
 
     /* ── Mobile ──────────────────────────────────────────────────── */
     @media (max-width: 680px) {
@@ -753,6 +773,7 @@
       <!-- Dividend history -->
       <div id="div-history-card" class="card">
         <div class="div-history-header">Dividend History</div>
+        <div id="upcoming-div-banner"></div>
         <div class="div-table-wrap">
           <table class="div-table">
             <thead>
@@ -1192,7 +1213,7 @@ async function selectStock(ticker) {
   }
 
   // Populate dividend history table
-  buildDivHistoryTable(stockData.records);
+  buildDivHistoryTable(stockData);
 
   applyRange('max');
 }
@@ -1296,11 +1317,37 @@ function buildRecoveryOverview() {
   });
 }
 
-function buildDivHistoryTable(records) {
-  const tbody = document.getElementById('div-history-body');
+function buildDivHistoryTable(stockData) {
+  const records = stockData.records;
+  const tbody   = document.getElementById('div-history-body');
+  const banner  = document.getElementById('upcoming-div-banner');
+  const card    = document.getElementById('div-history-card');
   tbody.innerHTML = '';
-  const card = document.getElementById('div-history-card');
+  banner.innerHTML = '';
 
+  // ── Upcoming dividend banner ──────────────────────────────────────────────
+  const nextEx = stockData.next_ex_date;
+  if (nextEx) {
+    const today    = new Date().toISOString().slice(0, 10);
+    const isPast   = nextEx < today;
+    // Estimate per-payment amount from forward annual dividend ÷ frequency
+    let estAmt = '';
+    if (stockData.forward_annual_dividend && stockData.divs_per_year) {
+      const per = stockData.forward_annual_dividend / stockData.divs_per_year;
+      estAmt = ` &nbsp;·&nbsp; ~${per.toFixed(2)} NOK estimated`;
+    } else if (stockData.forward_annual_dividend) {
+      estAmt = ` &nbsp;·&nbsp; ~${stockData.forward_annual_dividend.toFixed(2)} NOK/yr`;
+    }
+    const label = isPast ? 'Most recent ex-date' : 'Next ex-dividend date';
+    const cls   = isPast ? 'upcoming-div past' : 'upcoming-div';
+    banner.innerHTML = `
+      <div class="${cls}">
+        <span class="upcoming-div-icon">${isPast ? '📅' : '📆'}</span>
+        <span><strong>${label}:</strong> ${nextEx}${estAmt}</span>
+      </div>`;
+  }
+
+  // ── Historical dividend table ─────────────────────────────────────────────
   const events = [];
   for (let i = 1; i < records.length; i++) {
     if (!records[i].div || records[i].div <= 0) continue;
@@ -1312,7 +1359,7 @@ function buildDivHistoryTable(records) {
     events.push({ date: records[i].date, div: records[i].div, recoveredIn });
   }
 
-  if (!events.length) { card.style.display = 'none'; return; }
+  if (!events.length && !nextEx) { card.style.display = 'none'; return; }
   card.style.display = 'block';
 
   events.reverse().forEach(({ date, div, recoveredIn }) => {
