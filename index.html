@@ -639,6 +639,151 @@
     }
     .upcoming-div.past strong { color: #854d0e; }
 
+    /* ── Yield chart ─────────────────────────────────────────────── */
+    .chart-area-yield { height: 140px; }
+
+    /* ── Nøkkeltall card ─────────────────────────────────────────── */
+    #nokkeltall-card { display: none; }
+    .nkl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 8px 16px;
+      margin-bottom: 14px;
+    }
+    .nkl-label { font-size: 0.67rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+    .nkl-value { font-size: 1.05rem; font-weight: 700; color: #1e293b; margin-top: 2px; }
+    .analyst-bar-wrap { margin-top: 10px; }
+    .analyst-bar-label { font-size: 0.68rem; color: #64748b; margin-bottom: 5px; }
+    .analyst-bar {
+      display: flex;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #f1f5f9;
+    }
+    .analyst-seg { height: 100%; transition: width 0.3s; }
+    .analyst-seg.strong-buy  { background: #16a34a; }
+    .analyst-seg.buy         { background: #86efac; }
+    .analyst-seg.hold        { background: #fbbf24; }
+    .analyst-seg.sell        { background: #fb923c; }
+    .analyst-seg.strong-sell { background: #dc2626; }
+    .analyst-label {
+      display: inline-block;
+      margin-top: 5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .rolling-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 14px; }
+    .rolling-table th {
+      text-align: left; color: #94a3b8; font-weight: 500; font-size: 0.65rem;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 0 8px 5px 0; border-bottom: 1px solid #f1f5f9;
+    }
+    .rolling-table td { padding: 5px 8px 5px 0; color: #475569; border-bottom: 1px solid #f8fafc; font-variant-numeric: tabular-nums; }
+    .rolling-table tr:last-child td { border-bottom: none; }
+    .rolling-table td.pos { color: #16a34a; font-weight: 600; }
+    .rolling-table td.neg { color: #dc2626; font-weight: 600; }
+
+    /* ── Fusjoner section ────────────────────────────────────────── */
+    #fusjoner-container { display: none; }
+    .fusjon-section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 16px;
+    }
+    .fusjon-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 10px;
+    }
+    .fusjon-stat-card {
+      border-radius: 10px;
+      padding: 14px 18px;
+      border-left: 4px solid #64748b;
+      background: #f8fafc;
+    }
+    .fusjon-stat-card.green { border-left-color: #16a34a; background: #f0fdf4; }
+    .fusjon-stat-card.red   { border-left-color: #dc2626; background: #fef2f2; }
+    .fusjon-stat-card.blue  { border-left-color: #2563eb; background: #eff6ff; }
+    .fusjon-stat-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #94a3b8;
+      margin-bottom: 5px;
+    }
+    .fusjon-stat-value {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1e293b;
+    }
+    .fusjon-stat-value.green { color: #16a34a; }
+    .fusjon-stat-value.red   { color: #dc2626; }
+    .fusjon-stat-value.blue  { color: #2563eb; }
+    .fusjon-stat-sub {
+      font-size: 0.68rem;
+      color: #94a3b8;
+      margin-top: 3px;
+    }
+    .merger-table-wrap { overflow-x: auto; }
+    .merger-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+      min-width: 580px;
+    }
+    .merger-table th {
+      text-align: left;
+      color: #94a3b8;
+      font-weight: 500;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0 10px 8px 0;
+      border-bottom: 1px solid #f1f5f9;
+      white-space: nowrap;
+    }
+    .merger-table td {
+      padding: 9px 10px 9px 0;
+      border-bottom: 1px solid #f8fafc;
+      color: #475569;
+      vertical-align: top;
+    }
+    .merger-table tr:last-child td { border-bottom: none; }
+    .merger-table .merger-name { font-weight: 600; color: #1e293b; white-space: nowrap; }
+    .verdict-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+    .verdict-badge.win  { background: #dcfce7; color: #15803d; }
+    .verdict-badge.draw { background: #fef3c7; color: #92400e; }
+    .fusjon-explainer {
+      font-size: 0.82rem;
+      color: #475569;
+      line-height: 1.7;
+    }
+    .fusjon-explainer h3 {
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 14px 0 5px;
+    }
+    .fusjon-explainer h3:first-child { margin-top: 0; }
+    .fusjon-explainer ul { padding-left: 18px; margin-top: 4px; }
+    .fusjon-explainer li { margin-bottom: 3px; }
+    .fusjon-disclaimer {
+      font-size: 0.7rem;
+      color: #94a3b8;
+      padding: 0 2px;
+    }
+
     /* ── Mobile ──────────────────────────────────────────────────── */
     @media (max-width: 680px) {
       #sidebar      { display: none; }
@@ -657,7 +802,9 @@
 </header>
 
 <!-- Mobile: horizontal scrollable tab bar -->
-<nav id="tab-bar"></nav>
+<nav id="tab-bar">
+  <span class="tab-item" id="fusjoner-tab" data-section="fusjoner">Fusjoner</span>
+</nav>
 
 <div class="app-layout">
 
@@ -666,6 +813,13 @@
     <div class="sidebar-search-wrap">
       <input type="search" id="sidebar-search" placeholder="Søk aksjer…" autocomplete="off" />
     </div>
+    <div class="sidebar-label">Analyse</div>
+    <a class="sidebar-item" href="#fusjoner" id="fusjoner-nav" data-section="fusjoner">
+      <div class="sidebar-row">
+        <div class="sidebar-name">Fusjoner</div>
+      </div>
+      <div class="sidebar-ticker">Hvem tjener mest?</div>
+    </a>
     <div class="sidebar-label" style="display:flex;justify-content:space-between;padding-right:16px">
       <span>Oslo Børs</span><span>1Y</span>
     </div>
@@ -690,6 +844,121 @@
         </div>
         <div id="recovery-grid" class="recovery-list"></div>
       </div>
+
+      <!-- Fusjoner analysis section -->
+      <div id="fusjoner-container">
+
+        <!-- Summary stat cards -->
+        <div class="card">
+          <div class="fusjon-section-title">Fusjoner &ndash; Hvem tjener mest?</div>
+          <div class="fusjon-stats-grid">
+            <div class="fusjon-stat-card green">
+              <div class="fusjon-stat-title">Oppkjøpt bank</div>
+              <div class="fusjon-stat-value green">+15–30%</div>
+              <div class="fusjon-stat-sub">umiddelbar verdiøkning</div>
+            </div>
+            <div class="fusjon-stat-card red">
+              <div class="fusjon-stat-title">Kjøpende bank</div>
+              <div class="fusjon-stat-value red">0 til −5%</div>
+              <div class="fusjon-stat-sub">ved kunngjøring</div>
+            </div>
+            <div class="fusjon-stat-card blue">
+              <div class="fusjon-stat-title">Langsiktig (3–5 år)</div>
+              <div class="fusjon-stat-value blue">Avhenger av synergi</div>
+              <div class="fusjon-stat-sub">kjøper kan innhente dersom synergi nås</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bar chart: average price reaction -->
+        <div class="card">
+          <div class="chart-subheader">Gjennomsnittlig kursreaksjon ved fusjonsannonsering</div>
+          <div class="chart-area" style="height:220px">
+            <canvas id="chart-fusjoner"></canvas>
+          </div>
+          <p class="note" style="margin-top:8px">Basert på akademisk forskning på bankfusjoner og observerte norske sparebank-fusjoner. Langsiktig avkastning avhenger av synergirealisering.</p>
+        </div>
+
+        <!-- Historical merger table -->
+        <div class="card">
+          <div class="div-history-header">Historiske norske sparebank-fusjoner</div>
+          <div class="merger-table-wrap">
+            <table class="merger-table">
+              <thead>
+                <tr>
+                  <th>Fusjon</th>
+                  <th>År</th>
+                  <th>Kjøper / Kjøpt</th>
+                  <th>Tegningskurs vs markedspris</th>
+                  <th>Konklusjon</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="merger-name">SR-Bank + Sørøst-Norge → SB1NO</td>
+                  <td>2024</td>
+                  <td>SRBNK kjøper SOON</td>
+                  <td>0.4817 SRBNK-aksjer + NOK 4.33 kontant per SOON &mdash; ~8–12% over bokverdi</td>
+                  <td><span class="verdict-badge win">Oppkjøpt vant</span></td>
+                </tr>
+                <tr>
+                  <td class="merger-name">SMN + Søre Sunnmøre</td>
+                  <td>2023</td>
+                  <td>MING kjøper SØSUN</td>
+                  <td>Tegningskurs NOK 103.36 vs markedspris NOK 137.10 (+33%)</td>
+                  <td><span class="verdict-badge win">Oppkjøpt vant</span></td>
+                </tr>
+                <tr>
+                  <td class="merger-name">Østlandet + Totens Sparebank</td>
+                  <td>2024</td>
+                  <td>SPOL kjøper Totens</td>
+                  <td>20 030 935 nye EKB utstedt &mdash; tegningskurs NOK 117.88</td>
+                  <td><span class="verdict-badge draw">Uavgjort</span></td>
+                </tr>
+                <tr>
+                  <td class="merger-name">Sandnes Sparebank + Hjelmeland</td>
+                  <td>2024</td>
+                  <td>SADG kjøper Hjelmeland</td>
+                  <td>1 Hjelmeland → 1.80 SADG &mdash; ~10% av samlet EK til Hjelmeland</td>
+                  <td><span class="verdict-badge win">Oppkjøpt vant</span></td>
+                </tr>
+                <tr>
+                  <td class="merger-name">Sparebanken Vest + Sparebanken Sør</td>
+                  <td>2025</td>
+                  <td>Vest kjøper Sør</td>
+                  <td>Nye EKB til NOK 89.10 per EKB (= siste estimerte bokverdi)</td>
+                  <td><span class="verdict-badge draw">Uavgjort</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Explanatory text -->
+        <div class="card">
+          <div class="div-history-header">Hvorfor vinner oppkjøpt bank oftest?</div>
+          <div class="fusjon-explainer">
+            <h3>Bytteforholdet gir umiddelbar gevinst til den oppkjøpte banken</h3>
+            <p>I sparebank-fusjoner settes bytteforholdet typisk med utgangspunkt i bokverdi per egenkapitalbevis (EKB). Kjøperens EKB handles normalt til en premie over bokverdi på Oslo Børs &ndash; noe som betyr at innehavere av den oppkjøpte bankens EKB får en umiddelbar verdiøkning idet de bytter til kjøperens EKB.</p>
+
+            <h3>Kjøpende bank bærer kortsiktige kostnader</h3>
+            <ul>
+              <li>Fusjonsutgifter (juridisk, rådgivning, IT-integrasjon) belastes kjøperen</li>
+              <li>Utvanning av eksisterende EKB-innehavere dersom nye EKB utstedes</li>
+              <li>Usikkerhet rundt integrasjon demper markedets kursreaksjon</li>
+            </ul>
+
+            <h3>Sparebankstiftelsenes rolle</h3>
+            <p>Når en sparebank fusjonerer, mottar sparebankstiftelsen tilknyttet den oppkjøpte banken nye EKB i den kjøpende banken. Stiftelsen er som regel en langsiktig eier og selger normalt ikke, noe som gir dem mulighet til å dra nytte av langsiktig synergirealisering. For vanlige EKB-innehavere i den oppkjøpte banken er gevinsten mest konkret og umiddelbar.</p>
+
+            <h3>Akademisk forskning: kjøpere underpresterer på 3–5 år</h3>
+            <p>Studier av bankfusjoner viser at kjøpende institusjoner i gjennomsnitt underpresterer i 3–5 år etter fusjonen, med mindre synergier faktisk realiseres. Markedet priser inn optimistiske synergianslag ved kunngjøring, men leverer kjøper ikke på kostnadskutt og inntektsvekst, vil aksjonærene bli skuffet.</p>
+          </div>
+        </div>
+
+        <p class="fusjon-disclaimer">Data er hentet fra børsmeldinger og kvartalsrapporter. Historisk fusjonspremie er ikke garanti for fremtidig utfall.</p>
+
+      </div><!-- #fusjoner-container -->
 
       <!-- Controls -->
       <div id="controls-card" class="card">
@@ -734,6 +1003,12 @@
             <canvas id="chart"></canvas>
           </div>
 
+          <!-- Yield chart -->
+          <div class="chart-subheader" style="margin-top:14px">Løpende direkteavkastning (siste 12 mnd)</div>
+          <div class="chart-area chart-area-yield">
+            <canvas id="chart-yield"></canvas>
+          </div>
+
           <div class="legend">
             <div class="legend-item">
               <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#2563eb" stroke-width="2.5"/></svg>
@@ -754,6 +1029,14 @@
             <div class="legend-item" id="floor-legend" style="display:none">
               <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="rgba(14,165,233,0.8)" stroke-width="1.5" stroke-dasharray="4,3"/></svg>
               Teoretisk kursfall (−utbytte)
+            </div>
+            <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#0891b2" stroke-width="2"/></svg>
+              Direkteavkastning (12m)
+            </div>
+            <div class="legend-item">
+              <svg width="24" height="10"><line x1="0" y1="5" x2="24" y2="5" stroke="#f97316" stroke-width="1.5" stroke-dasharray="6,4"/></svg>
+              5Y snitt
             </div>
           </div>
           <div class="note">
@@ -788,6 +1071,21 @@
           <div class="stat-label">Utbyttegjenoppretting</div>
           <div class="stat-value" id="s-recovery">–</div>
           <div class="stat-sub" id="s-recovery-sub">gj.sn. dager etter ex-dato</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Fall fra ATH</div>
+          <div class="stat-value" id="s-drawdown">–</div>
+          <div class="stat-sub">fra høyeste kurs noensinne</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Direkteavkastning</div>
+          <div class="stat-value" id="s-yield">–</div>
+          <div class="stat-sub" id="s-yield-sub">trailing 12 mnd</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Utbyttevekst</div>
+          <div class="stat-value" id="s-divcagr">–</div>
+          <div class="stat-sub" id="s-divcagr-sub">3Y / 5Y CAGR</div>
         </div>
       </div>
 
@@ -824,6 +1122,21 @@
             <tbody id="div-history-body"></tbody>
           </table>
         </div>
+      </div>
+
+      <!-- Nøkkeltall -->
+      <div id="nokkeltall-card" class="card">
+        <div class="div-history-header">Nøkkeltall</div>
+        <div class="nkl-grid" id="nkl-grid"></div>
+        <div id="analyst-wrap" style="display:none">
+          <div class="analyst-bar-label">Analytiker-konsensus &nbsp;(<span id="analyst-count"></span>)</div>
+          <div class="analyst-bar" id="analyst-bar"></div>
+          <div id="analyst-label-text" class="analyst-label"></div>
+        </div>
+        <table class="rolling-table">
+          <thead><tr><th>Periode</th><th>Totalavkastning CAGR</th></tr></thead>
+          <tbody id="rolling-tbody"></tbody>
+        </table>
       </div>
 
     </div>
@@ -1005,6 +1318,7 @@ let _showRecovery = false; // true when view spans ≤ 5 years
 Chart.register({
   id: 'divMarkers',
   afterDraw(chart) {
+    if (chart.canvas.id === 'chart-yield') return;
     const { ctx, chartArea, scales } = chart;
     const isPriceChart = chart.canvas.id === 'chart-price';
 
@@ -1148,6 +1462,7 @@ const state = {
   allRecords:    [],
   chart:         null,   // return chart (bottom)
   chartPrice:    null,   // price chart (top)
+  chartYield:    null,   // trailing yield chart
 };
 const dataCache = new Map(); // ticker → parsed JSON response
 
@@ -1171,8 +1486,11 @@ async function initApp() {
   buildNav();
   buildOverview();
 
+  const initialHash   = window.location.hash.slice(1);
   const initialTicker = getTickerFromHash();
-  if (initialTicker) {
+  if (initialHash === 'fusjoner') {
+    showFusjoner();
+  } else if (initialTicker) {
     await selectStock(initialTicker);
   } else {
     showOverview();
@@ -1180,7 +1498,9 @@ async function initApp() {
 }
 
 window.addEventListener('hashchange', () => {
+  const hash   = window.location.hash.slice(1);
   const ticker = getTickerFromHash();
+  if (hash === 'fusjoner') { showFusjoner(); return; }
   if (ticker && ticker !== state.currentTicker) selectStock(ticker);
   else if (!ticker) showOverview();
 });
@@ -1188,6 +1508,12 @@ window.addEventListener('hashchange', () => {
 document.getElementById('header-name').addEventListener('click', () => {
   if (state.stocks.length > 0) showOverview();
 });
+
+document.getElementById('fusjoner-nav').addEventListener('click', e => {
+  e.preventDefault();
+  showFusjoner();
+});
+document.getElementById('fusjoner-tab').addEventListener('click', () => showFusjoner());
 
 
 // ── Navigation ────────────────────────────────────────────────────────────────
@@ -1522,24 +1848,159 @@ function buildDivHistoryTable(stockData) {
 }
 
 
+// ── Nøkkeltall card ───────────────────────────────────────────────────────────
+function buildNoekkeltallCard(stockData) {
+  const card            = document.getElementById('nokkeltall-card');
+  const grid            = document.getElementById('nkl-grid');
+  const analystWrap     = document.getElementById('analyst-wrap');
+  const analystBar      = document.getElementById('analyst-bar');
+  const analystLabelTxt = document.getElementById('analyst-label-text');
+  const rollingTbody    = document.getElementById('rolling-tbody');
+
+  const fmt = (v, d = 1) => v != null ? v.toFixed(d) : '–';
+  grid.innerHTML = '';
+  [
+    { label: 'P/E (trailing)', value: fmt(stockData.trailingPE) },
+    { label: 'P/E (forward)',  value: fmt(stockData.forwardPE)  },
+    { label: 'P/B',            value: fmt(stockData.priceToBook) },
+    { label: 'EPS',            value: fmt(stockData.trailingEps, 2) },
+  ].forEach(({ label, value }) => {
+    const div = document.createElement('div');
+    div.className = 'nkl-item';
+    div.innerHTML = `<div class="nkl-label">${label}</div><div class="nkl-value">${value}</div>`;
+    grid.appendChild(div);
+  });
+
+  const recKey   = stockData.recommendationKey;
+  const nAnalysts = stockData.numberOfAnalystOpinions;
+  if (recKey && nAnalysts) {
+    analystWrap.style.display = 'block';
+    document.getElementById('analyst-count').textContent = nAnalysts + ' analytikere';
+    const labelMap = {
+      'strong_buy': 'Sterk kjøp', 'buy': 'Kjøp', 'hold': 'Hold',
+      'underperform': 'Selg', 'sell': 'Sterk selg',
+    };
+    analystLabelTxt.textContent = labelMap[recKey] || recKey;
+    const segments = [
+      { key: 'strong_buy',   cls: 'strong-buy',  label: 'Sterk kjøp' },
+      { key: 'buy',          cls: 'buy',          label: 'Kjøp'       },
+      { key: 'hold',         cls: 'hold',         label: 'Hold'       },
+      { key: 'underperform', cls: 'sell',         label: 'Selg'       },
+      { key: 'sell',         cls: 'strong-sell',  label: 'Sterk selg' },
+    ];
+    analystBar.innerHTML = segments.map(s =>
+      `<div class="analyst-seg ${s.cls}${s.key === recKey ? ' active' : ''}" title="${s.label}" style="flex:1"></div>`
+    ).join('');
+  } else {
+    analystWrap.style.display = 'none';
+  }
+
+  rollingTbody.innerHTML = '';
+  const rolling = stockData.rolling_returns || {};
+  [{ key: '1y', label: '1 år' }, { key: '3y', label: '3 år' }, { key: '5y', label: '5 år' }, { key: '10y', label: '10 år' }]
+    .forEach(({ key, label }) => {
+      const val = rolling[key];
+      const tr  = document.createElement('tr');
+      tr.innerHTML = `<td>${label}</td><td class="${val == null ? '' : val >= 0 ? 'pos' : 'neg'}">${val == null ? '–' : (val >= 0 ? '+' : '') + val.toFixed(1) + '%'}</td>`;
+      rollingTbody.appendChild(tr);
+    });
+
+  card.style.display = 'block';
+}
+
+
 function showOverview() {
   state.currentTicker = null;
   history.replaceState(null, '', window.location.pathname);
-  document.getElementById('overview-container').style.display = 'block';
-  document.getElementById('controls-card').style.display    = 'none';
-  document.getElementById('chart-card').style.display       = 'none';
-  document.getElementById('stats-container').style.display  = 'none';
+  document.getElementById('overview-container').style.display  = 'block';
+  document.getElementById('fusjoner-container').style.display  = 'none';
+  document.getElementById('controls-card').style.display       = 'none';
+  document.getElementById('chart-card').style.display          = 'none';
+  document.getElementById('stats-container').style.display     = 'none';
   document.getElementById('header-name').innerHTML = 'Oslo Børs';
   document.getElementById('last-updated').textContent = '';
-  document.getElementById('company-info').style.display    = 'none';
-  document.getElementById('div-history-card').style.display = 'none';
+  document.getElementById('company-info').style.display        = 'none';
+  document.getElementById('div-history-card').style.display    = 'none';
+  document.getElementById('nokkeltall-card').style.display     = 'none';
   document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
+}
+
+
+// ── Fusjoner section ──────────────────────────────────────────────────────────
+let fusjonerChartInitialized = false;
+
+function showFusjoner() {
+  state.currentTicker = null;
+  history.replaceState(null, '', '#fusjoner');
+  document.getElementById('overview-container').style.display  = 'none';
+  document.getElementById('fusjoner-container').style.display  = 'block';
+  document.getElementById('controls-card').style.display       = 'none';
+  document.getElementById('chart-card').style.display          = 'none';
+  document.getElementById('stats-container').style.display     = 'none';
+  document.getElementById('company-info').style.display        = 'none';
+  document.getElementById('div-history-card').style.display    = 'none';
+  document.getElementById('nokkeltall-card').style.display     = 'none';
+  document.getElementById('header-name').innerHTML = 'Fusjoner';
+  document.getElementById('last-updated').textContent = '';
+  document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('[data-section="fusjoner"]').forEach(el => el.classList.add('active'));
+  if (!fusjonerChartInitialized) {
+    initFusjonerChart();
+    fusjonerChartInitialized = true;
+  }
+}
+
+function initFusjonerChart() {
+  const ctx = document.getElementById('chart-fusjoner').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Kjøpende bank', 'Oppkjøpt bank'],
+      datasets: [{
+        label: 'Kursreaksjon',
+        data: [-2, 18],
+        backgroundColor: ['rgba(220,38,38,0.18)', 'rgba(22,163,74,0.18)'],
+        borderColor: ['#dc2626', '#16a34a'],
+        borderWidth: 2,
+        borderRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => (ctx.raw >= 0 ? '+' : '') + ctx.raw + '%'
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#f1f5f9' },
+          ticks: { font: { size: 12, family: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif' }, color: '#475569' }
+        },
+        y: {
+          grid: { color: '#f1f5f9' },
+          ticks: {
+            font: { size: 11, family: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif' },
+            color: '#94a3b8',
+            callback: v => (v >= 0 ? '+' : '') + v + '%'
+          },
+          suggestedMin: -5,
+          suggestedMax: 25
+        }
+      }
+    }
+  });
 }
 
 
 // ── Visibility helpers ────────────────────────────────────────────────────────
 function showLoading() {
   document.getElementById('overview-container').style.display = 'none';
+  document.getElementById('fusjoner-container').style.display = 'none';
   document.getElementById('controls-card').style.display    = 'block';
   document.getElementById('chart-card').style.display       = 'block';
   document.getElementById('loading').style.display = 'block';
@@ -1584,6 +2045,83 @@ function filterAndNormalize(startDate, endDate) {
     close:       r.close,
     div:         r.div || 0,
   }));
+}
+
+
+// ── Trailing yield helpers ────────────────────────────────────────────────────
+function computeTrailing12mYield(displayedDates) {
+  const records = state.allRecords;
+  const dateSet = new Set(displayedDates);
+  const result = [];
+  for (let i = 0; i < records.length; i++) {
+    if (!dateSet.has(records[i].date)) continue;
+    const endDate   = new Date(records[i].date);
+    const startStr  = new Date(endDate.setFullYear(endDate.getFullYear() - 1)).toISOString().slice(0, 10);
+    let divSum = 0;
+    for (let j = i; j >= 0 && records[j].date > startStr; j--) {
+      if (records[j].div) divSum += records[j].div;
+    }
+    const close = records[i].close;
+    result.push(close > 0 ? (divSum / close) * 100 : null);
+  }
+  return result;
+}
+
+function renderYieldChart(data) {
+  const labels      = data.map(d => d.date);
+  const yieldValues = computeTrailing12mYield(labels);
+  const tickCb      = xTickCallback(labels);
+
+  if (state.chartYield) {
+    state.chartYield.data.labels           = labels;
+    state.chartYield.data.datasets[0].data = yieldValues;
+    state.chartYield.options.scales.x.ticks.callback = tickCb;
+    state.chartYield.update('none');
+    return;
+  }
+
+  const ctx = document.getElementById('chart-yield').getContext('2d');
+  state.chartYield = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Direkteavkastning 12M',
+        data: yieldValues,
+        borderColor: '#8b5cf6',
+        backgroundColor: 'rgba(139,92,246,0.07)',
+        fill: true,
+        borderWidth: 1.5,
+        pointRadius: 0,
+        tension: 0,
+        spanGaps: true,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: c => c.raw != null ? `Direkteavkastning: ${c.raw.toFixed(2)}%` : '',
+          },
+        },
+      },
+      scales: {
+        x: {
+          ticks: { maxTicksLimit: 9, maxRotation: 0, color: '#94a3b8', font: { size: 11 }, callback: tickCb },
+          grid: { display: false },
+        },
+        y: {
+          position: 'left',
+          ticks: { color: '#8b5cf6', font: { size: 11 }, callback: val => val.toFixed(1) + '%' },
+          grid: { color: '#f1f5f9' },
+        },
+      },
+    },
+  });
 }
 
 
@@ -1793,6 +2331,7 @@ function applyRange(range) {
 
   renderChart(data);
   updateStats(data);
+  renderYieldChart(data);
 }
 
 document.querySelectorAll('.range-btn').forEach(btn => {
@@ -1820,6 +2359,7 @@ document.getElementById('date-to').addEventListener('change', () => {
 document.getElementById('sidebar-search').addEventListener('input', function () {
   const q = this.value.toLowerCase();
   document.querySelectorAll('.sidebar-item').forEach(el => {
+    if (!el.dataset.ticker) return; // skip static section items (e.g. Fusjoner)
     const match = el.dataset.ticker.toLowerCase().includes(q) ||
                   el.querySelector('.sidebar-name').textContent.toLowerCase().includes(q);
     el.style.display = match ? 'block' : 'none';
