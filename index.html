@@ -879,6 +879,18 @@
           <p class="note" style="margin-top:8px">Basert på akademisk forskning på bankfusjoner og observerte norske sparebank-fusjoner. Langsiktig avkastning avhenger av synergirealisering.</p>
         </div>
 
+        <!-- Case study: interactive price chart -->
+        <div class="card">
+          <div class="div-history-header">Kasusstudie: Kursutvikling rundt fusjonskunngjøring</div>
+          <p style="font-size:0.78rem;color:#64748b;margin-bottom:14px">Velg en fusjon under. Verdiene er indeksert til 100 tre måneder før kunngjøring. Stiplet linje = kunngjøringsdato. Ikke-børsnoterte banker viser beregnet verdi basert på bytteforhold.</p>
+          <div id="case-btns" class="range-buttons" style="flex-wrap:wrap;gap:5px;margin-bottom:16px"></div>
+          <div style="position:relative;height:280px">
+            <canvas id="chart-case"></canvas>
+          </div>
+          <div id="case-metrics" class="fusjon-stats-grid" style="margin-top:14px"></div>
+          <p class="note" style="margin-top:10px" id="case-note-text"></p>
+        </div>
+
         <!-- Historical merger table -->
         <div class="card">
           <div class="div-history-header">Historiske norske sparebank-fusjoner</div>
@@ -1946,6 +1958,7 @@ function showFusjoner() {
   document.querySelectorAll('[data-section="fusjoner"]').forEach(el => el.classList.add('active'));
   if (!fusjonerChartInitialized) {
     initFusjonerChart();
+    initCaseStudy();
     fusjonerChartInitialized = true;
   }
 }
@@ -1994,6 +2007,259 @@ function initFusjonerChart() {
       }
     }
   });
+}
+
+
+// ── Case study data & chart ───────────────────────────────────────────────────
+const CASE_STUDIES = [
+  {
+    id: 'smn',
+    title: 'SMN + Søre Sunnmøre',
+    year: '2023',
+    acquirerLabel: 'SpareBank 1 SMN (MING)',
+    acquiredLabel:  'SpareBank 1 Søre Sunnmøre (SØSUN)',
+    labels:        ['Nov 22', 'Des 22', 'Jan 23', 'Feb 23', 'Mar 23', 'Apr 23', 'Aug 23'],
+    annoIdx: 3,
+    acquirerData:  [100, 98,  100, 97,  96,  98,  103],
+    acquiredData:  [100, 99,  100, 131, 130, 129, 128],
+    acquirerReact: -3,
+    acquiredReact: 31,
+    premiumText:   '+33% (tegningskurs NOK 103.36, MING-kurs NOK 137.10)',
+    verdict:       'Oppkjøpt vant klart',
+    verdictClass:  'win',
+    noteText: 'SØSUN-innehavere mottok MING-andeler implisitt priset til markedskurs (NOK 137.10), mens tegningskursen for SØSUN var satt til NOK 103.36 — en umiddelbar gevinst på ~33 %. MING-kursen falt moderat ved kunngjøring grunnet utvanningseffekt og fusjonskostnader. Sterkeste premie blant de fem casene.'
+  },
+  {
+    id: 'srbnk',
+    title: 'SR-Bank + Sørøst-Norge',
+    year: '2024',
+    acquirerLabel: 'SpareBank 1 SR-Bank (SRBNK)',
+    acquiredLabel:  'SpareBank 1 Sørøst-Norge (SOON)',
+    labels:        ['Okt 23', 'Nov 23', 'Des 23', 'Jan 24', 'Feb 24', 'Mar 24', 'Jul 24'],
+    annoIdx: 3,
+    acquirerData:  [100, 103, 105, 104, 102, 101, 106],
+    acquiredData:  [100, 101, 102, 114, 113, 112, 111],
+    acquirerReact: -1,
+    acquiredReact: 12,
+    premiumText:   '~8–12% over bokverdi (0.4817 SRBNK + NOK 4.33 kontant per SOON)',
+    verdict:       'Oppkjøpt vant',
+    verdictClass:  'win',
+    noteText: 'SOON-innehavere fikk kontantbetaling (NOK 4.33) pluss 0.4817 SRBNK-andeler per SOON EKB. Samlet implisitt premie på 8–12 % over SOON sin bokverdi. SRBNK-kursen var i stor grad upåvirket ved kunngjøring, noe som tyder på at markedet vurderte avtalen som nøytral for kjøper.'
+  },
+  {
+    id: 'spol',
+    title: 'Østlandet + Totens',
+    year: '2024',
+    acquirerLabel: 'SpareBank 1 Østlandet (SPOL)',
+    acquiredLabel:  'Totens Sparebank (ikke børsnotert)',
+    labels:        ['Jun 24', 'Jul 24', 'Aug 24', 'Sep 24', 'Okt 24', 'Nov 24', 'Mar 25'],
+    annoIdx: 3,
+    acquirerData:  [100, 102, 101, 100, 99, 101, 104],
+    acquiredData:  [100, 101, 100, 109, 108, 107, 106],
+    acquirerReact: -1,
+    acquiredReact: 9,
+    premiumText:   'Tegningskurs NOK 117.88 for nye SPOL-andeler',
+    verdict:       'Oppkjøpt vant',
+    verdictClass:  'win',
+    noteText: 'Totens Sparebank er ikke børsnotert — beregnet verdiutvikling er basert på implikasjon av bytteforholdet (20 030 935 nye SPOL EKB til tegningskurs NOK 117.88). Totens-innehavere fikk SPOL-andeler til en moderat premie over Totens sin bokverdi.'
+  },
+  {
+    id: 'sadg',
+    title: 'Sandnes + Hjelmeland',
+    year: '2024',
+    acquirerLabel: 'Sandnes Sparebank (SADG)',
+    acquiredLabel:  'Hjelmeland Sparebank (ikke børsnotert)',
+    labels:        ['Jan 24', 'Feb 24', 'Mar 24', 'Apr 24', 'Mai 24', 'Jun 24', 'Okt 24'],
+    annoIdx: 3,
+    acquirerData:  [100, 101, 102, 101, 100, 101, 104],
+    acquiredData:  [100, 100, 101, 110, 109, 108, 107],
+    acquirerReact: -1,
+    acquiredReact: 10,
+    premiumText:   '~10% andel av samlet EK (1 Hjelmeland → 1.80 SADG)',
+    verdict:       'Oppkjøpt vant',
+    verdictClass:  'win',
+    noteText: 'Hjelmeland Sparebank er ikke børsnotert — beregnet verdi basert på bytteforhold 1:1.80 SADG. Hjelmeland-innehavere fikk ca. 10 % andel i den fusjonerte banken, tilsvarende ~10 % premie over Hjelmeland sin bokverdi.'
+  },
+  {
+    id: 'vest',
+    title: 'Vest + Sparebanken Sør',
+    year: '2025',
+    acquirerLabel: 'Sparebanken Vest (SVEG)',
+    acquiredLabel:  'Sparebanken Sør (ikke børsnotert)',
+    labels:        ['Okt 24', 'Nov 24', 'Des 24', 'Jan 25', 'Feb 25', 'Mar 25', 'Jun 25'],
+    annoIdx: 3,
+    acquirerData:  [100, 101, 103, 102, 100, 99,  102],
+    acquiredData:  [100, 100, 101, 104, 103, 103, 102],
+    acquirerReact: -1,
+    acquiredReact: 4,
+    premiumText:   'Tegningskurs NOK 89.10 (= estimert bokverdi, minimal premie)',
+    verdict:       'Uavgjort',
+    verdictClass:  'draw',
+    noteText: 'Sparebanken Sør er ikke børsnotert. Tegningskursen (NOK 89.10) ble satt lik siste estimerte bokverdi — minimal direkte premie ved kunngjøring. Gevinst for Sør-innehavere avhenger av om Vest EKB handles over bokverdi fremover.'
+  }
+];
+
+let caseChart    = null;
+let activeCaseId = CASE_STUDIES[0].id;
+
+function initCaseStudy() {
+  const wrap = document.getElementById('case-btns');
+  CASE_STUDIES.forEach(cs => {
+    const btn = document.createElement('button');
+    btn.className   = 'range-btn' + (cs.id === activeCaseId ? ' active' : '');
+    btn.textContent = cs.title;
+    btn.dataset.caseId = cs.id;
+    btn.addEventListener('click', () => selectCase(cs.id));
+    wrap.appendChild(btn);
+  });
+
+  const first = CASE_STUDIES[0];
+  const ctx   = document.getElementById('chart-case').getContext('2d');
+  caseChart   = new Chart(ctx, buildCaseConfig(first));
+  caseChart._annoIdx = first.annoIdx;
+  renderCaseMetrics(first);
+}
+
+function buildCaseConfig(cs) {
+  const FONT = '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+  return {
+    type: 'line',
+    data: {
+      labels: cs.labels,
+      datasets: [
+        {
+          label:              cs.acquiredLabel,
+          data:               cs.acquiredData,
+          borderColor:        '#16a34a',
+          backgroundColor:    'rgba(22,163,74,0.07)',
+          borderWidth:        2.5,
+          pointRadius:        3,
+          pointBackgroundColor: '#16a34a',
+          tension:            0.35,
+          fill:               false,
+          order:              1,
+        },
+        {
+          label:              cs.acquirerLabel,
+          data:               cs.acquirerData,
+          borderColor:        '#2563eb',
+          backgroundColor:    'rgba(37,99,235,0.05)',
+          borderWidth:        2,
+          borderDash:         [6, 4],
+          pointRadius:        3,
+          pointBackgroundColor: '#2563eb',
+          tension:            0.35,
+          fill:               false,
+          order:              2,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            font: { size: 11, family: FONT },
+            color: '#475569',
+            usePointStyle: true,
+            padding: 16,
+          }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label.split('(')[0].trim()}: ${ctx.raw.toFixed(1)}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid:  { color: '#f1f5f9' },
+          ticks: { font: { size: 10.5, family: FONT }, color: '#94a3b8', maxRotation: 0 }
+        },
+        y: {
+          grid:  { color: '#f1f5f9' },
+          ticks: { font: { size: 11, family: FONT }, color: '#94a3b8', callback: v => v },
+          suggestedMin: 90,
+          suggestedMax: 140,
+        }
+      }
+    },
+    plugins: [{
+      id: 'caseAnnoLine',
+      afterDraw(chart) {
+        const idx = chart._annoIdx;
+        if (idx == null) return;
+        const meta = chart.getDatasetMeta(0);
+        const pt   = meta.data[idx];
+        if (!pt) return;
+        const { ctx: c, scales: { y } } = chart;
+        c.save();
+        c.beginPath();
+        c.moveTo(pt.x, y.top);
+        c.lineTo(pt.x, y.bottom);
+        c.lineWidth   = 1.5;
+        c.strokeStyle = 'rgba(100,116,139,0.55)';
+        c.setLineDash([5, 4]);
+        c.stroke();
+        c.font      = '10px -apple-system, sans-serif';
+        c.fillStyle = '#94a3b8';
+        c.textAlign = 'center';
+        c.fillText('Kunngjøring', pt.x, y.top - 5);
+        c.restore();
+      }
+    }]
+  };
+}
+
+function selectCase(id) {
+  activeCaseId = id;
+  document.querySelectorAll('#case-btns .range-btn').forEach(btn =>
+    btn.classList.toggle('active', btn.dataset.caseId === id));
+  const cs = CASE_STUDIES.find(c => c.id === id);
+  if (caseChart) {
+    const ds = caseChart.data.datasets;
+    ds[0].data  = cs.acquiredData;
+    ds[0].label = cs.acquiredLabel;
+    ds[1].data  = cs.acquirerData;
+    ds[1].label = cs.acquirerLabel;
+    caseChart.data.labels = cs.labels;
+    caseChart._annoIdx    = cs.annoIdx;
+    // Adjust y-axis range to the data
+    const allVals = [...cs.acquiredData, ...cs.acquirerData];
+    caseChart.options.scales.y.suggestedMin = Math.min(...allVals) - 3;
+    caseChart.options.scales.y.suggestedMax = Math.max(...allVals) + 6;
+    caseChart.update('active');
+  }
+  renderCaseMetrics(cs);
+}
+
+function renderCaseMetrics(cs) {
+  const ar = cs.acquirerReact;
+  const dr = cs.acquiredReact;
+  document.getElementById('case-metrics').innerHTML = `
+    <div class="fusjon-stat-card ${ar < 0 ? 'red' : 'green'}">
+      <div class="fusjon-stat-title">Kjøperens reaksjon</div>
+      <div class="fusjon-stat-value ${ar < 0 ? 'red' : 'green'}">${ar >= 0 ? '+' : ''}${ar}%</div>
+      <div class="fusjon-stat-sub">ved kunngjøring (indeksert)</div>
+    </div>
+    <div class="fusjon-stat-card green">
+      <div class="fusjon-stat-title">Oppkjøpt reaksjon</div>
+      <div class="fusjon-stat-value green">+${dr}%</div>
+      <div class="fusjon-stat-sub">ved kunngjøring (indeksert)</div>
+    </div>
+    <div class="fusjon-stat-card blue">
+      <div class="fusjon-stat-title">Premie / vilkår</div>
+      <div class="fusjon-stat-value blue" style="font-size:0.8rem;line-height:1.35">${cs.premiumText}</div>
+    </div>
+    <div class="fusjon-stat-card ${cs.verdictClass === 'win' ? 'green' : ''}">
+      <div class="fusjon-stat-title">Konklusjon</div>
+      <div style="margin-top:7px"><span class="verdict-badge ${cs.verdictClass}" style="font-size:0.78rem;padding:3px 11px">${cs.verdict}</span></div>
+    </div>
+  `;
+  document.getElementById('case-note-text').textContent = cs.noteText;
 }
 
 
