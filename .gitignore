@@ -1,0 +1,8 @@
+# Local report database and PDFs — never commit these
+reports/
+reports.db
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
