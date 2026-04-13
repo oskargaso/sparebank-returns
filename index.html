@@ -855,6 +855,126 @@
       padding: 0 2px;
     }
 
+    /* ── M&A Radar section ───────────────────────────────────────── */
+    #mna-container { display: none; }
+
+    /* Teal accent for sidebar M&A link */
+    #mna-nav:hover { background: #f0fdfa; }
+    #mna-nav.active { border-left-color: #0d9488; background: #f0fdfa; }
+    #mna-nav.active .sidebar-name { color: #0f766e; }
+    #mna-tab.active { color: #0f766e; border-bottom-color: #0d9488; }
+
+    .mna-page-hero {
+      background: linear-gradient(135deg, #134e4a 0%, #0f766e 60%, #0d9488 100%);
+      border-radius: 12px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: white;
+    }
+    .mna-hero-icon { font-size: 2.4rem; line-height: 1; flex-shrink: 0; }
+    .mna-hero-title { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 4px; }
+    .mna-hero-sub { font-size: 0.8rem; opacity: 0.82; line-height: 1.5; }
+    .mna-hero-badge {
+      margin-left: auto; flex-shrink: 0;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px; padding: 8px 14px; text-align: center;
+    }
+    .mna-hero-badge-label { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.07em; opacity: 0.75; margin-bottom: 2px; }
+    .mna-hero-badge-value { font-size: 1.05rem; font-weight: 700; }
+    @media (max-width: 560px) { .mna-hero-badge { display: none; } }
+
+    /* Score bar */
+    .mna-rank-list { display: flex; flex-direction: column; gap: 14px; }
+    .mna-rank-item {
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 14px 16px;
+      background: #fafafa;
+      transition: box-shadow 0.15s;
+    }
+    .mna-rank-item:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+    .mna-rank-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .mna-rank-num {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: #0d9488;
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .mna-rank-num.rank-1 { background: #b45309; }
+    .mna-rank-num.rank-2 { background: #6b7280; }
+    .mna-rank-num.rank-3 { background: #b87333; }
+    .mna-rank-name { font-weight: 600; font-size: 0.9rem; color: #1e293b; flex: 1; }
+    .mna-rank-score {
+      font-size: 1.05rem; font-weight: 700; color: #0f766e;
+    }
+    .mna-score-bar-wrap {
+      background: #e2e8f0; border-radius: 4px; height: 6px; margin-bottom: 10px;
+    }
+    .mna-score-bar {
+      height: 6px; border-radius: 4px;
+      background: linear-gradient(90deg, #0d9488, #14b8a6);
+      transition: width 0.6s ease;
+    }
+    .mna-rank-item.rank-1 .mna-score-bar { background: linear-gradient(90deg, #b45309, #d97706); }
+    .mna-rank-item.rank-2 .mna-score-bar { background: linear-gradient(90deg, #6b7280, #9ca3af); }
+
+    .mna-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+    .mna-tag {
+      font-size: 0.68rem; font-weight: 500;
+      padding: 2px 8px; border-radius: 10px;
+      background: #f1f5f9; color: #475569;
+    }
+    .mna-tag.alliance-SpareBank1 { background: #eff6ff; color: #1d4ed8; }
+    .mna-tag.alliance-Eika       { background: #fef3c7; color: #92400e; }
+    .mna-tag.alliance-Independent{ background: #f0fdf4; color: #166534; }
+
+    .mna-rationale { list-style: none; padding: 0; margin: 0; }
+    .mna-rationale li {
+      font-size: 0.76rem; color: #475569;
+      padding: 2px 0 2px 14px;
+      position: relative;
+    }
+    .mna-rationale li::before {
+      content: "→";
+      position: absolute; left: 0;
+      color: #0d9488; font-size: 0.7rem;
+    }
+
+    .mna-acquirers { margin-top: 8px; font-size: 0.74rem; color: #94a3b8; }
+    .mna-acquirers strong { color: #475569; }
+
+    .mna-kv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .mna-kv {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 6px 8px;
+    }
+    .mna-kv-label { font-size: 0.62rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+    .mna-kv-value { font-size: 0.82rem; font-weight: 600; color: #1e293b; margin-top: 1px; }
+
+    #mna-loading { color: #64748b; font-size: 0.85rem; padding: 24px 0; text-align: center; }
+    #mna-error   { color: #dc2626; font-size: 0.85rem; padding: 12px 0; display: none; }
+
+    .mna-meta { font-size: 0.68rem; color: #94a3b8; margin-top: 6px; }
+
     /* ── Mobile ──────────────────────────────────────────────────── */
     @media (max-width: 680px) {
       #sidebar      { display: none; }
@@ -875,6 +995,7 @@
 <!-- Mobile: horizontal scrollable tab bar -->
 <nav id="tab-bar">
   <span class="tab-item" id="fusjoner-tab" data-section="fusjoner">Fusjoner</span>
+  <span class="tab-item" id="mna-tab" data-section="mna">M&amp;A-radar</span>
 </nav>
 
 <div class="app-layout">
@@ -890,6 +1011,12 @@
         <div class="sidebar-name">Fusjoner</div>
       </div>
       <div class="sidebar-ticker">Hvem tjener mest?</div>
+    </a>
+    <a class="sidebar-item" href="#mna" id="mna-nav" data-section="mna">
+      <div class="sidebar-row">
+        <div class="sidebar-name">M&amp;A-radar</div>
+      </div>
+      <div class="sidebar-ticker">Neste oppkjøpsmål?</div>
     </a>
     <hr class="sidebar-section-divider" />
     <div class="sidebar-label" style="display:flex;justify-content:space-between;padding-right:16px">
@@ -1056,6 +1183,61 @@
         <p class="fusjon-disclaimer">Data er hentet fra børsmeldinger og kvartalsrapporter. Historisk fusjonspremie er ikke garanti for fremtidig utfall.</p>
 
       </div><!-- #fusjoner-container -->
+
+      <!-- M&A Radar section -->
+      <div id="mna-container">
+
+        <div class="mna-page-hero">
+          <div class="mna-hero-icon">🎯</div>
+          <div>
+            <div class="mna-hero-title">M&amp;A-radar</div>
+            <div class="mna-hero-sub">Modellbasert rangering av norske børsnoterte banker etter sannsynlighet for oppkjøp</div>
+          </div>
+          <div class="mna-hero-badge">
+            <div class="mna-hero-badge-label">Oppdatert</div>
+            <div class="mna-hero-badge-value" id="mna-updated">–</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="fusjon-section-title" style="margin-bottom:6px">Mest sannsynlige oppkjøpsmål</div>
+          <p class="note" style="margin-bottom:16px">Scorer basert på finansielt press, kapitaldekning, effektivitetsgap, pris/bok og geografisk synergi. <span id="mna-peer-note"></span></p>
+          <div id="mna-loading">Laster analyse&hellip;</div>
+          <div id="mna-error"></div>
+          <div id="mna-rank-list" class="mna-rank-list"></div>
+          <p class="mna-meta" id="mna-meta"></p>
+        </div>
+
+        <div class="card">
+          <div class="fusjon-section-title">Metodikk</div>
+          <div class="fusjon-explainer">
+            <h3>Datakilder</h3>
+            <ul>
+              <li>Kursdata og finansielle nøkkeltall: Yahoo Finance (yfinance)</li>
+              <li>CET1-buffere: siste tilgjengelige årsrapporter (manuelt oppdatert)</li>
+              <li>Alliansemapping: SpareBank 1, Eika, Uavhengige</li>
+            </ul>
+            <h3>Scoringsmodell (vekting)</h3>
+            <ul>
+              <li>Finansielt press (ROE, KI-ratio, CET1): 28%</li>
+              <li>Skalafaktor (eiendeler): 18%</li>
+              <li>Effektivitetsgap vs. peer-median: 13%</li>
+              <li>Pris/bok-rabatt: 12%</li>
+              <li>Inntjeningsvolatilitet: 10%</li>
+              <li>Alliansefaktor: 9%</li>
+              <li>Maks pairwise synergi: 10%</li>
+            </ul>
+            <h3>Tolkning</h3>
+            <ul>
+              <li>Høy score = modellen anser banken som mer sårbar for oppkjøp</li>
+              <li>Scoren er relativ — ikke en absolutt sannsynlighet</li>
+              <li>Modellen kan ikke forutse faktiske styrevedtak eller budintensjoner</li>
+            </ul>
+          </div>
+          <p class="fusjon-disclaimer" style="margin-top:14px">Analysen er utelukkende informativ og ikke investeringsrådgivning. Historisk mønster er ingen garanti for fremtidig utfall.</p>
+        </div>
+
+      </div><!-- #mna-container -->
 
       <!-- Controls -->
       <div id="controls-card" class="card">
@@ -1587,6 +1769,8 @@ async function initApp() {
   const initialTicker = getTickerFromHash();
   if (initialHash === 'fusjoner') {
     showFusjoner();
+  } else if (initialHash === 'mna') {
+    showMna();
   } else if (initialTicker) {
     await selectStock(initialTicker);
   } else {
@@ -1598,6 +1782,7 @@ window.addEventListener('hashchange', () => {
   const hash   = window.location.hash.slice(1);
   const ticker = getTickerFromHash();
   if (hash === 'fusjoner') { showFusjoner(); return; }
+  if (hash === 'mna') { showMna(); return; }
   if (ticker && ticker !== state.currentTicker) selectStock(ticker);
   else if (!ticker) showOverview();
 });
@@ -1611,6 +1796,123 @@ document.getElementById('fusjoner-nav').addEventListener('click', e => {
   showFusjoner();
 });
 document.getElementById('fusjoner-tab').addEventListener('click', () => showFusjoner());
+
+
+// ── M&A Radar section ─────────────────────────────────────────────────────────
+let mnaInitialized = false;
+
+function showMna() {
+  state.currentTicker = null;
+  history.replaceState(null, '', '#mna');
+  document.getElementById('overview-container').style.display  = 'none';
+  document.getElementById('fusjoner-container').style.display  = 'none';
+  document.getElementById('mna-container').style.display       = 'block';
+  document.getElementById('controls-card').style.display       = 'none';
+  document.getElementById('chart-card').style.display          = 'none';
+  document.getElementById('stats-container').style.display     = 'none';
+  document.getElementById('company-info').style.display        = 'none';
+  document.getElementById('div-history-card').style.display    = 'none';
+  document.getElementById('nokkeltall-card').style.display     = 'none';
+  document.getElementById('header-name').innerHTML = 'M&A-radar';
+  document.getElementById('last-updated').textContent = '';
+  document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('[data-section="mna"]').forEach(el => el.classList.add('active'));
+  if (!mnaInitialized) {
+    initMna();
+    mnaInitialized = true;
+  }
+}
+
+async function initMna() {
+  const loadingEl = document.getElementById('mna-loading');
+  const errorEl   = document.getElementById('mna-error');
+  const listEl    = document.getElementById('mna-rank-list');
+
+  try {
+    const resp = await fetch('data/mna-targets.json');
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+
+    loadingEl.style.display = 'none';
+
+    // Header metadata
+    document.getElementById('mna-updated').textContent =
+      data.generated ? data.generated.split(' ')[0] : '–';
+
+    if (data.peer_medians) {
+      const pm = data.peer_medians;
+      const parts = [];
+      if (pm.roe_pct != null)          parts.push(`Peer-median ROE: ${pm.roe_pct}%`);
+      if (pm.cost_income_pct != null)  parts.push(`KI-ratio: ${pm.cost_income_pct}%`);
+      if (parts.length) document.getElementById('mna-peer-note').textContent = parts.join(' · ') + '.';
+    }
+
+    const targets = data.top_targets || [];
+    targets.forEach((t, idx) => {
+      const rank = idx + 1;
+      const rankClass = rank <= 3 ? `rank-${rank}` : '';
+
+      // Key-value metrics
+      const kvItems = [
+        { label: 'Score',    value: t.score != null ? t.score.toFixed(0) : '–' },
+        { label: 'ROE',      value: t.financials?.roe != null ? t.financials.roe.toFixed(1) + '%' : '–' },
+        { label: 'KI-ratio', value: t.financials?.cost_income != null ? t.financials.cost_income.toFixed(0) + '%' : '–' },
+        { label: 'CET1',     value: t.financials?.cet1 != null ? t.financials.cet1.toFixed(1) + '%' : '–' },
+        { label: 'P/B',      value: t.financials?.pb_ratio != null ? t.financials.pb_ratio.toFixed(2) + 'x' : '–' },
+        { label: 'Eiendeler',value: t.financials?.assets_bnok != null ? t.financials.assets_bnok.toFixed(0) + ' Mrd' : '–' },
+      ];
+
+      const kvHtml = kvItems.map(kv =>
+        `<div class="mna-kv"><div class="mna-kv-label">${kv.label}</div><div class="mna-kv-value">${kv.value}</div></div>`
+      ).join('');
+
+      const tagsHtml = [
+        `<span class="mna-tag alliance-${t.alliance}">${t.alliance}</span>`,
+        `<span class="mna-tag">${t.region}</span>`,
+      ].join('');
+
+      const rationaleHtml = (t.rationale || [])
+        .map(r => `<li>${r}</li>`).join('');
+
+      const acquirersHtml = t.likely_acquirers?.length
+        ? `<div class="mna-acquirers"><strong>Mulige kjøpere:</strong> ${t.likely_acquirers.map(a => a.name).join(', ')}</div>`
+        : '';
+
+      const item = document.createElement('div');
+      item.className = `mna-rank-item ${rankClass}`;
+      item.innerHTML = `
+        <div class="mna-rank-header">
+          <div class="mna-rank-num ${rankClass}">${rank}</div>
+          <div class="mna-rank-name">${t.name}</div>
+          <div class="mna-rank-score">${t.score != null ? t.score.toFixed(0) : '–'}</div>
+        </div>
+        <div class="mna-score-bar-wrap">
+          <div class="mna-score-bar" style="width:${t.score ?? 0}%"></div>
+        </div>
+        <div class="mna-tags">${tagsHtml}</div>
+        <div class="mna-kv-grid">${kvHtml}</div>
+        <ul class="mna-rationale">${rationaleHtml}</ul>
+        ${acquirersHtml}
+      `;
+      listEl.appendChild(item);
+    });
+
+    document.getElementById('mna-meta').textContent =
+      `Generert ${data.generated || '–'} · ${targets.length} banker analysert`;
+
+  } catch (err) {
+    loadingEl.style.display = 'none';
+    errorEl.style.display = 'block';
+    errorEl.textContent = `Kunne ikke laste M&A-data: ${err.message}`;
+    console.error('MNA load error:', err);
+  }
+}
+
+document.getElementById('mna-nav').addEventListener('click', e => {
+  e.preventDefault();
+  showMna();
+});
+document.getElementById('mna-tab').addEventListener('click', () => showMna());
 
 
 // ── Navigation ────────────────────────────────────────────────────────────────
@@ -2011,6 +2313,7 @@ function showOverview() {
   history.replaceState(null, '', window.location.pathname);
   document.getElementById('overview-container').style.display  = 'block';
   document.getElementById('fusjoner-container').style.display  = 'none';
+  document.getElementById('mna-container').style.display       = 'none';
   document.getElementById('controls-card').style.display       = 'none';
   document.getElementById('chart-card').style.display          = 'none';
   document.getElementById('stats-container').style.display     = 'none';
@@ -2031,6 +2334,7 @@ function showFusjoner() {
   history.replaceState(null, '', '#fusjoner');
   document.getElementById('overview-container').style.display  = 'none';
   document.getElementById('fusjoner-container').style.display  = 'block';
+  document.getElementById('mna-container').style.display       = 'none';
   document.getElementById('controls-card').style.display       = 'none';
   document.getElementById('chart-card').style.display          = 'none';
   document.getElementById('stats-container').style.display     = 'none';
@@ -2352,6 +2656,7 @@ function renderCaseMetrics(cs) {
 function showLoading() {
   document.getElementById('overview-container').style.display = 'none';
   document.getElementById('fusjoner-container').style.display = 'none';
+  document.getElementById('mna-container').style.display     = 'none';
   document.getElementById('controls-card').style.display    = 'block';
   document.getElementById('chart-card').style.display       = 'block';
   document.getElementById('loading').style.display = 'block';

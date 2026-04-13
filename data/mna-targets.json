@@ -1,0 +1,294 @@
+{
+  "generated": "2026-04-13 20:55 UTC",
+  "peer_medians": {
+    "roe_pct": null,
+    "cost_income_pct": null
+  },
+  "top_targets": [
+    {
+      "ticker": "PARB.OL",
+      "name": "Pareto Bank",
+      "alliance": "Independent",
+      "region": "øst",
+      "score": 100.0,
+      "components": {
+        "financial_pressure": 2.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 5.0,
+        "max_synergy": 2.0
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 17.8,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "MING.OL",
+          "name": "SpareBank 1 SMN"
+        },
+        {
+          "ticker": "SNOR.OL",
+          "name": "SpareBank 1 Nordmøre"
+        },
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (17.8% — only 1.3pp above regulatory floor)",
+        "No alliance membership — no structural barrier to acquisition"
+      ]
+    },
+    {
+      "ticker": "INSTA.OL",
+      "name": "Instabank",
+      "alliance": "Independent",
+      "region": "øst",
+      "score": 100.0,
+      "components": {
+        "financial_pressure": 2.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 5.0,
+        "max_synergy": 2.0
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 18.1,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "MING.OL",
+          "name": "SpareBank 1 SMN"
+        },
+        {
+          "ticker": "SNOR.OL",
+          "name": "SpareBank 1 Nordmøre"
+        },
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (18.1% — only 1.6pp above regulatory floor)",
+        "No alliance membership — no structural barrier to acquisition"
+      ]
+    },
+    {
+      "ticker": "MORG.OL",
+      "name": "Sparebanken Møre",
+      "alliance": "Independent",
+      "region": "vest",
+      "score": 66.9,
+      "components": {
+        "financial_pressure": 1.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 5.0,
+        "max_synergy": 2.0
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 18.6,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "MING.OL",
+          "name": "SpareBank 1 SMN"
+        },
+        {
+          "ticker": "SNOR.OL",
+          "name": "SpareBank 1 Nordmøre"
+        },
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (18.6% — only 2.1pp above regulatory floor)",
+        "No alliance membership — no structural barrier to acquisition"
+      ]
+    },
+    {
+      "ticker": "SBNOR.OL",
+      "name": "Sparebanken Norge",
+      "alliance": "Independent",
+      "region": "vest",
+      "score": 66.9,
+      "components": {
+        "financial_pressure": 1.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 5.0,
+        "max_synergy": 2.0
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 19.2,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "MING.OL",
+          "name": "SpareBank 1 SMN"
+        },
+        {
+          "ticker": "SNOR.OL",
+          "name": "SpareBank 1 Nordmøre"
+        },
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (19.2% — only 2.7pp above regulatory floor)",
+        "No alliance membership — no structural barrier to acquisition"
+      ]
+    },
+    {
+      "ticker": "MING.OL",
+      "name": "SpareBank 1 SMN",
+      "alliance": "SpareBank1",
+      "region": "midt",
+      "score": 66.3,
+      "components": {
+        "financial_pressure": 2.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 1.5,
+        "max_synergy": 2.3
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 18.4,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "SPOL.OL",
+          "name": "SpareBank 1 Østlandet"
+        },
+        {
+          "ticker": "NONG.OL",
+          "name": "SpareBank 1 Nord-Norge"
+        },
+        {
+          "ticker": "SBINO.OL",
+          "name": "SpareBank 1 Sørøst-Norge"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (18.4% — only 1.9pp above regulatory floor)"
+      ]
+    },
+    {
+      "ticker": "SPOG.OL",
+      "name": "Sparebanken Øst",
+      "alliance": "Eika",
+      "region": "øst",
+      "score": 49.1,
+      "components": {
+        "financial_pressure": 1.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 3.0,
+        "max_synergy": 2.3
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 19.3,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        },
+        {
+          "ticker": "TRSB.OL",
+          "name": "Trøndelag Sparebank"
+        },
+        {
+          "ticker": "MELG.OL",
+          "name": "Melhus Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (19.3% — only 2.8pp above regulatory floor)",
+        "Eika alliance — consolidation ongoing within group"
+      ]
+    },
+    {
+      "ticker": "SPOL.OL",
+      "name": "SpareBank 1 Østlandet",
+      "alliance": "SpareBank1",
+      "region": "øst",
+      "score": 33.1,
+      "components": {
+        "financial_pressure": 1.0,
+        "scale": 2.5,
+        "efficiency_gap": 2.5,
+        "pb_ratio": 2.5,
+        "earnings_volatility": 2.5,
+        "alliance": 1.5,
+        "max_synergy": 2.3
+      },
+      "financials": {
+        "roe": null,
+        "cost_income": null,
+        "cet1": 19.1,
+        "pb_ratio": null,
+        "assets_bnok": null
+      },
+      "likely_acquirers": [
+        {
+          "ticker": "MING.OL",
+          "name": "SpareBank 1 SMN"
+        },
+        {
+          "ticker": "SNOR.OL",
+          "name": "SpareBank 1 Nordmøre"
+        },
+        {
+          "ticker": "GRONG.OL",
+          "name": "Grong Sparebank"
+        }
+      ],
+      "rationale": [
+        "Thin CET1 buffer (19.1% — only 2.6pp above regulatory floor)"
+      ]
+    }
+  ]
+}
