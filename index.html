@@ -66,6 +66,10 @@
       border-bottom-color: #2563eb;
       font-weight: 600;
     }
+    #fusjoner-tab.active {
+      color: #b45309;
+      border-bottom-color: #d97706;
+    }
 
     /* ── App layout ──────────────────────────────────────────────── */
     .app-layout {
@@ -687,6 +691,73 @@
 
     /* ── Fusjoner section ────────────────────────────────────────── */
     #fusjoner-container { display: none; }
+
+    /* Amber accent for sidebar Fusjoner link */
+    #fusjoner-nav:hover { background: #fffbeb; }
+    #fusjoner-nav.active {
+      border-left-color: #d97706;
+      background: #fffbeb;
+    }
+    #fusjoner-nav.active .sidebar-name { color: #b45309; }
+    #fusjoner-nav .sidebar-ticker { color: #b45309; opacity: 0.7; }
+
+    /* Sidebar visual separator above stock list */
+    .sidebar-section-divider {
+      border: none;
+      border-top: 2px solid #e2e8f0;
+      margin: 8px 12px 4px;
+    }
+
+    /* Fusjoner page hero banner */
+    .fusjon-page-hero {
+      background: linear-gradient(135deg, #78350f 0%, #b45309 60%, #d97706 100%);
+      border-radius: 12px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: white;
+    }
+    .fusjon-hero-icon {
+      font-size: 2.4rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .fusjon-hero-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 4px;
+    }
+    .fusjon-hero-sub {
+      font-size: 0.8rem;
+      opacity: 0.82;
+      line-height: 1.5;
+    }
+    .fusjon-hero-badge {
+      margin-left: auto;
+      flex-shrink: 0;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      padding: 8px 14px;
+      text-align: center;
+    }
+    .fusjon-hero-badge-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      opacity: 0.75;
+      margin-bottom: 2px;
+    }
+    .fusjon-hero-badge-value {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    @media (max-width: 560px) {
+      .fusjon-hero-badge { display: none; }
+    }
+
     .fusjon-section-title {
       font-size: 1.1rem;
       font-weight: 600;
@@ -820,6 +891,7 @@
       </div>
       <div class="sidebar-ticker">Hvem tjener mest?</div>
     </a>
+    <hr class="sidebar-section-divider" />
     <div class="sidebar-label" style="display:flex;justify-content:space-between;padding-right:16px">
       <span>Oslo Børs</span><span>1Y</span>
     </div>
@@ -847,6 +919,19 @@
 
       <!-- Fusjoner analysis section -->
       <div id="fusjoner-container">
+
+        <!-- Page hero -->
+        <div class="fusjon-page-hero">
+          <div class="fusjon-hero-icon">🏦</div>
+          <div>
+            <div class="fusjon-hero-title">Sparebank-fusjoner</div>
+            <div class="fusjon-hero-sub">Analyse av norske bankfusjoner &mdash; kursreaksjoner, premie og langsiktig avkastning</div>
+          </div>
+          <div class="fusjon-hero-badge">
+            <div class="fusjon-hero-badge-label">Analyserte fusjoner</div>
+            <div class="fusjon-hero-badge-value">8+</div>
+          </div>
+        </div>
 
         <!-- Summary stat cards -->
         <div class="card">
