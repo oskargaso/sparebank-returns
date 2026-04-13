@@ -48,11 +48,9 @@ BANKS = [
     {"ticker": "JAREN.OL", "name": "Jæren Sparebank",                "alliance": "Eika", "region": "vest"},
     {"ticker": "VVL.OL",   "name": "Voss Veksel- og Landmandsbank",  "alliance": "Eika", "region": "vest"},
     {"ticker": "ROGS.OL",  "name": "Rogaland Sparebank",             "alliance": "Eika", "region": "vest"},
-    # Independent
+    # Independent sparebankene
     {"ticker": "MORG.OL",  "name": "Sparebanken Møre",               "alliance": "Independent", "region": "vest"},
     {"ticker": "SBNOR.OL", "name": "Sparebanken Norge",              "alliance": "Independent", "region": "vest"},
-    {"ticker": "PARB.OL",  "name": "Pareto Bank",                    "alliance": "Independent", "region": "øst"},
-    {"ticker": "INSTA.OL", "name": "Instabank",                      "alliance": "Independent", "region": "øst"},
 ]
 
 DNB_TICKER = "DNB.OL"
@@ -87,8 +85,6 @@ CET1_OVERRIDES = {
     "ROGS.OL":  21.5,
     "MORG.OL":  18.6,
     "SBNOR.OL": 19.2,
-    "PARB.OL":  17.8,
-    "INSTA.OL": 18.1,
 }
 
 REQUIRED_CET1 = 16.5  # proxy regulatory minimum (%)
