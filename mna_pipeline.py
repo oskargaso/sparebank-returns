@@ -37,7 +37,8 @@ BANKS = [
     {"ticker": "GRONG.OL", "name": "Grong Sparebank",                "alliance": "Eika", "region": "midt"},
     {"ticker": "HSPG.OL",  "name": "Høland og Setskog Sparebank",    "alliance": "Eika", "region": "øst"},
     {"ticker": "FFSB.OL",  "name": "Flekkefjord Sparebank",          "alliance": "Eika", "region": "vest"},
-    {"ticker": "TRSB.OL",  "name": "Trøndelag Sparebank",            "alliance": "Eika", "region": "midt"},
+    # TRSB: Trøndelag Sparebank er kjøper (fusjon med Ørland Sparebank feb. 2026) — ikke mål
+    # {"ticker": "TRSB.OL", "name": "Trøndelag Sparebank", ...},
     {"ticker": "MELG.OL",  "name": "Melhus Sparebank",               "alliance": "Eika", "region": "midt"},
     {"ticker": "SKUE.OL",  "name": "Skue Sparebank",                 "alliance": "Eika", "region": "øst"},
     {"ticker": "ROMER.OL", "name": "Romerike Sparebank",             "alliance": "Eika", "region": "øst"},
@@ -72,7 +73,8 @@ CET1_OVERRIDES = {
     "GRONG.OL": 25.0,
     "HSPG.OL":  24.0,
     "FFSB.OL":  24.5,
-    "TRSB.OL":  22.8,
+    # "TRSB.OL": 22.8,  # excluded — active acquirer
+
     "MELG.OL":  24.2,
     "SKUE.OL":  23.1,
     "ROMER.OL": 22.0,
