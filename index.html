@@ -499,6 +499,38 @@
     .recovery-cagr.pos { color: #16a34a; }
     .recovery-cagr.neg { color: #dc2626; }
 
+    /* ── Dividend arbitrage explain card ─────────────────────────── */
+    .div-arb-explain {
+      background: #f0f7ff;
+      border: 1px solid #bfdbfe;
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+    .div-arb-explain-title {
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #1d4ed8;
+      margin-bottom: 6px;
+    }
+    .div-arb-explain-body {
+      font-size: 0.78rem;
+      color: #475569;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .div-arb-mini-stats { display: flex; gap: 20px; flex-wrap: wrap; }
+    .div-arb-mini-stat { display: flex; flex-direction: column; gap: 1px; }
+    .div-arb-mini-stat-val { font-size: 1rem; font-weight: 700; color: #1e293b; }
+    .div-arb-mini-stat-lbl { font-size: 0.62rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.04em; }
+    /* Recovery yield column */
+    .recovery-yield { display: flex; flex-direction: column; align-items: flex-end; flex-shrink: 0; min-width: 52px; }
+    .recovery-yield-val { font-size: 0.82rem; font-weight: 600; color: #0f766e; white-space: nowrap; }
+    .recovery-yield-sub { font-size: 0.62rem; color: #94a3b8; }
+
     .note { font-size: 0.7rem; color: #94a3b8; margin-top: 10px; }
 
     /* ── Company info card ───────────────────────────────────────── */
@@ -1038,8 +1070,26 @@
         <div id="overview-grid" class="overview-grid"></div>
 
         <div class="overview-intro" style="margin-top:28px">
-          <h2>Raskest etter ex-dag &mdash; Top 10</h2>
-          <p>Gjennomsnittlig handelsdager til kursutvinning etter ex-utbytte (siste 5 år). Klikk for å se full graf.</p>
+          <h2>Utbyttearbitrasje &mdash; Top 10 raskest gjenoppretting</h2>
+          <p>Gjennomsnittlig handelsdager til kursutvinning etter ex-utbytte (siste 5 år). Direkteavkastning og totalavkastning vises per selskap. Klikk for full analyse.</p>
+        </div>
+        <div class="div-arb-explain">
+          <div class="div-arb-explain-title">Om utbyttearbitrasje</div>
+          <p class="div-arb-explain-body">På ex-utbyttedatoen faller kursen typisk med omtrent utbyttebeløpet. <strong>Utbyttearbitrasje</strong> er strategien der man kjøper etter kursfallet og selger når kursen er hentet inn igjen. Jo kortere gjenopprettingstid og høyere direkteavkastning, jo mer attraktivt er timingen rundt ex-dag — men konkurransen er høy og gevinsten spises fort av kurtasje.</p>
+          <div class="div-arb-mini-stats">
+            <div class="div-arb-mini-stat">
+              <span class="div-arb-mini-stat-val" id="arb-fastest">–</span>
+              <span class="div-arb-mini-stat-lbl">Raskest (top 10)</span>
+            </div>
+            <div class="div-arb-mini-stat">
+              <span class="div-arb-mini-stat-val" id="arb-median">–</span>
+              <span class="div-arb-mini-stat-lbl">Median gjenoppretting</span>
+            </div>
+            <div class="div-arb-mini-stat">
+              <span class="div-arb-mini-stat-val" id="arb-avg-yield">–</span>
+              <span class="div-arb-mini-stat-lbl">Snitt direkteavk.</span>
+            </div>
+          </div>
         </div>
         <div id="recovery-grid" class="recovery-list"></div>
       </div>
@@ -2125,7 +2175,21 @@ function buildRecoveryOverview() {
     .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
     .slice(0, 10);
 
-  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y, website }, idx) => {
+  // Populate arb explain card mini-stats
+  if (top10.length) {
+    const days = top10.map(s => s.avg_recovery_days);
+    const validYields = top10.filter(s => s.yield_current != null).map(s => s.yield_current);
+    const median = days[Math.floor(days.length / 2)];
+    const avgYield = validYields.length ? validYields.reduce((a, b) => a + b, 0) / validYields.length : null;
+    const elFastest  = document.getElementById('arb-fastest');
+    const elMedian   = document.getElementById('arb-median');
+    const elAvgYield = document.getElementById('arb-avg-yield');
+    if (elFastest)  elFastest.textContent  = Math.round(days[0]) + 'd';
+    if (elMedian)   elMedian.textContent   = Math.round(median) + 'd';
+    if (elAvgYield) elAvgYield.textContent = avgYield != null ? avgYield.toFixed(1) + '%' : '–';
+  }
+
+  top10.forEach(({ ticker, name, avg_recovery_days, div_frequency, cagr_5y, yield_current, website }, idx) => {
     const row = document.createElement('div');
     row.className = 'recovery-row';
 
@@ -2137,6 +2201,7 @@ function buildRecoveryOverview() {
     const freqHtml  = div_frequency ? `<span class="freq-tag">${freqMap[div_frequency] || div_frequency}</span>` : '';
     const fmtCagr   = (v) => v == null ? '–' : (v >= 0 ? '+' : '') + v.toFixed(1) + '%';
     const cagrCls   = (v) => v == null ? '' : v >= 0 ? 'pos' : 'neg';
+    const yieldStr  = yield_current != null ? yield_current.toFixed(1) + '%' : '–';
 
     row.innerHTML = `
       <div class="recovery-rank">${idx + 1}</div>
@@ -2147,7 +2212,11 @@ function buildRecoveryOverview() {
       </div>
       <div>
         <div class="recovery-days">${Math.round(avg_recovery_days)}d</div>
-        <div class="recovery-days-sub">gj.sn. dager</div>
+        <div class="recovery-days-sub">gjenoppretting</div>
+      </div>
+      <div class="recovery-yield">
+        <div class="recovery-yield-val">${yieldStr}</div>
+        <div class="recovery-yield-sub">direkteavk.</div>
       </div>
       <div class="recovery-meta">
         <div class="recovery-cagr ${cagrCls(cagr_5y)}">${fmtCagr(cagr_5y)}</div>
