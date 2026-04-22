@@ -289,6 +289,10 @@ def calc_dividend_recovery(records, years=5):
     For each dividend ex-date in the last `years` years, calculate how many
     trading days it takes for the stock price to recover to the pre-ex-dividend
     closing price. Returns (avg_recovery_days, freq_label, divs_per_year).
+
+    Dividends paid within MERGE_WINDOW trading days of each other are treated
+    as a single event (combined amount, single reference price). This handles
+    companies that split one payout into two close tranches.
     """
     if not records:
         return None, None, None
@@ -300,43 +304,52 @@ def calc_dividend_recovery(records, years=5):
         cutoff = last_date.strftime("%Y-%m-%d")
 
     MAX_RECOVERY = 252  # ~1 trading year cap
+    MERGE_WINDOW = 10   # trading days — merges split tranches but not monthly payers
+
+    # Build list of all dividend events (index, date, amount)
+    all_divs = [
+        (i, r["date"], r["div"])
+        for i, r in enumerate(records)
+        if r.get("div", 0) > 0
+    ]
+
+    # Merge dividends within MERGE_WINDOW trading days into single events
+    merged = []  # (first_record_idx, first_date, combined_div)
+    k = 0
+    while k < len(all_divs):
+        first_idx, first_date, total_div = all_divs[k]
+        k += 1
+        while k < len(all_divs) and all_divs[k][0] - first_idx <= MERGE_WINDOW:
+            total_div += all_divs[k][1]
+            k += 1
+        merged.append((first_idx, first_date, total_div))
+
+    # Only events inside the 5-year window
+    events = [(idx, date, div) for idx, date, div in merged if date >= cutoff]
+    div_count = len(events)
 
     recovery_days_list = []
-    div_count = 0
 
-    for i, r in enumerate(records):
-        if r["date"] < cutoff:
-            continue
-        if r.get("div", 0) <= 0:
-            continue
-
-        div_count += 1
-        if i == 0:
+    for first_idx, _date, total_div in events:
+        if first_idx == 0:
             continue  # no previous price reference
 
-        pre_ex_price = records[i - 1]["close"]
-        div_amount   = r["div"]
+        pre_ex_price = records[first_idx - 1]["close"]
 
-        # Data-quality filter: skip events where no meaningful price drop is
-        # observable within 3 trading days of the ex-date.  This removes
-        # artefacts from (a) illiquid stocks whose price is forward-filled by
-        # Yahoo Finance and (b) ex-dates where the stock happened to rise.
-        # Threshold: the minimum close in the window must be at least 20% of
-        # the dividend below the pre-ex close.
+        # Data-quality filter: require observable drop >= 20% of dividend within
+        # 3 days of first ex-date. Use combined div as the expected drop size.
         min_close_window = min(
             records[k]["close"]
-            for k in range(i, min(i + 4, len(records)))
+            for k in range(first_idx, min(first_idx + 4, len(records)))
         )
-        if min_close_window > pre_ex_price - div_amount * 0.2:
+        if min_close_window > pre_ex_price - total_div * 0.2:
             continue  # no real drop observed — skip this event
 
         # Find first day AFTER ex-date when price recovers to pre-ex level.
-        # We start from i+1: the ex-date itself is where the drop occurs,
-        # so recovery is measured from the next trading day onwards.
         recovered_in = MAX_RECOVERY
-        for j in range(i + 1, min(i + MAX_RECOVERY + 1, len(records))):
+        for j in range(first_idx + 1, min(first_idx + MAX_RECOVERY + 1, len(records))):
             if records[j]["close"] >= pre_ex_price:
-                recovered_in = j - i  # minimum 1
+                recovered_in = j - first_idx  # minimum 1
                 break
 
         recovery_days_list.append(recovered_in)
@@ -357,6 +370,108 @@ def calc_dividend_recovery(records, years=5):
         freq_label = "irregular"
 
     return avg_days, freq_label, round(divs_per_year, 1)
+
+
+def calc_drawdown_from_ath(records):
+    """Current % below all-time-high close price."""
+    if not records:
+        return None
+    ath = max(r["close"] for r in records)
+    if ath <= 0:
+        return None
+    return round((records[-1]["close"] / ath - 1) * 100, 1)
+
+
+def calc_dividend_cagr(records, years):
+    """
+    CAGR of dividends per share over `years` years.
+    Compares trailing-12m dividend sum at the start of the window vs the end.
+    """
+    if not records:
+        return None
+    last_dt = datetime.strptime(records[-1]["date"], "%Y-%m-%d")
+    try:
+        window_start = last_dt.replace(year=last_dt.year - years)
+        t12m_start   = window_start.replace(year=window_start.year - 1)
+    except ValueError:
+        return None
+
+    ws_str  = window_start.strftime("%Y-%m-%d")
+    t12_str = t12m_start.strftime("%Y-%m-%d")
+    last_str = records[-1]["date"]
+
+    div_old = sum(r["div"] for r in records
+                  if r.get("div", 0) > 0 and t12_str <= r["date"] <= ws_str)
+    div_new = sum(r["div"] for r in records
+                  if r.get("div", 0) > 0 and r["date"] > ws_str and r["date"] <= last_str)
+
+    if div_old <= 0 or div_new <= 0:
+        return None
+    actual_years = (last_dt - window_start).days / 365.25
+    if actual_years < 1:
+        return None
+    return round((pow(div_new / div_old, 1 / actual_years) - 1) * 100, 1)
+
+
+def calc_yield_stats(records):
+    """
+    Returns (current_trailing_12m_yield_pct, avg_trailing_yield_5y_pct).
+    Uses a sliding window over the record history.
+    """
+    from collections import deque
+    if not records:
+        return None, None
+
+    last_dt = datetime.strptime(records[-1]["date"], "%Y-%m-%d")
+    try:
+        cutoff_5y = last_dt.replace(year=last_dt.year - 5).strftime("%Y-%m-%d")
+    except ValueError:
+        cutoff_5y = records[0]["date"]
+
+    dq = deque()   # (date_str, div)
+    yields_5y = []
+    current_yield = None
+
+    for r in records:
+        if r.get("div", 0) > 0:
+            dq.append((r["date"], r["div"]))
+        cur_dt = datetime.strptime(r["date"], "%Y-%m-%d")
+        while dq and (cur_dt - datetime.strptime(dq[0][0], "%Y-%m-%d")).days > 365:
+            dq.popleft()
+        t12m = sum(d for _, d in dq)
+        if r["close"] > 0 and t12m > 0:
+            y = t12m / r["close"] * 100
+            if r["date"] >= cutoff_5y:
+                yields_5y.append(y)
+            current_yield = round(y, 2)
+
+    yield_5y_avg = round(sum(yields_5y) / len(yields_5y), 2) if yields_5y else None
+    return current_yield, yield_5y_avg
+
+
+def calc_rolling_returns(records):
+    """1Y, 3Y, 5Y, 10Y CAGR of total return index."""
+    if not records:
+        return {}
+    last = records[-1]
+    last_dt = datetime.strptime(last["date"], "%Y-%m-%d")
+    result = {}
+    for yrs in (1, 3, 5, 10):
+        try:
+            target_str = last_dt.replace(year=last_dt.year - yrs).strftime("%Y-%m-%d")
+        except ValueError:
+            result[f"{yrs}y"] = None
+            continue
+        base = next((r for r in records if r["date"] >= target_str), None)
+        if base is None or base["date"] == last["date"]:
+            result[f"{yrs}y"] = None
+            continue
+        actual_yrs = (last_dt - datetime.strptime(base["date"], "%Y-%m-%d")).days / 365.25
+        if actual_yrs < 0.5:
+            result[f"{yrs}y"] = None
+            continue
+        result[f"{yrs}y"] = round((pow(last["tri"] / base["tri"], 1 / actual_yrs) - 1) * 100, 1)
+    return result
 
 
 def process_ticker(ticker, name):
@@ -465,6 +580,28 @@ def process_ticker(ticker, name):
     output["div_frequency"] = div_frequency
     output["divs_per_year"] = divs_per_year
 
+    # Drawdown from all-time high
+    output["drawdown_from_ath"] = calc_drawdown_from_ath(records)
+
+    # Dividend CAGR
+    output["div_cagr_3y"] = calc_dividend_cagr(records, 3)
+    output["div_cagr_5y_calc"] = calc_dividend_cagr(records, 5)
+
+    # Trailing yield stats
+    output["yield_current"], output["yield_5y_avg"] = calc_yield_stats(records)
+
+    # Rolling total returns (1Y, 3Y, 5Y, 10Y)
+    output["rolling_returns"] = calc_rolling_returns(records)
+
+    # Valuation metrics from yfinance .info
+    output["trailingPE"]             = info.get("trailingPE")
+    output["forwardPE"]              = info.get("forwardPE")
+    output["priceToBook"]            = info.get("priceToBook")
+    output["trailingEps"]            = info.get("trailingEps")
+    output["recommendationKey"]      = info.get("recommendationKey")
+    output["recommendationMean"]     = info.get("recommendationMean")
+    output["numberOfAnalystOpinions"] = info.get("numberOfAnalystOpinions")
+
     print(f"  {records[0]['date']} -> {records[-1]['date']}  "
           f"DRIP: {final_tri - 100:.1f}%  Price: {price_pct:.1f}%  ({len(records)} days)")
 
@@ -501,6 +638,10 @@ def main():
                 "website": result.get("website"),
                 "next_ex_date": result.get("next_ex_date"),
                 "forward_annual_dividend": result.get("forward_annual_dividend"),
+                "drawdown_from_ath": result.get("drawdown_from_ath"),
+                "div_cagr_5y": result.get("div_cagr_5y_calc"),
+                "yield_current": result.get("yield_current"),
+                "recommendationKey": result.get("recommendationKey"),
             })
 
         # Small delay to avoid Yahoo Finance rate limits
