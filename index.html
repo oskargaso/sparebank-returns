@@ -2171,7 +2171,9 @@ function buildRecoveryOverview() {
   rgrid.innerHTML = '';
 
   const top10 = state.stocks
-    .filter(s => s.avg_recovery_days != null && s.avg_recovery_days > 0 && s.div_frequency !== 'irregular')
+    .filter(s => s.avg_recovery_days != null && s.avg_recovery_days > 0
+              && s.div_frequency !== 'irregular'
+              && (s.cagr_5y == null || s.cagr_5y >= 0))
     .sort((a, b) => a.avg_recovery_days - b.avg_recovery_days)
     .slice(0, 10);
 
