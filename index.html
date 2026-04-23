@@ -2343,8 +2343,57 @@ async function selectStock(ticker) {
     recoverySubEl.textContent = 'ingen utbyttedata';
   }
 
+  // Populate drawdown from ATH
+  const drawdownEl = document.getElementById('s-drawdown');
+  if (stockData.drawdown_from_ath != null) {
+    const dd = stockData.drawdown_from_ath;
+    drawdownEl.textContent = (dd >= 0 ? '+' : '') + dd.toFixed(1) + '%';
+    drawdownEl.className   = 'stat-value ' + (dd >= 0 ? 'pos' : 'neg');
+  } else {
+    drawdownEl.textContent = '–';
+    drawdownEl.className   = 'stat-value';
+  }
+
+  // Populate trailing yield + 5Y average
+  const yieldEl    = document.getElementById('s-yield');
+  const yieldSubEl = document.getElementById('s-yield-sub');
+  if (stockData.yield_current != null) {
+    yieldEl.textContent = stockData.yield_current.toFixed(1) + '%';
+    yieldEl.className   = 'stat-value neutral';
+    yieldSubEl.textContent = stockData.yield_5y_avg != null
+      ? `trailing 12 mnd · 5Y snitt ${stockData.yield_5y_avg.toFixed(1)}%`
+      : 'trailing 12 mnd';
+  } else {
+    yieldEl.textContent    = '–';
+    yieldEl.className      = 'stat-value';
+    yieldSubEl.textContent = 'trailing 12 mnd';
+  }
+
+  // Populate dividend CAGR (3Y / 5Y)
+  const divCagrEl    = document.getElementById('s-divcagr');
+  const divCagrSubEl = document.getElementById('s-divcagr-sub');
+  const dc3 = stockData.div_cagr_3y;
+  const dc5 = stockData.div_cagr_5y_calc;
+  if (dc3 != null || dc5 != null) {
+    const parts = [];
+    if (dc3 != null) parts.push((dc3 >= 0 ? '+' : '') + dc3.toFixed(1) + '%');
+    if (dc5 != null) parts.push((dc5 >= 0 ? '+' : '') + dc5.toFixed(1) + '%');
+    const ref = dc5 ?? dc3;
+    divCagrEl.textContent = parts.join(' / ');
+    divCagrEl.className   = 'stat-value ' + (ref >= 0 ? 'pos' : 'neg');
+    divCagrSubEl.textContent = (dc3 != null && dc5 != null) ? '3Y / 5Y CAGR'
+                             : (dc5 != null ? '5Y CAGR' : '3Y CAGR');
+  } else {
+    divCagrEl.textContent    = '–';
+    divCagrEl.className      = 'stat-value';
+    divCagrSubEl.textContent = '3Y / 5Y CAGR';
+  }
+
   // Populate dividend history table
   buildDivHistoryTable(stockData);
+
+  // Nøkkeltall card (P/E, P/B, analyst ratings, rolling returns)
+  buildNoekkeltallCard(stockData);
 
   applyRange('max');
 }
