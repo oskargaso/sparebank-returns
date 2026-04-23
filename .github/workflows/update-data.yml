@@ -27,6 +27,9 @@ jobs:
       - name: Fetch and process stock data
         run: python fetch_data.py
 
+      - name: Fetch merger case study data
+        run: python fetch_merger_data.py
+
       - name: Run M&A target pipeline
         run: python mna_pipeline.py
 

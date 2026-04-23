@@ -320,7 +320,7 @@ def calc_dividend_recovery(records, years=5):
         first_idx, first_date, total_div = all_divs[k]
         k += 1
         while k < len(all_divs) and all_divs[k][0] - first_idx <= MERGE_WINDOW:
-            total_div += all_divs[k][1]
+            total_div += all_divs[k][2]
             k += 1
         merged.append((first_idx, first_date, total_div))
 
