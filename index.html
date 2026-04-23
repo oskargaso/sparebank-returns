@@ -724,6 +724,87 @@
     /* ── Fusjoner section ────────────────────────────────────────── */
     #fusjoner-container { display: none; }
 
+    /* ── Kalender section ────────────────────────────────────────── */
+    #kalender-container { display: none; }
+    #kalender-nav:hover { background: #f0fdf4; }
+    #kalender-nav.active { border-left-color: #16a34a; background: #f0fdf4; }
+    #kalender-nav.active .sidebar-name { color: #15803d; }
+    #kalender-nav .sidebar-ticker { color: #16a34a; opacity: 0.7; }
+
+    .kal-filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .kal-filter-btn {
+      padding: 4px 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #fff;
+      color: #64748b;
+      transition: all 0.12s;
+    }
+    .kal-filter-btn:hover { border-color: #94a3b8; color: #1e293b; }
+    .kal-filter-btn.active { background: #1e3a5f; border-color: #1e3a5f; color: #fff; }
+
+    .kal-month-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #94a3b8;
+      padding: 18px 2px 6px;
+    }
+    .kal-day-group { margin-bottom: 6px; }
+    .kal-day-header {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #475569;
+      background: #f8fafc;
+      padding: 5px 12px;
+      border-radius: 6px 6px 0 0;
+      border: 1px solid #e2e8f0;
+      border-bottom: none;
+    }
+    .kal-events {
+      border: 1px solid #e2e8f0;
+      border-radius: 0 0 6px 6px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .kal-event {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-bottom: 1px solid #f1f5f9;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .kal-event:last-child { border-bottom: none; }
+    .kal-event:hover { background: #f8fafc; }
+    .kal-badge {
+      font-size: 0.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 6px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-width: 44px;
+      text-align: center;
+    }
+    .kal-badge-ex       { background: #dbeafe; color: #1d4ed8; }
+    .kal-badge-earnings { background: #fef3c7; color: #92400e; }
+    .kal-logo { flex-shrink: 0; }
+    .kal-logo img { width: 24px; height: 24px; object-fit: contain; border-radius: 4px; display: block; }
+    .kal-logo .card-badge { width: 24px; height: 24px; font-size: 0.55rem; }
+    .kal-name { flex: 1; min-width: 0; }
+    .kal-name-main { font-size: 0.8rem; font-weight: 600; color: #1e293b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .kal-name-sub  { font-size: 0.65rem; color: #94a3b8; margin-top: 1px; }
+    .kal-detail    { font-size: 0.72rem; color: #475569; white-space: nowrap; text-align: right; }
+    .kal-empty { color: #94a3b8; font-size: 0.82rem; padding: 24px 0; text-align: center; }
+
     /* Amber accent for sidebar Fusjoner link */
     #fusjoner-nav:hover { background: #fffbeb; }
     #fusjoner-nav.active {
@@ -1028,6 +1109,7 @@
 <nav id="tab-bar">
   <span class="tab-item" id="fusjoner-tab" data-section="fusjoner">Fusjoner</span>
   <span class="tab-item" id="mna-tab" data-section="mna">M&amp;A-radar</span>
+  <span class="tab-item" id="kalender-tab" data-section="kalender">Kalender</span>
 </nav>
 
 <div class="app-layout">
@@ -1049,6 +1131,12 @@
         <div class="sidebar-name">M&amp;A-radar</div>
       </div>
       <div class="sidebar-ticker">Neste oppkjøpsmål?</div>
+    </a>
+    <a class="sidebar-item" href="#kalender" id="kalender-nav" data-section="kalender">
+      <div class="sidebar-row">
+        <div class="sidebar-name">Kalender</div>
+      </div>
+      <div class="sidebar-ticker">Finanskalender</div>
     </a>
     <hr class="sidebar-section-divider" />
     <div class="sidebar-label" style="display:flex;justify-content:space-between;padding-right:16px">
@@ -1295,6 +1383,20 @@
         </div>
 
       </div><!-- #mna-container -->
+
+      <!-- Financial Calendar section -->
+      <div id="kalender-container">
+        <div class="card">
+          <div class="fusjon-section-title">Finanskalender &ndash; Oslo Børs</div>
+          <p style="font-size:0.78rem;color:#64748b;margin:6px 0 16px">Kommende ex-utbyttedatoer og resultatdatoer for selskaper notert på Oslo Børs. Klikk for full analyse.</p>
+          <div class="kal-filter-bar">
+            <button class="kal-filter-btn active" data-kal-filter="alle">Alle</button>
+            <button class="kal-filter-btn" data-kal-filter="ex">Ex-utbytte</button>
+            <button class="kal-filter-btn" data-kal-filter="earnings">Resultat</button>
+          </div>
+          <div id="kalender-list"></div>
+        </div>
+      </div><!-- #kalender-container -->
 
       <!-- Controls -->
       <div id="controls-card" class="card">
@@ -1828,6 +1930,8 @@ async function initApp() {
     showFusjoner();
   } else if (initialHash === 'mna') {
     showMna();
+  } else if (initialHash === 'kalender') {
+    showKalender();
   } else if (initialTicker) {
     await selectStock(initialTicker);
   } else {
@@ -1840,6 +1944,7 @@ window.addEventListener('hashchange', () => {
   const ticker = getTickerFromHash();
   if (hash === 'fusjoner') { showFusjoner(); return; }
   if (hash === 'mna') { showMna(); return; }
+  if (hash === 'kalender') { showKalender(); return; }
   if (ticker && ticker !== state.currentTicker) selectStock(ticker);
   else if (!ticker) showOverview();
 });
@@ -1864,6 +1969,7 @@ function showMna() {
   document.getElementById('overview-container').style.display  = 'none';
   document.getElementById('fusjoner-container').style.display  = 'none';
   document.getElementById('mna-container').style.display       = 'block';
+  document.getElementById('kalender-container').style.display  = 'none';
   document.getElementById('controls-card').style.display       = 'none';
   document.getElementById('chart-card').style.display          = 'none';
   document.getElementById('stats-container').style.display     = 'none';
@@ -1970,6 +2076,132 @@ document.getElementById('mna-nav').addEventListener('click', e => {
   showMna();
 });
 document.getElementById('mna-tab').addEventListener('click', () => showMna());
+
+
+// ── Finanskalender ────────────────────────────────────────────────────────────
+const KAL_MONTHS = ['Januar','Februar','Mars','April','Mai','Juni','Juli','August','September','Oktober','November','Desember'];
+const KAL_DAYS   = ['Søndag','Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag'];
+
+let kalFilter = 'alle';
+
+function showKalender() {
+  state.currentTicker = null;
+  history.replaceState(null, '', '#kalender');
+  document.getElementById('overview-container').style.display  = 'none';
+  document.getElementById('fusjoner-container').style.display  = 'none';
+  document.getElementById('mna-container').style.display       = 'none';
+  document.getElementById('kalender-container').style.display  = 'block';
+  document.getElementById('controls-card').style.display       = 'none';
+  document.getElementById('chart-card').style.display          = 'none';
+  document.getElementById('stats-container').style.display     = 'none';
+  document.getElementById('company-info').style.display        = 'none';
+  document.getElementById('div-history-card').style.display    = 'none';
+  document.getElementById('nokkeltall-card').style.display     = 'none';
+  document.getElementById('header-name').innerHTML = 'Finanskalender';
+  document.getElementById('last-updated').textContent = '';
+  document.querySelectorAll('.sidebar-item, .tab-item').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('[data-section="kalender"]').forEach(el => el.classList.add('active'));
+  buildKalender();
+}
+
+function buildKalender() {
+  const today = new Date().toISOString().slice(0, 10);
+  const end   = new Date(); end.setDate(end.getDate() + 180);
+  const endStr = end.toISOString().slice(0, 10);
+
+  const events = [];
+  for (const s of state.stocks) {
+    const short = s.name.replace(/ ASA$| AS$| Group$| Holdings?$/i, '');
+    const tick  = s.ticker.replace('.OL', '');
+    const domain = LOGO_DOMAINS[s.ticker] || domainFromUrl(s.website);
+
+    if (s.next_ex_date && s.next_ex_date >= today && s.next_ex_date <= endStr) {
+      let detail = '';
+      if (s.forward_annual_dividend) {
+        const per = s.divs_per_year && s.divs_per_year > 0
+          ? s.forward_annual_dividend / s.divs_per_year
+          : s.forward_annual_dividend;
+        detail = `~${per.toFixed(2)} NOK`;
+      }
+      events.push({ date: s.next_ex_date, type: 'ex', ticker: s.ticker, name: short, tick, domain, detail });
+    }
+    if (s.next_earnings_date && s.next_earnings_date >= today && s.next_earnings_date <= endStr) {
+      events.push({ date: s.next_earnings_date, type: 'earnings', ticker: s.ticker, name: short, tick, domain, detail: 'Kvartalsresultat' });
+    }
+  }
+
+  const filtered = kalFilter === 'alle' ? events : events.filter(e => e.type === kalFilter);
+  filtered.sort((a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
+
+  const list = document.getElementById('kalender-list');
+  list.innerHTML = '';
+
+  if (!filtered.length) {
+    list.innerHTML = '<div class="kal-empty">Ingen hendelser de neste 180 dagene.</div>';
+    return;
+  }
+
+  let currentMonth = '', currentDay = '', dayEventsEl = null;
+
+  for (const ev of filtered) {
+    const month = ev.date.slice(0, 7);
+    if (month !== currentMonth) {
+      currentMonth = month;
+      const mEl = document.createElement('div');
+      mEl.className = 'kal-month-header';
+      const [y, m] = month.split('-');
+      mEl.textContent = `${KAL_MONTHS[+m - 1]} ${y}`;
+      list.appendChild(mEl);
+    }
+    if (ev.date !== currentDay) {
+      currentDay = ev.date;
+      const d = new Date(ev.date + 'T00:00:00');
+      const dayGroup = document.createElement('div');
+      dayGroup.className = 'kal-day-group';
+      const hdr = document.createElement('div');
+      hdr.className = 'kal-day-header';
+      hdr.textContent = `${KAL_DAYS[d.getDay()]} ${d.getDate()}. ${KAL_MONTHS[d.getMonth()].toLowerCase()}`;
+      dayEventsEl = document.createElement('div');
+      dayEventsEl.className = 'kal-events';
+      dayGroup.appendChild(hdr);
+      dayGroup.appendChild(dayEventsEl);
+      list.appendChild(dayGroup);
+    }
+
+    const row = document.createElement('div');
+    row.className = 'kal-event';
+
+    const badgeCls  = ev.type === 'ex' ? 'kal-badge-ex' : 'kal-badge-earnings';
+    const badgeTxt  = ev.type === 'ex' ? 'Ex-dato'      : 'Resultat';
+    const logoHtml  = makeLogoHtml(ev.domain, ev.ticker);
+
+    row.innerHTML = `
+      <span class="kal-badge ${badgeCls}">${badgeTxt}</span>
+      <span class="kal-logo">${logoHtml}</span>
+      <span class="kal-name">
+        <div class="kal-name-main">${ev.name}</div>
+        <div class="kal-name-sub">${ev.tick}</div>
+      </span>
+      ${ev.detail ? `<span class="kal-detail">${ev.detail}</span>` : ''}`;
+
+    row.addEventListener('click', () => selectStock(ev.ticker));
+    dayEventsEl.appendChild(row);
+  }
+}
+
+document.getElementById('kalender-nav').addEventListener('click', e => {
+  e.preventDefault();
+  showKalender();
+});
+document.getElementById('kalender-tab').addEventListener('click', () => showKalender());
+
+document.getElementById('kalender-container').addEventListener('click', e => {
+  const btn = e.target.closest('[data-kal-filter]');
+  if (!btn) return;
+  kalFilter = btn.dataset.kalFilter;
+  document.querySelectorAll('[data-kal-filter]').forEach(b => b.classList.toggle('active', b === btn));
+  buildKalender();
+});
 
 
 // ── Navigation ────────────────────────────────────────────────────────────────
@@ -2392,6 +2624,7 @@ function showOverview() {
   document.getElementById('overview-container').style.display  = 'block';
   document.getElementById('fusjoner-container').style.display  = 'none';
   document.getElementById('mna-container').style.display       = 'none';
+  document.getElementById('kalender-container').style.display  = 'none';
   document.getElementById('controls-card').style.display       = 'none';
   document.getElementById('chart-card').style.display          = 'none';
   document.getElementById('stats-container').style.display     = 'none';
@@ -2413,6 +2646,7 @@ function showFusjoner() {
   document.getElementById('overview-container').style.display  = 'none';
   document.getElementById('fusjoner-container').style.display  = 'block';
   document.getElementById('mna-container').style.display       = 'none';
+  document.getElementById('kalender-container').style.display  = 'none';
   document.getElementById('controls-card').style.display       = 'none';
   document.getElementById('chart-card').style.display          = 'none';
   document.getElementById('stats-container').style.display     = 'none';
@@ -2735,6 +2969,7 @@ function showLoading() {
   document.getElementById('overview-container').style.display = 'none';
   document.getElementById('fusjoner-container').style.display = 'none';
   document.getElementById('mna-container').style.display     = 'none';
+  document.getElementById('kalender-container').style.display = 'none';
   document.getElementById('controls-card').style.display    = 'block';
   document.getElementById('chart-card').style.display       = 'block';
   document.getElementById('loading').style.display = 'block';

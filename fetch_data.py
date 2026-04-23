@@ -533,6 +533,26 @@ def process_ticker(ticker, name):
     except Exception:
         pass
 
+    # Try to get next earnings date from yfinance calendar
+    next_earnings_date = None
+    try:
+        cal = t.calendar
+        if isinstance(cal, dict):
+            dates = cal.get('Earnings Date', [])
+            today_str = datetime.utcnow().strftime("%Y-%m-%d")
+            future = []
+            for d in dates:
+                try:
+                    ds = d.strftime("%Y-%m-%d") if hasattr(d, 'strftime') else str(d)[:10]
+                    if ds >= today_str:
+                        future.append(ds)
+                except Exception:
+                    pass
+            if future:
+                next_earnings_date = min(future)
+    except Exception:
+        pass
+
     output = {
         "ticker": ticker,
         "name": name,
@@ -545,6 +565,7 @@ def process_ticker(ticker, name):
         "website": info.get("website"),
         "longBusinessSummary": info.get("longBusinessSummary"),
         "next_ex_date": _ts_to_date(info.get("exDividendDate")),
+        "next_earnings_date": next_earnings_date,
         "forward_annual_dividend": info.get("dividendRate"),
         "records": records,
     }
@@ -637,6 +658,7 @@ def main():
                 "div_frequency": result.get("div_frequency"),
                 "website": result.get("website"),
                 "next_ex_date": result.get("next_ex_date"),
+                "next_earnings_date": result.get("next_earnings_date"),
                 "forward_annual_dividend": result.get("forward_annual_dividend"),
                 "drawdown_from_ath": result.get("drawdown_from_ath"),
                 "div_cagr_5y": result.get("div_cagr_5y_calc"),
