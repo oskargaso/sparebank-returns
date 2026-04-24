@@ -731,7 +731,9 @@
     #kalender-nav.active .sidebar-name { color: #15803d; }
     #kalender-nav .sidebar-ticker { color: #16a34a; opacity: 0.7; }
 
-    .kal-filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .kal-filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; align-items: center; }
+    .kal-filter-bar:last-of-type { margin-bottom: 16px; }
+    .kal-filter-label { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #94a3b8; margin-right: 2px; white-space: nowrap; }
     .kal-filter-btn {
       padding: 4px 12px;
       border: 1px solid #e2e8f0;
@@ -1390,9 +1392,16 @@
           <div class="fusjon-section-title">Finanskalender &ndash; Oslo Børs</div>
           <p style="font-size:0.78rem;color:#64748b;margin:6px 0 16px">Kommende ex-utbyttedatoer og resultatdatoer for selskaper notert på Oslo Børs. Klikk for full analyse.</p>
           <div class="kal-filter-bar">
+            <span class="kal-filter-label">Type</span>
             <button class="kal-filter-btn active" data-kal-filter="alle">Alle</button>
             <button class="kal-filter-btn" data-kal-filter="ex">Ex-utbytte</button>
             <button class="kal-filter-btn" data-kal-filter="earnings">Resultat</button>
+          </div>
+          <div class="kal-filter-bar">
+            <span class="kal-filter-label">Sektor</span>
+            <button class="kal-filter-btn active" data-kal-cat="alle">Alle selskaper</button>
+            <button class="kal-filter-btn" data-kal-cat="banker">Banker</button>
+            <button class="kal-filter-btn" data-kal-cat="laks">Lakseoppdrett</button>
           </div>
           <div id="kalender-list"></div>
         </div>
@@ -2082,7 +2091,24 @@ document.getElementById('mna-tab').addEventListener('click', () => showMna());
 const KAL_MONTHS = ['Januar','Februar','Mars','April','Mai','Juni','Juli','August','September','Oktober','November','Desember'];
 const KAL_DAYS   = ['Søndag','Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag'];
 
-let kalFilter = 'alle';
+let kalFilter   = 'alle';
+let kalCategory = 'alle';
+
+const KAL_CATEGORIES = {
+  banker: new Set([
+    'DNB.OL','STB.OL',
+    'MING.OL','SPOL.OL','NONG.OL','SBNOR.OL','MORG.OL','SOAG.OL','HELG.OL',
+    'RING.OL','SNOR.OL','ROGS.OL','SPOG.OL','SB68.OL','TINDE.OL','SKUE.OL',
+    'AURG.OL','VVL.OL','BIEN.OL','GRONG.OL','MELG.OL','TRSB.OL','ROMER.OL',
+    'FFSB.OL','NISB.OL','HSPG.OL','JAREN.OL','AASB.OL',
+    'PARB.OL','INSTA.OL','SBINO.OL',
+  ]),
+  laks: new Set([
+    'MOWI.OL','SALM.OL','LSG.OL','BAKKA.OL','AUSS.OL','GSF.OL',
+    'MAS.OL','SALME.OL','ANDF.OL','GIGA.OL','AFISH.OL','NOAP.OL',
+    'PROXI.OL','KLDVK.OL',
+  ]),
+};
 
 function showKalender() {
   state.currentTicker = null;
@@ -2130,7 +2156,10 @@ function buildKalender() {
     }
   }
 
-  const filtered = kalFilter === 'alle' ? events : events.filter(e => e.type === kalFilter);
+  const filtered = events.filter(e =>
+    (kalFilter   === 'alle' || e.type === kalFilter) &&
+    (kalCategory === 'alle' || KAL_CATEGORIES[kalCategory]?.has(e.ticker))
+  );
   filtered.sort((a, b) => a.date.localeCompare(b.date) || a.name.localeCompare(b.name));
 
   const list = document.getElementById('kalender-list');
@@ -2196,11 +2225,19 @@ document.getElementById('kalender-nav').addEventListener('click', e => {
 document.getElementById('kalender-tab').addEventListener('click', () => showKalender());
 
 document.getElementById('kalender-container').addEventListener('click', e => {
-  const btn = e.target.closest('[data-kal-filter]');
-  if (!btn) return;
-  kalFilter = btn.dataset.kalFilter;
-  document.querySelectorAll('[data-kal-filter]').forEach(b => b.classList.toggle('active', b === btn));
-  buildKalender();
+  const typeBtn = e.target.closest('[data-kal-filter]');
+  if (typeBtn) {
+    kalFilter = typeBtn.dataset.kalFilter;
+    document.querySelectorAll('[data-kal-filter]').forEach(b => b.classList.toggle('active', b === typeBtn));
+    buildKalender();
+    return;
+  }
+  const catBtn = e.target.closest('[data-kal-cat]');
+  if (catBtn) {
+    kalCategory = catBtn.dataset.kalCat;
+    document.querySelectorAll('[data-kal-cat]').forEach(b => b.classList.toggle('active', b === catBtn));
+    buildKalender();
+  }
 });
 
 
