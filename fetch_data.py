@@ -37,6 +37,7 @@ TICKERS = {
     "LSG.OL":   "Lerøy Seafood Group",
     "SPOL.OL":  "Sparebank 1 Østlandet",
     "NOD.OL":   "Nordic Semiconductor",
+    "NORBT.OL": "Norbit",
     "BWLPG.OL": "BW LPG",
     "BAKKA.OL": "Bakkafrost",
     "VEI.OL":   "Veidekke",

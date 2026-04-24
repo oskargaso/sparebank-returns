@@ -504,6 +504,24 @@
     "recommendationKey":"buy"
   },
   {
+    "ticker":"NORBT.OL",
+    "name":"Norbit",
+    "return_1y":78.9,
+    "cagr_5y":65.4,
+    "marketCap":15193640960,
+    "industry":"Scientific & Technical Instruments",
+    "avg_recovery_days":24.5,
+    "div_frequency":"annual",
+    "website":"https://www.norbit.com",
+    "next_ex_date":"2026-05-21",
+    "next_earnings_date":"2026-05-13",
+    "forward_annual_dividend":5.0,
+    "drawdown_from_ath":0.0,
+    "div_cagr_5y":75.0,
+    "yield_current":2.52,
+    "recommendationKey":"strong_buy"
+  },
+  {
     "ticker":"BWLPG.OL",
     "name":"BW LPG",
     "return_1y":88.0,
